@@ -1,0 +1,165 @@
+﻿<div class="modal-header">
+    <button type="button" class="close" ng-click="cancel()" aria-hidden="true">&times;</button>
+    <h4 class="modal-title">{{::modalTitle}}</h4>
+</div>
+
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-horizontal" name="addEditResourceUnitForm" role="form" >
+                <div class="form-group" pr-show-errors>
+                    <label for="driver" class="col-sm-3 control-label">Driver</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text"
+                                   class="form-control"
+                                   id="driver"
+                                   placeholder="Enter a driver"
+                                   name="driver"
+                                   ng-model="resourceUnit.driver"
+                                   ng-focus="driverFocused()"
+                                   ng-blur="driverBlurred()"
+                                   ng-class="{'has-error-with-focus': driverHasFocus}"
+                                   typeahead="driver as driver.fullName for driver in getDrivers($viewValue) | limitTo:25"
+                                   typeahead-min-length="2"
+                                   typeahead-wait-ms="250"
+                                   typeahead-template-url="/ng/html-partials/directives/driver-typeahead-template.html"
+								   typeahead-on-select="setDriver($item)"
+                                   required
+                                   pr-auto-focus>
+                            <span class="input-group-addon input-group-addon-remove-border">
+                                <pr-validator form-control="addEditResourceUnitForm.driver" field-name="Driver" only-when-touched>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" pr-show-errors>
+                    <label for="vehicle" class="col-sm-3 control-label">Vehicle</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input class="form-control"
+                                   id="vehicle"
+                                   type="text"
+                                   placeholder="Enter a vehicle"
+                                   name="vehicle"
+                                   ng-model="resourceUnit.vehicle"
+                                   ng-focus="vehicleFocused()"
+                                   ng-blur="vehicleBlurred()"
+                                   typeahead="vehicle as vehicle.registrationNumber for vehicle in getVehicles($viewValue) | limitTo:25"
+                                   typeahead-min-length="2"
+                                   typeahead-wait-ms="250"
+                                   typeahead-template-url="/ng/html-partials/directives/vehicle-typeahead-template.html"
+								   typeahead-on-select="setVehicle($item)"
+                                   required>
+                            <span class="input-group-addon input-group-addon-remove-border">
+                                <pr-validator form-control="addEditResourceUnitForm.vehicle" field-name="Vehicle" only-when-touched>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" pr-show-errors>
+                    <label for="startdate" class="col-sm-3 control-label">Start Date</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text"
+                                   class="form-control"
+                                   id="startdate"
+                                   name="startdate"
+                                   placeholder="Select a start date"
+                                   ng-model="resourceUnit.startDate"
+                                   datepicker-popup="dd/MM/yyyy"
+                                   close-text="Close"
+                                   is-open="startDateOpened"
+                                   required>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="openStartDate($event)">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+                            </span>
+                            <span class="input-group-addon input-group-addon-remove-border">
+                                <pr-validator form-control="addEditResourceUnitForm.startdate" field-name="Start date">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" pr-show-errors>
+                    <label for="starttime" class="col-sm-3 control-label">Start Time</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text"
+                                   class="form-control"
+                                   id="starttime"
+                                   name="starttime"
+                                   placeholder="Select a start time"
+                                   ng-model="resourceUnit.startTime"
+                                   pr-format-time
+                                   pr-valid-time
+                                   required>
+                            <span class="input-group-addon input-group-addon-remove-border">
+                                <pr-validator form-control="addEditResourceUnitForm.starttime" field-name="Start time">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" pr-show-errors>
+                    <label for="finishdate" class="col-sm-3 control-label">Finish Date</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text"
+                                   class="form-control"
+                                   id="finishdate"
+                                   name="finishdate"
+                                   placeholder="Select a finish date"
+                                   ng-model="resourceUnit.finishDate"
+                                   pr-date-less-than="resourceUnit.startDate"
+                                   datepicker-popup="dd/MM/yyyy"
+                                   close-text="Close"
+                                   is-open="finishDateOpened"
+                                   required>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="openFinishDate($event)">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+                            </span>
+                            <span class="input-group-addon input-group-addon-remove-border">
+                                <pr-validator form-control="addEditResourceUnitForm.finishdate" field-name="Finish date">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" pr-show-errors>
+                    <label for="finishtime" class="col-sm-3 control-label">Finish Time</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text"
+                                   class="form-control"
+                                   id="finishtime"
+                                   name="finishtime"
+                                   placeholder="Select a finish time"
+                                   pr-time-less-than="resourceUnit.startTime"
+                                   start-date="resourceUnit.startDate"
+                                   finish-date="resourceUnit.finishDate"
+                                   ng-model="resourceUnit.finishTime"
+                                   pr-enter="saveResourceUnit()"
+                                   pr-format-time
+                                   pr-valid-time
+                                   required>
+                            <span class="input-group-addon input-group-addon-remove-border">
+                                <pr-validator form-control="addEditResourceUnitForm.finishtime" field-name="Finish time">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <ng-form ng-hide="isEdit">
+        <input type="checkbox" ng-model="createAnother">Create another
+    </ng-form>
+    <button type="button" class="btn btn-danger align-left" ng-show="isEdit" ng-click="deleteResourceUnit(resourceUnit.resourceUnitID)">Delete</button>
+    <button type="button" class="btn btn-default" ng-click="saveResourceUnit()">Save</button>
+    <button type="button" class="btn btn-primary" ng-click="cancel()">Cancel</button>
+</div>

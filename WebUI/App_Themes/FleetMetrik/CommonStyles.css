@@ -1,0 +1,2120 @@
+﻿/** ---------------------------------- **/
+/** New global Styles for Orchestrator **/
+/** ---------------------------------- **/
+
+body * 
+{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;	
+}
+
+.masterpagelessPage 
+{
+	background-color: #FFF;
+	margin: 0;
+	padding: 0	
+}
+
+/** Header and sub headers **/
+
+h1 
+{
+	font-family: Arial;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0 0 3px 0;
+	padding: 0 0 3px 0;
+	color: #404143;
+	border-bottom: 1px dotted #CCC;	
+} 
+
+h2 
+{
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: normal;	
+	margin: 0 0 10px 0;
+	color: #0c5a2e;
+	padding: 0;	
+}
+
+h3, h3 *, h3 label 
+{
+	font-family: Arial !important;
+	font-size: 14px !important;
+	font-weight: bold;	
+	margin: 5px 0 5px 0;
+	color: #404143;
+	padding: 0;
+	font-style: italic;			
+}
+
+h4, h4 *, h4 label 
+{
+	font-family: Arial !important;
+	font-size: 24px !important;
+	text-align: center;	
+	margin: 15px 0;
+	color: #404143;
+	padding: 0;
+	font-style: italic;			
+}
+
+/** Tidying up any elements that have been placed inside the H1s and H2s that don't pick up the styles above **/
+
+h1 * 
+{
+	font-family: Arial;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+h2 * 
+{
+	font-size: 12px !important;	
+}
+
+/** Specific headers **/
+
+.deliveriesIcon 
+{
+	background: transparent url('img/Masterpage/icon-deliveries.png') no-repeat 16px center;
+	border: 0 !important;
+	padding: 13px 0 4px 58px !important;
+	margin: 3px 0 !important;
+	display: block !important;
+	height: 22px;
+}
+
+.collectionsIcon 
+{
+	background: transparent url('img/Masterpage/icon-collections.png') no-repeat 16px center;
+	border: 0 !important;
+	padding: 13px 0 4px 58px !important;
+	margin: 3px 0 !important;
+	display: block !important;
+	height: 22px;
+}
+
+/** Special page title areas **/
+
+.pagetitleTabs 
+{
+    background-color: #f1f1f1; 
+    margin: 0 -8px 10px; 
+    top: -5px; 
+    position: relative;   
+}
+
+.pagetitleTabs h1
+{
+    border: none; 
+    padding: 10px 10px 10px;
+}
+
+.pagetitleTabs h1 * 
+{
+    font-family: Verdana;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.pagetitleTabs .RadTabStrip_Orchestrator .rtsLevel 
+{
+    padding: 0 0 0 10px;
+    width: auto !important;     
+}
+
+/** Paragraphs **/
+
+p 
+{
+	font-family: Verdana;
+	font-size: 11px;
+	font-weight: normal;	
+	color: #363636;
+	margin: 0 0 10px 0;
+	padding: 0;	
+}
+
+/** Used to produce white space between items if there's none specified by margin **/
+
+.whitepacepusher, .whitespacepusher 
+{
+	height: 10px;	
+}
+
+/** Links (Note:links are also specified in Grid and Telerik skins too) **/
+
+a
+{
+	color: #0c5a2e;
+	text-decoration: underline;	
+}
+
+a:link	
+{	
+	color: #2d4768;
+	text-decoration: underline;	
+}
+	
+a:visited
+{	
+	color: #2d4768;
+	text-decoration: underline;	
+}	
+		
+a:active	
+{	
+	color: #2d4768;
+	text-decoration: underline;	
+}	
+		
+/*a:hover	
+{	
+	color: #2d4768;
+	text-decoration: none;	
+}*/
+
+/** Clearing is used below floated elements, this is so the element that the floats are inside doesn't lose its height **/
+
+.clearDiv 
+{
+	clear: both;
+	height: 0px;
+	line-height: 0px;
+	font-size: 0px;
+	padding: 0px;
+	margin: 0px;	
+}
+
+/** Validation Icon **/
+
+.validationErrorIcon 
+{
+	background-image: url('img/masterpage/icon-warning.png');
+	background-repeat: no-repeat;
+	background-position: top center;
+	height: 16px !important;
+	width: 16px;
+	padding: 8px 0;
+	//padding: 0;
+}
+
+.validationErrorIcon img 
+{
+	height: 0px;
+	width: 0px;
+	padding: 8px;
+}
+
+/** Information boxes **/
+
+.infoPanel 
+{
+	border: 1px solid #a2cdff;
+	background-color: #e1eefd;
+	padding: 7px 7px 7px 32px;
+	font-style: italic;
+	background-image: url('img/MasterPage/icon-info.png');
+	background-position: 8px 6px;
+	background-repeat: no-repeat;
+}
+
+.errorPanel 
+{
+	border: 1px solid #9f1313;
+	background-color: #d8b9b9;
+	padding: 7px 7px 7px 32px;
+	margin: 0 0 10px 0;
+	font-style: italic;
+	background-image: url('img/MasterPage/icon-cross-cirlce.png');
+	background-position: 8px 6px;
+	background-repeat: no-repeat;	
+}
+
+.warningPanel 
+{
+	border: 1px solid #ae9c34;
+	background-color: #fefce5;
+	padding: 7px 7px 7px 32px;
+	margin: 0 0 10px 0;
+	font-style: italic;
+	background-image: url('img/MasterPage/icon-warning.png');
+	background-position: 8px 6px;
+	background-repeat: no-repeat;	
+}
+
+.confirmSaved 
+{
+	background-image: url('img/MasterPage/icon-tick.png');
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding: 0 0 0 18px;
+	font-style: italic;	
+}
+
+.infoPanel *, .errorPanel *, .warningPanel * 
+{
+	color: #000 !important;	
+}
+
+.infoPanel img 
+{
+	display: none;	
+}
+
+.downloadPanel
+{
+	background-color: #f3fff8; 
+	background-image: url('/App_Themes/Orchestrator/img/Masterpage/icon-arrow-down-fast.png'); 
+	background-position: 12px center; 
+	background-repeat: no-repeat;  
+	border: 1px solid #CCC; 
+	padding: 10px 10px 10px 38px;
+	display: block;
+}
+
+.downloadPanel:hover 
+{
+	background-color: #fff7ca;
+	cursor: pointer;
+		
+}
+
+a .downloadPanel *
+{
+	text-decoration: none;	
+}
+
+/** ----- **/
+/** Forms **/
+/** ----- **/
+
+/** Container **/
+
+.formPageContainer 
+{
+	width: 75%;	
+}
+
+/** Fieldset **/
+
+fieldset 
+{
+	border: 1px solid #0d592e;
+	padding: 10px;
+	margin: 0 0 10px 0;
+}
+
+fieldset legend
+{
+	font-size: 11px;
+	font-weight: bold;	
+	margin: 0;
+	padding: 2px 10px;
+	color: #0d592e;
+}
+
+.invisiableFieldset 
+{
+	background-color: Transparent;
+	border: 0 none;
+	margin: 0px;
+	padding: 0px;	
+}
+
+/** **/
+
+.formBlock 
+{
+    border: 1px solid #777;
+    padding: 10px;
+    margin: 0 10px 10px 0;
+}
+
+.formBlock  .formBlock 
+{
+    background: #f3fff8 none;
+    border: 0;    
+}
+
+.formBlock h1
+{
+    font-family: Verdana;
+	font-size: 11px;
+	font-weight: bold;	
+	border: 0;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+/** Collapsing Fieldset **/
+
+.collapsingFieldset legend
+{
+	background: transparent url('Grid/SingleMinus.gif') no-repeat left center;
+	padding: 0 0 0 20px;
+}
+
+.collapsingFieldset legend:hover 
+{
+	cursor: pointer;	
+}
+
+.collapsingFieldset legend.active 
+{
+	background-image: url('Grid/SinglePlus.gif');	
+}
+
+/** Cell label **/
+
+.formCellLabel 
+{
+	background-color:#eaf5ef;
+	border: 1px solid #FFF;
+	color:#000;
+	padding:5px 5px 5px 15px;
+	text-align:right;
+	vertical-align: top;
+	font-size: 11px;	
+}
+
+.formCellLabel-Horizontal 
+{
+	background-color:#eaf5ef;
+	border-top: 1px solid #CCC;
+	color:#000;
+	padding: 3px;
+	text-align: left;
+	font-size: 11px;	
+}
+
+/** Input boxes **/
+
+.formCellField 
+{
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+}
+
+.formCellField-Horizontal 
+{
+	padding: 1px 3px;	
+}
+
+input.fieldInputBox, .fieldInputBox input
+{
+	color:#000;
+	font-size: 11px;
+	//height: 1%;	
+	padding:2px;
+	margin: 0px;
+	vertical-align: middle;
+	border:1px solid #6e9bbf;		
+}
+
+/*input.fieldInputBox:hover, textarea.fieldInputBox:hover
+{
+	border: 1px solid #587d9a;
+}*/
+
+
+textarea.fieldInputBox
+{
+	color: #000;
+	font-size: 11px;
+	padding: 2px;
+	margin: 0px;
+	vertical-align: middle;
+	border:1px solid #6e9bbf;		
+}
+
+/** Date Inputs **/
+
+input.dateInputBox
+{
+	color:#000!important;
+	font-size: 11px!important;
+	//height: 1%!important;	
+	padding:1px!important;
+	margin: 0px!important;
+	vertical-align: middle!important;
+	border:1px solid #6e9bbf !important;	
+}
+
+/*input.dateInputBox:hover 
+{
+	border: 1px solid #587d9a !important;	
+}*/
+
+/** Checkbox fix for TS Filters **/
+
+.checkboxListField 
+{
+	padding: 0px;	
+}
+
+.checkboxListField .overflowHandler 
+{
+	height: 35px;
+	overflow-y: auto; 	
+}
+
+.checkboxListField  .overflowHandler * 
+{
+	font-size: 10px !important;
+	margin: 1px;
+	padding: 0px;	
+	vertical-align: top;
+}
+
+.checkboxListField .overflowHandler input 
+{
+	height: 13px;
+	width: 13px;	
+}
+
+/** Cell labels / view fields **/
+
+/*.formCellLabel, *.formCellLabel
+{
+	padding: 2px;
+	margin: 0px;	
+	color: #404143;
+	font-size: 11px;
+	font-weight: bold;
+}*/
+
+/** Button Bar **/
+
+.buttonbar, .buttonBar 
+{
+	border: 1px solid #0d592e;
+	background-color: #f3fff8;
+	padding: 5px;
+	text-align: left;
+	/*margin: 0 0 10px 0;*/
+	
+}
+
+.buttonbar div
+{
+	display:inline !important;
+}
+
+.buttonbar input, .buttonBar input,.buttonClass  
+{	
+	color: #FFF;
+	background: transparent url('img/MasterPage/button-bg.jpg') repeat-x top;
+	background-color: #374b64;
+	border:1px solid #374b64;
+	//border:1px solid #f3fff8;
+	padding: 5px;
+	font-size: 11px;
+}
+
+.buttonbar input[type=text], .buttonBar input[type=text], .buttonbar text .buttonBar text
+{
+    background: #FFFFFF none !important;
+    color:#000;
+	font-size: 11px;
+	//height: 1%;	
+	padding:2px;
+	margin: 0px;
+	vertical-align: middle;
+	border:1px solid #6e9bbf;	
+}
+
+.buttonbar input[type=checkbox],    /** < IE **/
+.buttonBar input[type=checkbox],
+.buttonbar checkbox                 /** < Everything else **/
+.buttonBar checkbox                 
+{
+    background: transparent none !important;
+    border: 0px !important;
+}
+
+.buttonClassSmall 
+{
+	color: #FFF;
+	background: transparent url('img/MasterPage/button-bg.jpg') repeat-x top;
+	background-color: #374b64;
+	border:1px solid #374b64;
+	//border:1px solid transparent;
+	padding: 3px;
+	font-size: 10px;	
+}
+
+/*.buttonbar input:hover, .buttonBar input:hover, .buttonClass:hover 
+{
+	cursor: pointer;
+	background: transparent url('img/MasterPage/button-bg-on.jpg') repeat-x top;
+	background-color: #374b64;
+	border:1px solid #374b64;
+	//border:1px solid #f3fff8;	
+}*/
+
+/** Image buttons incase the buttons aren't inside a buttonbar **/
+
+.buttonClassAdd:hover, .buttonClassCallIn-Remove:hover, .buttonClassCallIn-Add:hover, 
+.InstructionPoint img:hover, .buttonClassTipSheet:hover, .buttonClassPalletHandling:hover, 
+.buttonClassRedeliver-Add:hover, .buttonClass-Edit:hover, .buttonClass-Remove:hover,
+.buttonClassConvert:hover
+{
+	cursor: pointer;	
+}
+
+/** Icon specific buttons, mostly used on grids **/
+
+.buttonClassAdd 
+{
+	background-image: url('img/MasterPage/icon-plus.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 16px;
+	width: 16px;
+	border: 0px;
+	background-color: Transparent; 		
+}
+
+.buttonClassCallIn-Remove 
+{
+	background-image: url('img/MasterPage/icon-callin-remove.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 16px;
+	width: 16px;
+	border: 0px;
+	background-color: Transparent;
+	margin: 0 4px 0px 0px; 
+}
+
+.buttonClassCallIn-Add 
+{
+	background-image: url('img/MasterPage/icon-callin-add.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 16px;
+	width: 16px;
+	border: 0px;
+	background-color: Transparent;
+	margin: 0 4px 0px 0px;	
+}
+
+.buttonClass-Edit 
+{
+	background-image: url('img/MasterPage/icon-pencil.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 16px;
+	width: 16px;
+	border: 0px;
+	background-color: Transparent;
+	margin: 0 4px 0px 0px;	
+}
+
+.buttonClass-Remove 
+{
+	background-image: url('img/MasterPage/icon-cross.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 16px;
+	width: 16px;
+	border: 0px;
+	background-color: Transparent;
+	margin: 0 4px 0px 0px; 
+}
+
+.buttonClassTipSheet 
+{
+	background-image: url('img/MasterPage/icon-tipSheet.gif');
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 16px;
+	width: 16px;
+	border: 0px;
+	background-color: Transparent;
+	margin: 0 4px 0px 0px; 
+}
+
+.buttonClassPalletHandling 
+{
+	background-image: url('img/MasterPage/icon-pallet-small.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 16px;
+	width: 16px;
+	border: 0px;
+	background-color: Transparent;
+	margin: 0 4px 0px 0px; 
+}
+
+.buttonClassRedeliver-Add 
+{
+	background-image: url('img/MasterPage/icon-redeliver-add.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 16px;
+	width: 16px;
+	border: 0px;
+	background-color: Transparent;
+	margin: 0 4px 0px 0px;	
+}
+
+.buttonClassConvert 
+{
+	background-image: url('img/MasterPage/icon-convert.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 16px;
+	width: 16px;
+	border: 0px;
+	background-color: Transparent;
+	margin: 0 4px 0px 0px;	
+}
+
+/** Coloured Key **/
+
+.colouredKey {
+	border: 0px solid #000;
+	background-color: #000;
+}
+
+
+/** ------------------------ **/
+/** Component art data table **/
+/** ------------------------ **/
+
+.Grid
+{ 
+	background-color: #FFFFFF; 
+	border: 1px solid #000 !important;
+	border-collapse: separate !important;  
+	font-family: Verdana; 
+	font-size: 10px; 
+	cursor: pointer;
+	display: table !important;
+}
+
+.Grid * 
+{
+	font-size: 11px !important;
+	border: 0px;	
+}
+
+/** Group and search row **/
+
+.GridHeader
+{
+	background-image: none; 
+	background-color: #495e78;
+	background-image: url('Grid/header-bg.jpg');
+	background-repeat: repeat-x;
+	background-position: top; 
+	height: 24px;
+	padding-left: 3px;
+	cursor: default;
+	color: #FFF;
+}
+
+.GridHeader div 
+{
+	color: #FFF;	
+}
+
+.GridHeader input 
+{
+	color:#404143;
+	font-size: 10px;
+	height: 1%;	
+	padding:3px;
+	margin: 0 2px 2px 0;
+	vertical-align: middle;
+	border:1px solid #1c1c1c;	
+}
+
+.GridHeader input:hover 
+{
+	border: 1px solid #000;	
+}
+
+.GridHeaderText
+{
+	color: #FFF;  
+	font-family: Verdana; 
+	padding: 0 0 0 3px; 
+}
+
+.GroupByCell
+{
+	cursor: pointer;
+	background-color:#ffffff;
+}
+
+.GroupByText
+{
+	color: #FFF;  
+	font-weight: bold; 
+	padding-right: 5px;
+}
+
+/** Data header **/
+
+.HeadingRow 
+{ 
+	background-color: #363636; 
+}
+
+.HeadingRow li
+{
+	display:inline;	
+}
+
+.HeadingRow td, .HeadingRow th, .HeadingRow li
+{ 
+	background-image: url('Grid/tableheader-bg.jpg');
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color: #3d3d3d;
+	border-right: 1px solid #363636;
+	border-bottom: 1px solid #eae9e1;
+	padding: 0px 3px 1px 2px; 
+	height: 22px;
+	font-family: Verdana; 
+	font-weight: bold;
+	color: #FFF;
+	vertical-align: middle;  
+}
+
+.HeadingRow td td 
+{
+	background-image: none;
+	background-color: Transparent;
+	border: 0px;	
+}
+
+.HeadingRowLite 
+{
+	background-color: #3d3d3d;
+	vertical-align: top;
+}
+
+.HeadingRowLite th
+{ 
+	background-image: url('Grid/tableheader-bg.jpg');
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color: #3d3d3d;
+	border-right: 1px solid #363636;
+	padding: 0px 3px 1px 2px; 
+	height: 22px;
+	font-family: Verdana; 
+	font-weight: bold;
+	color: #FFF;
+	vertical-align: middle;  
+}
+
+.HeadingRowLite th a 
+{
+	font-family: Verdana;  
+	font-weight: bold;
+	color: #FFF; 
+	text-align: left;
+}
+
+.HeadingCell 
+{ 
+	background-image: url('Grid/tableheader-bg.jpg');
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color: #3d3d3d;
+	border-right: 1px solid #363636; 
+	padding: 3px; 
+	padding-top: 2px; 
+	padding-bottom: 1px;  
+}
+
+.HeadingRow td.FirstHeadingCell
+{ 
+	background-image: url('Grid/tableheader-bg.jpg'); 
+}
+
+.HeadingCellText
+{
+	font-family: Verdana;
+	font-weight: bold;
+	color: #FFF; 
+	text-align: left;
+	padding-top: 3px;
+	padding-bottom: 5px;
+}
+
+/** Tabular data **/
+/** Normal Row **/
+
+.Row 
+{ 
+	height:20px;
+	background-color: #FFFFFF; 
+}
+
+.Row td.DataCell, .Row td 
+{ 
+	cursor: default;
+	padding: 1px 1px 1px 2px;
+	border-right: 1px solid #e9e9e9;  
+	border-bottom: 1px solid #e9e9e9;
+	border-left: 0px;
+	border-top: 0px; 
+	font-family: verdana; 
+	font-size: 10px;
+	height: 20px; 
+}
+
+.Row td.LastDataCell 
+{ 
+	background-color: #EFEFF4; 
+} 
+
+/** Alerternate row **/
+
+.AlternatingRow 
+{
+	background-color: #f3fff8; 	
+}
+
+.AlternatingRow td.DataCell, .AlternatingRow td  
+{ 
+	height:20px;
+
+	cursor: default;
+	padding: 1px 1px 1px 2px;
+	border-right: 1px solid #e9e9e9; 
+	border-bottom: 1px solid #e9e9e9; 
+	font-family: verdana; 
+}
+
+/** Selected row **/
+
+.SelectRowTrafficSheetLite td.DataCell
+{
+	background-color: #fff7ca; 
+	padding: 1px 1px 1px 2px; 
+	font-family: verdana;   
+	border-right: 0px; 
+	height:20px;
+	border-right: 1px solid #e9e9e9;
+	border-bottom: 1px solid #e9e9e9;
+}
+
+.SelectedRow td.DataCell, .SelectedRow td
+{
+	height:20px;
+	background-color: #fff7ca;	 
+	cursor: default;
+	padding: 1px 1px 1px 2px;
+	border-right: 1px solid #e9e9e9;  
+	border-bottom: 1px solid #e9e9e9; 
+	font-family: verdana; 
+	font-size: 10px; 
+}
+
+/** Data specific colours **/
+
+.statePlanned td.DataCell
+{
+    background-color: #daf0d6 !important;
+    padding: 1px 1px 1px 2px; 
+	font-family: verdana;   
+	height:20px;
+	border-right: 1px solid #c7dac3;
+	border-bottom: 1px solid #c7dac3 !important;
+}
+
+.stateBooked td.DataCell
+{
+    background-color: #FFF !important;
+    padding: 1px 1px 1px 2px; 
+	font-family: verdana;   
+	height:20px;
+	border-right: 1px solid #e9e9e9;  
+	border-bottom: 1px solid #e9e9e9 !important; 
+}
+
+
+/** Data Links */
+
+.Row td.DataCell a, .AlternatingRow td.DataCell a,
+.SelectedRow td.DataCell a, .SelectRowTrafficSheetLite td.DataCell a,
+.statePlanned td.DataCell a, .DataCell Div a, .Row td a,
+.AlternatingRow td a  
+{
+	color: #0c5a2e;
+	text-decoration: underline;	
+}
+
+/*.Row td.DataCell a:hover, .AlternatingRow td.DataCell a:hover,
+.SelectedRow td.DataCell a:hover, .SelectRowTrafficSheetLite td.DataCell a:hover,
+.statePlanned td.DataCell a:hover, .DataCell Div a:hover, .Row td a:hover,
+.AlternatingRow td a:hover    
+{
+	color: #2d4768;
+	text-decoration: none;	
+}*/
+
+/** **/  
+
+
+.SortedDataCell 
+{ 
+	background-color: #F5F5F5; 
+} 
+
+
+.SelectRowTrafficSheetLite 
+{ 
+	
+}
+
+
+.GroupHeading
+{
+	color: #0e0e0e; 
+	background-color: #FFFFFF; 
+	font-family: verdana; 
+	font-weight: bold;
+	border-bottom: 2px solid #898989; 
+	padding-top: 10px;
+	padding-bottom: 3px;
+}
+
+.SliderPopup
+{
+	background-color: #FFF4D7; 
+	border: 1px solid #4B4B6F; 
+	border-top-color: #9495A2; 
+	border-left-color: #9495A2; 
+	width: 288px;
+	height: 60px;
+}
+
+.GridFooter
+{
+	cursor: default;
+	padding: 5px;
+}
+
+.GridFooterText
+{
+	color: #000000;  
+	font-family: verdana; 
+	font-size: 10px;
+}
+
+
+/** ----------------- **/
+/** Misc data table 1 **/
+/** ----------------- **/
+
+.DataGridStyle 
+{
+	background-color: #FFFFFF; 
+	border: 1px solid #000;  
+	font-family: Verdana; 
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+.DataGridStyle * 
+{
+	font-size: 11px !important;	
+}
+
+.DataGridStyle a 
+{
+	color: #2d4768;
+	text-decoration: underline;	
+}
+
+/*.DataGridStyle a:hover
+{
+	color: #2d4768;
+	text-decoration: none;
+}*/
+
+.DataGridListHead td, .DataGridListHead th
+{
+	background-image: url('Grid/tableheader-bg.jpg');
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color: #3d3d3d;
+	border-top: 1px solid #363636;
+	border-right: 1px solid #363636;
+	border-bottom: 1px solid #eae9e1;
+	padding: 2px 3px 2px 2px; 
+	height: 22px;
+	font-family: Verdana; 
+	font-weight: bold;
+	color: #FFF;
+	vertical-align: middle;
+	text-align: left; 
+}
+
+.DataGridListHeadSmall td
+{
+	background-image: url('Grid/tableheader-bg.jpg');
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color: #3d3d3d !important;
+	border-top: 1px solid #363636;
+	border-right: 1px solid #363636 !important;
+	border-bottom: 1px solid #eae9e1;
+	padding: 1px 2px 1px 2px; 
+	height: 16px;
+	font-family: Verdana; 
+	color: #FFF;
+	vertical-align: middle;
+	text-align: left; 	
+} 
+
+.DataGridListHeadSmall th 
+{
+	background-image: url('Grid/tableheader-bg.jpg');
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color: #3d3d3d !important;
+	border-right: 1px solid #363636 !important;
+	border-bottom: 1px solid #363636;
+	padding: 1px 2px 1px 2px; 
+	height: 16px;
+	font-family: Verdana; 
+	color: #FFF;
+	vertical-align: middle;
+	text-align: left; 		
+}
+
+
+.DataGridListHead td a 
+{
+	color: #FFF;
+	text-decoration: none;
+}
+
+.DataGridListHead td a:hover 
+{
+	color: #FFF;
+	text-decoration: underline;
+}
+
+.DataGridListItem td
+{
+	cursor: default;
+	padding: 1px 1px 1px 2px;
+	border-right: 1px solid #e9e9e9;  
+	border-bottom: 1px solid #e9e9e9; 
+	font-family: verdana; 
+	height: 20px;
+	vertical-align: middle;
+	text-align: left;	
+}
+
+/*.DataGridListItemAlt 
+{
+	background-color: #f3fff8;	
+}*/
+
+
+.DataGridListItemAlt td
+{
+	cursor: default;
+	padding: 1px 1px 1px 2px;
+	border-right: 1px solid #e9e9e9; 
+	border-bottom: 1px solid #e9e9e9; 
+	font-family: verdana; 
+	height: 20px;
+	vertical-align: middle;
+	text-align: left;		
+}
+
+.DataGridListItemSelected td
+{
+	background-color: #fff7ca; 
+	padding: 1px 1px 1px 2px; 
+	font-family: verdana;  
+	border-right: 0px; 
+	height:20px;
+	border-right: 1px solid #e9e9e9;
+	border-bottom: 1px solid #e9e9e9;
+}
+
+/** ----------------- **/
+/** Databox popup box **/
+/** ----------------- **/
+
+.databoxTable 
+{
+	border: 1px solid #000;
+	border-collapse: collapse;	
+}
+
+.databoxTable th 
+{
+	background-color: #FFF;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	color: #000;	
+}
+
+.databoxTable td
+{
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;	
+}
+
+/** -------------------------------------------------------------------- **/
+/** RADGrid styles are in RadControls/Grid/Skins/Orchestrator/Styles.css **/
+/** -------------------------------------------------------------------- **/
+
+/** ------------- **/
+/** Traffic Sheet **/
+/** ------------- **/
+
+/** Toolbar Silver **/
+
+.ToolbarSilver 
+{
+	background-image: url('img/MasterPage/silvertoolbar-bg.jpg');
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #9f9f9f;
+	color: #1a1a1a;
+	border: 1px solid #000;
+}
+
+.ToolbarSilver td 
+{
+	border: 0px;
+	padding: 0px 9px 0px 9px;		
+	font-size: 11px;
+	height: 26px;
+}
+
+.ToolbarSilver .HeadingCellText 
+{
+	color: #1a1a1a;
+	border: 0px;
+}
+
+.ToolbarSilver a 
+{
+	color: #2d4768;
+	text-decoration: underline;
+}
+
+/*.ToolbarSilver a:hover 
+{
+	color: #2d4768;
+	text-decoration: none;
+}*/
+
+/** Toolbar Blue **/
+
+.ToolbarBlue
+{
+	background-image: url('img/MasterPage/bluetoolbar-bg.jpg');
+	background-repeat: repeat-x;
+	background-position: bottom;
+	background-color: #475c75;
+	color: #fff;
+	padding: 5px;
+	border: 1px solid #000;
+}
+
+.ToolbarBlue td
+{
+	color: #FFF;
+}
+
+.ToolbarBlue input 
+{
+	border:1px solid #1C1C1C;
+	color:#404143;
+	font-size:10px;
+	height:1%;
+	margin:0 2px 2px 0;
+	padding:3px;
+	vertical-align:middle;
+}
+
+
+/** --------- **/
+/** Web Parts **/
+/** --------- **/
+
+.webpartContainer
+{
+	border: 1px solid #363636 !important;
+	background-color: #F8F8F8;	
+}
+
+.webpartTitleBar 
+{
+	background-color: #5a7495;  
+	font-size: 11px; 
+	color: #FFF;
+	background-image: url('img/MasterPage/bluetoolbar-bg.jpg');
+	background-repeat: repeat-x;
+	background-position: top;
+	padding: 3px 3px 3px 5px;
+	border-bottom: 1px solid #363636;
+}
+
+/** Menu downwards arrow icon **/
+
+.webpartIconArrow 
+{
+	color: #d2e3f7;	
+}
+
+.webpartIconArrow:hover 
+{
+	color: #FFF;	
+}
+
+/** Firefox doesn't display the downwards icon, and instead displays default text (verb) **/
+
+a.webpartTitleVerb 
+{
+	 font-size: 10px; 
+	 text-decoration: underline; 
+	 color: #FFF;
+}
+
+a.webpartTitleVerb:hover
+{
+	text-decoration: none;	
+}
+
+/** ! The menu wont pick up any CSS, so the styles are inline on the default.aspx page ! **/
+
+/** Grid Headers specifically for webparts **/
+
+.webpartHeadingRow 
+{ 
+	background-color: #cbcf43; 
+	font-size: 10px;
+}
+
+.webpartHeadingRow td, .webpartHeadingRow th 
+{ 
+	background-image: url('Grid/tableheader-bg.jpg');
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color: #ffe512;
+	border-right: 1px solid #cbcf43;
+	border-bottom: 1px solid #8a8e14;
+	border-top: 0px;
+	border-left: 0px;
+	padding: 2px;
+	font-family: Verdana; 
+	font-weight: normal;
+	color: #000;
+	vertical-align: middle;
+	border-collapse: collapse;  
+}
+
+/** Catalogue Box **/
+
+.webpartCatalogHeader
+{
+	background-image: url('..img/MasterPage/silvertoolbar-bg.jpg');
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #9f9f9f;
+	color: #1a1a1a;
+	border-bottom: 1px solid #363636;
+	padding: 2px;
+}
+
+.webpartCatalogFooter 
+{
+	border-top: 1px solid #363636;
+	background-color: #f3fff8; 
+	text-align: left;
+}
+
+/** Editor **/
+
+.webpartEditorHeader
+{
+	background-image: url('..img/MasterPage/silvertoolbar-bg.jpg');
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #9f9f9f;
+	color: #1a1a1a;
+	border-bottom: 1px solid #363636;
+	padding: 2px;
+}
+
+.webpartEditorFooter 
+{
+	border-top: 1px solid #363636;
+	background-color: #f3fff8; 
+	text-align: left;
+}
+
+.webpartEditorTitleBar 
+{ 
+	font-size: 11px;
+}
+
+.annoyingpanel, .annoyingpanel div, 
+div.annoyingpanel, *.annoyingpanel,
+.annoyingpanel *  
+{
+	padding: 0px;
+	line-height: 0px;
+	margin: 0px;
+}
+
+/** Used for old tab strip that's being temporarally used on traffic sheet **/
+
+#RadPanelbar1 
+{
+	margin-bottom: 25px; 	
+}
+
+.itemCollapsedStyle, .itemExpandedStyle  
+{
+	color: #FFF;	
+	border-top: 1px solid #000;
+}
+
+.itemExpandedStyle td, 
+.itemCollapsedStyle td
+{
+	height: 29px;
+}
+
+.itemCollapsedStyle:hover, itemExpandedStyle:hover 
+{
+	cursor: pointer;	
+}
+
+#Panel1, #Panel2, #Panel3, 
+#Panel4, #Panel5, #Panel6, 
+#Panel7
+{	
+	height: 26px;
+}
+
+/** Job.aspx SubTabs **/
+
+.subTabOuter 
+{
+	vertical-align: middle;
+	text-align: center;	
+}
+
+.subTabOuter a 
+{
+	text-decoration: none;
+	color: #336699;
+}
+
+.subTabInner 
+{
+	background: url('/images/selector.gif') left center no-repeat; 
+	font-weight: bold; 
+	padding: 6px 6px 8px 22px;
+}
+
+/** Divs for Grouping Information with heading **/
+/** ------------------------- **/
+/** Whitelabeled Default.aspx **/
+/** ------------------------- **/
+
+.layoutDefault-boxOuter 
+{
+	width: 300px;
+	float: left;
+	border: 1px dotted #CCC;
+	margin-right: 15px;	
+}
+
+.layoutDefault-boxOuter a 
+{
+	text-decoration: none;	
+}
+
+.layoutDefault-boxInner 
+{
+	margin: 10px;	
+} 
+
+.layoutDefault-boxHeader 
+{
+	margin: 0;
+	padding: 0;	
+}
+
+.layoutDefault-boxHeader h1 
+{
+	padding: 0 0 5px 0;
+	margin: 0;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+.layoutDefault-boxContent 
+{
+	padding: 0;
+	margin: 0;	
+}
+
+.layoutDefault-contentList 
+{
+	margin: 0;
+	padding: 0;	
+}
+
+.layoutDefault-contentListItem 
+{
+	margin: 0 0 5px 0;
+	list-style-type: none;	
+}
+
+.layoutDefault-contentListItem .default-outer 
+{
+	background-image: url('/images/newMasterPage/button-bg-round-off.png');
+	background-position: right top;
+	height: 40px;
+	display: block;	
+}
+
+.layoutDefault-contentListItem .default-inner 
+{
+	background-image: url('/images/newMasterPage/button-bg-round-off.png');
+	background-position: left top;
+	height: 40px;
+	margin: 0 5px 0 0;
+	display: block;	
+}
+
+/** Overlayed Data Box is used on Deliveries and is a fixed box that doesn't move even when scrolling **/
+
+.overlayedDataBox
+{
+	position: fixed; 
+	bottom: 20px; 
+	right: 20px; 
+	width: 200px; 
+	padding: 10px;
+	border: 1px solid #000; 
+	z-index: 1000; 
+	background-image: url('img/MasterPage/opaque-black.png');
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: transparent;
+	color: #FFF;
+	font-weight: bold;
+}
+
+.masterpagelite_toolTip 
+{
+	width: 250px;
+	padding: 10px;
+	border: 1px solid #000; 
+	z-index: 1000; 
+	background-image: url('img/MasterPage/opaque-black.png');
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: transparent;
+	color: #FFF;
+	font-weight: bold;	
+}
+
+.overlayedDataBox h1, .overlayedDataBox *, .masterpagelite_toolTip * 
+{
+	color: #FFF;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;	
+}
+
+/** Filter box used on collections and deleveries **/
+
+.overlayedFilterBox
+{
+	position:absolute;
+	top: 119px;  
+	//top: 122px;
+	left: 12px;
+	//left: 13px;
+	right: 13px; 
+	padding: 24px 5px 0 5px;
+	z-index: 100; /** So it's over the RadMenu **/ 
+	color: #000;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	background-color: #FFF;
+	border: 1px solid #000;
+}
+
+.overlayedFilterIconOff 
+{
+	background: transparent url('img/masterpage/icon-filter.png') no-repeat 5px 3px;
+	padding: 4px 3px 4px 23px;
+	border: 1px solid #000;
+	float: left;
+	width: 110px;
+	margin-top: 1px;
+	margin-right: 5px;
+}
+
+.overlayedFilterIconOn 
+{
+	background: #FFF url('img/masterpage/icon-filter.png') no-repeat 5px 3px;
+	padding: 4px 3px 4px 23px;
+	border: 1px solid transparent;
+	float: left;
+	width: 110px;
+	margin-top: 1px;
+	z-index: 7600;
+	color: #000 !important;
+	position: relative;	
+} 
+
+.overlayedFilterIconOff:hover 
+{
+	border: 1px solid #000;
+	background-color: #FFF;
+	color: #000;
+	cursor: pointer;	
+}
+
+.overlayedFilterIconOn:hover
+{
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	background-color: #FFF;
+	color: #000;
+	cursor: pointer;	
+} 
+
+/** Point Summary Box used on Job Details - Leg Summary **/
+
+.overlayedLegSummaryBox
+{
+	position:absolute;
+	top: 36px; 
+	//top: 37px;
+	right: 1px; 
+	//right: 2px; 
+	padding: 24px 5px 0 5px;
+	z-index: 7500; /** So it's over the RadMenu **/ 
+	color: #000;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	background-color: #FFF;
+	border: 1px solid #000;
+	width: 450px;
+	height: 632px;
+}
+
+.overlayedLegSummaryIconOff 
+{
+	background: transparent url('img/masterpage/icon-clipboard.png') no-repeat 5px 3px;
+	padding: 4px 3px 4px 23px;
+	border: 1px solid #000;
+	float: right;
+	width: 110px;
+	margin-top: 1px;
+	margin-right: 1px;
+}
+
+.overlayedLegSummaryIconOn 
+{
+	background: #FFF url('img/masterpage/icon-clipboard.png') no-repeat 5px 3px;
+	padding: 4px 3px 4px 23px;
+	border: 1px solid transparent;
+	float: right;
+	width: 110px;
+	margin-top: 1px;
+	margin-right: 1px;
+	z-index: 7600;
+	color: #000 !important;
+	position: relative;	
+} 
+
+.overlayedLegSummaryIconOff:hover 
+{
+	border: 1px solid #000;
+	background-color: #FFF;
+	color: #000;
+	cursor: pointer;	
+}
+
+.overlayedLegSummaryIconOn:hover
+{
+	border-left: 1px solid #000;
+	border-bottom: 1px solid #000;
+	background-color: #FFF;
+	color: #000;
+	cursor: pointer;	
+}
+
+/** Key box used on collections and deleveries **/
+
+.overlayedKeyBox
+{
+	position:absolute; 
+	//top: 104px;
+	top: 103px; 
+	//left: 13px;
+	left: 12px;
+	right: 13px; 
+	padding: 24px 5px 0 5px;
+	z-index: 7500; /** So it's over the RadMenu **/ 
+	color: #000;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	background-color: #FFF;
+	border: 1px solid #000;
+}
+
+.overlayedKeyIconOff 
+{
+	background: transparent url('img/masterpage/icon-key.png') no-repeat 5px 3px;
+	padding: 4px 3px 4px 23px;
+	border: 1px solid #000;
+	float: left;
+	width: 90px;
+	margin-top: 1px;
+	margin-right: 5px;
+}
+
+.overlayedKeyIconOn 
+{
+	background: #FFF url('img/masterpage/icon-key.png') no-repeat 5px 3px;
+	padding: 4px 3px 4px 23px;
+	border: 1px solid transparent;
+	float: left;
+	width: 90px;
+	margin-top: 1px;
+	z-index: 7600;
+	color: #000 !important;
+	position: relative;	
+} 
+
+.overlayedKeyIconOff:hover 
+{
+	border: 1px solid #000;
+	background-color: #FFF;
+	color: #000;
+	cursor: pointer;	
+}
+
+.overlayedKeyIconOn:hover 
+{
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	background-color: #FFF;
+	color: #000;
+	cursor: pointer;	
+} 
+
+/** Refresh icon used on collections and deleveries **/
+
+.overlayedRefreshIcon 
+{
+	background: transparent url('img/masterpage/icon-refresh.png') no-repeat 5px 3px;
+	border: 1px solid #000;
+	float: left;
+	margin-top: 1px;
+	margin-right: 5px;
+}
+
+.overlayedRefreshIcon input 
+{
+	padding: 4px 3px 2px 21px;	
+	width: 80px;
+	margin: 0px !important;
+	background: transparent none;
+	border: 0 none;
+	color: #FFF;
+}
+
+.overlayedRefreshIcon:hover 
+{
+	border: 1px solid #000;
+	background-color: #FFF;
+	color: #000;
+	cursor: pointer;	
+}
+
+.overlayedRefreshIcon input:hover 
+{
+	cursor: pointer;
+	color: #000;	
+}
+
+/** Approve and Reject overlay **/
+
+.overlayedApproveIcon 
+{
+	background: transparent url('img/masterpage/icon-approve.png') no-repeat 5px 3px;
+	border: 1px solid #000;
+	float: left;
+	margin-top: 1px;
+	margin-right: 5px;
+}
+
+.overlayedApproveIcon input 
+{
+	padding: 4px 3px 2px 21px;	
+	width: 140px;
+	margin: 0px !important;
+	background: transparent none;
+	border: 0 none;
+	color: #FFF;
+	font-size: 11px;
+}
+
+.overlayedApproveIcon:hover 
+{
+	border: 1px solid #000;
+	background-color: #FFF;
+	color: #000;
+	cursor: pointer;	
+}
+
+.overlayedApproveIcon:hover input 
+{
+	cursor: pointer;
+	color: #000;	
+}
+
+.overlayedRejectBox
+{
+	position:absolute; 
+	padding: 10px 10px 0 10px;
+	z-index: 7500; /** So it's over the RadMenu **/ 
+	color: #000;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	background-color: #FFF;
+	border: 1px solid #000;
+	width: 450px;
+}
+
+.overlayedRejectBox fieldset 
+{
+	margin: 0 0 10px 0 !important;
+}
+
+.overlayedRejectIcon 
+{
+	background: transparent url('img/masterpage/icon-reject.png') no-repeat 5px 3px;
+	border: 1px solid #000;
+	float: left;
+	margin-top: 1px;
+	margin-right: 5px;
+}
+
+.overlayedRejectIcon input 
+{
+	padding: 4px 3px 2px 21px;	
+	width: 120px;
+	margin: 0px !important;
+	background: transparent none;
+	border: 0 none;
+	color: #FFF;
+	font-size: 11px;
+}
+
+.overlayedRejectIcon:hover 
+{
+	border: 1px solid #000;
+	background-color: #FFF;
+	color: #000;
+	cursor: pointer;	
+}
+
+.overlayedRejectIcon:hover input 
+{
+	cursor: pointer;
+	color: #000;	
+}
+
+/** Current leg map overlay **/
+
+.mapLegSummaryContainer 
+{
+    margin: -16px -10px -15px -10px;  
+}
+
+.mapLegSummaryContainer .ToolbarBlue a 
+{
+    color: #FFF;   
+}
+
+/** Fleet map **/
+
+.mapfleetContainer 
+{
+    margin: -15px -9px -15px -9px;   
+}
+
+/** Save icon **/
+
+.overlayedSaveIcon 
+{
+	background: transparent url('img/masterpage/icon-save.png') no-repeat 5px 3px;
+	border: 1px solid #000;
+	float: left;
+	margin-top: 1px;
+	margin-right: 5px;
+}
+
+.overlayedSaveIcon input 
+{
+	padding: 4px 3px 2px 21px;	
+	width: 120px;
+	margin: 0px !important;
+	background: transparent none;
+	border: 0 none;
+	color: #FFF;
+	font-size: 11px;
+}
+
+.overlayedSaveIcon:hover 
+{
+	border: 1px solid #000;
+	background-color: #FFF;
+	color: #000;
+	cursor: pointer;	
+}
+
+.overlayedSaveIcon:hover input 
+{
+	cursor: pointer;
+	color: #000;	
+}
+
+/** Fleet Map overlay boxes **/
+
+.overlayedMapTableIconOff, 
+.overlayedMapTableIconOn    
+{
+    left: 455px;
+    right: 455px;
+    bottom: 0px;
+    position: absolute;
+    background: transparent url('img/masterpage/opaque-white.png');
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;   
+}
+
+.overlayedMapTableIconOff:hover, 
+.overlayedMapTableIconOn:hover 
+{
+    cursor: pointer;    
+}
+
+.overlayedMapTableIconOff
+{
+    z-index: 90000;   
+}
+
+.overlayedMapTableIconOn    
+{
+     z-index: 93000;     
+}
+
+.overlayedMapTable 
+{
+    z-index: 92000; 
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    background: transparent url('img/masterpage/opaque-white.png');
+    border-top: 1px solid #000;
+    padding: 10px 10px 50px 10px;   
+}
+
+/** Same box as above, but with no backgroud **/
+
+.overlayedClearDataBox
+{
+	position: fixed; 
+	bottom: 20px; 
+	right: 20px; 
+	width: 390px; 
+	padding: 0px;
+	z-index: 8000; /** So it's over the RadMenu **/ 
+	color: #000;
+	color: #000;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+}
+
+/** ! Note: Tabbed data styles are inside jQuery UI ! **/
+
+.loadBuilder fieldset 
+{
+	padding: 3px;
+	margin: 0px;	
+}
+
+.loadBuilder fieldset .buttonClass, 
+.loadBuilder .buttonbar input,
+.ui-tabs .buttonBar input,
+.overlayedFilterBox  .buttonbar input,
+.overlayedKeyBox .buttonbar input,
+.overlayedLegSummaryBox .buttonbar input
+{
+	padding: 3px;
+	font-size: 10px;
+	margin-right: 3px;	
+}
+
+/** Links used on client home **/
+
+.default-link, .default-link:hover 
+{
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+	cursor: pointer;	
+}
+
+.default-link:hover .default-outer 
+{
+	background-image: url('/images/newMasterPage/button-bg-round-on.png');
+}
+
+.default-link:hover .default-inner 
+{
+	background-image: url('/images/newMasterPage/button-bg-round-on.png');
+}
+
+.default-text 
+{
+	font-size: 11px;
+	margin: 0 0 0 15px;
+	padding: 12px 0 0 0;
+	color: #FFF;
+	font-weight: bold;	
+	background-position: left 11px;
+	background-repeat: no-repeat;
+}
+
+.default-addicon 
+{
+	background-image: url('/images/newMasterPage/icon-docsadd.png');
+	padding-left: 24px;	
+}
+
+.default-lockicon 
+{
+	background-image: url('/images/newMasterPage/icon-lockarrow.png');
+	padding-left: 24px;	
+}
+
+.default-searchicon 
+{
+	background-image: url('/images/newMasterPage/icon-search.png');
+	padding-left: 24px;	
+}
+
+.default-docicon 
+{
+	background-image: url('/images/newMasterPage/icon-doc.png');
+	padding-left: 24px;	
+}
+
+/** Add order **/
+
+.neworderOuterCollumnLeft 
+{
+	background-color: #fff8db;
+	padding: 4px;
+	width: 408px;	
+}
+
+.neworderOuterCollumnLeft  .formCellLabel-Horizontal 
+{
+	background-color: #fff8db !important;		
+}
+
+.neworderOuterCollumnMid
+{
+	background-color: #eefced;
+	padding: 4px;	
+	width: 355px;
+}
+
+.neworderOuterCollumnMid  .formCellLabel-Horizontal 
+{
+	background-color: #eefced !important;		
+}
+
+.neworderOuterCollumnRight
+{
+	background-color: #ecf7ff;
+	padding: 4px;
+	width: 355px;	
+}
+
+.neworderOuterCollumnRight  .formCellLabel-Horizontal 
+{
+	background-color: #ecf7ff !important;		
+}
+
+.neworderFieldset .palletforceContainer 
+{
+	background-color: #fff4f6;
+	padding: 5px;	
+}
+
+.neworderFieldset .palletforceContainer .formCellLabel-Horizontal 
+{
+	background-color: #fff4f6 !important;		
+}
+
+/** New Order table **/
+
+.neworderTable 
+{
+	/*border: 1px solid #cddce8;
+	margin: 0 5px 10px 0;
+	background-color: #fff;	*/
+}
+
+.neworderTable .formCellLabel-Horizontal, 
+.neworderTable .formCellField-Horizontal  
+{
+	padding: 3px;
+	border: 0px;
+}
+
+.neworderTable .formCellField-Horizontal
+{
+	/*border-top: 1px solid #cddce8;*/	
+}
+
+.neworderTable .formCellLabel-Horizontal 
+{
+	background-color: transparent;	
+}
+
+.neworderFieldset 
+{
+	border: 1px solid #aeaeae;	
+}

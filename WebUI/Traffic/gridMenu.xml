@@ -1,0 +1,25 @@
+<items>
+  <item Text="Sub-Contract" ClientSideCommand="Subcontract(GridContextMenu.ContextData);" />
+  <item Text="Un-Contract Leg" ClientSideCommand="UnContractLeg(GridContextMenu.ContextData);" />
+	<item LookId="BreakItem" />
+  <item Text="Trunk" ClientSideCommand="Trunk(GridContextMenu.ContextData);" />
+  <item Text="Multi-Trunk" ClientSideCommand="MultiTrunk(GridContextMenu.ContextData);" />
+  <item Text="Remove Trunk" ClientSideCommand="RemoveTrunk(GridContextMenu.ContextData);" />
+  <item Text="Resource This" ClientSideCommand="Trunk(GridContextMenu.ContextData);" />
+  <item LookId="BreakItem" />
+  <item Text="Link Job" ClientSideCommand="LinkJob(GridContextMenu.ContextData);" />
+  <item Text="Remove Links" />
+  <item LookId="BreakItem" />
+  <item Text="Change Booked Times" ClientSideCommand="ChangeBookedTimes(GridContextMenu.ContextData);" />
+  <item Text="Change Planned Times" ClientSideCommand="ChangePlannedTimes(GridContextMenu.ContextData);" />
+  <item LookId="BreakItem" />
+  <item Text="Communicate This" ClientSideCommand="Communicate(GridContextMenu.ContextData);" />
+  <item Text="Job Details" ClientSideCommand="JobDetails(GridContextMenu.ContextData);" />
+  <item Text="Call In" ClientSideCommand="CallIn(GridContextMenu.ContextData);" />
+  <item Text="Give Resource" ClientSideCommand="GiveResourceTo(GridContextMenu.ContextData);" />
+  <item Text="Show Load Order" />
+  <item LookId="BreakItem" />
+  <item Text="Add Destination" ClientSideCommand="AddDestination(GridContextMenu.ContextData);" />
+  <item Text="Add Multiple Destinations" ClientSideCommand="AddMultipleDestinations(GridContextMenu.ContextData);" />
+  <item Text="Remove Destination" ClientSideCommand="RemoveDestination(GridContextMenu.ContextData);" />
+</items>

@@ -1,0 +1,14 @@
+﻿/** ------------------------------------------------------------------------------------------------- **/
+/** Orchestrator Whitelabeled Masterpage CSS - This stylesheet overwrites the Masterpage.Orchestrator **/
+/** CSS file and whitelabels certain elements of masterpages										  **/
+/** ------------------------------------------------------------------------------------------------- **/
+
+.HeaderLogoImg, .masterpage_headerLogoImg, masterpagelite_headerLogoImg
+{
+	background-image: url('Img/orchhaulage-logo.png');
+}
+
+#traffic, .masterpage_headerTraffic, .masterpagelite_headerTraffic, .layoutSearch, .masterpage_searchBox, .masterpagelite_searchBox, .masterpagelite_headerSearch, .masterpage_searchCheckbox, .masterpagelite_searchFilterOptions
+{
+	display: none;
+}

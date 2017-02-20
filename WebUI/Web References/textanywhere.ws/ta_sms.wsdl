@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://ws.textanywhere.net/TA_WS" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://ws.textanywhere.net/TA_WS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://ws.textanywhere.net/TA_WS">
+      <s:element name="SendSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Client_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Client_Pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Client_Ref" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Billing_Ref" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Connection" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Originator" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Destination" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Body" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SMS_Type" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SMS_encoding" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendSMSResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSMSEx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Client_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Client_Pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Client_Ref" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Billing_Ref" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Connection" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Originator" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DestinationEx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Body" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SMS_Type" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Reply_Type" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Reply_Data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSMSExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendSMSExResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMSStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Client_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Client_Pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Client_Ref" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMSStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SMSStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMSStatusEx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Client_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Client_Pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Client_Ref" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMSStatusExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SMSStatusExResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReply">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Client_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Client_Pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReplyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReplyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReplyByClientRef">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Client_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Client_Pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Client_Ref" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReplyByClientRefResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReplyByClientRefResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteReply">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Client_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Client_Pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDs" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteReplyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteReplyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTextInbound">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Client_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Client_Pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Inbound_Number" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTextInboundResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTextInboundResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTextInboundXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Client_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Client_Pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Inbound_Number" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTextInboundXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTextInboundXMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FormatNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FormatNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FormatNumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckNumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceTest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Client_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Client_Pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceTestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSExSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSMSEx" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSExSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSMSExResponse" />
+  </wsdl:message>
+  <wsdl:message name="SMSStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:SMSStatus" />
+  </wsdl:message>
+  <wsdl:message name="SMSStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:SMSStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SMSStatusExSoapIn">
+    <wsdl:part name="parameters" element="tns:SMSStatusEx" />
+  </wsdl:message>
+  <wsdl:message name="SMSStatusExSoapOut">
+    <wsdl:part name="parameters" element="tns:SMSStatusExResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReplySoapIn">
+    <wsdl:part name="parameters" element="tns:GetReply" />
+  </wsdl:message>
+  <wsdl:message name="GetReplySoapOut">
+    <wsdl:part name="parameters" element="tns:GetReplyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReplyByClientRefSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReplyByClientRef" />
+  </wsdl:message>
+  <wsdl:message name="GetReplyByClientRefSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReplyByClientRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteReplySoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteReply" />
+  </wsdl:message>
+  <wsdl:message name="DeleteReplySoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteReplyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTextInboundSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTextInbound" />
+  </wsdl:message>
+  <wsdl:message name="GetTextInboundSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTextInboundResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTextInboundXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTextInboundXML" />
+  </wsdl:message>
+  <wsdl:message name="GetTextInboundXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTextInboundXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="FormatNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:FormatNumber" />
+  </wsdl:message>
+  <wsdl:message name="FormatNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:FormatNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckNumber" />
+  </wsdl:message>
+  <wsdl:message name="CheckNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceTestSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceTest" />
+  </wsdl:message>
+  <wsdl:message name="ServiceTestSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceTestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TextAnywhere_SMSSoap">
+    <wsdl:operation name="SendSMS">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Send SMS to the TextAnywhere Gateway. Return code.</documentation>
+      <wsdl:input message="tns:SendSMSSoapIn" />
+      <wsdl:output message="tns:SendSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMSEx">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Send an extented SMS text message to the TextAnywhere Gateway. Allow multiple destination and reply</documentation>
+      <wsdl:input message="tns:SendSMSExSoapIn" />
+      <wsdl:output message="tns:SendSMSExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMSStatus">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Request a specific SMS status from the TextAnywhere Gateway</documentation>
+      <wsdl:input message="tns:SMSStatusSoapIn" />
+      <wsdl:output message="tns:SMSStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMSStatusEx">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Query the TextAnywhere Gateway and return the extended message's delivery status.</documentation>
+      <wsdl:input message="tns:SMSStatusExSoapIn" />
+      <wsdl:output message="tns:SMSStatusExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReply">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Returns SMS message replies originally sent with SendSMSEx setup to receive replies via the Web Service.</documentation>
+      <wsdl:input message="tns:GetReplySoapIn" />
+      <wsdl:output message="tns:GetReplySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReplyByClientRef">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Returns SMS message replies by client_Ref originally sent with SendSMSEx setup to receive replies via the Web Service.</documentation>
+      <wsdl:input message="tns:GetReplyByClientRefSoapIn" />
+      <wsdl:output message="tns:GetReplyByClientRefSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReply">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Returns SMS message replies originally sent with SendSMSEx setup to receive replies via the Web Service.</documentation>
+      <wsdl:input message="tns:DeleteReplySoapIn" />
+      <wsdl:output message="tns:DeleteReplySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTextInbound">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">This method is used to retrieve all inbound SMS messages sent to a TextInbound number. Return CSV string</documentation>
+      <wsdl:input message="tns:GetTextInboundSoapIn" />
+      <wsdl:output message="tns:GetTextInboundSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTextInboundXML">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">This method is used to retrieve all inbound SMS messages sent to a TextInbound number. Return XML</documentation>
+      <wsdl:input message="tns:GetTextInboundXMLSoapIn" />
+      <wsdl:output message="tns:GetTextInboundXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FormatNumber">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Returns formatted number.</documentation>
+      <wsdl:input message="tns:FormatNumberSoapIn" />
+      <wsdl:output message="tns:FormatNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckNumber">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Check the format of a phone number. It must start with a +. Return (Country name, formatted number, credit amount)</documentation>
+      <wsdl:input message="tns:CheckNumberSoapIn" />
+      <wsdl:output message="tns:CheckNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceTest">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Return the service status and your organisation name</documentation>
+      <wsdl:input message="tns:ServiceTestSoapIn" />
+      <wsdl:output message="tns:ServiceTestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TextAnywhere_SMSSoap" type="tns:TextAnywhere_SMSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendSMS">
+      <soap:operation soapAction="http://ws.textanywhere.net/TA_WS/SendSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMSEx">
+      <soap:operation soapAction="http://ws.textanywhere.net/TA_WS/SendSMSEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMSStatus">
+      <soap:operation soapAction="http://ws.textanywhere.net/TA_WS/SMSStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMSStatusEx">
+      <soap:operation soapAction="http://ws.textanywhere.net/TA_WS/SMSStatusEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReply">
+      <soap:operation soapAction="http://ws.textanywhere.net/TA_WS/GetReply" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReplyByClientRef">
+      <soap:operation soapAction="http://ws.textanywhere.net/TA_WS/GetReplyByClientRef" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteReply">
+      <soap:operation soapAction="http://ws.textanywhere.net/TA_WS/DeleteReply" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTextInbound">
+      <soap:operation soapAction="http://ws.textanywhere.net/TA_WS/GetTextInbound" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTextInboundXML">
+      <soap:operation soapAction="http://ws.textanywhere.net/TA_WS/GetTextInboundXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormatNumber">
+      <soap:operation soapAction="http://ws.textanywhere.net/TA_WS/FormatNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckNumber">
+      <soap:operation soapAction="http://ws.textanywhere.net/TA_WS/CheckNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceTest">
+      <soap:operation soapAction="http://ws.textanywhere.net/TA_WS/ServiceTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TextAnywhere_SMS">
+    <wsdl:port name="TextAnywhere_SMSSoap" binding="tns:TextAnywhere_SMSSoap">
+      <soap:address location="http://ws.textanywhere.net/ta_sms.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PanelItems>
+  <PanelItem ID="Panel1" Text="Drivers" Expanded="True" ImageCollapsed="icon-mydrivers.jpg" ImageExpanded="icon-mydrivers.jpg" ImageHover="icon-mydrivers.jpg" height="100%" BackgroundImageCollapsed="MyResourceBG.gif" BackgroundImageExpanded="MyResourceBG_Hover.gif" BackgroundImageHoverCollapsed="HoverBg.gif" BackgroundImageHoverExpanded="HoverBg.gif"  >
+    <PanelItem ID="Panel1_1" TemplateID="templateDrivers" ItemCollapsedCssClass="CalendarStyle" />
+  </PanelItem>
+  <PanelItem ID="Panel2" Text="Trailers" ImageCollapsed="trailer1.gif" ImageExpanded="trailer1.gif" ImageHover="trailer1.gif" BackgroundImageCollapsed="MyResourceBG.gif" BackgroundImageExpanded="MyResourceBG_Hover.gif" BackgroundImageHoverCollapsed="HoverBg.gif" BackgroundImageHoverExpanded="HoverBg.gif"  >
+    <PanelItem ID="Panel2_1" TemplateID="templateTrailers" ItemCollapsedCssClass="CalendarStyle" />
+  </PanelItem>
+  <PanelItem ID="Panel3" Text="Vehicles" ImageCollapsed="cab.gif" ImageExpanded="cab.gif" ImageHover="cab.gif" BackgroundImageCollapsed="MyResourceBG.gif" BackgroundImageExpanded="MyResourceBG_Hover.gif" BackgroundImageHoverCollapsed="HoverBg.gif" BackgroundImageHoverExpanded="HoverBg.gif"  >
+    <PanelItem ID="Panel3_1" TemplateID="templateVehicles" ItemCollapsedCssClass="CalendarStyle" />
+  </PanelItem>
+  <PanelItem ID="Panel4" Text="Subcontractors" ImageCollapsed="folderList.gif" ImageExpanded="folderList.gif" ImageHover="folderList.gif">
+    <PanelItem ID="Panel4_1" TemplateID="templateSubcontractors" ItemCollapsedCssClass="CalendarStyle" />
+  </PanelItem>
+</PanelItems>

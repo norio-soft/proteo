@@ -1,0 +1,57 @@
+﻿.TopMenuItem 
+{
+                color: #FFF;
+                height:32px;
+                background-image: url('/images/newMasterPage/nav-seperatorbg.jpg');
+                background-position: center right;
+                background-repeat: no-repeat;                
+}
+
+.TopMenuItemHover, .TopMenuItemActive 
+{
+                background-image: url('/images/newMasterPage/nav-seperatorbg.jpg');
+                background-position: center right;
+                background-repeat: no-repeat;
+                background-color: #484747;
+                color: #8cc7f1;
+                height:32px;
+}
+
+.MenuGroup 
+{
+                background-color: #484747;
+                border-right: 1px solid #000;
+                border-bottom: 1px solid #000;
+                border-left: 1px solid #000;
+                border-top: 1px solid #484747;
+}
+
+.MenuItem 
+{
+                background-color: #484747;
+                border: 1px solid #484747;           
+}
+
+.MenuItem nobr 
+{
+                color: #FFF;
+}
+
+.MenuItemHover
+{
+                background-color: #c2c2c2;
+                background-image: url('/images/newMasterPage/menu-hoverbg.jpg');
+                background-repeat:repeat-x;
+                border: 1px solid #a5cae4;           
+}
+
+.MenuItemHover nobr 
+{
+                color: #000;
+}
+
+.MenuBreak 
+{
+                background-color: #3e3e3e;
+                border-bottom: 1px dotted #000;                            
+}

@@ -1,0 +1,173 @@
+.RadMenu_Outlook
+{
+	background:#ADC9F7;
+	font:menu;
+	line-height:20px;
+	padding: 2px 5px;
+}
+
+.RadMenu_Outlook_Context
+{
+	background:none;
+	padding:0;
+}
+
+.RadMenu_Outlook .link
+{
+	color:Black;
+	text-decoration:none;
+	padding:3px 8px;
+}
+
+.RadMenu_Outlook .rootGroup .vertical .separator 
+{
+	padding:0;
+	margin:1px 0;
+}
+
+.RadMenu_Outlook .rootGroup .vertical .separator span.text
+{
+	border-top:1px solid #6A8CCB;
+	margin-left: 28px;
+}
+
+.RadMenu_Outlook .rootGroup .focused,
+.RadMenu_Outlook .rootGroup .link:hover
+{
+	background:#FFD59A url(Img/RootItemFocusedBkg.gif) left top repeat-x;
+	border:1px solid #002D96;
+	padding:2px 7px;	
+}
+
+.RadMenu_Outlook .rootGroup .disabled:hover,
+.RadMenu_Outlook .rootGroup .disabled
+{
+	background:none;
+	border:0;
+	padding:3px 8px;
+	color: #666;
+}
+
+.RadMenu_Outlook .horizontal .expanded,
+.RadMenu_Outlook .horizontal .expanded:hover
+{
+	background:#93B5E7 url(Img/RootItemBkg.gif) left top repeat-x;
+	border:1px solid #002D96;
+	padding:2px 7px;
+	padding-bottom:3px;
+	border-bottom:0;
+}
+
+.RadMenu_Outlook .vertical .expanded,
+.RadMenu_Outlook .vertical .expanded:hover
+{
+	background:#93B5E7 url(Img/x.gif) left top repeat-x;
+	border:1px solid #002D96;
+	padding:2px 7px;
+}
+
+.RadMenu_Outlook .group
+{
+	border:1px solid #002D96;
+	float:left;
+	background: #F6F6F6 url(Img/GroupBkg.gif) repeat-y;
+}
+
+.RadMenu_Outlook .group .link
+{
+	padding:2px;
+}
+
+.RadMenu_Outlook .group .item
+{
+	margin:0;
+	padding:1px;
+}
+
+.RadMenu_Outlook .group .link:hover,
+.RadMenu_Outlook .group .focused,
+.RadMenu_Outlook .group .expanded
+{
+	background-color:#FFEEC2;
+	background-image:none;
+	border:1px solid #002D96;
+	padding:1px;
+}
+
+.RadMenu_Outlook .group .disabled:hover,
+.RadMenu_Outlook .group .disabled
+{
+	background-color:transparent;
+	background-image:none;
+	border:0;
+	padding:2px;
+	color: #ccc;
+}
+
+.RadMenu_Outlook .group .text
+{
+	padding: 0px 46px 0px 25px !important;
+	text-align:left;
+}
+
+
+.RadMenu_Outlook .text
+{
+	padding: 0px !important;
+	line-height: 20px;
+}
+
+.RadMenu_Outlook .expandLeft,
+.RadMenu_Outlook .expandRight
+{
+	background:transparent url(img/groupImage.gif) right center no-repeat;
+	padding-right:10px;
+}
+
+.RadMenu_Outlook_rtl .expandLeft,
+.RadMenu_Outlook_rtl .expandRight
+{
+	background:transparent url(img/groupImageRTL.gif) left center no-repeat;
+}
+
+.RadMenu_Outlook .topArrow,
+.RadMenu_Outlook .topArrowDisabled,
+.RadMenu_Outlook .rightArrow,
+.RadMenu_Outlook .rightArrowDisabled,
+.RadMenu_Outlook .leftArrow,
+.RadMenu_Outlook .leftArrowDisabled,
+.RadMenu_Outlook .bottomArrow,
+.RadMenu_Outlook .bottomArrowDisabled
+{
+	height:16px;
+}
+
+.RadMenu_Outlook .rightArrow,
+.RadMenu_Outlook .rightArrowDisabled
+{
+	background: #F6F6F6 url('img/right.gif') center center no-repeat;
+	width:25px;
+	height:100%;
+}
+
+.RadMenu_Outlook .leftArrow,
+.RadMenu_Outlook .lefttArrowDisabled
+{
+	background: #F6F6F6 url('img/left.gif') center center no-repeat;
+	width:25px;
+	height:100%;
+}
+
+.RadMenu_Outlook .topArrow,
+.RadMenu_Outlook .topArrowDisabled
+{
+	background: #e3efff url('img/top.gif') center center no-repeat;
+	width: 100%;
+}
+
+.RadMenu_Outlook .bottomArrow,
+.RadMenu_Outlook .bottomArrowDisabled
+{
+	background: #e3efff url('img/bottom.gif') center center no-repeat;
+	width: 100%;
+}

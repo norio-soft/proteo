@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script type="text/javascript" >
+    var url = window.location.search.substr(1);
+    if (url.length == 0)
+        document.write("A URL has not been supplied.");
+    else {
+        url = "//" + window.location.hostname + ":" + window.location.port + "/" + url;
+        //if (navigator.appName.indexOf('Explorer') > -1)
+        if (window.ActiveXObject)
+            window.location = url;
+        else {
+            var embed = '<embed id="_nept" type="application/x-meadco-neptune-ax" width="100%" height="100%" param-location="' + url + '"</embed>';
+            var html = '<html><body style="margin:0px;padding:0px;">' + embed + '</body></html>';
+            document.write(html);
+        }
+   }
+</script>

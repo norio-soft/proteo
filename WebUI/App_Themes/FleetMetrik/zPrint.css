@@ -1,0 +1,87 @@
+﻿@media print 
+{
+	body 
+	{
+		margin: 0px !important;
+		padding: 0px !important;	
+		background: white none !important;
+	}
+	
+	body *
+	{
+		/*background: white none !important;*/
+		font-size: 11px !important;
+		font-family: Verdana !important;
+		margin: 0px !important;
+		padding: 0px ;
+		border: 0px !important;
+		color: #000 !important;
+	}
+	
+	body .RadGrid_Orchestrator
+	{
+	    border: 1px !important;
+	    border-collapse: collapse !important;
+	}
+	
+	body .RadGrid_Orchestrator td,
+	body .RadGrid_Orchestrator th
+	{
+	    border: 1px solid #CCC !important;
+	    border-collapse: collapse !important;
+	}
+
+	.buttonBar, .buttonbar, .Buttonbar, .ButtonBar, fieldset, 
+	.masterpagelite_layoutNav, .overlayedClearDataBox, .masterpagelite_layoutHeader,
+	.masterpage_layoutNav, .masterpage_layoutHeader
+	{
+		display: none !important;
+		height: 0px;	
+	}
+	
+	.masterpagelite_layoutContainer, .masterpagelite_layoutFooter,
+	.masterpage_layoutContainer, .masterpage_layoutFooter  
+	{
+		width: 100% !important;	
+	}
+	
+	.masterpagelite_LayoutContent, .masterpagelite_contentTop,  
+	.masterpagelite_contentHolder, .masterpagelite_contentBottom, 
+	.masterpagelite_layoutFooter,
+	.masterpage_LayoutContent, .masterpage_contentTop,  
+	.masterpage_contentHolder, .masterpage_contentBottom, 
+	.masterpage_layoutFooter  
+	{
+		border: 0px none !important;
+		background-color: White !important;	
+	}
+	
+	checkbox 
+	{
+		height: 8px;
+		width: 8px;	
+	}
+	
+	.RadGrid_Orchestrator * {
+		font-family: Verdana !important;
+		font-size:10px !important;
+	}
+	
+    .RadGrid_OrchestratorBig * 
+    {
+        text-align:center !important;
+		font-family: Verdana !important;
+		font-size:20px !important;
+	}
+	
+	 .RadGrid_OrchestratorBig input,
+	 .RadGrid_OrchestratorBig label {
+		border-width:0 !important;
+	}
+	
+       .RadGrid_OrchestratorBig td,
+	 .RadGrid_OrchestratorBig th {
+		padding:1px !important;
+	}
+	
+}

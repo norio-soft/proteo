@@ -1,0 +1,29 @@
+﻿<div>
+    <button class="vehicle-tooltip-btn btn btn-xs btn-default pull-right" ng-click="closePopup()">
+        <i class="glyphicon glyphicon-remove"></i>
+    </button>
+    <div class="vehicle-details">
+        <div class="popup-header">
+            {{pin.regNo}} <span class="driver">Driver: {{driverName}}</span>
+        </div>
+        <div class="separator"></div>
+        <div class="main-details">
+
+            {{pin.reason}}
+            {{LocationString}} <br />
+            {{pin.locationString}} <br />
+        </div>
+        <div class="speed-direction-details">
+            {{pin.dateStamp | date: 'd/MM/yy HH:mm'}} <br />
+            Speed: {{pin.speed}} kph <br />
+            Direction: {{pin.direction}} <br />
+        </div>
+        <div ng-show="pin.currentJobID !== null">
+            Current run: <a class="mouse-cursor-click" ng-click="pin.viewRun()">{{pin.currentJobID}}</a>
+        </div>
+        <div ng-show="isKeyEvent===undefined" class="actions">
+            <a href="#" ng-click="showHistory()"><i class="glyphicon glyphicon-road"></i>Show History</a>
+            <i ng-click="toggleTracking($event)" ng-class="{'tracking-icon-tracking': pin.isTracked ,'tracking-icon': !pin.isTracked,'pull-right': true, 'glyphicon':true, 'glyphicon-screenshot': true}" title="Toggle vehicle tracking."></i>
+        </div>
+    </div>
+</div>

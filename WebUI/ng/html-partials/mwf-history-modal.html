@@ -1,0 +1,42 @@
+﻿<div class="modal-header">
+    <button type="button" class="close" ng-click="close()" aria-hidden="true">&times;</button>
+    <h4 class="modal-title">MWF Instruction Communication History</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6" ng-show="legHistory.startInstructionHistory">
+                <label>
+                    {{legHistory.startInstructionHistory.instructionType}} - {{legHistory.startInstructionHistory.pointDescription}}
+                </label>
+                <div ng-repeat="eventDetails in legHistory.startInstructionHistory.eventDetails">
+
+                    <label> {{eventDetails.TimeofEvent| date:'dd/MM/yyyy HH:mm'}}</label> - {{ eventDetails.EventDetails }}
+
+                </div>
+                <br />
+                <span ng-show="legHistory.endInstructionHistory.deviceIdentifier">
+                    Device Identifier - {{legHistory.startInstructionHistory.deviceIdentifier}}
+                </span>
+            </div>
+            <div class="col-md-6" ng-show="legHistory.endInstructionHistory">
+                <label>
+                    {{legHistory.endInstructionHistory.instructionType}} - {{legHistory.endInstructionHistory.pointDescription}}
+                </label>
+                <div ng-repeat="eventDetails in legHistory.endInstructionHistory.eventDetails">
+
+                    <label>{{eventDetails.TimeofEvent| date:'dd/MM/yyyy HH:mm'}}</label> - {{ eventDetails.EventDetails }}
+
+                </div>
+                <br />
+                <span ng-show="legHistory.endInstructionHistory.deviceIdentifier">
+                    Device identifier - {{legHistory.endInstructionHistory.deviceIdentifier}}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" ng-click="close()">Close</button>
+</div>
+

@@ -1,0 +1,48 @@
+﻿/** ------------------------------------------------------------------------------------------------- **/
+/** Orchestrator Whitelabeled Masterpage CSS - This stylesheet overwrites the Masterpage.Orchestrator **/
+/** CSS file and whitelabels certain elements of masterpages										  **/
+/** This is for Jack Richards ONLY																			  **/
+/** ------------------------------------------------------------------------------------------------- **/
+
+.masterpagelite_layoutHeader, .masterpagelite_layoutHeaderInner, .masterpagelite_layoutNav
+{
+	background-color: #F4A814;
+}
+
+.masterpagelite_headerNavSearchContainer
+{
+	margin-left: 360px;
+}
+
+.masterpagelite_headerLogo 
+{
+	width: 360px;
+}
+
+.HeaderLogoImg, .masterpage_headerLogoImg, .masterpagelite_headerLogoImg
+{
+	background-image: url('Img/JR_Final.gif');
+	width: 350px;
+}
+
+.HeaderLogoImg, .masterpage_layoutNav, .masterpagelite_layoutNav, .masterpagelite_headerTitle, .masterpagelite_headerNews
+{
+	border-color: #c1272d;	
+}
+
+#traffic, .masterpage_headerTraffic, .masterpagelite_headerTraffic, .layoutSearch, .masterpage_searchBox, .masterpagelite_searchBox, .masterpagelite_headerSearch, .masterpage_searchCheckbox, .masterpagelite_searchFilterOptions
+{
+	display: none;
+}
+
+.masterpagelite_headerTitle h1 
+{
+    color: #000;    
+}
+
+.RadMenu_Orchestrator .rmLink .rmText:hover,
+.RadMenu_Orchestrator .rmExpanded .rmText,
+.RadMenu_Orchestrator .rmFocused .rmText
+{
+	color: #c1272d;
+}

@@ -1,0 +1,10 @@
+﻿<Nodes MenuTitle="Client Menu">
+	<Node>
+		<Text>List All Clients</Text>
+		<Url>/webui/resource/organisation/listorganisations.aspx</Url>
+	</Node>
+	<Node>
+		<Text>Add New Client</Text>
+		<Url>/webui/organisation/addupdateorganisation.aspx</Url>
+	</Node>
+</Nodes>

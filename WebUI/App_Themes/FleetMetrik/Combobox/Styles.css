@@ -1,0 +1,128 @@
+.ComboBoxDropDown_Orchestrator
+{
+	border: 1px solid #6e9bbf;
+	background-color: white;
+	cursor: pointer;
+	_cursor: hand;
+}
+
+.ComboBoxImage_Orchestrator
+{
+	vertical-align:middle;
+	border: 1px solid #6e9bbf;
+	border-left: none;
+	background-image: url('/RadControls/ComboBox/Skins/Orchestrator/arrow_on.jpg');
+	background-position: top left;
+	background-repeat: no-repeat; 
+	width: 20px;
+	height: 19px;
+}
+
+.ComboBox_Orchestrator:hover .ComboBoxImage_Orchestrator
+{
+	background-image: url('/RadControls/ComboBox/Skins/Orchestrator/arrow_on.jpg');/** **/
+	border: 1px solid #587d9a;
+	border-left: none;
+}
+
+.ComboBoxImage_Orchestrator:hover 
+{
+	cursor: pointer;	
+}
+
+.ComboBoxInput_Orchestrator
+{
+	border: 1px solid #6e9bbf;
+	border-right: none;	
+	background-color: white;
+	vertical-align: middle;
+	font-family: Verdana;
+	font-size: 11px;
+	color: #000;
+	padding: 3px;
+	height: 13px !important;
+	margin: 0px;
+	cursor: default;
+}
+
+.ComboBox_Orchestrator:hover .ComboBoxInput_Orchestrator
+{
+	border: 1px solid #587d9a;
+	border-right: none;		
+}
+
+.ComboBoxInput_Orchestrator:hover 
+{
+	cursor: text	
+}
+
+.ComboBoxItem_Orchestrator
+{
+	font-family: Verdana;
+	font-size: 11px; 
+	color: #000;	
+	padding: 3px;
+	text-decoration: none;
+	text-align: left;
+}
+
+.ComboBoxItemHover_Orchestrator
+{
+	font-family: Verdana;
+	font-size: 11px; 
+	color: #FFF;
+	text-decoration: none;
+	background-color: #6e9bbf; 
+	cursor: pointer;
+	cursor: hand;
+	padding: 3px;
+	text-align: left;
+	_height:1%;
+}
+
+.ComboBoxItemDisabled_Orchestrator
+{
+	font-family: Verdana;
+	font-size: 11px; 
+	color: gray;
+	cursor: no-drop;
+	padding: 3px;
+	text-decoration: none;
+	text-align: left;
+	height:15px;
+	width:250px;
+}
+
+.ComboBoxLoadingMessage_Orchestrator
+{
+	font-family: Verdana;
+	font-size: 11px; 
+	padding: 2px;
+}
+
+.ComboBoxMoreResultsMessage_Orchestrator
+{
+	font-family: Verdana;
+	font-size: 11px; 
+	padding: 2px;
+	text-align: center;
+}
+
+
+.ComboBoxMoreResultsImage_Orchestrator
+{
+	padding: 5px;
+	margin-top: 5px;
+}
+
+.ComboBoxMoreResultsBox_Orchestrator
+{
+	background-color: whitesmoke;
+}
+
+.ComboBoxHeader_Orchestrator
+{
+	background-color: whitesmoke;
+	font-size: 11px;
+	font-weight: bold;
+}

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Menu>
+  <Group>
+    <Item Text="Order Management">
+      <Group>
+        <Item Text="Add Orders" Href="~/client/clientmanageorder.aspx" />
+        <Item Text="List of Orders" Href="~/client/clientorderlist.aspx" />
+        <Item IsSeparator="True" />
+        <Item Text="Order Points" Href="~/client/clientpointlist.aspx" />
+      </Group>
+    </Item>
+    <Item Text="POD Management">
+      <Group>
+        <Item Text="View and Search POD List" Href="~/POD/viewpods.aspx" />
+        <Item Text="View and Search Historic POD List" Href="~/POD/viewhistoricpods.aspx" />
+      </Group>
+    </Item>
+    <Item Text="Knauf Shunt Loading Sheet" Href="~/groupage/ShuntLoadingSheet.aspx" />
+    <Item Text="Dedicated Vehicle View" Href="~/resource/vehicle/fleet.aspx" />
+    <Item Text="Help">
+      <Group>
+        <Item Text="Log Off" Href="~/security/login.aspx?LO=1" />
+      </Group>
+    </Item>
+  </Group>
+</Menu>

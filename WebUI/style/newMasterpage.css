@@ -1,0 +1,508 @@
+﻿/** ----------------------------------------------------------------------------------- **/
+/** Orchestrator New Masterpage CSS - This stylesheet handles the layout and			**/
+/** look and feel for: header/footer user controls, default.master.                 	**/
+/** and tsmaster.aspx. When making any additions or ammendments remember to add them to	**/
+/** the newMasterPage variants (eg: newMasterPage_Firmin)								**/
+/** ----------------------------------------------------------------------------------- **/
+/** By Robin Turner, Steve Newman, Greg Duffield,										**/
+/** ----------------------------------------------------------------------------------- **/
+/*
+    Jason Steele 16/12/08
+    Removed all hover styles as this causes slow scrolling
+*/
+body
+{
+	background-color: #1c1c1c;
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 0px; 
+	height: 100%;
+}
+
+body *
+{
+	font-family: Verdana, Geneva, sans-serif;	
+	font-size: 11px;
+}
+
+.popupBody 
+{
+	background-color: #FFF;	
+}
+
+/** ----------- **/
+/** Page layout **/
+/** ----------- **/
+
+.layoutContainer 
+{
+	border: 1px solid #000;
+}
+
+.layoutHeaderRow 
+{
+	background-color: #363636;
+	background-image: url('/images/newMasterPage/header-bg.jpg');
+	background-position: top;
+	background-repeat: repeat-x;
+	height: 70px;
+}
+
+.layoutHeaderRow iframe 
+{
+	background-color: Transparent;	
+}
+
+.bodyIframe 
+{
+	background-color: #363636;
+	background-image: url('/images/newMasterPage/header-bg.jpg');
+	background-position: -30px;
+	background-repeat: repeat-x;	
+}
+
+.layoutHeaderLogo 
+{
+	padding: 0 0 0 9px;
+}
+
+.HeaderLogoImg
+{
+	background-image: url('/images/newMasterPage/orch-logo.png'); 
+	background-position: left center; 
+	background-repeat: no-repeat;
+	width: 355px;
+	height: 60px;
+	display: block; 	
+}
+/*
+.HeaderLogoImg:hover 
+{
+	cursor: pointer;	
+}
+*/
+.layoutContentTop 
+{
+	background-color: #FFF; 
+	background-image: url('/images/newMasterPage/content-bg-top.jpg'); 
+	background-position: top; 
+	background-repeat: repeat-x; 
+	height: 14px;
+	border-top: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+}
+
+.layoutContentMiddle 
+{
+	background-color: #FFF;
+	padding: 0px 10px 0px 10px !important;
+}
+
+.layoutContentMiddleInner 
+{
+	min-height: 100px;	
+}
+
+.layoutContentBottom 
+{
+	background-color: #FFF; 
+	background-image: url('/images/newMasterPage/content-bg-bottom.jpg'); 
+	background-position: bottom; 
+	background-repeat: repeat-x; 
+	height: 14px;
+	border-bottom: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+	border-left: 1px solid #FFF;	
+}
+
+.layoutFooter 
+{
+	background-color: #1c1c1c;
+	color: #FFF;
+}
+
+/** ---------------- **/
+/** Header seperator **/
+/** ---------------- **/
+
+.layoutHeaderSeperator 
+{
+	border-top: 1px solid #000;
+	border-bottom: 3px solid #6daddd;
+	background-color: #6daddd;
+	font-size: 0px;
+	line-height: 0px;	
+}
+
+/** ---------- **/
+/** Navigation **/
+/** ---------- **/
+
+.layoutNavigationHomeLink 
+{
+	background-color: #484747;
+	color: #FFF;
+	padding: 0 10px 0 7px;
+	background-image: url('/images/newMasterPage/nav-seperatorbg.jpg');
+	background-position: center right;
+	background-repeat: no-repeat;
+	vertical-align: top !important;	
+}
+
+.layoutNavigationHomeLink a 
+{
+	padding: 0px;
+	height: 15px;
+}
+
+.layoutNavigationHomeLink a img  
+{
+	border: 0px;	
+	margin: 0 0 0 0;
+}
+
+.layoutNavigationMiddle 
+{
+	background-color: #484747;
+	color: #FFF;
+	padding: 0;	
+}
+
+.layoutNavigationVersion 
+{
+	background-color: #484747;
+	color: #FFF;
+	padding: 0px 10px;	
+}
+
+.layoutNavigationVersion span
+{
+	color: #FFF;
+	font-weight: normal;
+}
+
+.layoutNavigationHome a:active
+{
+	color: #FFF;	
+}
+
+.TopMenuItem 
+{
+	color: #FFF;
+	background-image: url('/images/newMasterPage/nav-seperatorbg.jpg');
+	background-position: center right;
+	background-repeat: no-repeat;
+	padding: 12px 10px !important;	
+}
+
+.TopMenuItemHover, .TopMenuItemActive 
+{
+	background-image: url('/images/newMasterPage/nav-seperatorbg.jpg');
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-color: #484747;
+	color: #8cc7f1;
+	padding: 12px 10px !important;
+	cursor: pointer;
+}
+
+.MenuGroup 
+{
+	background-color: #484747;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	border-top: 1px solid #484747;
+}
+
+.MenuItem 
+{
+	background-color: #484747;
+	border: 1px solid #484747;	
+}
+
+.MenuItem nobr 
+{
+	color: #FFF;
+}
+
+.MenuItemHover
+{
+	background-color: #c2c2c2;
+	background-image: url('/images/newMasterPage/menu-hoverbg.jpg');
+	background-repeat:repeat-x;
+	border: 1px solid #a5cae4;	
+}
+
+.MenuItemHover nobr 
+{
+	color: #000;
+}
+
+.MenuBreak 
+{
+	background-color: #3e3e3e;
+	border-bottom: 1px dotted #000;		
+}
+
+/** ---------- **/
+/** Search Box **/
+/** ---------- **/
+
+.layoutSearch
+{
+	float: right;
+	padding-right: 10px;	
+}
+
+.layoutSearchDropDown
+{
+	float: left;
+	width: 160px;
+	height: 22px;
+	display: none;
+}
+
+.layoutSearchBox
+{
+	float: right;
+	width: 197px;
+	border-bottom: 2px solid #282828;
+	text-align: left;
+	margin: 0px;
+}
+
+.layoutSearchBox input 
+{
+	border: 0px;
+	background-color: Transparent;
+	width: 164px;
+	margin: 3px 0px 0px 2px;	
+}
+
+.layoutSearchBoxInner
+{
+	background-image: url('/images/newMasterPage/search-bg.jpg');
+	background-repeat: repeat-x;
+	border: 1px solid #FFF;
+	height: 22px;
+	width: 195px;
+}
+
+.layoutSearchBoxInner a img 
+{
+	cursor: pointer;	
+}
+
+.layoutSearchBoxFilter
+{
+	/** Doesn't seem to be used anymore, but it's here just incase **/
+}
+
+/** ------------- **/ 
+/** Traffic sheet **/
+/** ------------- **/
+
+.layoutTrafficSheetHeader 
+{
+	border: 0px;
+}
+
+/** ------------- **/
+/** Error Page	  **/
+/** ------------- **/
+
+.errorpageBodyClass 
+{
+	background-color: #363636;
+	background-position: top center;
+	background-repeat: no-repeat;
+	font-family: Verdana;
+	font-size: 11px;
+	color: #CCCFD1;	
+}
+
+.errorContainerOuter 
+{
+	margin: 0px auto;
+	padding: 100px 0 0 0;
+	width: 375px;
+	text-align: left;
+}
+
+.errorInnerHeader
+{
+	
+	background-position: top center;
+	background-repeat: no-repeat;
+	height: 15px;	
+}
+
+.errorInnerContent
+{
+	
+	background-position: center center;
+	background-repeat: repeat-y;
+	padding: 0 15px 0 15px;	
+}
+
+.errorInnerFooter
+{
+	
+	background-position: top center;
+	background-repeat: no-repeat;
+	height: 17px;	
+}
+
+.errorBottomFooter
+{
+	margin-top: 7px;
+	color: #CCC;
+}
+
+.errorContentContaier 
+{
+	border: 1px dotted #CCC;
+	padding: 10px;
+	margin-top: 10px;	
+}
+
+/** Content **/
+
+.errorContentBox 
+{
+	padding: 10px;
+	margin-top: 10px	
+}
+
+.errorInnerContent h1 
+{
+	font-size: 18px;
+	font-weight: normal;
+	font-family: Arial;
+	margin: 0 0 3px 0;
+	padding: 0 0 3px 22px;
+	color: #CCCFD1;
+	background-image: url('/images/newMasterPage/icon-warningshield.png');
+	background-repeat: no-repeat;
+	background-position: left 3px;
+}
+
+.errorInnerContent p, .errorInnerContent .ControlTitleHeader 
+{
+	padding: 0px;
+	margin: 0 0 15px 0;	
+}
+
+.errorInnerContent h3 
+{
+	font-weight: normal;
+	font-family: Verdana;
+	font-style: normal;
+	font-size: 18px;
+	/*color: #404143;*/
+	text-align: center;
+	margin: 0 0 15px 0;
+}
+
+.errorButtonBar {
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.errorButtonBar .buttonclass 
+{
+	_border: 1px solid #374b64;	
+	*border: 1px solid whitesmoke;
+	background-color: #374b64;
+	padding: 5px 5px 6px 6px;
+	color: #FFF;
+	background-image: url('/images/newMasterPage/button-bg.jpg');
+	background-color: #3d3d3d;
+	background-position: top;
+	background-repeat: repeat-x;
+	font-size: 11px;
+}
+/*
+.errorButtonBar .buttonclass:hover 
+{
+	cursor: pointer;
+	border: 1px solid #FFF;
+	background-image: url('/images/newMasterPage/button-bg-on.jpg');	
+}
+*/
+/** Footer **/
+
+.errorBottomFooter a, .errorBottomFooter a:link, .errorBottomFooter a:visited  
+{
+	border-bottom: 1px solid #737373;
+	color:#CCC;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+}
+/*
+.errorBottomFooter a:hover {
+	border-bottom: 1px solid #FFF;
+	color: #FFF;
+}
+*/
+
+/** Styles used by the JQuery Search Plug in for positioning the form elements **/
+form.quicksearch { padding: 10px; background: #f7f7f7; }
+form.quicksearch input { margin-left: 5px; width: 300px; }
+form.quicksearch img { vertical-align: middle; margin-left: 5px; }
+
+/** Wizzard master **/
+
+.layoutWizzardHeaderOuter 
+{
+	background-image: url('/images/newMasterPage/nav-bg.jpg'); 
+	background-repeat: repeat-x;	
+}
+
+.layoutWizzardHeaderInner 
+{
+	font-size: 12px; 
+	color: #FFF; 
+	padding: 10px 10px 10px 160px; 
+	vertical-align: top;
+	background-image: url('/images/newMasterPage/orch-logo-mini.png'); 
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	background-color: Transparent;	
+}
+
+.layoutWizzardHeaderInner p 
+{
+	float: left;
+	display: block;
+	width: 17px;
+	color: #CCC;
+	margin: 0;
+	padding: 0;	
+}
+
+.layoutWizzardHeaderInner span 
+{
+	padding: 0;
+	margin: 0;
+	display: block;
+	float: left;	
+}
+
+
+/** validation display **/
+.errorMessage
+{
+	border: 1px dotted #d11111;
+	color: #d11111; 
+	padding: 10px 0px 10px 40px;
+	margin-top: 10px;
+	background-image: url('/images/newLogin/icon-warning.png');
+	background-repeat: no-repeat;
+	background-position: 15px 10px;
+	width: 100%;
+	display: block;
+}

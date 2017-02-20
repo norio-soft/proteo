@@ -1,0 +1,10 @@
+﻿<Nodes MenuTitle="Job Menu">
+	<Node>
+		<Text>Create New</Text>
+		<Url>/webui/job/addupdatejob.aspx</Url>
+	</Node>
+	<Node>
+		<Text>Self Bill Management</Text>
+		<Url>/webui/job/listselfbilljob.aspx</Url>
+	</Node>
+</Nodes>

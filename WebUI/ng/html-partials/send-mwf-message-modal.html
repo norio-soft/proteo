@@ -1,0 +1,106 @@
+﻿<div class="modal-header">
+    <button type="button" class="close" ng-click="cancel()" aria-hidden="true">&times;</button>
+    <h4 class="modal-title">Send MWF Message</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-horizontal" name="sendMwfMessageForm" role="form">
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Run ID</label>
+
+                    <div class="col-xs-9 control-readonly">
+                        {{mwfMessage.heJobID}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="startdate" class="col-sm-3 control-label">Date/Time</label>
+                    <div class="col-xs-5" pr-show-errors>
+                        <div class="input-group">
+                            <input type="text"
+                                   class="form-control"
+                                   id="startdate"
+                                   name="startdate"
+                                   placeholder="Select a start date"
+                                   ng-model="mwfMessage.date"
+                                   datepicker-popup="dd/MM/yyyy"
+                                   close-text="Close"
+                                   is-open="dateTimeOpened"
+                                   required
+                                   pr-auto-focus>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="openDate($event)">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+                            </span>
+                            <span class="input-group-addon input-group-addon-remove-border">
+                                <pr-validator form-control="sendMwfMessageForm.startdate" field-name="Date" only-when-touched>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-4" pr-show-errors>
+                        <div class="input-group">
+                            <input type="text"
+                                   class="form-control"
+                                   id="mwfMessageTime"
+                                   name="mwfMessageTime"
+                                   placeholder="Select a time"
+                                   ng-model="mwfMessage.time"
+                                   pr-format-time
+                                   pr-valid-time />
+                            <span class="input-group-addon input-group-addon-remove-border">
+                                <pr-validator form-control="sendMwfMessageForm.mwfMessageTime" field-name="Time" only-when-touched>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Related Location</label>
+                    <div class="col-xs-9">
+                        <div class="input-group disable-ms-clear margin-bottom-20">
+                            <input class="form-control"
+                                   type="text"
+                                   value=""
+                                   name="mwfMessagePoint"
+                                   ng-model="pointDescription"
+                                   ng-keydown="$event.keyCode == 9"
+                                   placeholder="Type company name or postcode"
+                                   typeahead="point for point in getPoints($viewValue) | limitTo:50"
+                                   typeahead-min-length="3"
+                                   typeahead-editable="true"
+                                   typeahead-on-select="setMWFMessagePoint($item)"
+                                   typeahead-wait-ms="250"
+                                   typeahead-template-url="/ng/html-partials/directives/point-template.html"
+                                   typeahead-loading="pointsLoading">
+                            <span class="input-group-addon">
+                                <span ng-class="(pointsLoading) ? 'glyphicon spinner' : 'glyphicon glyphicon-search'"></span>
+                            </span>
+                            <span class="input-group-addon input-group-addon-remove-border">
+                                <pr-validator form-control="sendMwfMessageForm.mwfMessagePoint" field-name="Location" only-when-touched>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Message</label>
+                    <div class="col-xs-9" pr-show-errors>
+                        <div class="input-group">
+                            <textarea class="form-control"
+                                      name="mwfMessage"
+                                      ng-model="mwfMessage.message"
+                                      required />
+                            <span class="input-group-addon input-group-addon-remove-border">
+                                <pr-validator form-control="sendMwfMessageForm.mwfMessage" field-name="Message" only-when-touched>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-success" ng-click="send()">Send</button>
+    <button type="button" class="btn btn-primary" ng-click="close()">Close</button>
+</div>

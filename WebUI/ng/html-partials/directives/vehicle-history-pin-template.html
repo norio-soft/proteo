@@ -1,0 +1,15 @@
+﻿<div class="vehicle-pin vehicle-history-pin" pr-popover-template="templateUrl"
+     pr-popover-placement="top"
+     pr-popover-trigger="click"
+     ng-click="click()"
+     ng-dblclick="dblClick(event)"
+     ng-style="zIndexStyle">
+
+    <svg ng-hide="isKeyEvent" class="vehicle-history-pin-heading">
+        <circle cx="15" cy="15" r="7" ng-style="svgStyle" />
+        <polygon points="10,11.5 20,11.5 15,18.5" ng-style="svgStyle" ng-transform="transform" />
+    </svg>
+    <div ng-include="svgTemplate" ng-show="isKeyEvent" class="key-event-pin">     
+    </div>
+
+</div>

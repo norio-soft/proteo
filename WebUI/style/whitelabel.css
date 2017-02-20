@@ -1,0 +1,303 @@
+﻿/** Firmin whitelabel CSS **/
+
+body
+{
+	background-color: #1c1c1c;
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 0px; 
+	height: 100%;
+}
+
+body *
+{
+	font-family: Verdana, Geneva, sans-serif;	
+	font-size: 11px;
+}
+
+/** ----------- **/
+/** Page layout **/
+/** ----------- **/
+
+.layoutContainer 
+{
+	border: 1px solid #000;
+}
+
+.layoutHeaderRow 
+{
+	/**background-color: #363636;
+	background-image: url('/images/newMasterPage/firmin-header-bg.jpg');**/
+	background-position: top;
+	background-repeat: repeat-x;
+	background-image: url('/images/newMasterPage/orchhaulage-header-bg.jpg');
+	background-color: #6daddd;
+	height: 70px;
+}
+
+.layoutHeaderRow iframe 
+{
+	background-color: Transparent;
+	display: none;	
+}
+
+.layoutHeaderLogo 
+{
+	padding: 0 0 0 12px;
+}
+
+.HeaderLogoImg
+{
+	background-image: url('/images/newMasterPage/orchhaulage-logo.png');
+	width: 246px;
+	height: 53px; 
+	background-position: left center; 
+	background-repeat: no-repeat;
+	/*width: 201px;
+	height: 63px;
+	background-image: url('/images/newMasterPage/firmin-logo.png');*/
+	display: block; 	
+}
+
+.HeaderLogoImg:hover 
+{
+	cursor: pointer;	
+}
+
+.layoutContentTop 
+{
+	background-color: #FFF; 
+	background-image: url('/images/newMasterPage/content-bg-top.jpg'); 
+	background-position: top; 
+	background-repeat: repeat-x; 
+	height: 14px;
+	border-top: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+}
+
+.layoutContentMiddle 
+{
+	background-color: #FFF;
+	padding: 0px 10px 0px 10px !important;
+}
+
+.layoutContentMiddleInner 
+{
+	min-height: 600px;	
+}
+
+.layoutContentBottom 
+{
+	background-color: #FFF; 
+	background-image: url('/images/newMasterPage/content-bg-bottom.jpg'); 
+	background-position: bottom; 
+	background-repeat: repeat-x; 
+	height: 14px;
+	border-bottom: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+	border-left: 1px solid #FFF;	
+}
+
+.layoutFooter 
+{
+	background-color: #1c1c1c;
+	color: #FFF;
+}
+
+/** ---------------- **/
+/** Header seperator **/
+/** ---------------- **/
+
+.layoutHeaderSeperator 
+{
+	border-top: 1px solid #000;
+	border-bottom: 3px solid #6daddd;
+	background-color: #6daddd;
+	font-size: 0px;
+	line-height: 0px;	
+}
+
+/** ---------- **/
+/** Navigation **/
+/** ---------- **/
+
+.layoutNavigationHomeLink 
+{
+	background-color: #484747;
+	color: #FFF;
+	padding: 0 10px 0 7px;
+	background-image: url('/images/newMasterPage/nav-seperatorbg.jpg');
+	background-position: center right;
+	background-repeat: no-repeat;
+	vertical-align: top !important;
+	width: 24px;	
+}
+
+.layoutNavigationHomeLink a 
+{
+	padding: 0px;
+	height: 15px;
+}
+
+.layoutNavigationHomeLink a img  
+{
+	border: 0px;	
+	margin: 12px 0 0 0;
+}
+
+.layoutNavigationMiddle 
+{
+	background-color: #484747;
+	color: #FFF;
+	padding: 0;	
+}
+
+.layoutNavigationVersion 
+{
+	background-color: #484747;
+	color: #FFF;
+	padding: 0px 10px;	
+}
+
+.layoutNavigationVersion span
+{
+	color: #FFF !important;
+	font-weight: normal !important;
+}
+
+.layoutNavigationHome a:active
+{
+	color: #FFF;	
+}
+
+.TopMenuItem 
+{
+	color: #FFF;
+	background-image: url('/images/newMasterPage/nav-seperatorbg.jpg');
+	background-position: center right;
+	background-repeat: no-repeat;
+	padding: 12px 10px !important;	
+}
+
+.TopMenuItemHover, .TopMenuItemActive 
+{
+	background-image: url('/images/newMasterPage/nav-seperatorbg.jpg');
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-color: #484747;
+	color: #8cc7f1;
+	padding: 12px 10px !important;
+	cursor: pointer;
+}
+
+.MenuGroup 
+{
+	background-color: #484747;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	border-top: 1px solid #484747;
+}
+
+.MenuItem 
+{
+	background-color: #484747;
+	border: 1px solid #484747;	
+}
+
+.MenuItem nobr 
+{
+	color: #FFF;
+}
+
+.MenuItemHover
+{
+	background-color: #c2c2c2;
+	background-image: url('/images/newMasterPage/menu-hoverbg.jpg');
+	background-repeat:repeat-x;
+	border: 1px solid #a5cae4;	
+}
+
+.MenuItemHover nobr 
+{
+	color: #000;
+}
+
+.MenuBreak 
+{
+	background-color: #3e3e3e;
+	border-bottom: 1px dotted #000;		
+}
+
+/** ---------- **/
+/** Search Box **/
+/** ---------- **/
+
+.layoutSearch
+{
+	float: right;
+	margin-right: 10px;
+	width: 160px;
+	height: 60px;
+	background-image:  url('/images/newMasterPage/orch-poweredby-logo.png');
+	background-position: right center;
+	background-repeat: no-repeat;	
+}
+
+.layoutSearch * 
+{
+	display: none;	
+}
+
+.layoutSearchDropDown
+{
+	float: left;
+	width: 160px;
+	height: 22px;
+	display: none;
+}
+
+.layoutSearchBox
+{
+	float: right;
+	width: 197px;
+	border-bottom: 2px solid #282828;
+	text-align: left;
+	margin: 0px;
+}
+
+.layoutSearchBox input 
+{
+	border: 0px;
+	background-color: Transparent;
+	width: 164px;
+	margin: 3px 0px 0px 2px;	
+}
+
+.layoutSearchBoxInner
+{
+	background-image: url('/images/newMasterPage/search-bg.jpg');
+	background-repeat: repeat-x;
+	border: 1px solid #FFF;
+	height: 22px;
+	width: 195px;
+}
+
+.layoutSearchBoxInner a img 
+{
+	cursor: pointer;	
+}
+
+.layoutSearchBoxFilter
+{
+	/** Doesn't seem to be used anymore, but it's here just incase **/
+}
+
+/** ------------- **/ 
+/** Traffic sheet **/
+/** ------------- **/
+
+.layoutTrafficSheetHeader 
+{
+	border: 0px;
+}

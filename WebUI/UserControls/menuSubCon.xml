@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Menu>
+  <Group>
+    <Item Text="Order Management">
+      <Group>
+        <Item Text="Allocated Orders" Href="~/SubConPortal/AllocatedOrders.aspx" />
+      </Group>
+    </Item>
+    <Item Text="POD-Callin Management">
+      <Group>
+        <Item Text="Pods" Href="~/SubConPortal/ManagePods.aspx" />
+        <Item Text="CallIns" Href="~/SubConPortal/ManageCallins.aspx" />
+      </Group>
+    </Item>
+    <Item Text="Help">
+      <Group>
+        <Item Text="Log Off" Href="~/security/login.aspx?LO=1" />
+      </Group>
+    </Item>
+  </Group>
+</Menu>

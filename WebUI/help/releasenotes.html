@@ -1,0 +1,729 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <link href="../App_Themes/Orchestrator/CommonStyles.Orchestrator.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+	    <h1 style="font-family: verdana;"><span style="font-family: verdana;">Version 3.12.2</span></h1>
+        <ul>
+		    <li>Haulier Enterprise ToughTouch Integration (HETTI): There is a new field on the driver screen ‘Passcode’ for use with a ToughTouch. This will be blank by default.</li>
+		    <li>HETTI: There is a new flag on the vehicle screen to flag the vehicle as ‘ToughTouch installed’. This will be un-ticked by default.</li>
+		    <li>HETTI: There are configuration settings for Mobile Worker Flow on each business type. These will be all set to ‘No’ by default.</li>
+		    <li>HETTI: There are several new filters on the Traffic Sheet which are for Mobile Worker Flow enabled runs. Non ToughTouch users should ignore these and continue to use their business types/leg states filters as previously. Please be aware that if the instruction type ‘Non-MWF’ is unticked all of your instructions will disappear from the traffic sheet.</li>
+            <li>The ‘Booking In’ window on the collections/deliveries screen now defaults to the same booking time as the order.</li>
+            <li>Improvements and enhancement of the right hand search bar to speed up searches for orders.</li>
+            <li>Date pickers are now excluded from the tab order to remove impact on quick keyboard-centric data entry.</li>
+            <li>Bug Fix: The menu bar at the top of the screen now always display correctly in Internet Explorer.</li>
+            <li>Bug Fix: Filters no longer ‘hide’ behind reports in Internet Explorer.</li>
+		    <li>Bug Fix: Post town now saves on drivers.</li>
+            <li>Changed default size of some pop-up windows to show all information.</li> 
+            <li>Bug Fix: Client Invoicing Multi Batch screen invoice now always showing once approved.</li>
+            <li>Invoicing: Custom references can now be enabled or disabled individually per client via client settings > References tab.</li>
+            <li>Bug Fix: Change Booked Times from a run ‘Advanced’ mode fix.</li>
+            <li>Bug Fix: The ‘Enter Driver Start Times’ page close button now redirects to the View Start Times page.</li>
+            <li>Bug Fix: the ‘All Work for Sub-Contractor New’ report now retains data when a column sort is applied.</li>
+            <li>Added ‘Show more results’ button to the Auto Batch screen.</li>
+            <li>Increased the max number of cases which can be saved on an order from 9,999 to 99,999.</li>
+            <li>Columns on the Invoice Extra Preparation screen are now sortable.</li>
+            <li>Invoice Audit Trail filter now includes option to search by Invoice No.</li>
+            <li>Bug Fix: Invoice Date fields no longer stretch the full width of the screen.</li>
+            <li>Bug Fix: Running totals on the Multi Batch Invoice screen in the Ready to Invoice list are now correct when amount is above £1000. Note this bug did not affect the amount shown on the invoice.</li>
+            <li>Buttons at the top of the Add Order screen are now always mirrored at the bottom.</li>
+            <li>Change Request: There are two new fields on the driver screen: ‘Start Date’ and ‘Payroll No’. Neither are mandatory.</li>
+            <li>Change Request: The ‘Show location’ screen from the ‘My Resource’ section of the traffic sheet now has a time stamp.</li>
+            <li>Change Request: Schedule appointments can now be added for unavailable drivers.</li>
+        </ul>
+        <h1 style="font-family: verdana;"><span style="font-family: verdana;">Version 3.11.2</span></h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">72199</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Change Request: Manifest - change the default blank lines from 5 to 2.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">69620</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Change Request: Added Address Line 3 to the Collection and Delivery address on the Delivery Note.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">71382</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix: Orders, change Exchange Rate to NULL when changing customer from Foreign one to Domestic one.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">71332</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Change Request: Tip Sheet now shows Point Description and Address Line 1.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">71137</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Error avoidance: Stopped AutoComplete on Add Driver Window in the Post Code field as the Find Address button needs to be pressed otherwise it causes an error.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">70264</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Change Request: Setup email alerts for failed Premier Order imports.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">70228</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix: Added validation to stop customers setting Pallet Spaces to below 0.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">69987</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Changed Maximum number of cases to 99,999 as requested.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">69729</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix: Fixed issue with Order Screen only showing half the information (following Chrome update to 19.0.1084.46).</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">69652</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix: Stop the Call-In Sheet Report erroring if an order is returned with very long Remarks.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">69069</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix: Add Tariff screen. Added validation to force the user to select a Scale for the selected Metric or create one if none present.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">69058</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Change Request: Add/Update Extras Invoice. Add validation to ensure a Nominal Code is selected.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">68915</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix: Client Settings screen will now show if Extra Details are Per Order or Per Invoice upon screen load.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">64349</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix: When cancelling runs, made the pop-up confirmation choices more clear.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">64012</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix: Maintain column configuration between Order searches.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">68302</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix: Client Order Screen - correctly set the Delivery Date according to the default Service Level on Page Load.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">67808</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Change : Tariff Screen. Added a confirmation window when the Delete Tariff Version button is pressed.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">67525</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : POD Scan-In Save screen. Enforce the user to enter a Signature Date to avoid an error.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">67450</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : Call-In screen, limit the No. of Pallets/Cases Despatched to 0-9999.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">67241</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : Fixed an issue on the Find Invoices function.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">68389</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : Invoicing-Client Invoicing-Multi Batch Invoice. Fixed Client field to retain higlight upon focus to allow easier editing.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">68395</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : Call-In Sheet, allow the Email Sent notification to be seen.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">68367</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : Subcontractor - Auto Batch Run. Fixed issue where Job/Order ID column blanked after pressing Add Invoice References button.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">67579</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : For BR-Not-Required Mars Orders, send new Bookin details to Mars.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">68031</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : Make the Closest Town a Required Field when updating Driver Address.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">64297</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : View Fleet page now allows you to choose a date rather than just a month for the history dates.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">67488</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : Route deviation report no longer starts a new page after each driver.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">The run/leg counts now update when filtering the traffic sheet.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">On Resource this the cursor will now focus on the first empty textbox.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Can now add special instructions to driver manifests.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Added collection point filter to all work for customer report.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Rewrote the resource schedule page.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 12px;">&nbsp;</span></td>
+                    <td><span style="font-size: 12px;">&nbsp;</span></td>
+                    <td><span style="font-size: 12px;">&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 12px;">&nbsp;</span></td>
+                    <td><span style="font-size: 12px;">&nbsp;</span></td>
+                    <td><span style="font-size: 12px;">&nbsp;</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Version 3.11.1</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td><span style="font-size: 12px; font-family: arial;">TL&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">The Driver Braking dashboard widget has now been brought into line with the driver details report.&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 12px; font-family: arial;">TL&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">The Driver MPG dashboard widget has now been brought into line with the driver details report.&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 12px; font-family: arial;">TL&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">You can now select a day when using the Historic Location feature. &nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 12px; font-family: arial;">TL&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">The worst Driver Idling widget has been updated to show that the figure is a percentage of the drivers time.&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 12px; font-family: arial;">TL&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">The option to 'Remove' a User or Point has now been added. This does not delete the item, but merely marks the item as unusable&nbsp;in the system.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 12px; font-family: arial;">TL&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">The times on the date range for each report now run from 00:00 to 23:59 (allowing you to run the report for 1 day without having to enter the following days date).</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 12px; font-family: arial;">TL&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">The menus at the top of the report have now been altered - providing a new icon at the far right which will give a CSV export of the report.&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 12px; font-family: arial;">TL&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">Removed the link to the "Driver Details" report from the Vehicle Idling widget, as this had been set-up in error.&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 12px; font-family: arial;">TL&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">When re-sizing the Gazetteer widget, it now re-sizes the content.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 12px; font-family: arial;">TL</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">When re-sizing the "Hours Driven" widget, it now re-sizes the content.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 12px; font-family: arial;">TL&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">When adding a vehicle into the performance profile, the number of vehicles registered against the profile now updates correctly.&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 12px; font-family: arial;">TL&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">The "Driver Details" report now brings back a colour-coded background for the following metrics {MPG, Driver Idling Percentage, Over Revving, Speeding, Severe Breaking} to indicate how good the driver is compared to the benchmark.&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 12px; font-family: arial;">TL&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">&nbsp;</span></td>
+                    <td><span style="font-size: 12px; font-family: arial;">When adding a Resource Grouping, if an existing group has not been selected, then the new group will automatically be added to the "Your Company" group.</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <h1>Version 3.11.0</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">64105</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : changing culture for clients</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : Updated Point control, will now load the correct country when altering a point</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : You can now create a New point or alter an existing point from the Depot List page.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : Fixed address wizard so that it will now close the page when finishing in Chrome.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : Fixed issue when updating an address with the PostCode anywhere, will now create a default geo-fence when geo-coded.</span></td>
+                </tr>
+                                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : Various fixes to the geofence management.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">FleetMetrik - Location Summary Report added.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">FleetMetrik - Visits by Vehicle Report added.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">CR 64922</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix: Fixed issue where PalletForce delivery notes were not converting 24 hour clock times correctly.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">CR 66164</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : Fixed issue where Rejected orders are showing on the Shunt Loading Sheet.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">CR 63741</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : Credit Notes now included in totals on Client Turnover report.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">MH</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">CR 66260</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : Fixed issue where weekends/holidays in January were not adding the the Invalid Date array correctly.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">FleetMetrik - added markers to the search to display 1, 5 and 10 mile radii.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">FleetMetrik - Right click on Map (not on a vehicle) now gives the option of "Historic location". This will show the area searched by using the 1, 5 and 10 mile marker on the map and the results of the search in the "Historic Location" tab.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Goods Refusal : Invoice - Added option "Goods Refusals" tick box to clients invoice settings, allowing goods refusals to be shown on the invoice.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Goods Refusal : Invoice - Good refusals can now appear on an invoice. If selected they will display below the order they were generated from.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Goods Refusal : Callin - When clicking the "Claused" button, you will now be prompted if it is a 'Partial' or 'Full' refusal and then taken to the appropriate page.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Goods Refusal : Add Refusal - The number of pallets for the refusal is now captured.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Goods Refusal : When creating orders from goods refusals, the orginal load number and docket number are carried to the new return order and pre fixed with "R:". The return order will have its collection point set to the delivery point of the original order and will have the pallets and pallet spaces pulled through from the refusals.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Geofence Notifications : You can now set up notifications for incoming only, outgoing only and both incoming and outgoing.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix : fix applied to GPS auto callin to improve its accuracy.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Sage integration : orchestrator now integrates with Sage 2012.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Wisbech Roadways: Emailing of Princes PODs.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Wisbech Roadways: Changes to import, export, allocation and rating related to Princes.</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Version 3.10.0</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">GD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Added Trip Details to the FM Dashboard</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">GD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Added a noticeboard Widget to the FleetMetrik Dashboard</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">GD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Changed the Fleet Metric Dashboard to be all Silverlight and improved the performance.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Added driver to the noticeboard on the fleetview screen.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">GD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Added Geofence Management module which includes geofence notifications. This can be launched from the "Alter Position" link on a point.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Changes to fleet view noticeboard key colors to make them more easily distinguishable and less easily confused with snail trail colors.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Reports sent by clicking the Email button on the report viewer are now sent as a link rather than an attachment, and when a recipient first views the report the time is logged.  The sent emails and view times are visible via the menu: Administration -&gt; System Usage -&gt; Sent Emails.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">GD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">For Fleetmetrik only users they now do not see the TMS Dashboard tab and automatically default to the FleetMetrik Tab.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">61344</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug fix: sometimes the group count on the shunt loading sheet was doubling so have reset it to 0 to stop this.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">61765</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug fix: On Shunt loading the LoadingNow column being null was causing an error, have given it an empty value to stop the error.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">60246</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">O2O - when an order is cancelled or rejected by the O2O target, only unsubcontract the order or remove it from the run if the order is currently subcontracted to that O2O target.  This will resolve the issue with return orders where the order is not subcontracted to the target O2O.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">60263</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix: Invoiced orders were not showing on the sub con portal call in page.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">57355</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">O2O - When a return order was created it was using the default business type, can now use mapping to get the return business type.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">60996</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">O2O - when trying to unsubcontract an order it now checks to see if the order is still subcontracted to the sender of the message before unsubcontracting.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">62334</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix: When adding a client it would show the error page if the post code or address line 1 wasn't entered.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">62247</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix: Fixed bug with country drop down when altering a point from the order screen.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">62160</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix: Fixed occasional error when retrieving an invalid scanner id from a cookie.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">56068</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix: On invoice extra preparation screen you can now click on the extra type to make changes.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 12px;">TL</span></td>
+                    <td><span style="font-size: 12px;">63187</span>&nbsp;</td>
+                    <td><span style="font-size: 12px;">Bug Fix: The image quality issue with Epson-GT-S50 scanner has now been resolved.</span><span style="font-size: 12px;"></span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 12px;">RP</span></td>
+                    <td><span style="font-size: 12px;">63725</span>&nbsp;</td>
+                    <td><span style="font-size: 12px;">Bug Fix: Fixed issue with fuel surcharge on extras.</span><span style="font-size: 12px;"></span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-size: 12px;">RP</span></td>
+                    <td><span style="font-size: 12px;">63230</span>&nbsp;</td>
+                    <td><span style="font-size: 12px;">Bug Fix: Fixed bug with JR to WR Call in integration.</span><span style="font-size: 12px;"></span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">63712</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug fix: Fixed issue on the merge points screen that was allowing head office points to be merged.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">63625</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug fix: fixed issue that was allowing scanned images to be saved with a name of undefined.pdf.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">63718</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug fix: fixed issue that was preventing saving a client after it had been promoted from a client customer.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">64072</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug fix: fixed issue if clicking on find address from the client details page without entering a post code an error would occur.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug fix: Update My Resource Query to return results faster.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug fix: Can now enter a drivers start time from My Resource window.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug fix: Can now enter a Set Travel Notes from My Resource window.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">FleetMetrik - Added 4 reports : "Driver Logon History", "Location Event", "Location Idling", "Location Vehicle Trip".</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug fix: Modfied Route Deviation report to use the "Planned Date Time" when the previous instruction is a Trunk (provides a more accurate Leave Date Time).</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Empty Running - Modified to group by traffic area and provide traffic area totals. Added new column to display pence per mile.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug fix: Updated query for "View and search POD list" and now provide default "from" and "to" dates upon the page load.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug fix: Updated query for "Call In Sheet Report", yeidling faster performance.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug fix: updated the change booking date page so that you can now use the anytime functionality. also chnged the style of the buttons.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug fix: fixed issue when attempting to create a collection point, finding a duplicate and trying to click the go back button.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Points: When attempting to add a new point, if you get the duplicate point screen, there is now a button so that you can select a point from the list.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">GD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Have updated the Org Unit Grouping to be more intuitive.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug Fix: made changes to the scanning wizard to fix a problem where the parent page was not refreshing after scanning in google chrome</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Spread columns more evenly on the flag orders as ready to invoice screen</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Stopped the orchestrator footer from displaying in the middle of the screen in IE 8/9</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">From the find invoice screen, you no longer have to press the search button twice to search for an invoice.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Changed the AddDestination page to use the point control.</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Version 3.9.0</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">GRD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">61130</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">The personal mobile number is no longer displayed on the Driver overview on the Fleetmetrik report</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">F&amp;W: Ultra Finishing customer order import and use of imported tracking number in Palletforce label.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">61356</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">WR: Bug fix for imported PODs where order already has an uploaded POD.  Also improved logging and on-screen reporting.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">61146</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">WR: Change to load number and docket number columns on Shorts and Overs and Goods Refused Report.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">53416</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Bug fix for orders added in client portal that should be delivered anytime, it was setting them as a booking window.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">JS</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">A new module (Orchestrator.Alliance) can be used to automatically export to Palletforce when an order is subcontracted to Palletforce.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">JS</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">New Palletforce label layout.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">JS</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">In the Deliveries Load Builder you can now tick a checkbox to create multiple runs for a specified number of orders.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">JS</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">In the Deliveries Load Builder you can now tick a checkbox to create Pallet Identfications Labels (PILs).</span></td>
+                </tr>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">TP</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">WR: rewrite of Outstanding PODs KPI</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Version 3.8.0 </h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td><span style="width: 20px; font-family: arial; font-size: 12px;">GRD</span></td>
+                    <td><span style="width: 40px; font-family: arial; font-size: 12px;">61074</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">When integrating or adding a new Point the Organisation DropDown was not being cleared and enabled.&nbsp;</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Added the ability to scan from chrome</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Added the Route Deviation report.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-family: arial; font-size: 12px;">RD</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Faded out the toolbar on the fleetview screen when it is inactive, fades back in when the mouse moves over it.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-family: arial; font-size: 12px;">GRD</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Have Fixed the issue where the menus would show behind any silverlight controls on the page, this issue was more prminent in Chrome and Firefox</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-family: arial; font-size: 12px;">GRD</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Added th ability to search the Fleetview screen for Locations (as per BlueSphere)</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-family: arial; font-size: 12px;">TL</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">60023</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">SQL Change : Sub contracted History report will now no longer error if returning data for a cross-docked run, will return a &pound;0 for the 'Charge'.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-family: arial; font-size: 12px;">RP</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">59163</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">When a duplicate order was detected it would just add an order even if add grouped order was clicked, now continues to add whatever button was clicked originally.</span></td>
+                </tr>
+                <tr>
+                    <td><span style="font-family: arial; font-size: 12px;">TP</span></td>
+                    <td><span style="font-family: arial; font-size: 12px;"></span></td>
+                    <td><span style="font-family: arial; font-size: 12px;">Firmin orders are now split 85% to collection resource nominal code, 15% to delivery resource nominal code when invoicing.</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

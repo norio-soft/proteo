@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Orchestrator.WebUI.Services.GeoManagement" CodeBehind="GeoManagement.svc.cs" %>

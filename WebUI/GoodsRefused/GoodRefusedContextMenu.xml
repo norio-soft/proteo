@@ -1,0 +1,6 @@
+﻿<Nodes MenuTitle="Goods Refused Menu">
+	<Node>
+		<Text>Goods Refused Report</Text>
+		<Url>/goodsrefused/ListGoodsRefused.aspx</Url>
+	</Node>
+</Nodes>

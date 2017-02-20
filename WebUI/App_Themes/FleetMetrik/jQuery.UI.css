@@ -1,0 +1,193 @@
+﻿/** ---- **/
+/** Tabs **/
+
+/** Functions **/
+
+.ui-tabs {padding: 0px;}
+.ui-tabs-nav li a { text-decoration: none; padding: 0; }
+.ui-tabs-nav li.ui-tabs-selected {  padding-bottom: 0; border-bottom: 0; }
+.ui-tabs-hide { display: none !important; }
+
+/** Styles **/
+
+.ui-tabs 
+{
+	padding: 5px;
+	margin: 0px !important;
+	border: 1px solid #555;
+	background-color: #FFF;
+	color: #000;
+}
+
+.ui-tabs-nav
+{
+	padding: 0 0 0 5px;
+	margin: 0 !important; 
+	display: block;
+	background-color: #e4ecf7;
+	border: 1px solid #2d4768;
+	height: 29px;
+	list-style-type: none;
+}
+
+.ui-tabs-nav li 
+{
+	margin: 5px 5px 0 0; 
+	padding: 5px 8px; 
+	border: 1px solid #2d4768;
+	border-bottom-color: #2d4768;
+	background-color: transparent;
+	float: left;
+	padding: 0px !important; 	
+}
+
+.ui-corner-top a
+{
+	color: #456286;
+	font-weight: normal;
+	padding: 5px 8px !important;
+	display: block;	
+}
+
+.ui-tabs-panel  
+{
+	padding: 10px 0 0 0;  
+	display: block; 
+	border: 0; 
+	background: none; 
+}
+
+.ui-tabs-selected 
+{
+	border: 1px solid #2d4768 !important;
+	border-bottom-color: #FFF !important;
+	background-color: #FFF !important;
+	margin: 5px 5px 0 0 !important; 
+	padding: 0px !important; 
+}
+
+.ui-tabs-selected a 
+{
+	color: #2d4768;
+	font-weight: normal;
+	padding: 5px 8px !important;
+	display: block;	
+}
+
+.selectedInfo 
+{
+	padding-top: 5px;	
+}
+
+.moveTab 
+{
+	border: 0px !important;
+	background-image: url('img/MasterPage/icon-move.png');
+	background-position: center 3px;
+	background-repeat: no-repeat;
+	float: right !important;
+	height: 18px;
+	width: 16px;	
+}
+
+.moveTab:hover 
+{
+	cursor: move;	
+}
+
+.resetTab 
+{
+	border: 0px !important;
+	background-image: url('img/MasterPage/icon-arrow-snap.png');
+	background-position: center 3px;
+	background-repeat: no-repeat;
+	float: right !important;
+	height: 18px;
+	width: 16px;	
+}
+
+.resetTab:hover 
+{
+	cursor: pointer;	
+}
+
+.expandTab 
+{
+	border: 0px !important;
+	background-image: url('img/MasterPage/icon-expand.png');
+	background-position: center 3px;
+	background-repeat: no-repeat;
+	float: right !important;
+	height: 18px;
+	width: 16px;	
+}
+
+.expandTab:hover 
+{
+	cursor: pointer;	
+}
+
+.detractTab 
+{
+	border: 0px !important;
+	background-image: url('img/MasterPage/icon-detract.png');
+	background-position: center 3px;
+	background-repeat: no-repeat;
+	float: right !important;
+	height: 18px;
+	width: 16px;	
+}
+
+.detractTab:hover 
+{
+	cursor: pointer;	
+}
+
+/** Item move **/
+
+.boxOrderDroppable 
+{
+	border: 1px solid #CCC;
+	background: url('/App_Themes/Orchestrator/img/MasterPage/icon-move.png') no-repeat 4px center; 
+	padding: 3px 3px 3px 22px;
+	z-index: 200000;
+}
+
+.boxOrderDroppable:hover
+{	
+	cursor: move;
+}
+
+.boxOrderTableDrop 
+{
+	border: 2px solid #CCC;
+	height: 100px;	
+}
+
+/** Load builder styles **/
+
+.loadBuilder 
+{
+	height:385px;	
+}
+
+.loadBuilderInner 
+{
+	height: 320px; 
+	overflow-x:hidden; 
+	overflow-y:auto;	
+}
+
+/** Job View styles **/
+
+.jobView 
+{
+	height:330px;	
+}
+
+.jobViewInner 
+{
+	height: 272px; 
+	overflow-x:hidden; 
+	overflow-y:auto;	
+}

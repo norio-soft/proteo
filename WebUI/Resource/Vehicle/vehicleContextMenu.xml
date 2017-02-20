@@ -1,0 +1,14 @@
+<Nodes MenuTitle="Vehicle Menu">
+	<Node>
+		<Text>List All Vehicles</Text>
+		<Url>/webui/resource/vehicle/vehiclelist.aspx</Url>
+	</Node>
+	<Node>
+		<Text>Find Vehicle</Text>
+		<Url>/webui/resource/vehicle/findvehicle.aspx</Url>
+	</Node>
+	<Node>
+		<Text>Add New Vehicle</Text>
+		<Url>/webui/resource/vehicle/addupdatevehicle.aspx</Url>
+	</Node>
+</Nodes>

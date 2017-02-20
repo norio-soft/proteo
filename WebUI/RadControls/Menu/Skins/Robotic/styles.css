@@ -1,0 +1,148 @@
+.RadMenu_Robotic
+{
+	background:transparent url(Img/bkg.gif) left bottom repeat;
+	border-bottom:1px solid #A6A6A6;
+	font:11px arial, sans-serif;
+	line-height:13px;
+	white-space:normal;
+	
+}
+
+.RadMenu_Robotic .rootGroup 
+{
+	background: transparent url(Img/stripe.gif) right top repeat-y;
+	
+}
+
+.RadMenu_Robotic .rootGroup .item
+{
+	background: transparent url(Img/stripe.gif) left top repeat-y;
+	padding-left:7px;
+	padding-right:14px;
+}
+
+.RadMenu_Robotic .link
+{
+	padding:0px 30px;
+	border-top:1px solid #D5D5D5;
+	color:#333333;
+	text-decoration:none;
+	position:relative;
+}
+
+.RadMenu_Robotic .link:hover,
+.RadMenu_Robotic .expanded
+{
+
+	border-top:1px solid #6BC020;
+	border-left:1px solid #D5D5D5;
+	border-right:2px solid #A6A6A6;
+	margin-left:-1px;
+	margin-right:-2px;
+	background:white url(Img/itemBkg.gif) left top repeat-y;
+}
+
+.RadMenu_Robotic .link:hover
+{
+	color:#6BC020;
+}
+
+.RadMenu_Robotic .rootGroup .disabled:hover
+{
+	background: none;
+	border-top:0;
+	BORDER-LEFT:0;
+	border-right:0;
+	margin-left: 0;
+	margin-right:0;
+	margin-top:1px;
+}
+
+.RadMenu_Robotic .group .item
+{
+	background:white url(Img/itemBkg.gif) left top repeat-y;
+	border-left:1px solid #D5D5D5;
+	border-right:2px solid #A6A6A6;
+	padding:0;
+	border-bottom:1px solid #DFDFDF;
+}
+
+
+.RadMenu_Robotic .group .link,
+.RadMenu_Robotic .group .link:hover,
+.RadMenu_Robotic .group .expanded,
+.RadMenu_Robotic .group .expanded:hover
+{
+
+	margin:0;
+	border:0;
+	border-top:1px solid white;	
+	width:146px;
+	padding:0;
+}
+
+.RadMenu_Robotic .group .text
+{
+	padding-left:30px;
+	margin-right:30px;
+}
+
+.RadMenu_Robotic .group .first .link,
+.RadMenu_Robotic .group .first .link:hover,
+.RadMenu_Robotic .group .first .expanded,
+.RadMenu_Robotic .group .first .expanded:hover
+{
+	border-top:0;
+}
+
+
+.RadMenu_Robotic ul.group 
+{
+	padding-bottom:20px;
+	background:transparent url(img/groupBkg.gif) 6px bottom no-repeat;
+	padding-left:6px;
+}
+
+
+.RadMenu_Robotic ul.group .level2
+{
+	padding-left:0px;
+	background:transparent url(img/groupBkg.gif) 0px bottom no-repeat;
+}
+
+.RadMenu_Robotic .text
+{
+	padding-top:7px;
+	padding-bottom:7px;
+	display:block;
+}
+
+.RadMenu_Robotic .level2 li.first
+{
+	background:transparent url(img/firstItemBkg.gif) 0px top no-repeat;	
+	padding-top:10px;
+}
+
+
+.RadMenu_Robotic .level2 li.first .link
+{
+	background:white url(Img/itemBkg.gif) left top repeat-y;
+}
+
+
+.RadMenu_Robotic .group .link .expandLeft
+{
+	background:transparent url(img/arrow.gif) right center no-repeat;	
+}
+
+.RadMenu_Robotic .group .link:hover .expandLeft
+{
+	background:transparent url(img/arrowHover.gif) right center no-repeat;	
+}
+
+.RadMenu_Robotic .group .separator .text
+{
+	padding-top:3px;
+	font-size:1px;
+	line-height:1px;
+}

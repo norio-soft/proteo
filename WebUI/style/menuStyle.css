@@ -1,0 +1,53 @@
+.TopGroup
+{
+  background-color:#006699; 
+  font-family     :verdana, arial, helvetica; 
+  font-size       :8pt; 
+  padding         :2 5 2 5;
+  font-weight     :bold;
+  cursor          :hand;
+}
+.MenuGroup
+{
+  background-color:#EAF4FF;
+  word-spacing    :2px;
+  font-family     :verdana, arial, helvetica; 
+  font-size       :8pt; 
+  padding         :2 0 2 5;
+  border          :solid 1px #006699;
+  border-left-color:#C5DFF9;
+  border-top-color:#C5DFF9;
+  cursor:hand;
+}
+
+.TopMenuItemOver
+{
+  background-color:#006699; 
+}
+
+.SignUpLink
+{
+  background-color:#006699; 
+  color:#FFCC00; 
+}
+
+.MenuItem
+{
+  font-size:8pt; 
+  
+  width:150px;  
+}
+
+.MenuItemOver
+{
+  font-size       :8pt; 
+  width           :150px;
+  background-color:#C5DFF9;
+  color:#006699; 
+}
+
+.MenuBreak
+{
+  margin-left:0px; 
+}
+

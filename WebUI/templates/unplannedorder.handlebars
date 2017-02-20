@@ -1,0 +1,12 @@
+﻿{{#each unplannedOrders}}
+<li class="unplanned-order widget {{{goodstype this.GoodsTypeID}}}" id="{{this.OrderID}}">
+	<div class="widget-head">
+		<h3>{{this.CustomerName}}<span class="widget-strong">{{#if this.IsUK}}UK{{else}}{{#if this.IsImport}}I {{else}}E{{/if}}{{/if}}</span></h3>
+		<span>{{{formatteddate this.CreateDate}}}</span><span class="widget-showOrder" data-orderId="{{this.OrderID}}" style="cursor:pointer; font-size:0.7em;float:right" onclick="showOrder(this);">View Order<span>
+	</div>
+	<div class="widget-content">
+		<p>Collect<br/>{{this.CollectionPoint}}<br/><b>{{this.CollectionTown}}</b><br/>{{{formatteddate this.CollectionDate}}}</p>
+        <p>Deliver<br/>{{this.DeliveryPoint}}<br/><b>{{this.DeliveryTown}}</b><br/>{{{formatteddate this.DeliveryDate}}}</p>
+	</div>
+</li>
+{{/each}}

@@ -1,0 +1,136 @@
+/* r.a.d.menu WebBlue skin */
+
+.RadMenu_WebBlue
+{
+	padding: 0 30px;
+	background: #d5d9de url('img/MenuBackground.gif');
+	line-height: 23px;
+}
+
+.RadMenu_WebBlue .link
+{
+	text-decoration:none;
+	color: white;
+	font-weight: bold;
+	text-align:  center;
+	line-height: 23px;
+	width: 130px;
+}
+
+.RadMenu_WebBlue .link:hover,
+.RadMenu_WebBlue .focused,
+.RadMenu_WebBlue .expanded
+{
+	color: #276c9d;
+	font-weight: bold;
+	background: #fefefe url('img/MainItemBackground.gif') repeat-x;
+}
+
+.RadMenu_WebBlue .text
+{
+	font-size: 11px;
+	padding: 0px 24px;
+}
+
+.RadMenu_WebBlue .group
+{
+	border: solid 1px #d2d8de;
+	border-top: 0px;
+	border-bottom: 0px;
+}
+
+.RadMenu_WebBlue .group .link
+{
+	background: #f0f2f4;
+	border-top: solid 1px #f6f7f9;
+	border-bottom: solid 1px #dde1e4;
+	border-left: 0px;
+	border-right: 0px;
+	width: auto;
+	text-align: left;
+	color: #333;
+	min-width: 130px;
+}
+
+.RadMenu_WebBlue .group .text
+{
+	padding-left: 12px;
+	font-weight: normal;
+	padding-right: 60px;
+}
+
+.RadMenu_WebBlue .group .link:hover,
+.RadMenu_WebBlue .group .focused,
+.RadMenu_WebBlue .group .expanded
+{
+	background: white;
+	color: #5984a2;
+	font-weight: normal;
+	border-top: solid 1px #f6f7f9;
+}
+
+.RadMenu_WebBlue .leftArrow,
+.RadMenu_WebBlue .rightArrow,
+.RadMenu_WebBlue .topArrow,
+.RadMenu_WebBlue .bottomArrow,
+.RadMenu_WebBlue .leftArrowDisabled,
+.RadMenu_WebBlue .rightArrowDisabled,
+.RadMenu_WebBlue .topArrowDisabled,
+.RadMenu_WebBlue .bottomArrowDisabled
+{
+	border-left: 1px solid #d2d8de;
+	border-left: 1px solid #d2d8de;
+	background: #889bb0 url('img/left.gif') center center no-repeat;
+	width:15px;
+}
+
+.RadMenu_WebBlue .topArrow,
+.RadMenu_WebBlue .topArrowDisabled
+{
+	background-image:url('img/top.gif');
+	width:100%;
+}
+
+.RadMenu_WebBlue .bottomArrow,
+.RadMenu_WebBlue .bottomArrowDisabled
+{
+	background-image:url('img/bottom.gif');
+	width:100%;
+}
+
+.RadMenu_WebBlue .rightArrow,
+.RadMenu_WebBlue .leftArrow
+{
+	height:100%;
+}
+
+.RadMenu_WebBlue .rightArrow,
+.RadMenu_WebBlue .rightArrowDisabled
+{
+	background-image: url('img/right.gif');
+}
+
+.RadMenu_WebBlue .vertical .separator .text
+{
+	padding-top: 3px;
+	background: #f7f7f7 url('img/Separator.gif') no-repeat right;
+	font-size: 0px;
+	border-top:0px;
+	border-bottom:0px;
+}
+
+.RadMenu_WebBlue .expandLeft,
+.RadMenu_WebBlue .expandRight
+{
+	background:transparent url(img/groupImage.gif) right center no-repeat;
+}
+
+.RadMenu_WebBlue .link:hover .expandLeft,
+.RadMenu_WebBlue .link:hover .expandRight,
+.RadMenu_WebBlue .focused .expandLeft,
+.RadMenu_WebBlue .focused .expandRight,
+.RadMenu_WebBlue .expanded .expandLeft,
+.RadMenu_WebBlue .expanded .expandRight
+{
+	background:transparent url(img/invertedGroupImage.gif) right center no-repeat;
+}

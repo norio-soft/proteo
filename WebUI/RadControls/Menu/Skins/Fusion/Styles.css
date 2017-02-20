@@ -1,0 +1,130 @@
+/* r.a.d.menu Fusion skin */
+
+.RadMenu_Fusion
+{
+	background:transparent url(Img/bkg.jpg) bottom left repeat;
+	font:11px arial, sans-serif;
+	line-height:50px;
+	padding:0 30px;
+}
+
+.RadMenu_Fusion .rootGroup
+{
+	background:transparent url(Img/stripe.gif) bottom right repeat-y;
+}
+
+.RadMenu_Fusion .item
+{
+	background:transparent url(Img/stripe.gif) bottom left repeat-y;
+	padding:0;
+	padding-left:3px;
+}
+
+.RadMenu_Fusion .level1 .text
+{
+	padding-right:50px;
+}
+
+.RadMenu_Fusion .last
+{
+	padding-right:3px;
+}
+
+.RadMenu_Fusion .link
+{
+	color:Black;
+	text-decoration:none;
+	padding:0 37px;
+	background:transparent url(Img/blue.gif) bottom left repeat-x;
+}
+
+.RadMenu_Fusion .group
+{
+	line-height:27px;
+	border-right:2px solid #C2C2C2;
+	border-bottom:1px solid #C2C2C2;
+}
+
+.RadMenu_Fusion .level1 .item,
+.RadMenu_Fusion .level1 .last
+{
+	padding:0;
+}
+
+.RadMenu_Fusion .level1 .link
+{
+	border-right:1px solid #BDBDBD;
+	border-bottom:1px solid #BDBDBD;
+	border-top:1px solid white;
+	border-left:1px solid #D5D5D5;
+	background:transparent url(Img/item.jpg) bottom left repeat-x;
+	padding-left:18px;
+	padding-right:5px;
+}
+
+.RadMenu_Fusion .level1 .expandLeft,
+.RadMenu_Fusion .level1 .expandRight
+{
+	background:transparent url(img/groupImage.gif) right center no-repeat;
+}
+
+/* right to left */
+.RadMenu_Fusion_rtl .level1 .expandLeft,
+.RadMenu_Fusion_rtl .level1 .expandRight
+{
+	background: transparent url(img/left.gif) left center no-repeat;
+	padding-left: 12px !important;
+}
+
+.RadMenu_Fusion_rtl .level1 .group .link:hover .expandLeft,
+.RadMenu_Fusion_rtl .level1 .group .link:hover .expandRight
+{
+	background:transparent url(img/left.gif) left center no-repeat;
+	margin: 0px 1px;
+	margin-left: -2px;
+}
+
+.RadMenu_Fusion .level1 .link:hover
+{
+	background-image:url(Img/itemHover.jpg);
+	border-left:1px solid #FE9D56;
+}
+
+.RadMenu_Fusion .leftArrow,
+.RadMenu_Fusion .rightArrow,
+.RadMenu_Fusion .topArrow,
+.RadMenu_Fusion .bottomArrow,
+.RadMenu_Fusion .leftArrowDisabled,
+.RadMenu_Fusion .rightArrowDisabled,
+.RadMenu_Fusion .topArrowDisabled,
+.RadMenu_Fusion .bottomArrowDisabled
+{
+	background: #c2c2c2 url('img/left.gif') center center no-repeat;
+	width: 15px;
+}
+
+.RadMenu_Fusion .topArrow,
+.RadMenu_Fusion .topArrowDisabled
+{
+	background-image:url('img/top.gif');
+	width: 100%;
+}
+
+.RadMenu_Fusion .bottomArrow,
+.RadMenu_Fusion .bottomArrowDisabled
+{
+	background-image:url('img/bottom.gif');
+	width: 100%;
+}
+
+.RadMenu_Fusion .rightArrow,
+.RadMenu_Fusion .leftArrow
+{
+	height:100%;
+}
+
+.RadMenu_Fusion .rightArrow,
+.RadMenu_Fusion .rightArrowDisabled
+{
+	background-image:url('img/right.gif');
+}

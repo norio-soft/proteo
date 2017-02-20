@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Menu>
+  <Group>
+    <Item Text="Resources" Href="">
+      <Group>
+        <Item Text="Drivers" Href="~/resource/driver/driverlist.aspx" />
+        <Item Text="Vehicles" Href="~/resource/vehicle/vehiclelist.aspx" />
+        
+        <!--Item Text="Trailers" Href="">
+          <Group>
+            <Item Text="View All" Href="~/resource/trailer/trailerList.aspx" />
+            <Item Text="View Available" Href="~/resource/trailer/trailerList.aspx?showAvailable=true" />
+            <Item Text="Trailer Types" Href="~/resource/trailer/trailertypes.aspx"/>
+            <Item Text="GPS Mapping Details" Href="~/resource/trailer/gpsmappinglist.aspx"/>
+          </Group>
+        </Item>
+        <Item Text="Deleted Resources" Href="~/Resource/DeletedResources.aspx" />
+        <Item IsSeparator="True" />
+        <Item Text="Scheduling" Href="">
+          <Group>
+            <Item Text="View Schedule" Href="~/UseIE.htm?schedule/scheduleresource.aspx" />
+            <Item Text="Add New Schedule" Href="~/schedule/addscheduleresourceItem.aspx" />
+          </Group>
+        </Item>
+        <Item Text="Manage Resource Controllers" Href="~/resource/obtainresources.aspx" />-->
+        <Item Text="View Fleet" Href="~/Resource/Vehicle/fleet.aspx" />
+        <!--Item Text="Manage Planning Categories" Href="/resource/manageplanningcategories.aspx" /-->
+        <Item Text="Manage Resource Grouping" Href="/CAN/AddUpdateOrgUnit.aspx" />
+
+      </Group>
+    </Item>
+    <Item Text="Reports" Href="">
+      <Group>
+        <Item Text="Location" Href="">
+          <Group>
+            <Item Text="Driver Logon History" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=Location.DriverLogon', 800, 800)" />
+            <Item Text="Location Event" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=Location.LocationEvent', 800, 800)" />
+            <Item Text="Location Idling" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=Location.LocationIdling', 800, 800)" />
+            <Item Text="Location Vehicle Trip" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=Location.LocationVehicleTrip', 800, 800)" />
+            <Item Text="Location Summary" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=Location.LocationSummary', 800, 800)" />
+          </Group>
+        </Item>
+        <Item Text="CAN Reports" Href="">
+          <Group>
+            <Item Text="Driver Grading" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=CAN.DriverGrading2', 800, 800)" />
+            <Item Text="Driver Grading Detail" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=CAN.DriverGradingDetail', 800, 800)" />
+            <Item Text="Driver Overview" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=CAN.DriverOverview', 800, 800)" />
+            <Item Text="Driver Fuel Consumption" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=CAN.DriverFuelConsumption2', 800, 800)" />
+            <Item Text="Driver Idling" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=CAN.DriverIdling2', 800, 800)" />
+            <Item Text="Vehicle Fuel Consumption" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=CAN.VehicleFuelConsumption2', 800, 800)" />
+            <Item Text="Vehicle Idling" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=CAN.VehicleIdling2', 800, 800)" />
+          </Group>
+        </Item>
+      </Group>
+    </Item>
+    <Item Text="Locations" Href="">
+      <Group>
+        <Item Text="Location List" Href="~/Point/PointList.aspx" />
+        <!--<Item Text="Merge Points" Href="~/point/mergePoints.aspx" />-->
+      </Group>
+    </Item>
+    <Item Text="Administration" Href="">
+      <Group>
+        <Item Text="System Settings" Href="~/organisation/addupdateorganisation.aspx?yourCompany=true" />
+        <Item Text="Users" Href="~/administration/users/users.aspx" />
+        <Item Text="Profiles" Href="" >
+          <Group>
+            <Item Text="Tracking" Href="~/Profiles/TrackingProfiles.aspx"/>
+            <Item Text="Performance" Href="~/Profiles/PerformanceProfiles.aspx"/>
+          </Group>
+        </Item>
+        <Item Text="Vehicles" Href="">
+        <Group>
+          <Item Text="Manufacturers" Href="~/resource/Vehicle/Manufacturer/manufacturers.aspx" />
+           <Item Text="Models" Href="~/resource/Vehicle/Model/models.aspx" />
+          <Item Text="Vehicle Classes" Href="~/resource/Vehicle/Class/vehicleClasses.aspx" />
+        </Group>
+        </Item>
+        <Item Text="Set New Benchmark" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=CAN.DriverGradingDetail&amp;IsBenchmarkLinkEnabled=true',800,800)" />
+        <Item Text="Edit Grading Weights" Href="~/CAN/AddUpdateDriverGrading.aspx" />
+        <!--<Item Text="Release Notes" Href="/help/relnotes.aspx" />
+        <Item Text="Edit Release Notes" Href="/help/releasenotes.aspx" />-->
+      </Group>
+    </Item>
+    		<Item Text="Help">
+			<Group>
+				<Item Text="Video Site" Href="javascript:popup('http://help.proteofleet.co.uk',1000,1000)" />
+			</Group>
+		</Item>
+    <Item Text="Log Off" Href="~/security/login.aspx?LO=1" />
+  </Group>
+</Menu>

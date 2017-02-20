@@ -1,0 +1,14 @@
+﻿<Nodes MenuTitle="Trailer Menu">
+	<Node>
+		<Text>List All Trailers</Text>
+		<Url>/webui/resource/trailer/trailerlist.aspx</Url>
+	</Node>
+	<Node>
+		<Text>Find Trailer</Text>
+		<Url>/webui/resource/trailer/findtrailer.aspx</Url>
+	</Node>
+	<Node>
+		<Text>Add New Trailer</Text>
+		<Url>/webui/resource/trailer/addupdatetrailer.aspx</Url>
+	</Node>
+</Nodes>

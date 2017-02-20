@@ -1,0 +1,171 @@
+/* r.a.d.menu Inox skin */
+
+.RadMenu_Inox 
+{
+	background: #c5c4c4 url('img/MenuBarBackground.gif') repeat-x;
+}
+
+.RadMenu_Inox .link
+{
+	text-decoration:none;
+	color: #6b6f80;
+	font-size: 11px;
+	width: 89px;
+	line-height: 25px;
+	background: #fefefe url('img/MainItemBackground.gif') no-repeat;
+	text-align: center;
+}
+
+
+.RadMenu_Inox .last .link
+{
+	border-right: 1px solid #868485;
+}
+
+.RadMenu_Inox .vertical .link
+{
+	border-right: 1px solid #868485;
+}
+
+.RadMenu_Inox .link:hover,
+.RadMenu_Inox .focused,
+.RadMenu_Inox .expanded
+{
+	background: #fefefe url('img/MainItemBackgroundHover.gif') no-repeat;
+}
+
+.RadMenu_Inox .rootGroup .disabled:hover
+{
+	background: #fefefe url('img/MainItemBackground.gif') no-repeat;
+}
+
+.RadMenu_Inox .text
+{
+	color: #6b6f80;
+	font-family: Arial, Verdana;
+}
+
+.RadMenu_Inox .group
+{
+	border-right: solid 1px #a9a9a9;
+	border-bottom: solid 1px #c9c9c9;
+}
+
+.RadMenu_Inox .group .text
+{
+	padding-left: 31px;
+	color: #707070;
+}      
+
+.RadMenu_Inox .group .link
+{
+	background: #d0d0d0 url('img/MenuItemBackground.gif') no-repeat;
+	width: 139px;
+	line-height: 28px;
+	text-align: left;
+	border-right: 1px solid #e6e6e6;
+}
+
+.RadMenu_Inox .group .first .link
+{
+	background: #d0d0d0 url('img/MenuItemBgFirst.gif') no-repeat;
+	line-height: 33px;
+}
+
+.RadMenu_Inox .group .first .link:hover,
+.RadMenu_Inox .group .first .focused,
+.RadMenu_Inox .group .first .expanded
+{
+	background: #d0d0d0 url('img/MenuItemBgHoverFirst.gif') no-repeat;
+	line-height: 33px;
+}
+
+.RadMenu_Inox .group .link:hover,
+.RadMenu_Inox .group .focused,
+.RadMenu_Inox .group .expanded
+{
+	background: #d0d0d0 url('img/MenuItemBackgroundHover.gif') no-repeat;
+	color: #cc6102;
+}
+
+.RadMenu_Inox .leftArrow,
+.RadMenu_Inox .rightArrow,
+.RadMenu_Inox .topArrow,
+.RadMenu_Inox .bottomArrow,
+.RadMenu_Inox .leftArrowDisabled,
+.RadMenu_Inox .rightArrowDisabled,
+.RadMenu_Inox .topArrowDisabled,
+.RadMenu_Inox .bottomArrowDisabled
+{
+	border-left:1px solid #a9a9a9;
+	border-top-color:threedhighlight;
+	border-left-color:threedhighlight;
+	background: #c9c9c9 url('img/left.gif') center center no-repeat;
+	width:15px;
+}
+
+.RadMenu_Inox .topArrow,
+.RadMenu_Inox .topArrowDisabled
+{
+	background-image:url('img/top.gif');
+	width:100%;
+}
+
+.RadMenu_Inox .bottomArrow,
+.RadMenu_Inox .bottomArrowDisabled
+{
+	background-image:url('img/bottom.gif');
+	width:100%;
+}
+
+.RadMenu_Inox .rightArrow,
+.RadMenu_Inox .leftArrow
+{
+	height:100%;
+}
+
+.RadMenu_Inox .rightArrow,
+.RadMenu_Inox .rightArrowDisabled
+{
+	background-image: url('img/right.gif');
+}
+
+.RadMenu_Inox .vertical .separator .text
+{
+	padding-top: 3px;
+	background: #cdcece url('img/Separator.gif');
+	font-size: 1px;
+	border-right: 1px solid #e6e6e6;
+}
+
+.RadMenu_Inox .expandLeft,
+.RadMenu_Inox .expandRight
+{
+	background:transparent url(img/groupImage.gif) right center no-repeat;
+}
+
+.RadMenu_Inox_rtl .expandLeft,
+.RadMenu_Inox_rtl .expandRight
+{
+	background: transparent url(img/left.gif) left center no-repeat;
+	margin-left: 8px;
+}
+
+/* right to left */
+.RadMenu_Inox_rtl .group .link:hover .expandLeft,
+.RadMenu_Inox_rtl .group .link:hover .expandRight
+{
+	background:transparent url(img/invertedGroupImageRTL.gif) left center no-repeat;
+	margin: 0px;
+	margin-left: 8px;
+}
+
+.RadMenu_Inox .link:hover .expandLeft,
+.RadMenu_Inox .link:hover .expandRight,
+.RadMenu_Inox .focused .expandLeft,
+.RadMenu_Inox .focused .expandRight,
+.RadMenu_Inox .expanded .expandLeft,
+.RadMenu_Inox .expanded .expandRight
+{
+	background:transparent url(img/invertedGroupImage.gif) right center no-repeat;
+}

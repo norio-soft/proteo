@@ -1,0 +1,549 @@
+﻿/* 
+	v 1.23
+	Oct 31 2006
+*/
+html, body { margin:0; padding:0; font-family:verdana; font-size:100%; }
+h1, h2, h3, h4, h5, h6 { margin-top: 0px; margin-bottom: 0px; font-size: 1em; }	
+h1 { font-size: 2em; }	
+p { margin:0; font-size:100%; }
+tr, td, th { font-size:100%; }
+select, textarea { font-size:100%; }
+form { margin:0; padding:0; }
+small{ font-size: 1em; }  
+img  { border:0; }
+a:link, a:visited, a:active, a:hover { color: #000000; text-decoration: none; }
+li { padding:0; }
+
+/********************** COMPONENT HEADINGS *******************/
+h3 { font-size:.875em; text-transform:uppercase; font-family:arial,helvetica; font-weight:bold; line-height:0.8571em; }
+h3.epi-font1,h3.epi-font2,h3.epi-font3,h3.epi-font4{ font-size:.875em; font-family:arial,helvetica,sans-serif; }
+.epi-font1,.epi-font2,.epi-font3,.epi-font4{ font-size:1em; font-family:arial,helvetica,sans-serif; }
+a.epi-font1,a.epi-font2,a.epi-font3,a.epi-font4{ font-family:verdana; }
+
+/********************** PAGE CONTAINER ELEMENTS *******************/
+div.vgn-main { font-size:100%;}
+div.vgn-pagecontent { width:46.875em; } 
+div.vgn-inner-pagecontent { }
+
+/********************** ACCESSIBILITY *******************/
+#accessibility { display:none; }
+hr.access-rule { display:none; }
+
+/********************** HEADER *******************/
+div.vgn-header                             { height: 5.8125em; margin:0 0 0 0; padding:0; overflow:hidden; width: 46.875em; }
+div.vgn-header div#header-nav-container    { padding:0; margin:0; }
+div.vgn-header div#header-nav-container img#banner-jpg { padding:0; margin-top:0.0625em; width: 46.875em; height: 5.6875em; } /* height="91" width="750" */
+div.vgn-header div#header-nav-container h1 img#banner-jpg { margin-top:0.03125em; width:23.4375em; height:2.8438em; }
+
+div.vgn-header div#nav-bar-container       { position:absolute; left:0px; top:4.375em; }
+div.vgn-header div#nav-bar-container-inner { margin-left:0.9375em; white-space:nowrap; width:46.875em;}/* height="24?" */
+div.vgn-header div#nav-bar-container-inner ul { padding:0; margin:0; display:inline; overflow:hidden;}
+div.vgn-header div#nav-bar-container-inner li { padding:0; margin:0; display:inline; margin-right:0.1875em; }
+div.vgn-header div#nav-bar-container-inner ul li img { height: 1.4375em; vertical-align:top; }             /* height="23" */
+
+div#vgn-navigation-horizontal { margin:0 0 0 0; clear:both; height:1.875em; width: 46.875em; 
+                                background-image:url(/images/skycom/extended-grid/bottom-right-corner.gif);
+								background-position:bottom right;
+								background-repeat:no-repeat; }
+div#vgn-navigation-horizontal div#vgn-navigation-horizontal-inner { padding: 0em 0.9375em 0em 0.46875em;}
+div#vgn-navigation-horizontal div#sub-nav-container { float:left; padding: 0.5em 0em 0em 0em;}
+div#vgn-navigation-horizontal div#sub-nav-container ul { white-space:nowrap; padding:0;margin:0; }
+div#vgn-navigation-horizontal div#sub-nav-container ul li{display:inline; list-style-type:none; margin:0;padding:0;} 
+
+div#vgn-navigation-horizontal div#sub-nav-container img, div#sub-nav-right-container img { height: .75em; vertical-align:top; }	
+div#vgn-navigation-horizontal div#sub-nav-container a { margin-right: 0.625em; }
+div#vgn-navigation-horizontal div#sub-nav-right-container{ float:right; padding-top:0.25em; white-space:nowrap; }
+div#vgn-navigation-horizontal div#sub-nav-right-container label { display:none }
+div#vgn-navigation-horizontal div#sub-nav-right-container input#input-headersearch  { font-size:0.625em; font-family:verdana; width:11.1em; vertical-align:middle; }
+div#vgn-navigation-horizontal div#sub-nav-right-container input#submit-headersearch { font-size:1em; width:2.0625em; height:0.6875em; vertical-align:middle; margin-left:0.5em;}
+
+/********************** BREADCRUMB *******************/
+.aoc-breadcrumb { }	
+.aoc-breadcrumb .aoc-breadcrumb-text { padding-left:0.9375em; }	
+.aoc-breadcrumb .aoc-breadcrumb-text span { font-size:62.5%;line-height:1em; }   
+.aoc-breadcrumb .aoc-breadcrumb-text span a {  }	
+.aoc-breadcrumb .aoc-breadcrumb-text span a:link { color:#000000; } 	
+.aoc-breadcrumb .aoc-breadcrumb-text span a:visited { color:#000000; } 	
+
+/********************** LOGGED-IN WELCOME *******************/
+.aoc-gutter-horiz .aoc-gutter-horiz-text { width:45.9375em; text-align:right; padding-top:0.125em; }
+.aoc-gutter-horiz .aoc-gutter-horiz-text span { color:#4d4d4d; font-size: .625em;}
+.aoc-gutter-horiz .aoc-gutter-horiz-text span a { color:#4d4d4d; }
+
+/********************** PAGE TITLE *******************/
+div.aoc-title-container { clear:both; width: 45.9375em; height:1.25em;}
+div.aoc-title-container-inner {}				
+div.aoc-title { overflow:hidden; }
+div.aoc-title .aoc-title-image { position:absolute; padding-left:0.9375em; height:1.25em; }
+div.aoc-title .aoc-title-image img {  height:1.25em; vertical-align:top; }
+div.aoc-title .aoc-title-buttons   { position:absolute; width: 45.9375em; height:1.25em; overflow:hidden; }
+div.aoc-title .aoc-title-buttons-inner{ position:absolute; right:0; bottom:0; padding:0; }
+div.aoc-title .aoc-title-buttons-inner img { margin:0 .625em 0 1.25em; width:0.4375em; height:0.4375em; }         
+div.aoc-title .aoc-title-buttons-inner a { font-size:0.6875em; font-family: verdana,arial,helvetica; color: #2d076e; text-decoration: none; }
+div.aoc-title .aoc-title-buttons-inner a:link,
+div.aoc-title .aoc-title-buttons-inner a:visited { color: #000000; }
+div.aoc-title-container h1 { font-size:1em; }
+	
+/********************** SUB-TITLE *******************************/
+div.aoc-subtitle{ clear:both; overflow:hidden;}
+div.aoc-subtitle-2 h2	{ font-size: 0.875em; line-height:0.75em; text-transform:uppercase; font-family:arial,helvetica; color:#4d4d4d;}
+div.aoc-subtitle h2	{ font-size: 1.1875em; line-height:0.75em; text-transform:uppercase; font-family:arial,helvetica; color:#4d4d4d;}
+
+/********************** COLUMN/ROW FRAMEWORK *******************/
+.aoc-gutter-vertsemi  {  width: 0.3125em; height: 2em; overflow:hidden; }	
+.aoc-gutter-vert  {  width: 0.9375em; height: 2em; overflow:hidden; }	
+.aoc-gutter-horiz { height: 0.9375em; clear:both;  overflow:hidden; width:45.9375em; }
+.aoc-gutter-horizsemi { height: 0.75em; clear:both; overflow:hidden; }
+.vgn-pagecontent .aoc-gutter-horiz { width:auto; } 			
+
+.aoc-columns-container { clear:both; margin-left:0.9375em; }
+.aoc-columns-container .aoc-genericcolumn,
+.aoc-columns-container .aoc-genericpanel,
+.aoc-columns-container .aoc-gutter-vert,
+.aoc-columns-container .aoc-gutter-vertsemi{ display:block; float:left; }
+
+.aoc-columns-container .aoc-genericrow { clear:both; }
+.aoc-columns-container .aoc-genericcolumn{ overflow:visible; }
+.aoc-columns-container .aoc-genericpanel  {}
+
+/**********************************************************************
+***********************************************************************
+****************                                   ********************
+****************   Next 4 declarations for         ********************
+****************   development purposes only       ********************
+****************                                   ********************
+****************   Please delete upon integration  ********************
+****************                                   ********************
+***********************************************************************
+***********************************************************************/
+.aoc-columns-container .semi { width: 8.75em; }   
+.aoc-columns-container .single { width: 14.375em; }   
+.aoc-columns-container .double { width: 29.7em; } /* rounded up for FF quirk from 29.6875em;  */ 
+.aoc-columns-container .triple { width:45.062em; }  /* up for FF quirk from 45em; */
+       
+/**********************************************************************
+***********************************************************************
+****************                                   ********************
+****************   Previous 4 declarations for     ********************
+****************   development purposes only       ********************
+****************                                   ********************
+****************   Please delete upon integration  ********************
+****************                                   ********************
+***********************************************************************
+***********************************************************************/
+
+
+
+/********************** FOOTER *******************/
+#vgn-footer-container { clear:both; width: 45.9375em; padding-bottom:0.0625em; }
+#vgn-footer-container-inner { padding-left: 0.9375em; }			
+#vgn-footer	{ padding:.3em 0 0 .8em; color:#ffffff; 
+			background-image:url(/images/skycom/extended-grid/bottom-right-corner.gif);
+			background-position:bottom right;
+			background-repeat:no-repeat; }
+#vgn-footer .firstrow { height:1.125em; } 
+#vgn-footer .copyright{ font-size:60%; font-weight:bold; float:left; padding-top:0.3125em; }
+#vgn-footer ul { white-space:normal; list-style-type:none; padding:0;margin:0; }
+#vgn-footer ul li { display:inline; margin:0; padding:0; }
+#vgn-footer a         { text-decoration:none; font-size:85%; }
+#vgn-footer a:link    { color:#ffffff; }
+#vgn-footer a:visited { color:#ffffff; }
+#vgn-footer .sky-links{  padding-right:0.625em; text-align:right; float:right; }
+#vgn-footer .sky-links label   { font-size:60%; vertical-align:middle; }	
+#vgn-footer .sky-links select  { font-family:Verdana; font-size:60%; vertical-align:top; margin: 0; padding:0; }
+#vgn-footer .sky-links input   { font-size:1em; vertical-align:middle; width:2.0625em; height:0.6875em; }
+#vgn-footer .secondrow { clear:both; font-size:73%; padding: .4em 0 .5137em 0; }
+#vgn-footer .footer-list-item-divider { padding:0 .4280em 0 .4280em; }
+
+/*********** GRAY BORDERS WITH CUTOFFS *************/	
+.aoc-borders { }
+/* ----------- default borders --------------- set required combination to display when classname is simply  "aoc-borders" here  ---------- */
+.aoc-borders div.b-tl { position:absolute; width:16px; height:16px; z-index:3000;
+                        background: transparent url(/images/skycom/extended-grid/border-top-left.gif)     no-repeat top    left;  }
+.aoc-borders div.b-br { background: transparent url(/images/skycom/extended-grid/border-bottom-right.gif) no-repeat bottom right; }
+.aoc-borders div.b-b  { background: transparent url(/images/skycom/extended-grid/border-sides.gif)        repeat-x  bottom left;  }
+.aoc-borders div.b-t  { background: transparent url(/images/skycom/extended-grid/border-sides.gif)        repeat-x  top    left;  }
+.aoc-borders div.b-l  { background: transparent url(/images/skycom/extended-grid/border-sides.gif)        repeat-y  top    left;  }
+.aoc-borders div.b-r  { background: transparent url(/images/skycom/extended-grid/border-sides.gif)        repeat-y  top    right; }
+/* ----------- globally turn off border display when any classname other than "aoc-borders" is present -------------- */ 
+div.tl div.b-tl, div.tl div.b-tr, div.tl div.b-br, div.tl div.b-bl, div.tl div.b-b, div.tl div.b-t, div.tl div.b-l, div.tl div.b-r,
+div.tr div.b-tl, div.tr div.b-tr, div.tr div.b-br, div.tr div.b-bl, div.tr div.b-b, div.tr div.b-t, div.tr div.b-l, div.tr div.b-r,
+div.br div.b-tl, div.br div.b-tr, div.br div.b-br, div.br div.b-bl, div.br div.b-b, div.br div.b-t, div.br div.b-l, div.br div.b-r,
+div.bl div.b-tl, div.bl div.b-tr, div.bl div.b-br, div.bl div.b-bl, div.bl div.b-b, div.bl div.b-t, div.bl div.b-l, div.bl div.b-r,
+div.b  div.b-tl, div.b  div.b-tr, div.b  div.b-br, div.b  div.b-bl, div.b  div.b-b, div.b  div.b-t, div.b  div.b-l, div.b  div.b-r,
+div.t  div.b-tl, div.t  div.b-tr, div.t  div.b-br, div.t  div.b-bl, div.t  div.b-b, div.t  div.b-t, div.t  div.b-l, div.t  div.b-r,
+div.l  div.b-tl, div.l  div.b-tr, div.l  div.b-br, div.l  div.b-bl, div.l  div.b-b, div.l  div.b-t, div.l  div.b-l, div.l  div.b-r,
+div.r  div.b-tl, div.r  div.b-tr, div.r  div.b-br, div.r  div.b-bl, div.r  div.b-b, div.r  div.b-t, div.r  div.b-l, div.r  div.b-r { background-image: url( none ); } 
+/* ----------- selectively turn on border display  -------------- */ 
+div.tl div.b-tl { position:absolute; width:16px; height:16px; z-index:3000;
+                      background: transparent url(/images/skycom/extended-grid/border-top-left.gif)     no-repeat top    left!important ; }
+div.tr div.b-tr { background: transparent url(/images/skycom/extended-grid/border-top-right.gif)    no-repeat top    right!important ; }
+div.br div.b-br { background: transparent url(/images/skycom/extended-grid/border-bottom-right.gif) no-repeat bottom right!important ; }
+div.bl div.b-bl { background: transparent url(/images/skycom/extended-grid/border-bottom-left.gif)  no-repeat bottom left!important ;  }
+div.b  div.b-b  { background: transparent url(/images/skycom/extended-grid/border-sides.gif)        repeat-x  bottom left!important ;  }
+div.t  div.b-t  { background: transparent url(/images/skycom/extended-grid/border-sides.gif)        repeat-x  top    left!important ;  }
+div.l  div.b-l  { background: transparent url(/images/skycom/extended-grid/border-sides.gif)        repeat-y  top    left!important ;  }
+div.r  div.b-r  { background: transparent url(/images/skycom/extended-grid/border-sides.gif)        repeat-y  top    right!important ; }
+
+/*********** LINK HOVER BEHAVIOUR *************/	
+a.underline-hvr,       a.underline-hvr span       { text-decoration:underline!important; } 
+a.underline-hvr:hover, a.underline-hvr:hover span { text-decoration:none!important; }  
+a.none-hvr,       a.none-hvr span       { text-decoration:none!important; } 
+a.none-hvr:hover, a.none-hvr:hover span { text-decoration:underline!important; }
+
+/*********** ACCESSIBILITY SPACERS *************/
+div.spacer-div{ display:none}
+
+/*********** SIMPLE FLOAT CLEAR *************/
+.clear 	{clear:both;}
+
+/*********** SOME COMMON IMAGE WIDTHS *************/
+/* these assume "height:" has been set elsewhere in the cascade. images should have BOTH height: and width: AND DO NOT OMIT width= and height= from HTML!!! */	
+img.width33  { width:2.0625em; }
+img.width50  { width:3.125em;  }
+img.width51  { width:3.1875em; }
+img.width58  { width:3.625em;  }
+img.width57  { width:3.5625em; }
+img.width59  { width:3.6875em; }
+img.width64  { width:4em;      }
+img.width65  { width:4.0625em; }
+img.width68  { width:4.25em; }
+img.width69  { width:4.3125em; }
+img.width70  { width:4.375em;  }
+img.width73  { width:4.5625em; }
+img.width76  { width:4.75em;   }
+img.width79  { width:4.9375em; }
+img.width80  { width:5em;      }
+img.width82  { width:5.125em;  }
+img.width85  { width:5.3125em; }
+img.width86  { width:5.375em;  }
+img.width91  { width:5.6875em; }
+img.width96  { width:6em;      }
+img.width115 { width:7.1875em; }
+img.width122 { width:7.625em;  }
+img.width130 { width:8.125em;  }
+img.width132 { width:8.25em;   }
+img.width147 { width:9.1875em; }
+img.width149 { width:9.3125em; }
+img.width159 { width:9.9375em; }
+img.width160 { width:10em;     }
+img.width162 { width:10.125em; }
+
+/*********** SOME COMMON IMAGE HEIGHTS *************/
+/* these assume "width:" has been set elsewhere in the cascade. images should have BOTH height: and width: AND DO NOT OMIT width= and height= from HTML!!! */	
+img.height80  { height:5em;      }
+img.height155 { height:9.6875em; }
+
+/*********** SOME COMMON IMAGE WIDTHS/HEIGHTS *************/
+img.dims80x20  { width:5em;      height:1.25em;   }
+img.dims130x56 { width:8.125em;  height:3.5em;    }
+img.dims87x56  { width:5.4375em; height:3.5em;    }
+img.dims97x56  { width:6.0625em; height:3.5em;    }
+img.dims67x56  { width:4.1875em; height:3.5em;    }
+img.dims92x56  { width:5.75em;   height:3.5em;    }
+img.dims170x49 { width:10.625em; height:3.0625em; }
+img.dims73x49  { width:4.5625em; height:3.0625em; }
+img.dims95x49  { width:5.9375em; height:3.0625em; }
+img.dims135x49 { width:8.4375em; height:3.0625em; }
+
+/*********** BUTTON with guillemet image *************/
+button.guillemet { border-width:0px; background-color:transparent; text-transform:uppercase; font-size:1em; font-family:arial,helvetica; font-weight:bold; cursor:pointer; cursor:hand; }
+button.guillemet img { width:0.6875em; height:0.5625em; margin-right:0.375em; }
+button.guillemet span { font-size:0.875em; }
+
+/*********** LINK with guillemet image *************/
+a.guillemet { border-width:0px; background-color:transparent; text-transform:uppercase; font-size:1em; font-family:arial,helvetica; font-weight:bold; cursor:pointer; cursor:hand; }
+a.guillemet img { width:0.6875em; height:0.5625em; margin-right:0.375em; }
+a.guillemet span { font-size:0.875em; }
+a.guillemet-twelve span { font-size:0.75em; }
+
+
+/*********** RATING stars *************/
+p.aoc-rating{ margin:0; line-height:0.625em; }
+p.aoc-rating br{height:0.625em;}
+p.aoc-rating img{ width:0.625em; height:0.5625em; cursor:pointer; cursor:hand; }
+p.aoc-rating span { font-size:0.625em; line-height:1em; }
+p.aoc-rating span.saved { color:firebrick; }
+
+/*********** LINK with arrow or plus image *************/
+p.aoc-arrowlink, span.aoc-arrowlink { display:block; margin:0; margin-left:1.25em!important; text-indent:-1.25em!important; font-size:1em!important; ; }						
+p.aoc-arrowlink a, span.aoc-arrowlink a { font-size:1em!important;  }
+p.aoc-arrowlink img, span.aoc-arrowlink img{  width:0.625em!important; height:0.625em!important; margin-right:0.625em!important; }							
+p.aoc-arrowlink span, span.aoc-arrowlink span { font-size:0.75em!important; font-family:arial,helvetica;text-transform:uppercase; text-decoration:none; font-weight:bold;  }          							
+p.aoc-arrowlink-right { margin:0; font-size:1em!important; }						
+p.aoc-arrowlink-right a { font-size:1em;   }
+p.aoc-arrowlink-right img {  width:0.625em!important; height:0.625em!important; margin-left:0.625em!important; }							
+p.aoc-arrowlink-right span { font-size:0.75em; font-family:arial,helvetica;text-transform:uppercase; text-decoration:none; font-weight:bold; }          							
+p.morerecs-xml { display:none; }
+
+/*********** Popup Div and In-Page version for non-JS *************/
+div#sky-popup { visibility:hidden; position:absolute; left:0px; top:0px; z-index:4000; border:1px black solid;  color:#000000; background-color:#ffffe0; }
+div#sky-popup div#sky-popup-content { font-size:.625em;  padding:.5em; }
+div#sky-popup div#sky-popup-header { border-bottom: 1px black solid; background:#eeeeee; text-align:right; }
+div#sky-popup div#sky-popup-header img { margin:.25em; width:1em; height:.875em; cursor:pointer; cursor:hand; }
+div#sky-popup-trans{ position:absolute; border:2px gray solid; overflow:hidden;  z-index:4000;}
+
+div.anchor-popup-link{ font-size: .625em; }						
+div.anchor-popup-link-content{ clear:both; margin:1px; padding: 1em; height : 20em; overflow:auto; }   					
+div.anchor-popup-link a.link-return{ float:right; height:2.5em; line-height:2.5em; display:block; padding-right:.5em; }					
+
+/*********** "greyed out" read-only inputs. should be used in tandem with 'readonly="readonly"' XHTML *************/
+input.readonly, textarea.readonly { background-color:#f2f2f2; }
+
+/*********** "hidden" <labels> or part of labels, to fulfill accessibility requirements.
+eg. <label class="label-accessibility"...>...</label>, <label...>...<span class="label-accessibility">...</span></label> *************/
+.label-accessibility{ position:absolute; visibility:hidden; height:1px; width:1px; overflow:hidden; }
+
+/*********** font-size adjustments for body text *************/
+.font10to12	{ font-size:1.2em; }
+.font10to11	{ font-size:1.1em; }
+.font10to9	{ font-size:0.9em; }
+.font11to12	{ font-size:1.0909em; }
+.font11to10	{ font-size:0.9091em; }
+.font11to9	{ font-size:0.8182em; }
+.font16to12 { font-size:0.75em; }
+.font16to11 { font-size:0.6875em; }
+.font16to10 { font-size:0.625em; }
+.font16to9  { font-size:0.5625em; }
+
+/*********** Hard Copy PRINT modifications *************/
+@media print
+{
+	body { font-size:87.5%; }
+	div#nav-bar-container,
+	div#vgn-navigation-horizontal,
+	.aoc-gutter-horiz .aoc-gutter-horiz-text,
+	div.aoc-title .aoc-title-buttons,
+	#vgn-footer-container .secondrow { display:none; }
+	#vgn-footer { background:transparent url(none); }
+	#vgn-footer-container .firstrow  { visibility:hidden; }
+	#vgn-footer-container .firstrow .copyright { visibility:visible; color:#000000; }
+}
+
+/*********** Generic Tables *************/
+div.generic-table-0 { width:100%; }  
+div.generic-table-0 table { border-collapse:collapse; font-size:1em; width:100%; } 
+div.generic-table-0 table caption { display:none; }   						
+div.generic-table-0 table tr  { height:1.5em; }
+div.generic-table-0 table th  { background:#d8d8d8; color:#4d4d4d; font-size:.6875em; padding:0.1818em 0.9091em; text-align:left; font-family:arial,helvetica; }
+div.generic-table-0 table td  { font-size:.6875em; background:#f5f5f5; text-align:left; padding:0.1818em 0.9091em; border:#ffffff solid; border-width:2px 0 2px 2px; }
+div.generic-table-0 table .firstcol	{ padding-left:.9375em; text-align:left;}
+div.generic-table-0 table td.firstcol	{ border-left-width:0px; }		
+.aoc-borders div.generic-table-0 { margin:0 1px; width:29.5625em; }   				
+
+div.generic-table-1 { width:100%; }  
+div.generic-table-1	table { border-collapse:collapse; width:100%; font-size:1em; } 				
+div.generic-table-1	table thead, div.generic-table-1 table caption { display:none; }					
+div.generic-table-1	table td { padding:0.3em 0.3em 0.3em 1em; border:1px #d8dcdf solid; font:bold 0.625em arial; }
+.aoc-borders div.generic-table-1 table td { border-left-width:0px; }  
+
+/*********** Generic Lists *************/
+.generic-list-dash ul { margin:0; padding:0 0 0 2px; }							
+.generic-list-dash li {  margin:0 0 0 1.0em; text-indent:-1.0em; padding:0; list-style-type:none; line-height:1.4em; }							
+.generic-list-dash li span.dash { margin-right:0.5em; margin-left:-2px; }
+.generic-list-number ol { padding-top:.5em; margin-top:0; }    	
+.generic-list-number ol li { list-style-type:decimal; margin-bottom:.5em;  } 
+.generic-list-bullet ul { padding-top:.5em; margin-top:0; }                               
+.generic-list-bullet ul li { list-style-type:disc; margin-bottom:.5em; line-height:1.3em; }      
+
+/*********** JS-off Error *************/
+p.nojs-error { font-size:0.75em; color:#c50c0a; font-family:arial,helvetica; margin:0.75em 0 0.75em 2.3333em; text-indent:-2.3333em; line-height:1em; }
+p.nojs-error img { width:1.5833em; height:1.5833em; vertical-align:middle; margin-right:0.5em;}
+div.nojs-error p.nojs-error { margin:0 0 0 3.6667em; }
+
+/*********** Fixed Position RHS Panel *************/
+.rhs-fixedpos { position:absolute; }
+
+/*GREG*/
+
+.multichannel-listing{}
+.multichannel-listing-select{}
+.multichannel-listing-select-channel { height:1.8em; }
+.multichannel-listing-select-channel span { font-size:.6875em; }
+.multichannel-listing-select-channel select    				{font-family:verdana; font-size:.6875em;vertical-align:middle; margin-left:.2727em;}
+.multichannel-listing-select-channel select#select-tv-listing-channel 	{width:18em; } 	
+.multichannel-listing-select-channel select#select-tv-listing-date    	{width:11em; }
+.multichannel-listing-select-channel input#submit-tv-listing-channel-date {font-size:1em; margin:0 0 0 .25em; vertical-align:middle; width:1.25em; height:1.1875em; padding:0;}       
+.multichannel-listing-select-atoz { margin-top:.375em;}
+.multichannel-listing-select-atoz img { margin-right: 0.5em; width:0.5em; height:0.5em; }
+.multichannel-listing-select-atoz a { text-decoration:none; color:#000000; font-size: 0.6875em; } 
+.multichannel-listing-head { margin-top: .9375em; }
+.multichannel-listing-title{ background-color:#009bd4; height:2em; }	 						
+.multichannel-listing-title .container { position:relative; height:2em; top:0; left:0; } 						
+.multichannel-listing-title .container div { position:absolute; }
+.multichannel-listing-title .left     { left:0;   text-align:left;   width:25%; padding:.5em 0 0 .5em; }                           
+.multichannel-listing-title .middle   { left:25%; text-align:center; width:33%; line-height:2em;  }                            
+.multichannel-listing-title .right    { right:0;  text-align:right; padding:.375em .5em 0 0; }							
+.multichannel-listing-title .left h3 { color:#ffffff; }
+.multichannel-listing-title .middle span { font-size:0.6875em; color:#ffffff; } 							
+.multichannel-listing-title .right select{ vertical-align:middle; font-size:0.625em; width:27em; }							
+.multichannel-listing-title .right input { vertical-align:middle; font-size:1em; width:1.25em; height:1.1875em; margin-left:.375em;}
+.multichannel-listing-title .right label { display:none; }  						
+.multichannel-listing-nav { height:1.5625em; background-color:#ffffff;  margin-top:2px; } 							
+.multichannel-listing-nav .container { position:relative; top:0; left:0; height:1.5625em; overflow:hidden; }   						
+.multichannel-listing-nav .container a   		{ font-size:.6875em; }
+.multichannel-listing-nav .container div.cell-left-img a { font-size:1em; }							
+.multichannel-listing-nav .container a:link, .multichannel-listing-nav .container a:visited { color:#000; }
+.multichannel-listing-nav .container div 		{ position:absolute; height:1.5625em; text-align:center; line-height:1.3125em; }
+.multichannel-listing-nav .container div img 	{ position:relative; top:.4375em;  height:0.4375em; width:0.8125em; }
+.multichannel-listing-nav .container div div 	{left:0; bottom: 0; border-left: 1px #cccccc solid; height:50%; overflow:hidden;}
+.multichannel-listing-nav .container div.cell-left-img  { left:0; top:.0625em; text-align:left; padding-left:.375em; }   				
+.multichannel-listing-nav .container div.cell-left 	{ left:1.5em; top:.0625em; text-align:left; }
+.multichannel-listing-nav .container div.cell-middle { top:.0625em; padding-left:.5em; line-height:1.5625em; width:10.25em; }							
+.multichannel-listing-nav .container div.back { left:10.25em; padding-left:.75em; }
+.multichannel-listing-nav .container div.back a { font-size:1em; }    						
+.multichannel-listing-nav .container div.back img { position:relative; top:0.375em; width:0.4375em; height:0.8125em; }							
+.multichannel-listing-nav .container div.back div { width:2.25em; }							
+.multichannel-listing-nav .container div.back div div { left:1.9375em; height:100%; }   						
+.multichannel-listing-nav .container div.forward { left:43em; padding-left:.75em; }
+.multichannel-listing-nav .container div.forward a { font-size:1em; }    						
+.multichannel-listing-nav .container div.forward img { position:relative; top:0.375em; width:0.4375em; height:0.8125em; }							
+.multichannel-listing-nav .container div.time-first { left:12.25em; }
+.multichannel-listing-nav .container div.time-second { left:22.5em; }
+.multichannel-listing-nav .container div.time-third { left:32.75em; }
+.multichannel-listing-nav .container div span{ font-size:0.6875em; }
+.multichannel-listing-body{ margin-top:0px; }
+.multichannel-listing-body table 			{ table-layout:fixed; width: 45em; font-size:1em; }
+.multichannel-listing-body table col#channelcolumn  { width:11.25em;}
+.multichannel-listing-body table col#programmecolumn  { width:33.75em; } /* 90 minutes; .375em == 1 min */
+.multichannel-listing-body thead{ display:none; } 							
+.multichannel-listing-body tr			{ background: #009bd4; font-size:1em;} 
+.multichannel-listing-body td 		{ color:#ffffff; border-top:2px solid #ffffff; }
+.multichannel-listing-body td a 		{}
+.multichannel-listing-body td a:link, .multichannel-listing-body td a:visited{ color:#ffffff; }							
+.multichannel-listing-body td.channel 	{ font-weight:bold; padding-left:.5em;  }
+.multichannel-listing-body td.channel div	{ height:2em; line-height:2em; }
+.multichannel-listing-body td.channel span{ font-size:.6875em; }						
+.multichannel-listing-body td.programme	{ vertical-align:top; }						
+.multichannel-listing-body ul { margin:0; padding:0; }
+.multichannel-listing-body li { margin:0; padding:0; list-style-type:none; }
+
+/* .multichannel-listing-body td.programme qdiv, */
+.multichannel-listing-body td.programme li { position:absolute; height: 2em; overflow:hidden;  cursor:pointer; cursor:hand;  background-color: #009bd4;}
+.multichannel-listing-body td.programme li div{ border-left:2px #ffffff solid; line-height:2em; padding-left:.5em; }							
+.multichannel-listing-body td.programme li div	a { font-size:.6875em;  }						
+.multichannel-listing-body td.programme li div	a:link,							
+.multichannel-listing-body td.programme li div	a:visited{ color:#ffffff; }
+
+.multichannel-listing-body td.programme li.selected { background-color:#fdda26; }
+
+.multichannel-listing-body td.programme li.selected div a,
+.multichannel-listing-body td.programme li.currentpopout div a { font-weight:bold; }
+
+.multichannel-listing-body td.programme li span.remote { position:absolute; right:.5em; top:0.625em; }
+.multichannel-listing-body td.programme li span.remote img { vertical-align:top; width:.75em; height:.75em; }
+
+.multichannel-listing-body td.programme li.selected div a:link,
+.multichannel-listing-body td.programme li.selected div a:visited,
+.multichannel-listing-body td.programme li.currentpopout div a:link,
+.multichannel-listing-body td.programme li.currentpopout div a:visited { color:#0131a0; }
+.multichannel-listing-body td.programme li.currentpopout { background-color:#fdda26; }
+
+.multichannel-listing-body tr.popout, .multichannel-listing-body tr.popout td{ height:auto;}
+.multichannel-listing-body tr.popout, .multichannel-listing-body tr.popout td{ width:45em!important; background-color: transparent; height:auto; font-size:1em; padding:0;border-right-width:0px;}
+  					
+.multichannel-listing-body tr.popout td h4.message { margin-left:1em; font-size: .75em; height: 4em; line-height: 4em; color:#0131a0; }
+.multichannel-listing-foot{}   					
+.multichannel-listing-body .global-progpopout-container{height:12em;}								
+
+
+/***********************
+	2 column main comp with channel listing
+	compclass : time-listing
+------------
+	ENT 5.1
+***********************/
+.time-listing		  {}
+.time-listing-content { padding:1px; }			
+.time-listing-topimage-container	 { padding:1px 1px 0 1px;}
+.time-listing-topimage-container img { height:9.6875em; width:29.5625em; vertical-align:top; }
+.time-listing h3 	  { padding:.625em; }
+.time-listing h4      { height:2.2857em; line-height:2.2857em; padding-left:0.7143em; background-color:#009bd4; color:#ffffff; font-size:.875em; text-transform:uppercase; font-family:arial,helvetica; font-weight:bold; } 		
+.time-listing p	 	  { font-size:.6875em; padding:0 0.9091em 0.9091em .9091em; margin:0; }
+.time-listing-table-container { width:100%; overflow:auto; overflow:-moz-scrollbars-vertical; overflow-x:hidden; overflow-y:auto; height:8.375em; margin-top:0.125em; }
+.time-listing-table-container-js { height:auto; }
+.time-listing table 		  { border-collapse:collapse; width:100%; font-size:1em; table-layout:fixed; }
+.time-listing table col.time  { width:5.5em; }			
+.time-listing table thead     { display:none; } 			
+.time-listing table tr		  { background-color: #009bd4; }			
+.time-listing table td		  { color:#ffffff; border:0; border-bottom:0.125em solid #ffffff; white-space:nowrap; }
+.time-listing table td.time	  { font-weight:bold; text-align:center; }
+.time-listing table td.time div {height:2em;line-height:2em; white-space:nowrap; }
+.time-listing table td.time div span{font-size:.6875em;}
+.time-listing table td.programme { border-bottom-width:0.1818em; padding-left:1em; font-weight: normal; border-left:0.1818em solid #ffffff;font-size:.6875em;  }				
+.time-listing table tr.noborder td{ border-bottom-width:0; }        
+.time-listing td a:link,
+.time-listing td a:visited 	  { color:#ffffff; }
+.time-listing-navbar { border:solid #cccccc; border-width:0.0625em 0; margin-top:0.125em; } 									
+.time-listing-navbar-inner { height:1.5em; }										
+.time-listing-navbar-pos { position:absolute; height:1.5em; visibility:hidden; }
+.time-listing-navbar-bar { position:absolute; bottom:0; left:5.5em; height:50%; border-left:.0625em solid #cccccc; overflow:hidden;  width:.25em; }
+.time-listing-navbar-bar-bottom { top:0; }			
+.time-listing-navbar-img { position:absolute; top:.625em; left:6.25em; width:2em; cursor:pointer; cursor:hand; }
+.time-listing-navbar-img img { width:0.8125em; height:0.4375em; }  									
+.time-listing-navbar-text { position:absolute; font-size:0.6875em; top:0.5455em; left:10.8182em; white-space:nowrap; cursor:pointer; cursor:hand; }			
+.time-listing-navbar-text span { margin-left:0.3636em; }
+.time-listing-footer		    { clear:both; padding:.625em 0; }
+.time-listing-footer ul         { margin:0 0 0 .625em; padding:0; } 
+.time-listing-footer ul li      { float:left; margin:0 0 0 0; padding:.25em 0 0 0; list-style-type:none; width:48%; } 
+.time-listing-footer ul li.left { clear:both; }
+.time-listing-footer ul li p    { padding:0; }
+
+
+/***********************
+	3 column Single Channel TV Listing table
+	compclass : channel-listing
+------------
+	ENT 2.2
+***********************/
+.channel-listing{}
+.channel-listing-select {}
+.channel-listing-select-channel { height:1.8em;} 
+.channel-listing-select-channel span					{font-size:.6875em;}
+.channel-listing-select-channel select    				{font-family:verdana; font-size:.6875em;vertical-align:middle; margin-left:.2727em;}
+.channel-listing-select-channel select#select-tv-listing-channel 	{width:18em; } 	
+.channel-listing-select-channel select#select-tv-listing-date    	{width:11em; }
+.channel-listing-select-channel input#submit-tv-listing-channel-date {font-size:1em; margin:0 0 0 .25em; vertical-align:middle; width:1.25em; height:1.1875em; padding:0;}       
+.channel-listing-head { margin-top: .9375em;}
+.channel-listing-title{ background-color:#009bd4; height:2em; width:45em;}	 						
+.channel-listing-title .container { position:relative; height:2em; top:0; left:0; } 						
+.channel-listing-title .container div { position:absolute; }
+.channel-listing-title .left     { left:0;   text-align:left;   width:33%; padding:.5em 0 0 .5em;}                           
+.channel-listing-title .middle   { left:33%; text-align:center; width:34%; line-height:2em; }                            
+.channel-listing-title .right    { right:0;  text-align:right; padding:.375em .5em 0 0; }							
+.channel-listing-title .left img { height:1em; width:5.8125em; }
+.channel-listing-title .middle span { font-size:0.6875em; color:#ffffff; } 							
+.channel-listing-title .right select{ vertical-align:middle; font-size:0.625em; width:20em; }							
+.channel-listing-title .right input { vertical-align:middle; font-size:1em; width:1.25em; height:1.1875em; margin-left:.375em;}
+.channel-listing-title .right label { display:none; }
+.channel-listing-nav { height:1.5625em; background-color:#ffffff;  margin-top:2px; } 							
+.channel-listing-nav .container { position:relative; top:0; left:0; height:1.5625em; overflow:hidden; }   						
+.channel-listing-nav .container a   		{ font-size:.6875em; }
+.channel-listing-nav .container	div.cell-left-img a,
+.channel-listing-nav .container	div.cell-right-img a { font-size:1em; } 
+.channel-listing-nav .container a:link, .channel-listing-nav .container a:visited { color:#000; }
+.channel-listing-nav .container div 		{ position:absolute; height:1.5625em; text-align:center; line-height:1.3125em; }
+.channel-listing-nav .container div img 	{ position:relative; top:0.3125em; width:0.4375em; height:0.8125em; }
+.channel-listing-nav .container div div 	{left:0; bottom: 0; border-left: 1px #cccccc solid; height:50%; overflow:hidden;}
+.channel-listing-nav .container	div.cell-left-img  { left:0; top:.0625em; text-align:left; padding-left:.375em; }   				
+.channel-listing-nav .container	div.cell-left 	{ left:1.5em; top:.0625em; text-align:left; }
+.channel-listing-nav .container	div.cell-middle { top:.0625em; width:7.2em; }							
+.channel-listing-nav .container	div.middle_0 {left:10.3em;}
+.channel-listing-nav .container	div.middle_1 {left:17.5em;}
+.channel-listing-nav .container	div.middle_2 {left:24.7em;}
+.channel-listing-nav .container	div.middle_3 {left:31.9em;}
+.channel-listing-nav .container	div.cell-right {right:1.5em; top:.0625em; text-align:right;}
+.channel-listing-nav .container	div.cell-right-img { right:0; top:.0625em; text-align:right; padding-right:.375em; }
+.channel-listing-body{ margin-top:2px; }
+.channel-listing-body table 			{ border-collapse:collapse; table-layout:fixed; width:100%; font-size:1em; }
+.channel-listing-body table col#timecolumn  { width:5.5em;  }
+.channel-listing-body thead{ display:none; } 							
+.channel-listing-body tr			{ background: #009bd4; font-size:1em;} 
+.channel-listing-body td 		{  white-space:nowrap;  color:#ffffff; border-top:2px solid #ffffff; }
+.channel-listing-body tr.firstrow td{ border-top-width:0px; } 							
+.channel-listing-body td a 		{}
+.channel-listing-body td a:link, .channel-listing-body table td a:visited{ color:#ffffff; }							
+.channel-listing-body td.time 	{ font-size:1em;text-align:center; font-weight:bold;  }
+.channel-listing-body td.time div{ height:2em; line-height:2em; white-space:nowrap; }
+.channel-listing-body td.time div span{font-size:.6875em;}
+.channel-listing-body td.programme 	{ font-size:.6875em; padding-left:1em; font-weight: normal; border-left:2px solid #ffffff; }

@@ -1,0 +1,133 @@
+﻿<div class="modal-header">
+    <button type="button" class="close" ng-click="cancel()" aria-hidden="true">&times;</button>
+    <h4 class="modal-title">Resource {{ legs.length }} {{ legs.length === 1 ? 'leg' : 'legs' }} to {{ driverFullName }}, {{ vehicleRegistration }}</h4>
+    <p>The current leg planned times are shown below.  Please set the planned times as required.</p>
+</div>
+
+<div class="modal-body clearfix">
+    <div class="container col-md-12">
+        <alert ng-repeat="error in errors" type="danger">
+            {{ error }}
+        </alert>
+        <form class="form-horizontal" name="legsForm" role="form">
+            <div class="form-group">
+                <div class="row margin-bottom-10">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-7"><strong>Start Date</strong></div>
+                            <div class="col-md-5"><strong>Start Time</strong></div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-7"><strong>End Date</strong></div>
+                            <div class="col-md-5"><strong>End Time</strong></div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-repeat="leg in legs">
+                    <ng-form name="legForm">
+                        <div class="row margin-bottom-10">
+                            <div class="col-md-2">
+                                {{ leg.startInstructionLocation }}
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div class="input-group" pr-show-errors>
+                                            <input type="text"
+                                                   class="form-control"
+                                                   id="legStartDate"
+                                                   name="legStartDate"
+                                                   ng-model="leg.startInstructionDate"
+                                                   datepicker-popup="dd/MM/yy"
+                                                   show-button-bar="false"
+                                                   is-open="leg.startDateOpen"
+                                                   required
+                                                   pr-auto-focus="$first">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default" ng-click="openStartDatePicker($event, leg)">
+                                                    <i class="glyphicon glyphicon-calendar"></i>
+                                                </button>
+                                            </span>
+                                            <span class="input-group-addon input-group-addon-remove-border">
+                                                <pr-validator form-control="legForm.legStartDate" field-name="Start date">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="input-group" pr-show-errors>
+                                            <input type="text"
+                                                   class="form-control"
+                                                   name="legStartTime"
+                                                   ng-model="leg.startInstructionTime"
+                                                   pr-format-time
+                                                   pr-valid-time
+                                                   required>
+                                            <span class="input-group-addon input-group-addon-remove-border">
+                                                <pr-validator form-control="legForm.legStartTime" field-name="Start time">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                {{ leg.endInstructionLocation }}
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div class="input-group" pr-show-errors>
+                                            <input type="text"
+                                                   class="form-control"
+                                                   id="legEndDate"
+                                                   name="legEndDate"
+                                                   ng-model="leg.endInstructionDate"
+                                                   datepicker-popup="dd/MM/yy"
+                                                   show-button-bar="false"
+                                                   is-open="leg.endDateOpen"
+                                                   pr-date-less-than="leg.startInstructionDate"
+                                                   required>
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default" ng-click="openEndDatePicker($event, leg)">
+                                                    <i class="glyphicon glyphicon-calendar"></i>
+                                                </button>
+                                            </span>
+                                            <span class="input-group-addon input-group-addon-remove-border">
+                                                <pr-validator form-control="legForm.legEndDate" field-name="Finish date">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="input-group" pr-show-errors>
+                                            <input type="text"
+                                                   class="form-control"
+                                                   name="legEndTime"
+                                                   ng-model="leg.endInstructionTime"
+                                                   pr-time-less-than="leg.startIstructionTime"
+                                                   start-date="leg.startInstructionDate"
+                                                   finish-date="leg.endInstructionDate"
+                                                   pr-enter="save()"
+                                                   pr-format-time
+                                                   pr-valid-time
+                                                   required>
+                                            <span class="input-group-addon input-group-addon-remove-border">
+                                                <pr-validator form-control="legForm.legEndTime" field-name="Finish time">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-form>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" ng-click="save()">Save</button>
+    <button type="button" class="btn btn-primary" ng-click="cancel()">Cancel</button>
+</div>

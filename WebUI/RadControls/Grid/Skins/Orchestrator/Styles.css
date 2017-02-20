@@ -1,0 +1,290 @@
+/* r.a.d.grid Orchestrator skin */
+/*
+    Jason Steele 16/12/08
+    Removed all hover styles as this causes slow scolling
+*/
+
+div.RadGrid_Orchestrator
+{ 
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+.RadGrid_Orchestrator * 
+{	
+	font-family: Verdana !important;
+	font-size: 11px !important;	
+}
+
+.RadGrid_Orchestrator a 
+{
+	color: #2d4768;
+	text-decoration: underline;	
+}
+/*
+Caused scrolling to be very slow in IE7
+.RadGrid_Orchestrator a:hover
+{
+	color: #2d4768;
+	text-decoration: none;
+}
+*/
+
+.MasterTable_Orchestrator
+{
+	border-collapse: separate !important;
+	color: #27413e;
+	border: 1px solid #000; 
+	-moz-user-select: none;
+}
+
+.MasterTable_Orchestrator .undefined td 
+{
+	padding: 15px;	
+}
+
+.GridHeader_Orchestrator,
+.ResizeHeader_Orchestrator
+{
+	background-image: url('img/tableheader-bg.jpg');
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color: #3d3d3d;
+	border-right: 1px solid #363636;
+	border-bottom: 1px solid #363636;
+	padding: 0px 3px 0px 3px; 
+	height: 22px;
+	font-weight: bold;
+	color: #FFF !important;
+	vertical-align: middle;   
+}
+
+/*
+.GridHeader_Orchestrator a, .GridHeader_Orchestrator a:hover 
+*/
+.GridHeader_Orchestrator a 
+{
+	color: #FFF;
+	text-decoration: none;
+}
+
+.GridFilterRow_Orchestrator td 
+{
+	background-color: #edf5fb;
+	border-right: 1px solid #e9e9e9;
+	border-bottom: 1px solid #e9e9e9;
+	padding: 2px;		
+}
+
+.GridFilterRow_Orchestrator input 
+{
+	width: 75px;
+	margin: 0 0 3px 0;	
+}
+
+.GridFilterRow_Orchestrator img 
+{
+	margin: 2px;
+}
+
+.GridRow_Orchestrator,
+.GridAltRow_Orchestrator
+{
+	background: transparent;
+}
+
+.GridRow_Orchestrator td,
+.GridEditRow_Orchestrator td
+{
+	cursor: default;
+	padding: 1px 1px 1px 2px;
+	border-right: 1px solid #e9e9e9;  
+	border-bottom: 1px solid #e9e9e9; 
+	height: 20px;
+	font-family: verdana; 
+}
+
+.GridAltRow_Orchestrator td {
+	cursor: default;
+	padding: 1px 1px 1px 2px;
+	border-right: 1px solid #e9e9e9; 
+	border-bottom: 1px solid #e9e9e9;
+	height: 20px; 
+	font-family: verdana; 
+	/*
+	background-color: whitesmoke;
+*/
+}
+
+/*
+Caused scrolling to be very slow in IE7
+.GridRow_Orchestrator:hover td,
+.GridAltRow_Orchestrator:hover td {
+	background-color: #fffade;
+}
+*/
+
+.SelectedRow_Orchestrator,
+.ActiveRow_Orchestrator
+{
+	/*height: 19px;*/
+}
+
+.GridRow_InputCell input
+{
+	_border: 1px solid #374b64;	
+	border: 1px solid whitesmoke;
+	background-color: #374b64;
+	padding: 5px 5px 6px 6px;
+	color: #FFF;
+	background-image: url('/images/newMasterPage/button-bg.jpg');
+	background-color: #3d3d3d;
+	background-position: top;
+	background-repeat: repeat-x;
+}
+/*
+.GridRow_InputCell input:hover
+{
+	cursor: pointer;
+	border: 1px solid #FFF;
+	background-image: url('/images/newMasterPage/button-bg-on.jpg');	
+}
+*/
+
+.SelectedRow_Orchestrator td,
+.ActiveRow_Orchestrator td
+{
+	border-right: #e9e9e9 1px solid;	
+	padding-right: 1px;	
+	padding-left: 2px;	
+	padding-bottom: 1px;	
+	padding-top: 1px;	
+	border-bottom: #e9e9e9 1px solid;	
+	font-family: verdana;	
+	height: 20px;	
+	background-color: #fff7ca
+}
+
+.GridEditRow_Orchestrator
+{
+	background: #ffffe1;
+}
+
+.GridEditRow_Orchestrator input
+{
+}
+
+.GridPager_Orchestrator
+{
+	background: #FFF;
+	height: 15px;
+}
+
+.GridPager_Orchestrator td 
+{
+	padding: 10px;	
+}
+
+.GridFooter_Orchestrator
+{
+	background: #FFF;
+	padding: 10px;
+	color: #000;
+}
+
+.GridFooter_Orchestrator td
+{
+	border: solid 1px #fbfbfb;
+	border-top: 1px solid #637783;
+}
+
+.GridFooter_Orchestrator td a
+{
+	color: #666;
+	font-size: 10px;
+}
+
+.GridPager_Orchestrator td a
+{
+	color: #2D4768;
+	text-decoration: underline;
+}
+/*
+.GridPager_Orchestrator td a:hover,
+.GridFooter_Orchestrator td a:hover
+{
+	color: #2D4768;
+	text-decoration: none;
+}
+*/
+
+tr.GroupHeader_Orchestrator
+{
+	background: #e4ecf7;
+	height: 22px;
+}
+
+.GroupPanel_Orchestrator
+{
+	background: #9ebde5 url('Img/bluetoolbar-bg.jpg') repeat-x;
+	width: 100%;
+	height: 23px;
+	border: solid 1px #000;
+	border-bottom: 0px;
+	border-collapse: collapse;
+}
+
+.GroupPanelItems_Orchestrator
+{
+	background: white;
+	color: black;
+	border: solid 1px #325373;
+	white-space:  nowrap;
+	padding-left: 2px;
+	height: 15px;
+}
+
+td.GridHeader_Orchestrator input
+{
+	width: auto;
+	float: left;
+	border: solid 1px #3b5a82;
+	background: #fafafa;
+	font-weight: bold;
+	color: #989cb0;
+	height: 14px;
+	vertical-align:middle;
+}
+
+.GridCommandRow_Orchestrator td
+{
+	background-image: none; 
+	background-color: #495e78;
+	background-image: url('/images/newGrid/header-bg.jpg');
+	background-repeat: repeat-x;
+	background-position: top; 
+	padding-left: 3px;
+	cursor: default;
+	vertical-align: bottom;
+	color: #FFF;
+	border-bottom: 1px solid #363636;
+}
+
+.GridCommandRow_Orchestrator div 
+{
+	color: #FFF;	
+}
+
+.GridCommandRow_Orchestrator a
+{
+	color: #FFF;
+	text-decoration: none;
+}
+
+/*
+.GridCommandRow_Orchestrator a:hover 
+{
+	color: #FFF;
+	text-decoration: underline;
+}
+*/

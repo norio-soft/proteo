@@ -1,0 +1,41 @@
+﻿<div class="instruction-pin">
+    <div ng-style="zIndexStyle"
+         pr-popover-template="templateUrl"
+         pr-popover-placement="top"
+         pr-popover-trigger="click"
+         ng-click="click()"
+         ng-dblclick="dblClick(event)">
+
+        <div ng-hide="isKeyEvent" ng-style="cssStyle" class="instruction-pin-display">{{ pin.instructionNumber }}</div>
+
+        <div ng-include="svgTemplate" ng-show="isKeyEvent" class="key-event-pin"></div>
+    </div>
+
+    <script type="text/ng-template" id="instruction-popup-template.html">
+        <div ng-style="popupZIndexStyle">
+            <button class="instruction-tooltip-btn btn btn-xs btn-default pull-right" ng-click="closePopup()">
+                <i class="glyphicon glyphicon-remove"></i>
+            </button>
+            <div class="instruction-details">
+                <div class="popup-header">
+                    <div ng-hide="isKeyEvent">{{ pin.location }}</div>
+                    <div ng-show="pin.keyEventType === 'currentPosition'">Current Location</div>
+                    <div ng-show="pin.keyEventType === 'ignitionOff'">Ignition Off</div>
+                </div>
+                <div class="separator"></div>
+                <div class="main-details">
+                    <div ng-hide="isKeyEvent">
+                        Planned Arrival: {{ pin.plannedArrivalDateTime | date : 'dd/MM/yy HH:mm' }} <br />
+                        Actual Arrival: {{ pin.actualArrivalDateTime | date : 'dd/MM/yy HH:mm' }}
+                    </div>
+                    <div ng-show="pin.keyEventType === 'currentPosition'">
+                        {{ pin.vehicleRegistration }}
+                    </div>
+                    <div ng-show="pin.keyEventType === 'ignitionOff'">
+                        {{ pin.ignitionOffDateStamp | date : 'dd/MM/yy HH:mm' }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>

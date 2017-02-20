@@ -1,0 +1,40 @@
+﻿
+<div class="modal-header">
+<h3 class="modal-title">Add Customer to {{controlArea.description}}</h3>
+</div>
+
+<div class="modal-body">
+    <form class="he-form" name="addCustomerForm" role="form">
+
+        <div class="row">
+
+            <div class="form-horizontal">
+
+                <div class="form-group">
+                    <div class="col-md-10 col-md-offset-1" >
+                        <div class="input-group">
+                            <input type="text"
+                                   autocomplete="off"
+                                   ng-model="customer.selectedCustomer"
+                                   typeahead="customer as customer.organisationName for customer in customers | filter:{'organisationName':$viewValue} | limitTo:10"
+                                   typeahead-editable="false"
+                                   typeahead-dropdown="customers"
+                                   typeahead-dropdown-view-field="organisationName"
+                                   class="form-control"
+                                   placeholder="Customer"
+                                   name="customer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<div class="modal-footer">
+    <div class="form-buttons">
+        <div id="btnAddCustomer" class="btn btn-primary" ng-click="addCustomer()" ng-disabled="isAddDisabled()" tabindex="0">Add</div>
+        <div id="btnCancel" class="btn btn-warning" ng-click="cancel()" tabindex="0">Cancel</div>
+    </div>
+</div>

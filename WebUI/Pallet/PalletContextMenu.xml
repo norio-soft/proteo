@@ -1,0 +1,6 @@
+﻿<Nodes MenuTitle="Pallet Menu">
+	<Node>
+		<Text>Generate Pallet Log</Text>
+		<Url>/webui/pallet/findpalletlog.aspx</Url>
+	</Node>
+</Nodes>

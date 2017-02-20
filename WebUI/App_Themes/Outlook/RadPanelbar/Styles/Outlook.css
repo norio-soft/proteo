@@ -1,0 +1,118 @@
+.panelbarHeaderCollapsed
+{                              
+                FONT-SIZE: 11px; 
+                COLOR: #10110F;
+                border-top: solid 1px #1a1a1a;
+                FONT-FAMILY: Verdana;
+                font-weight: bold;
+                cursor: hand;
+                cursor: pointer;
+                background-image: url(../Img/coming-in.jpg);
+                background-repeat: repeat-x;
+                background-color: #363636;
+                height: 33px;
+                padding: 0 0 0 7px;
+                margin: 0 0 -1px 0;
+}
+
+.panelbarHeaderHover 
+{                              
+                FONT-SIZE: 11px; 
+                COLOR: #10110F;
+                border-top: solid 1px #1a1a1a;
+                FONT-FAMILY: Verdana;
+                font-weight: bold;
+                cursor: hand;
+                cursor: pointer;
+                background-image: url(../Img/tabhover-bg.jpg);
+                background-repeat: repeat-x;
+                background-color: #596a56;
+                height: 33px;
+                padding: 0 0 0 7px;
+                margin: 0 0 -1px 0;
+}
+
+.panelbarHeaderExpand
+{
+                FONT-SIZE: 11px; 
+                COLOR: #10110F;
+                border-top: solid 1px #1a1a1a;
+                FONT-FAMILY: Verdana;
+                font-weight: bold;
+                cursor: hand;
+                cursor: pointer;
+                background-image: none !important;
+                background-color: #FFF;
+                height: 33px;
+                padding: 0 0 0 7px;
+                margin: 0 0 -1px 0;
+}
+
+/** Text Colors **/
+
+.panelbarText
+{
+                padding-left: 7px;
+                color: #FFF;
+}
+
+.panelbarHeaderExpand .panelbarText 
+{
+                color: #363636;  
+}
+
+.panelbarItem 
+{
+                FONT-SIZE: 11px; 
+                COLOR: #333333;
+                FONT-FAMILY: Verdana;
+                width: 100%;
+                cursor: hand;
+                cursor: pointer;
+                text-decoration: none;
+                padding-left: 7px;
+                height: 24px;
+}              
+
+.panelbarItemHover
+{
+                FONT-SIZE: 11px; 
+                COLOR: #000;
+                FONT-FAMILY: Verdana;
+                width: 100%;
+                cursor: hand;
+                cursor: pointer;
+                text-decoration: underline;
+                padding-left: 7px;
+                height: 24px;
+}
+
+.panelbar 
+{
+                border-top: 0px solid #1a1a1a;
+                border-left: 0px solid #1a1a1a;
+                border-right: 0px solid #1a1a1a;
+                border-bottom: 3px solid #1a1a1a;
+                color:White;
+                background-color:White;
+/*           background-image: url(../Img/itemsBg.gif);*/
+}
+
+.panelbarHeaderCollapsed1
+{                              
+                FONT-SIZE: 11px; 
+                COLOR: #eeddcc;
+                border-top: solid 1px #1a1a1a;
+                border-bottom: 1px solid #1a1a1a;
+                FONT-FAMILY: Verdana;
+                font-weight: bold;
+                cursor: hand;
+                cursor: pointer;
+                height: 32px;
+                padding-left: 7px;
+}
+
+.CalendarStyle 
+{
+                border: 0px;       
+}

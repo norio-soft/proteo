@@ -1,0 +1,175 @@
+/* r.a.d.menu Metallic skin */
+
+.RadMenu_Metallic 
+{
+	padding: 0px 15px;
+	background: #ececec url('img/mainBg.gif') repeat-x bottom;
+	text-align: left;
+	font-size: 11px;
+}
+
+.RadMenu_Metallic .link
+{
+	text-decoration: none;
+	line-height: 35px;
+	background: url('img/mainItemArrow.gif') no-repeat left center;
+	padding: 4px 5px 0px 19px;
+}
+
+.RadMenu_Metallic .link:hover,
+.RadMenu_Metallic .link:hover .text,
+.RadMenu_Metallic .focused,
+.RadMenu_Metallic .expanded
+{
+	color: #000;
+	cursor: hand;
+	cursor: pointer;
+}
+
+.RadMenu_Metallic .rootGroup .link
+{
+	
+	width:auto;
+	_width:70px;
+	min-width:70px;
+}
+
+
+.RadMenu_Metallic .text
+{
+	padding-right: 15px;
+	color: #424242;
+}
+
+/* needed for horizontal scrolling case*/
+.RadMenu_Metallic .group .horizontal
+{
+	background: #e9e9e9 none;
+}
+
+
+.RadMenu_Metallic .group
+{
+	background: #e9e9e9 url('img/groupHeader.gif') repeat-x left top;
+	border-left: solid 1px #cfcfcf;
+	border-right: solid 1px #cfcfcf;
+	border-bottom: solid 2px #676767;
+	margin-top:-2px !important;
+}
+
+
+.RadMenu_Metallic .group .link
+{
+	background: none;
+	border-bottom: solid 1px #fff;
+	border-top: solid 1px #d4d4d4;
+	line-height: 22px;
+	padding-top: 0px;
+}
+
+
+.RadMenu_Metallic .group .first .link 
+{
+	padding-top: 9px;
+	border-top: 0px;
+}
+
+.RadMenu_Metallic .group .link .text
+{
+	padding-right: 34px;
+}
+
+.RadMenu_Metallic .group .link:hover,
+.RadMenu_Metallic .group .focused,
+.RadMenu_Metallic .group .expanded
+{
+	color: black;
+}
+
+.RadMenu_Metallic .group .level2
+{
+	background: #e9e9e9;
+	margin-top:0px !important;
+	border-top: solid 2px #676767;
+}
+
+.RadMenu_Metallic .group .level2 .first .link, .RadMenu_Metallic .group .level2 .last .link,
+.RadMenu_Metallic .group  .horizontal .first .link,
+.RadMenu_Metallic .group  .horizontal .first .link:hover,
+.RadMenu_Metallic .group .horizontal .last .link
+{
+	padding-top: 0px;
+	border-top: solid 1px #d4d4d4;
+}
+
+
+.RadMenu_Metallic .leftArrow,
+.RadMenu_Metallic .rightArrow,
+.RadMenu_Metallic .topArrow,
+.RadMenu_Metallic .bottomArrow,
+.RadMenu_Metallic .leftArrowDisabled,
+.RadMenu_Metallic .rightArrowDisabled,
+.RadMenu_Metallic .topArrowDisabled,
+.RadMenu_Metallic .bottomArrowDisabled
+{
+	background: #f3f3f3 url('img/left.gif') center center no-repeat;
+	width:15px;
+}
+
+.RadMenu_Metallic .topArrow,
+.RadMenu_Metallic .topArrowDisabled
+{
+	background-image:url('img/top.gif');
+	width:100%;
+	border-top: solid 2px #676767
+}
+
+.RadMenu_Metallic .bottomArrow,
+.RadMenu_Metallic .bottomArrowDisabled
+{
+	background-image:url('img/bottom.gif');
+	width:100%;
+}
+
+.RadMenu_Metallic .rightArrow,
+.RadMenu_Metallic .leftArrow
+{
+	height:100%;
+}
+
+.RadMenu_Metallic .rightArrow,
+.RadMenu_Metallic .rightArrowDisabled
+{
+	background-image:url('img/right.gif');
+}
+
+.RadMenu_Metallic .vertical .separator .text
+{
+	border-bottom: solid 1px #989898;
+}
+
+.RadMenu_Metallic .expandLeft,
+.RadMenu_Metallic .expandRight
+{
+	background:transparent url(img/groupImage.gif) right center no-repeat;
+}
+
+.RadMenu_Metallic_rtl .expandLeft,
+.RadMenu_Metallic_rtl .expandRight,
+.RadMenu_Metallic_rtl .group .link:hover .expandLeft,
+.RadMenu_Metallic_rtl .group .link:hover .expandRight
+{
+	background: none;
+	
+}
+
+
+.RadMenu_Metallic .link:hover .expandLeft,
+.RadMenu_Metallic .link:hover .expandRight,
+.RadMenu_Metallic .focused .expandLeft,
+.RadMenu_Metallic .focused .expandRight,
+.RadMenu_Metallic .expanded .expandLeft,
+.RadMenu_Metallic .expanded .expandRight
+{
+	background:transparent url(img/invertedGroupImage.gif) right center no-repeat;
+}

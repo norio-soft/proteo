@@ -1,0 +1,14 @@
+<Nodes MenuTitle="Invoice Management Menu">
+	<Node>
+		<Text>Find Invoice</Text>
+		<Url>/webui/invoicing/listinvoice.aspx</Url>
+	</Node>
+	<Node>
+		<Text>All Job To Invoice</Text>
+		<Url>/webui/invoicing/invoicepreparation.aspx</Url>
+	</Node>
+	<Node>
+		<Text>Upload Pre Invoice</Text>
+		<Url>/webui/invoicing/uploadpreinvoice.aspx?csid=xx</Url>
+	</Node>
+</Nodes>

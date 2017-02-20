@@ -1,0 +1,584 @@
+﻿<alert class="alert" ng-repeat="alert in alerts track by $index" typeof="danger">
+    <b>{{ alert }}</b>
+</alert>
+<div class="row proteo-banner-leg-planning">
+    <div class="col-lg-3 col-md-12 col-sm-12">
+        <div class="proteo-logo" />
+        <div class="btn-group banner-logo-control">
+            <button class="btn btn-primary glyphicon2 glyphicon-th-list"
+                    title="Open resource unit screen"
+                    pr-safe-click="openResourceUnit()"></button>
+            <button ng-click="onDropDownClick()" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-filter" title="Filter options"></i> <span class="caret" ng-class="{rotate180: dropDownOpen}"></span></button>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-2 col-lg-1 hidden-xs resource-unit-text">
+        <span>{{includeAllResourceUnitsBtnText}}</span>
+    </div>
+    <div class="col-xs-12 col-md-2 col-lg-1 small-resource-unit-text visible-xs">
+        <span>{{includeAllResourceUnitsBtnText}}</span>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3" ng-controller="LegPlanningFiltersResourceUnitCtrl">
+        <div id="resourceUnitFilter" class="input-group">
+            <input type="text"
+                   class="form-control"
+                   placeholder="Filter Resource Units"
+                   ng-model="filters.resourceUnitFreeTextFilter"
+                   ng-model-options="{debounce: 200}" />
+
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default"
+                        tooltip="Clear free text filter."
+                        tooltip-placement="right"
+                        tooltip-trigger="mouseenter"
+                        ng-click="resetResourceUnitFreeTextFilter()">
+                    <i class="glyphicon glyphicon-remove" />
+                </button>
+
+            </span>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3" ng-controller="LegPlanningFiltersLegCtrl">
+        <div id="legFilter" class="input-group">
+            <input type="text"
+                   class="form-control"
+                   placeholder="Filter Legs"
+                   ng-model="filters.legs.freeText"
+                   ng-model-options="{debounce: 200}" />
+
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default"
+                        tooltip="Reset all leg filters."
+                        tooltip-placement="right"
+                        tooltip-trigger="mouseenter : mouseleave click"
+                        ng-disabled="!filterProperties.legs.isResetEnabled()"
+                        ng-click="filterProperties.legs.reset()">
+                    <i class="glyphicon glyphicon-remove" />
+                </button>
+
+            </span>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-2 col-lg-2">
+        <div class="input-group">
+            <input type="text"
+                   class="form-control"
+                   id="schedulerDate"
+                   name="schedulerDate"
+                   ng-model="scheduleState.fromDateTime"
+                   datepicker-popup="dd/MM/yyyy"
+                   show-button-bar="false"
+                   datepicker-options="datePickerOptions"
+                   is-open="datePickerOpened">
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="openDatePicker($event)">
+                    <i class="glyphicon glyphicon-calendar"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+
+</div>
+
+<div class="below-banner">
+
+    <div class="banner-dropdown" ng-class="{open: dropDownOpen}">
+
+        <div class="row col-xs-12">
+
+            <div class="col col-xs-6">
+                <div class="panel" ng-controller="LegPlanningFiltersResourceUnitCtrl">
+
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-9">
+                                <h3 class="panel-title">Resource Unit Filters</h3>
+                            </div>
+                            <div class="col-xs-3">
+                                <pr-spin class="pull-right" config="spinnerConfig" spin-if="loading || scheduleState.processingYData || scheduleState.processingData" style="color: #ccc;"></pr-spin>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+
+                        <form role="form" class="form-inline">
+
+                            <div class="filter-form-group">
+                                <label class="main-radio-label">Showing</label>
+                                <div class="radio filter-ctrl">
+                                    <label>
+                                        <input type="radio" ng-model="filters.includeAllResourceUnits" ng-change="toggleIncludeAllResourceUnits()" value="onlyMyResourceUnits" ng-disabled="loading">Only my resource units
+                                    </label>
+                                </div>
+                                <div class="radio filter-ctrl">
+                                    <label>
+                                        <input type="radio" ng-model="filters.includeAllResourceUnits" ng-change="toggleIncludeAllResourceUnits()" value="includeAllResourceUnits" ng-disabled="loading">All resource units
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <div class="radio filter-ctrl">
+                                        <label>
+                                            <input type="radio" ng-model="filters.includeAllResourceUnits" ng-change="toggleIncludeAllResourceUnits()"  value="anotherPlannersResourceUnits" ng-disabled="loading">Another planner's resource units
+                                        </label>
+                                    </div>
+
+                                    <select class="form-control filter-ctrl" name="plannersView" ng-model="filters.viewingPlanner" ng-change="filters.includeAllResourceUnits = 'anotherPlannersResourceUnits'" ng-disabled="loading || !enableViewingPlannersPlan">
+                                        <option ng-selected="user.identityID == filters.viewingPlanner" ng-repeat="user in plannerUsers" value="{{::user.identityID}}">
+                                            {{::user.userName}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="filter-form-group">
+                                <div class="form-group">
+                                    <label for="driver" class="filter-control-label">Driver</label>
+                                    <input class="form-control filter-ctrl" type="text" id="driver" ng-model="filters.resourceUnits.driverName" ng-model-options="{debounce: 200}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="vehicle" class="filter-control-label">Vehicle</label>
+                                    <input class="form-control filter-ctrl vehicle" type="text" id="vehicle" ng-model="filters.resourceUnits.vehicleRegistration" ng-model-options="{debounce: 200}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="finishTown" class="filter-control-label">Today's Finish Town</label>
+                                    <input class="form-control filter-ctrl" type="text" id="finishTown" ng-model="filters.resourceUnits.todayFinishTown" ng-model-options="{debounce: 200}">
+                                </div>
+                            </div>
+
+                            <div class="filter-form-group">
+                                <label class="control-label main-checkbox-label">Driver Type</label>
+                                <div class="checkbox filter-ctrl">
+                                    <label>
+                                        <input type="checkbox" ng-model="isDriverTypeChecked" ng-checked="true" ng-click="unTickAll('driverType')"> Select All
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <div class="form-group" ng-repeat="driverType in driverTypes">
+                                        <div class="checkbox filter-ctrl">
+                                            <label>
+                                                <input type="checkbox" ng-model="filters.resourceUnits.driverType[driverType.description]">{{ driverType.description }}
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="filter-form-group">
+                                <label class="control-label main-checkbox-label">Today's Finish Traffic Area</label>
+                                <div class="checkbox filter-ctrl">
+                                    <label>
+                                        <input type="checkbox" ng-model="isTodayFinishTrafficAreaChecked" ng-checked="true" ng-click="unTickAll('todayFinishTrafficArea')"> Select All
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <div class="form-group" ng-repeat="trafficArea in trafficAreas">
+                                        <div class="checkbox filter-ctrl">
+                                            <label>
+                                                <input type="checkbox" ng-model="filters.resourceUnits.todayFinishTrafficArea[trafficArea.description]">{{ trafficArea.description }}
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">Order By</label>
+                                <select class="form-control filter-ctrl" ng-model="filters.resourceUnits.orderResourceUnitsBy">
+                                    <option ng-selected="orderResourceUnitsByField.field == filters.resourceUnits.orderResourceUnitsBy"
+                                            ng-repeat="orderResourceUnitsByField in orderResourceUnitsByFields"
+                                            value="{{orderResourceUnitsByField.field}}">
+                                        {{orderResourceUnitsByField.displayName}}
+                                    </option>
+                                </select>
+                            </div>
+
+                            <button class="btn btn-sm btn-default prevent-default-action"
+                                    ng-click="resetResourceUnitFilters()"
+                                    ng-disabled="!filterProperties.resourceUnits.isResetEnabled()">
+                                Reset
+                            </button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-xs-6">
+                <div class="panel" ng-controller="LegPlanningFiltersLegCtrl">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-9">
+                                <h3 class="panel-title">Leg Filters</h3>
+                            </div>
+                            <div class="col-xs-3">
+                                <pr-spin class="pull-right" config="spinnerConfig" spin-if="loading || scheduleState.processingYData || scheduleState.processingData" style="color: #ccc;"></pr-spin>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+
+                        <form role="form" class="form-inline">
+
+                            <div class="filter-form-group">
+                                <div class="form-group">
+                                    <label for="driver" class="filter-control-label">Location</label>
+                                    <input class="form-control filter-ctrl" type="text" id="location" ng-model="filters.legs.location" ng-model-options="{debounce: 200}">
+                                </div>
+                            </div>
+
+                            <div class="filter-form-group">
+                                <label class="control-label main-checkbox-label">Leg State</label>
+                                <div class="checkbox filter-ctrl">
+                                    <label>
+                                        <input type="checkbox" ng-model="isDriverTypeChecked" ng-checked="true" ng-click="unTickAll('legState')"> Select All
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <div class="form-group" ng-repeat="legState in legStates">
+                                        <div class="checkbox filter-ctrl">
+                                            <label>
+                                                <input type="checkbox" ng-model="filters.legs.legState[legState.legStateID]">{{ legState.description }}
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="filter-form-group" ng-show="trafficAreas.length > 0">
+                                <label class="control-label main-checkbox-label">Traffic Area</label>
+                                <div class="checkbox filter-ctrl">
+                                    <label>
+                                        <input type="checkbox" ng-model="isTrafficAreaChecked" ng-checked="true" ng-click="unTickAll('trafficArea')"> Select All
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <div class="form-group" ng-repeat="trafficArea in trafficAreas">
+                                        <div class="checkbox filter-ctrl">
+                                            <label>
+                                                <input type="checkbox" ng-model="filters.legs.trafficArea[trafficArea.description]">{{ trafficArea.description }}
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="filter-form-group" ng-show="controlAreas.length > 0">
+                                <label class="control-label main-checkbox-label">Control Area</label>
+                                <div class="checkbox filter-ctrl">
+                                    <label>
+                                        <input type="checkbox" ng-model="isControlAreaChecked" ng-checked="true" ng-click="unTickAll('controlArea')"> Select All
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <div class="form-group" ng-repeat="controlArea in controlAreas">
+                                        <div class="checkbox filter-ctrl">
+                                            <label>
+                                                <input type="checkbox" ng-model="filters.legs.controlArea[controlArea.description]">{{ controlArea.description }}
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter-form-group" ng-show="businessTypes.length > 0">
+                                <label class="control-label main-checkbox-label">Business Type</label>
+                                <div class="checkbox filter-ctrl">
+                                    <label>
+                                        <input type="checkbox" ng-model="isBusinessTypeChecked" ng-checked="true" ng-click="unTickAll('businessType')"> Select All
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <div class="form-group" ng-repeat="businessType in businessTypes">
+                                        <div class="checkbox filter-ctrl">
+                                            <label>
+                                                <input type="checkbox" ng-model="filters.legs.businessType[businessType.description]">{{ businessType.description }}
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter-form-group" ng-show="mwfCommunicationStatuses.length > 0">
+                                <label class="control-label main-checkbox-label">MWF Comms Status</label>
+                                <div class="checkbox filter-ctrl">
+                                    <label>
+                                        <input type="checkbox" ng-model="isMwfCommunicationChecked" ng-checked="true" ng-click="unTickAll('mwfCommunicationStatus')"> Select All
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <div class="form-group" ng-repeat="mwfCommunicationStatus in mwfCommunicationStatuses">
+                                        <div class="checkbox filter-ctrl">
+                                            <label>
+                                                <input type="checkbox" ng-model="filters.legs.mwfCommunicationStatus[mwfCommunicationStatus.description]">{{ mwfCommunicationStatus.description }}
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-sm btn-default prevent-default-action"
+                                    ng-click="filterProperties.legs.reset()"
+                                    ng-disabled="!filterProperties.legs.isResetEnabled()">
+                                Reset
+                            </button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="scheduler-rows">
+        <div class="row">
+            <div class="col-md-12 col-lg-8 col-lg-offset-2">
+                <alert ng-if="planLegFailed" type="danger" close="planLegFailedHide()">
+                    <strong>Error!</strong> Leg planning was not successful
+                    <ul class="list-unstyled">
+                        <li ng-repeat="error in planLegErrors">{{ error }}</li>
+                    </ul>
+                </alert>
+            </div>
+
+            <div class="col-md-12 col-lg-8 col-lg-offset-2">
+                <alert ng-if="contextMenuError" type="danger" close="contextMenuErrorHide()">
+                    {{ contextMenuError }}
+                </alert>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="scheduler-col col-md-12">
+                <pr-scheduler config="scheduleConfig"
+                              data="schedulerEvents"
+                              force-reload-data="schedulerEventsForceReload"
+                              y-data="schedulerRows"
+                              unavailability="schedulerUnavailability"
+                              from-date-time="scheduleState.fromDateTime"
+                              to-date-time="scheduleState.toDateTime"
+                              loading="loading"
+                              processing-y-data="scheduleState.processingYData"
+                              processing-data="scheduleState.processingData"
+                              on-internal-drop="schedulerInternalDrop(schedulerEvent)"
+                              on-external-drop="schedulerExternalDrop(dropData, dropDateTime, schedulerSection, isRowHeaderDrop)"
+                              on-event-double-click="schedulerEventDoubleClick(schedulerEvent)"
+                              date-range-formatter="dateRangeFormatter(dateA, dateB)"
+                              display-event-tooltips="scheduleState.displayEventTooltips"
+                              show-now-button="true"
+                              scheduler-height="90vh"
+                              on-refresh="refreshScheduler()"
+                              on-double-click="schedulerDoubleClick(resourceSchedule)"
+                              show-context-menu="true"
+                              data-target="schedulerMenu"
+                              >
+
+                    <div id="yDataTemplate">
+                        <table class="table text-left leg-planning-scheduler-y-cell">
+                            <tr>
+                                <td width="50%">
+                                    <b>{{ ::driver.fullName }}</b>
+                                    <i class="{{ ::driver.driverRequestClass }}" pr-safe-click="::viewDriverRequests(driver)" title="Create and modify driver requests."></i>
+                                    <i class="{{::driver.driverDebriefClass}}" pr-safe-click="::toggleDriverDebriefFlag(driver)" title="Driver has been debriefed"></i>
+                                </td>
+                                <td width="50%">
+                                    <div class="{{ ::vehicle ? '' : 'ng-hide' }}">
+                                        <span class=" mouse-cursor-click" pr-safe-click="::assignVehicle()"><b>{{ ::vehicle.registrationNumber }}</b></span> <i pr-safe-click="::viewVehicleCurrentLocation()" class="glyphicon glyphicon-globe" title="View current location."></i>
+                                    </div>
+                                    <div class="{{ ::vehicle ? 'ng-hide' : '' }}">
+                                        <span class=" mouse-cursor-click" pr-safe-click="::assignVehicle()" title="Assign a vehicle to this driver.">- no vehicle -</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="50%">
+                                    <span class="mouse-cursor-click {{driver.finishTimeHasNotes ? 'non-partial-indication' : '' }}" pr-safe-click="::driverFinishTimeModal()" title="Set yesterday's finish time for driver.">{{::driver.finishTime}} </span>
+                                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                                    <span class="mouse-cursor-click {{driver.startTimeHasNotes ? 'non-partial-indication' : '' }}" pr-safe-click="::driverStartTimeModal()" title="Start Time Notes: {{::driver.startTimeNotes}}">{{::driver.startTime}}</span>
+                                </td>
+                                <td width="50%">
+                                    <span class="{{::driver.finishPostTown ? '' : 'ng-hide'}}" title="Finish town and traffic area for {{::driver.currentFinishDate}}.">{{ ::driver.finishPostTown}} ({{ ::driver.finishTrafficArea}})</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" colspan="2">
+                                    <span class="ellipsis pull-left {{ editing ? 'ng-hide' : '' }}" ng-click="editing = true" ng-attr-style="opacity: {{driver.travelNotes ? 1 : 0.75}}; padding-bottom: 6px" title="{{driver.travelNotes}}">{{driver.travelNotes ? driver.travelNotes : "Enter travel notes here."}}</span>
+                                    <div class="{{ editing ? '' : 'ng-hide' }}">
+                                        <form ng-submit="::updateDriverTravelNotes(); editing = false">
+                                            <input class="pull-left" type="text" ng-model="driver.travelNotes" ng-blur="updateDriverTravelNotes(); editing = false" placeholder="Enter travel notes here." pr-inline-edit-focus />
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                    <div id="eventTemplate" >
+                        <div class="{{ ::leg ? '' : 'ng-hide' }}">
+                            <div class="ellipsis mwf-status-icon {{ ::isPartial() }}" context-menu="::onContextMenuShow()" context-menu-close="::onContextMenuClose()" data-target="schedulerEventMenu" ng-attr-style="height: {{ ::yEventHeight }}px;">
+                                <i class="{{ ::mwfStatusIcon() }}" pr-safe-click="::openMWFHistory()"></i>
+                                <span>{{ ::leg.startPointPostTown }} to {{ ::leg.endPointPostTown}} </span>
+                                <div class="{{ ::leg.endBookedIsAnytime == false ? 'leg-booked-time' : 'ng-hide' }}">
+                                    <div class="{{::leg.isEndBookingWindow ? '' : 'ng-hide'}}">
+                                        {{ ::leg.endBookedFrom }} to {{ ::leg.endBookedTo }}
+                                    </div>
+                                    <div class="{{::leg.isEndBookingWindow ? 'ng-hide' : ''}}">
+                                        {{ ::leg.endBookedFrom }}
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="{{ ::resourceSchedule ? 'ng-hide' : 'ellipsis' }}" >
+                            {{ ::text }}
+                        </div>
+                        <div class="  {{ ::resourceSchedule ? '' : 'ng-hide'}}" context-menu="::onContextMenuShow()" context-menu-close="::onContextMenuClose()" data-target="travelNoteEventMenu" ng-attr-style="height: {{ ::yEventHeight }}px;">
+                                <label>{{::text}}</label>
+                            
+                        </div>
+                    </div>
+
+                    <div id="eventTooltipTemplate">
+                        <!--## L E G   T O O L T I P   H O V E R   D E T A I L -->
+                        <div class="{{ ::leg ? '' : 'ng-hide' }}">
+                            <table class="scheduler-tooltip-table">
+                                <tr>
+                                    <td>Customer</td>
+                                    <td>{{ ::leg.customer}} </td>
+                                </tr>
+                                <tr>
+                                    <td>From</td>
+                                    <td>{{ ::leg.startPointDescription }} {{ ::leg.startDateDisplay }} </td>
+                                </tr>
+                                <tr>
+                                    <td>To</td>
+                                    <td>{{ ::leg.endPointDescription }} {{ ::leg.endDateDisplay }}</td>
+                                </tr>
+                                <tr class="{{ ::leg.trailerRef ? '' : 'ng-hide' }}">
+                                    <td>Trailer</td>
+                                    <td>{{ ::leg.trailerRef }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Business Type</td>
+                                    <td>{{ ::leg.businessType }}</td>
+                                </tr>
+                                <tr class="{{ ::leg.startMwfCommunicationStatus ? '' : 'ng-hide' }}">
+                                    <td>Start MWF Status</td>
+                                    <td>{{ ::leg.startMwfCommunicationStatus }}</td>
+                                </tr>
+                                <tr class="{{ ::leg.endMwfCommunicationStatus ? '' : 'ng-hide' }}">
+                                    <td><span ng-show="::leg.hasStartMwfInst">End </span>MWF Status</td>
+                                    <td>{{ ::leg.endMwfCommunicationStatus }}</td>
+                                </tr>
+                                <tr ng-show="leg.loadNumber.length > 0">
+                                    <td>Load Number</td>
+                                    <td>{{ ::leg.loadNumber }}</td>
+                                </tr>
+                                <tr ng-show="leg.deliveryOrderNumber.length > 0">
+                                    <td>Delivery Order Number</td>
+                                    <td>{{ ::leg.deliveryOrderNumber }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="{{ ::resourceSchedule ? '' : 'ng-hide' }}">
+                            <div context-menu="::onContextMenuShow()" context-menu-close="::onContextMenuClose()" data-target="travelNoteEventMenu" ng-attr-style="height: {{ ::yEventHeight }}px;">
+                                <table class="scheduler-tooltip-table">
+                                    <tr>
+                                        <td>Reason</td>
+                                        <td>{{ ::text }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>From</td>
+                                        <td>{{ ::resourceSchedule.startDateDisplay }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>To</td>
+                                        <td>{{ ::resourceSchedule.endDateDisplay }}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                    </div>
+
+                    <div id="timeModeControlTemplate" class="btn-group">
+                        <button class="btn btn-group btn-default"
+                                ng-model="config.selectedTimeMode"
+                                btn-radio="'6hour'"
+                                uncheckable
+                                title="View 6 hour range.">
+                            6 Hr
+                        </button>
+                        <button class="btn btn-group btn-default"
+                                ng-model="config.selectedTimeMode"
+                                btn-radio="'12hour'"
+                                uncheckable
+                                title="View 12 hour range.">
+                            12 Hr
+                        </button>
+                        <button class="btn btn-group btn-default"
+                                ng-model="config.selectedTimeMode"
+                                btn-radio="'24hour'"
+                                uncheckable
+                                title="View 24 hour range.">
+                            24 Hr
+                        </button>
+                        <button class="btn btn-group btn-default"
+                                ng-model="config.selectedTimeMode"
+                                btn-radio="'48hour'"
+                                uncheckable
+                                title="View 48 hour range.">
+                            48 Hr
+                        </button>
+                        <button class="btn btn-group btn-default"
+                                ng-model="config.selectedTimeMode"
+                                btn-radio="'72hour'"
+                                uncheckable
+                                title="View 72 hour range.">
+                            72 Hr
+                        </button>
+                        <button class="btn btn-group btn-default"
+                                ng-model="config.selectedTimeMode"
+                                btn-radio="'week'"
+                                uncheckable
+                                title="View one week range.">
+                            Week
+                        </button>
+                    </div>
+                </pr-scheduler>
+            </div>
+
+            <!-- scheduler event context menu -->
+            <div id="schedulerEventMenu" class="dropdown position-fixed eventMenu">
+                <ul class="dropdown-menu" role="menu">
+                    <li role="presentation" ng-repeat="item in legContextMenuItems" ng-class="{ 'disabled': item.isDisabled, 'divider': item.isDivider }" tooltip="{{ item.tooltip }}" tooltip-trigger="mouseenter" tooltip-placement="right">
+                        <a ng-if="!item.isDivider" class="pointer" role="menuitem" tabindex="-1" ng-click="item.action()">{{ item.caption }}</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="travelNoteEventMenu" class="dropdown position-fixed eventMenu">
+                <ul class="dropdown-menu" role="menu">
+                    <li role="presentation" ng-repeat="item in travelNotesContextMenuItems" ng-class="{ 'disabled': item.isDisabled, 'divider': item.isDivider }" tooltip="{{ item.tooltip }}" tooltip-trigger="mouseenter" tooltip-placement="right">
+                        <a ng-if="!item.isDivider" class="pointer" role="menuitem" tabindex="-1" ng-click="item.action()">{{ item.caption }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>

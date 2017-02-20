@@ -1,0 +1,66 @@
+﻿<div class="row proteo-banner-schedule-resource">
+    <div class="col-lg-2 col-md-12 col-sm-12">
+        <div class="proteo-logo" />
+    </div>
+    <div class="col-sm-1 col-md-1 col-lg-1 resource-type-text">
+        <span>Resource Type</span>
+    </div>
+    <div class="col-sm-8 col-md-2 col-lg-1">
+        <select class="form-control filter-ctrl" name="resourceTypes" ng-model="selectedResourceType">
+            <option ng-repeat="resourceType in resourceTypes" 
+                    value="{{::resourceType.ResourceTypeId}}" 
+                    ng-selected="resourceType.ResourceTypeId === selectedResourceType">
+                {{::resourceType.Description}}
+            </option>
+        </select>
+    </div>
+    <div ng-hide="selectedResourceType != '3'">
+        <div class="col-sm-1 col-md-1 col-lg-1 driver-type-text">
+            <span>Driver Type</span>
+        </div>
+        <div class="col-sm-8 col-md-2 col-lg-1">
+            <select class="form-control filter-ctrl" name="driverTypes" ng-model="selectedDriverType">
+                <option ng-repeat="driverType in driverTypes"
+                        value="{{::driverType.DriverTypeID}}"
+                        ng-selected="driverType.DriverTypeID === selectedDriverType">
+                    {{::driverType.Description}}
+                </option>
+            </select>
+        </div>
+    </div>
+    <div ng-hide="selectedResourceType === '2'">
+        <div class="col-sm-1 col-md-1 col-lg-1 depot-type-text">
+            <span>Depot</span>
+        </div>
+        <div class="col-sm-8 col-md-2 col-lg-2">
+            <select class="form-control filter-ctrl" name="depots" ng-model="selectedDepot">
+                <option ng-repeat="depot in depots"
+                        value="{{::depot.OrganisationLocationId}}"
+                        ng-selected="depot.OrganisationLocationId === selectedDepot">
+                    {{::depot.OrganisationLocationName}}
+                </option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-2 col-lg-3">
+        <div class="checkbox filter-ctrl">
+            <label>
+                <input type="checkbox" ng-model="showUnavailableResources"/>
+                Show Unavailable Resources
+            </label>
+        </div>
+    </div>
+</div>
+
+<div class="below-banner">
+    <div dhx-scheduler style="height: 650px; width: 100%;left:15px;" data-source="data">
+        <div class="dhx_cal_prev_button">&nbsp;</div>
+        <div class="dhx_cal_next_button">&nbsp;</div>
+        <div class="dhx_cal_today_button"></div>
+        <div class="dhx_cal_date"></div>
+        <div class="dhx_cal_tab" name="day_tab" style="right:204px;"></div>
+        <div class="dhx_cal_tab" name="week_tab" style="right:140px;"></div>
+        <div class="dhx_cal_tab" name="month_tab" style="right:76px;"></div>        
+    </div>
+</div>

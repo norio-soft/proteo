@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Orchestrator.WebUI.NewDashboard.UpdateWidgetOnDashboard" CodeBehind="UpdateWidgetOnDashboard.svc.cs" %>

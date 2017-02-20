@@ -1,0 +1,7 @@
+<items>
+	<item Text="Give Resource" ClientSideCommand="GiveResourceTo();" />
+	<item Text="Show Location" ClientSideCommand="ShowLocation();" />
+	<item Text="Driver Time" ClientSideCommand="" />
+  <item Text="Take Goods off Trailer" ClientSideCommand="" />
+  <item Text="Send MWF Message" ClientSideCommand="" />
+</items>

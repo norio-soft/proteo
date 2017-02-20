@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <DIAssemblies Include="bin\EntityFramework.*" />
+    <DIAssemblies Include="bin\log4net.*" />
+    <DIAssemblies Include="bin\MobileWorkerFlow.Bomford.*" />
+    <DIAssemblies Include="bin\Orchestrator.Accounts.Integration.Interface.*" />
+    <DIAssemblies Include="bin\Orchestrator.Alliance.*" />
+    <DIAssemblies Include="bin\Orchestrator.Chiltern.*" />
+    <DIAssemblies Include="bin\Orchestrator.CSV.*" />
+    <DIAssemblies Include="bin\Orchestrator.FaganWhalley.*" />
+    <DIAssemblies Include="bin\Orchestrator.Firmin.*" />
+    <DIAssemblies Include="bin\Orchestrator.JR.*" />
+    <DIAssemblies Include="bin\Orchestrator.Nicholls.*" />
+    <DIAssemblies Include="bin\Orchestrator.OrchToOrch.*" />
+    <DIAssemblies Include="bin\Orchestrator.Repositories.EF.*" />
+    <DIAssemblies Include="bin\Orchestrator.WisbechRoadways.*" />
+    <DIAssemblies Include="bin\Orchestrator.Woodall.*" />
+  </ItemGroup>
+  
+  <Target Name="CopyDIAssemblies" AfterTargets="CopyAllFilesToSingleFolderForPackage">
+    <Message Text="Copying dependency injection assemblies" Importance="high" />
+    
+    <Copy SourceFiles="@(DIAssemblies)"
+          DestinationFolder="$(_PackageTempDir)\bin"
+          OverwriteReadOnlyFiles="true"
+          SkipUnchangedFiles="false" />
+  </Target>
+</Project>

@@ -1,0 +1,14 @@
+﻿<Nodes MenuTitle="Driver Menu">
+	<Node>
+		<Text>List All Drivers</Text>
+		<Url>/webui/resource/driver/driverlist.aspx</Url>
+	</Node>
+	<Node>
+		<Text>Find Driver</Text>
+		<Url>/webui/resource/driver/finddriver.aspx</Url>
+	</Node>
+	<Node>
+		<Text>Add New Driver</Text>
+		<Url>/webui/resource/driver/addupdatedriver.aspx</Url>
+	</Node>
+</Nodes>

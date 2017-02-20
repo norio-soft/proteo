@@ -1,0 +1,22 @@
+<%@ Register TagPrefix="radP" Namespace="Telerik.Web.UI" Assembly="RadPanelbar.Net2" %>
+
+<radP:RadPanelbar Runat="server"
+	CssFile="~/app_themes/Blue/RadPanelbar/Styles/Blue.css"
+	HeaderExpandedCssClass="panelbarHeaderExpand"
+	HeaderCollapsedCssClass="panelbarHeaderCollapsed"
+	HeaderHoverCollapsedCssClass="panelbarHeaderHover"
+	HeaderHoverExpandedCssClass="panelbarHeaderHover"
+	HeaderTextExpandedCssClass="panelbarText"
+	HeaderTextCollapsedCssClass="panelbarText"
+	HeaderTextHoverCssClass="panelbarText"
+	ItemCollapsedCssClass="panelbarItem"
+	ItemHoverCollapsedCssClass="panelbarItemHover"
+	ItemHoverExpandedCssClass="panelbarItemHover"
+	ItemSelectedCssClass="panelbarItemHover"
+	ItemTextCollapsedCssClass="panelbarText"
+	ItemTextExpandedCssClass="panelbarText"
+	ItemTextHoverCssClass="panelbarText"
+	CssClass="panelbar"
+	ImagesBaseDir="~/app_themes/Outlook/RadPanelbar/Img/"
+	SingleExpandedPanel="True"
+	/>

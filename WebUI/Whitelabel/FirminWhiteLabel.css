@@ -1,0 +1,30 @@
+﻿/** ------------------------------------------------------------------------------------------------- **/
+/** Orchestrator Whitelabeled Masterpage CSS - This stylesheet overwrites the Masterpage.Orchestrator **/
+/** CSS file and whitelabels certain elements of masterpages										  **/
+/** This is for Firmin ONLY																			  **/
+/** ------------------------------------------------------------------------------------------------- **/
+
+.masterpagelite_layoutHeader, .masterpagelite_layoutHeaderInner, .masterpagelite_layoutNav
+{
+	background-color: #19374F;
+}
+
+.masterpagelite_headerNavSearchContainer
+{
+	margin-left: 280px;
+}
+.masterpagelite_headerLogo
+{
+	width: 280px;
+}
+
+.HeaderLogoImg, .masterpage_headerLogoImg, .masterpagelite_headerLogoImg
+{
+	background-image: url('Img/firmin-logo.png');
+	width: 270px;
+}
+
+#traffic, .masterpage_headerTraffic, .masterpagelite_headerTraffic, .layoutSearch, .masterpage_searchBox, .masterpagelite_searchBox, .masterpagelite_headerSearch, .masterpage_searchCheckbox, .masterpagelite_searchFilterOptions
+{
+	display: none;
+}

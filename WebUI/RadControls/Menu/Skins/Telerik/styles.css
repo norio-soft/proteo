@@ -1,0 +1,126 @@
+/* r.a.d.menu Default skin */
+
+.RadMenu_Telerik 
+{
+}
+
+.RadMenu_Telerik .link
+{
+	text-decoration:none;
+	color: #666;
+	line-height: 22px;
+	background: #fefefe url('img/MainItemBackground.gif') repeat-x;
+	border-left: 1px solid #dbdbdb;
+	border-right: 1px solid #dbdbdb;
+}
+
+.RadMenu_Telerik .link:hover,
+.RadMenu_Telerik .focused,
+.RadMenu_Telerik .expanded
+{
+	color: black;
+}
+
+.RadMenu_Telerik .text
+{
+	font-size: 11px;
+	padding: 0px 24px;
+	font-family: Arial, Verdana;
+}
+
+.RadMenu_Telerik .group
+{
+	background: white;
+	border: solid 1px #e4e4e4;
+}
+
+.RadMenu_Telerik .group .link
+{
+	background: #f7f7f7 url('img/MenuItemBackground.gif') repeat-y right;
+	border-top: solid 1px #f0f0f0;
+	border-left: 0px;
+	border-right: 0px;
+	width: 120px;
+	text-align: left;
+}
+
+.RadMenu_Telerik .group .text
+{
+	border-top: solid 1px white;
+	border-bottom: solid 1px white;
+	padding-left: 12px;
+}
+
+.RadMenu_Telerik .group .link:hover,
+.RadMenu_Telerik .group .focused,
+.RadMenu_Telerik .group .expanded
+{
+	background: #c8f415 url('img/menuItemHover.gif') repeat-x;
+	font-weight: normal;
+}
+
+.RadMenu_Telerik .leftArrow,
+.RadMenu_Telerik .rightArrow,
+.RadMenu_Telerik .topArrow,
+.RadMenu_Telerik .bottomArrow,
+.RadMenu_Telerik .leftArrowDisabled,
+.RadMenu_Telerik .rightArrowDisabled,
+.RadMenu_Telerik .topArrowDisabled,
+.RadMenu_Telerik .bottomArrowDisabled
+{
+	border-left:1px solid #e4e4e4;
+	border-left:1px solid #e4e4e4;
+	background: #efefef url('img/left.gif') center center no-repeat;
+	width:15px;
+}
+
+.RadMenu_Telerik .topArrow,
+.RadMenu_Telerik .topArrowDisabled
+{
+	background-image:url('img/top.gif');
+	width:100%;
+}
+
+.RadMenu_Telerik .bottomArrow,
+.RadMenu_Telerik .bottomArrowDisabled
+{
+	background-image:url('img/bottom.gif');
+	width:100%;
+}
+
+.RadMenu_Telerik .rightArrow,
+.RadMenu_Telerik .leftArrow
+{
+	height:100%;
+}
+
+.RadMenu_Telerik .rightArrow,
+.RadMenu_Telerik .rightArrowDisabled
+{
+	background-image: url('img/right.gif');
+}
+
+.RadMenu_Telerik .vertical .separator .text
+{
+	padding-top: 3px;
+	background: #f7f7f7 url('img/Separator.gif') no-repeat right;
+	font-size: 0px;
+	border-top:0px;
+	border-bottom:0px;
+}
+
+.RadMenu_Telerik .expandLeft,
+.RadMenu_Telerik .expandRight
+{
+	background:transparent url(img/groupImage.gif) right center no-repeat;
+}
+
+.RadMenu_Telerik .link:hover .expandLeft,
+.RadMenu_Telerik .link:hover .expandRight,
+.RadMenu_Telerik .focused .expandLeft,
+.RadMenu_Telerik .focused .expandRight,
+.RadMenu_Telerik .expanded .expandLeft,
+.RadMenu_Telerik .expanded .expandRight
+{
+	background:transparent url(img/invertedGroupImage.gif) right center no-repeat;
+}

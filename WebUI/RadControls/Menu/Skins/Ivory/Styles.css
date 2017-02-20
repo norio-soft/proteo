@@ -1,0 +1,130 @@
+.RadMenu_Ivory
+{	
+	font:11px/15px tahoma, verdana, sans-serif;
+}
+
+.RadMenu_Ivory .group, 
+.RadMenu_Ivory .rootGroup
+{
+	border:1px solid #666655;
+}
+
+.RadMenu_Ivory .horizontal
+{
+	border-left:0;
+}
+
+.RadMenu_Ivory .vertical
+{
+	border-top:0;
+}
+
+.RadMenu_Ivory .link:hover
+{
+	background-color:#666666;
+	color:#fffffc;
+	cursor:pointer;
+}
+
+
+.RadMenu_Ivory .link,
+.RadMenu_Ivory .disabled,
+.RadMenu_Ivory .disabled:hover
+{
+	color:#666655;
+	padding:3px 6px;
+	text-decoration:none;
+	background-color:#fffffc;
+	cursor:pointer;
+}
+
+.RadMenu_Ivory .text
+{
+	cursor:pointer;
+	padding:0 15px;
+}
+
+.RadMenu_Ivory .horizontal .link
+{
+	border-left:1px solid #666655;
+	border-top:0;
+}
+
+.RadMenu_Ivory .vertical .link
+{
+	border-left:0;
+	border-top:1px solid #666655;
+}
+
+
+
+
+.RadMenu_Ivory .link:hover .expandLeft,
+.RadMenu_Ivory .link:hover .expandRight
+{
+	background-image:url(Img/arrowWhite.gif);
+}
+
+
+.RadMenu_Ivory .expandLeft,
+.RadMenu_Ivory .expandRight,
+.RadMenu_Ivory .disabled:hover .expandLeft,
+.RadMenu_Ivory .disabled:hover .expandRight
+{
+	background:transparent url('Img/arrow.gif') right center no-repeat;
+}
+
+.RadMenu_Ivory_rtl .expandLeft,
+.RadMenu_Ivory_rtl .expandRight
+{
+	background: transparent url(img/left.gif) left center no-repeat;
+	
+}
+
+/* right to left */
+.RadMenu_Ivory_rtl .group .link:hover .expandLeft,
+.RadMenu_Ivory_rtl .group .link:hover .expandRight
+{
+	background:transparent url(img/invertedGroupImageRTL.gif) left center no-repeat;
+	margin: 0px;
+	
+}
+
+.RadMenu_Ivory .leftArrow,
+.RadMenu_Ivory .rightArrow,
+.RadMenu_Ivory .topArrow,
+.RadMenu_Ivory .bottomArrow,
+.RadMenu_Ivory .leftArrowDisabled,
+.RadMenu_Ivory .rightArrowDisabled,
+.RadMenu_Ivory .topArrowDisabled,
+.RadMenu_Ivory .bottomArrowDisabled
+{
+	background: #666655 url('img/left.gif') center center no-repeat;
+	width: 15px;
+}
+
+.RadMenu_Ivory .topArrow,
+.RadMenu_Ivory .topArrowDisabled
+{
+	background-image:url('img/top.gif');
+	width: 100%;
+}
+
+.RadMenu_Ivory .bottomArrow,
+.RadMenu_Ivory .bottomArrowDisabled
+{
+	background-image:url('img/bottom.gif');
+	width: 100%;
+}
+
+.RadMenu_Ivory .rightArrow,
+.RadMenu_Ivory .leftArrow
+{
+	height:100%;
+}
+
+.RadMenu_Ivory .rightArrow,
+.RadMenu_Ivory .rightArrowDisabled
+{
+	background-image:url('img/right.gif');
+}

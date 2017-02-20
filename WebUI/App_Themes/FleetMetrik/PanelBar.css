@@ -1,0 +1,262 @@
+.RadPanelBar_Orchestrator
+{
+	background-color:White;
+	background: #FFF;
+	height: 100%;
+}
+
+.RadPanelBar_Orchestrator ul.rpRootGroup
+{
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	/*padding: 20px 36px 28px 28px;*/
+}
+
+.RadPanelBar_Orchestrator_rtl ul.rpRootGroup
+{
+	padding: 20px 28px 28px 36px;
+	text-align: right;
+}
+
+.RadPanelBar_Orchestrator .rpLink
+{
+	border-bottom: 1px solid #000;
+	overflow-x: hidden;
+}
+
+.RadPanelBar_Orchestrator .rpText
+{
+	margin-right: 7px;
+	overflow-x: hidden;
+}
+
+.RadPanelBar_Orchestrator_rtl .rpText
+{
+	margin-left: 7px;
+	margin-right: 0;
+}
+
+.RadPanelBar_Orchestrator .rpGroup .rpExpanded .rpText,
+.RadPanelBar_Orchestrator .rpGroup .rpExpandable .rpText
+{
+	background-position: right 5px;
+}
+
+
+.RadPanelBar_Orchestrator_rtl .rpGroup .rpExpanded .rpText,
+.RadPanelBar_Orchestrator_rtl .rpGroup .rpExpandable .rpText
+{
+	background-position: left 5px;
+}
+
+.RadPanelBar_Orchestrator .rpGroup
+{
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.RadPanelBar_Orchestrator .rpGroup .rpLink,
+.RadPanelBar_Orchestrator .rpGroup .rpLast .rpLink
+{
+	border-bottom-color: #626262
+}
+
+.RadPanelBar_Orchestrator .rpLevel1 .rpLink .rpFirst
+{
+	border-top: 1px solid #bfbfbf;
+}
+
+.RadPanelBar_Orchestrator .rpLevel1 .rpLink .rpItem .rpFirst
+{
+	border-top: 1px solid #626262;
+}
+
+.RadPanelBar .rpLevel1
+{
+	border-bottom:1px solid #BFBFBF;
+}
+
+.RadPanelBar .rpLast .rpLevel1
+{
+	border-bottom: 0;
+}
+
+.RadPanelBar_Orchestrator .rpLevel1 .rpLast .rpLink
+{
+	border-bottom-width: 0;
+}
+
+.RadPanelBar_Orchestrator .rpLevel1 .rpGroup .rpLast .rpLink,
+.RadPanelBar_Orchestrator .rpLevel1 .rpLast .rpGroup .rpLink
+{
+	border-bottom-width: 1px;
+}
+
+
+
+.RadPanelBar_Orchestrator .rpLevel1 .rpLink
+{
+	display: none;
+	height: 0px;
+	line-height: 0px;
+}
+
+.RadPanelBar_Orchestrator .rpRootGroup .rpText
+{
+	padding: 6px 7px 6px 3px;
+}
+
+.RadPanelBar_Orchestrator_rtl .rpRootGroup .rpText
+{
+	padding: 6px 3px 6px 7px;
+}
+
+.RadPanelBar_Orchestrator .rpGroup .rpLink,
+.RadPanelBar_Orchestrator .rpGroup .rpTemplate
+{
+	font-size: 11px;
+}
+
+.RadPanelBar_Orchestrator .rpGroup .rpText
+{
+	padding: 1px 7px 0 0;
+}
+
+.RadPanelBar_Orchestrator_rtl .rpGroup .rpText
+{
+	padding: 1px 0 0 7px;
+}
+
+.RadPanelBar_Orchestrator .rpLevel1 .rpText
+{
+	padding-left: 10px;
+}
+
+.RadPanelBar_Orchestrator .rpLevel2 .rpText
+{
+	padding-left: 20px;
+}
+
+.RadPanelBar_Orchestrator .rpLevel3 .rpText
+{
+	padding-left: 30px;
+}
+
+.RadPanelBar_Orchestrator_rtl .rpLevel1 .rpText
+{
+	padding-right: 10px;
+	padding-left: 0;
+}
+
+.RadPanelBar_Orchestrator_rtl .rpLevel2 .rpText
+{
+	padding-right: 20px;
+	padding-left: 0;
+}
+
+.RadPanelBar_Orchestrator_rtl .rpLevel3 .rpText
+{
+	padding-right: 30px;
+	padding-left: 0;
+}
+
+/* these should be checked */
+
+.RadPanelBar_Orchestrator .rpSelected .rpText
+{
+	font-weight: bold;
+}
+
+.RadPanelBar_Orchestrator .rpDisabled .rpText
+{
+	cursor: default;
+	color: #bbb;
+}
+
+.RadPanelBar_Orchestrator .rpRootGroup .rpDisabled:hover
+{
+	border-bottom-color: #bfbfbf;
+	cursor: default;
+	text-decoration: none;
+}
+
+.RadPanelBar_Orchestrator .rpGroup .rpDisabled:hover
+{
+	border-bottom: 1px solid #626262;
+	cursor: default;
+	text-decoration: none;
+}
+
+/** -------- **/
+/** -------- **/
+/** -------- **/
+/** -------- **/
+
+/** Top Level tabs **/
+
+.RadPanelBar_Orchestrator .rpRootGroup .rpLink
+{
+	color: #fff;
+	background-image: url('/App_Themes/Orchestrator/Panelbar/img/comingin-bg.jpg');
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #363636;
+	height: 29px;
+	overflow: hidden;	
+	border-top: 1px solid #000;
+	border-bottom: 0px;
+}
+
+.RadPanelBar_Orchestrator .rpRootGroup .rpLinkMyResources
+{
+	color: #fff;
+	background-image: url('/App_Themes/Orchestrator/Panelbar/img/myresource-bg.jpg');
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #363636;
+	height: 29px;
+	overflow: hidden;
+	border-top: 1px solid #000;
+	border-bottom: 0px;
+}
+
+.RadPanelBar_Orchestrator .rpRootGroup .rpLink:hover
+{
+	background-image: url('/App_Themes/Orchestrator/Panelbar/img/tabhover-bg.jpg');
+	background-color: #596a57;	
+}
+
+.RadPanelBar_Orchestrator .rpRootGroup .rpExpanded 
+{
+	background-image: none;
+	background-color: #FFF;
+	color: #333;	
+}
+
+.RadPanelBar_Orchestrator .rpRootGroup .rpExpanded:hover
+{
+	color: #FFF;	
+}
+
+/** Text and image within tab **/
+
+.RadPanelBar_Orchestrator .rpRootGroup .rpLink .rpText 
+{
+	padding: 7px 0px 0px 5pxpx;
+	font-weight: bold;		
+}
+
+.RadPanelBar_Orchestrator .rpRootGroup .rpLink .rpImage 
+{
+	padding: 2px 0px 0px 2px;	
+}
+
+/** Tab open slide **/
+
+.RadPanelBar_Orchestrator .rpRootGroup .rpTemplate
+{
+	padding: 5px;
+}
+
+

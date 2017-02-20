@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+	<string id="Maximize">Maximieren</string>
+	<string id="Minimize">Minimieren</string>
+	<string id="Close">Schließen</string>
+	<string id="Restore">Wiederherstellen</string>	
+	<string id="PinOff">Herausnehmen</string>
+	<string id="PinOn">Befestigen</string>
+	<string id="ConfirmMessage">Sind Sie sicher?</string>
+	<string id="PromptMessage">Tragen Sie Wert ein:</string>
+	<string id="Ok">Ok</string>
+	<string id="Cancel">AufHeben</string>
+	<string id="Yes">Ja</string>
+	<string id="No">Nein</string>
+	<string id="Loading">Laden...</string>
+	<string id="Reload">Wiederladen</string>	
+	<string id="Alert">r.a.d.window Warnung</string>
+	<string id="Prompt">r.a.d.window Anforderungszeichen</string>
+	<string id="Confirm">r.a.d.window Bestätigung</string>
+</localization>

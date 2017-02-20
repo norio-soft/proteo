@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7b6dcec4-6187-4104-ad82-b86f787894df" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://blue.orchestrator.co.uk/profiles.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Profiles4.xsd" MetadataType="Schema" ID="93d47237-d7ee-4dc3-96a2-55e52a480885" SourceId="1" SourceUrl="http://blue.orchestrator.co.uk/Profiles.svc?xsd=xsd0" />
+    <MetadataFile FileName="Profiles41.xsd" MetadataType="Schema" ID="f66c7f87-77aa-4c13-a26c-cbf87d20b28f" SourceId="1" SourceUrl="http://blue.orchestrator.co.uk/Profiles.svc?xsd=xsd1" />
+    <MetadataFile FileName="Profiles42.xsd" MetadataType="Schema" ID="e9c8c5b2-036f-44d1-8234-6ee0ef687d8d" SourceId="1" SourceUrl="http://blue.orchestrator.co.uk/Profiles.svc?xsd=xsd3" />
+    <MetadataFile FileName="Profiles1.wsdl" MetadataType="Wsdl" ID="55e8da64-8dfa-4411-99d9-cdd8ddac6692" SourceId="1" SourceUrl="http://blue.orchestrator.co.uk/Profiles.svc?wsdl" />
+    <MetadataFile FileName="Profiles1.disco" MetadataType="Disco" ID="755c68e3-e318-47cd-bae8-e5267d62f23a" SourceId="1" SourceUrl="http://blue.orchestrator.co.uk/Profiles.svc?disco" />
+    <MetadataFile FileName="Profiles43.xsd" MetadataType="Schema" ID="108389b3-4ad9-40b7-9ee7-ab6f3bb9de9e" SourceId="1" SourceUrl="http://blue.orchestrator.co.uk/Profiles.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,153 @@
+﻿<div class="modal-header">
+    <button type="button" class="close" ng-click="close()" aria-hidden="true">&times;</button>
+    <h4 class="modal-title">Driver Requests</h4>
+</div>
+
+<div class="modal-body" >
+    <form class="form-driverRequests" role="form" name="editDriverRequestsForm" novalidate>
+        <div class="dt-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="list-group">
+                        <div class="list-group-item">
+                            <div class="col-md-6">
+                                <h3 class="list-group-item-heading">{{driver.fullName}}</h3>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-default pull-right" placeholder="Add request here" ng-click="toggleCreateDriverRequest()" ng-disabled="createDriverRequestActive" ng-show="driverRequests.length > 0 || !createDriverRequestActive">
+                                    Add Driver Request
+                                </button>
+                            </div>
+
+                            <div class="row remove-ng-table-pager">
+                                <table ng-table="tableParams" class="table">
+
+                                    <tr ng-repeat="driverRequest in driverRequests">
+
+                                        <td header-class="col-md-6" data-title="'Request'">
+                                            <div class="form-group">
+                                                <ng-form name="driverRequestTextFieldForm">
+                                                    <span ng-if="!driverRequest.$edit">{{ driverRequest.requestText }}</span>
+                                                    <div ng-if="driverRequest.$edit">
+                                                        <div pr-show-errors>
+                                                            <p class="input-group">
+                                                                <input class="form-control" type="text" name="driverRequestText" ng-model="driverRequest.requestText" required />
+                                                                <span class="input-group-addon input-group-addon-remove-border">
+                                                                    <pr-validator form-control="driverRequestTextFieldForm.driverRequestText" field-name="Request">
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                </ng-form>
+                                            </div>
+                                        </td>
+
+                                        <td header-class="col-md-3" data-title="'Date'">
+                                            <div class="form-group">
+                                                <span ng-if="!driverRequest.$edit">{{driverRequest.appliesUntil| date: 'dd/MM/yy'}}</span>
+                                                <div ng-if="driverRequest.$edit">
+                                                    <ng-form name="driverRequestDateFieldForm">
+                                                        <div pr-show-errors>
+                                                            <p class="input-group">
+                                                                <input type="text"
+                                                                       class="form-control"
+                                                                       name="driverRequestDate"
+                                                                       placeholder="Select a date"
+                                                                       ng-model="driverRequest.appliesUntil"
+                                                                       datepicker-popup="dd/MM/yy"
+                                                                       close-text="Close"
+                                                                       is-open="driverRequest.isDatePickerOpened"
+                                                                       pr-format-date
+                                                                       pr-valid-date
+                                                                       required />
+                                                                <span class="input-group-btn">
+                                                                    <button type="button" class="btn btn-default" ng-click="openAppliesUntilDate($event,driverRequest)">
+                                                                        <i class="glyphicon glyphicon-calendar"></i>
+                                                                    </button>
+                                                                </span>
+                                                                <span class="input-group-addon input-group-addon-remove-border">
+                                                                    <pr-validator form-control="driverRequestDateFieldForm.driverRequestDate" field-name="Date">
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </ng-form>
+                                                </div>
+                                            </div>
+
+                                        </td>
+
+                                        <td header-class="col-md-3" data-title="''">
+                                            <a ng-if="!driverRequest.$edit" href="" class="btn btn-default" ng-click="driverRequest.$edit = true">Edit</a>
+                                            <a ng-if="driverRequest.$edit" href="" class="btn btn-primary" ng-click="driverRequest.$edit = false ; updateDriverRequest(driverRequest)">Save</a>
+                                            <button type="button" class="btn btn-danger" ng-click="deleteDriverRequest(driverRequest.driverRequestID)">Delete</button>
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="row">
+                                <div ng-show="createDriverRequestActive">
+
+                                    <div class="col-md-6">
+                                        <div class="form-group" pr-show-errors>
+                                            <p class="input-group">
+                                                <input class="form-control"
+                                                       id="newRequestText"
+                                                       type="text"
+                                                       placeholder="Add request here"
+                                                       name="createDriverRequestText"
+                                                       ng-model="newDriverRequest.requestText"
+                                                       pr-enter="createDriverRequest()"
+                                                       required />
+                                                <span class="input-group-addon input-group-addon-remove-border">
+                                                    <pr-validator form-control="editDriverRequestsForm.createDriverRequestText" field-name="Request" only-when-touched>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group" pr-show-errors>
+                                            <p class="input-group">
+                                                <input type="text"
+                                                       id="newAppliesUntil"
+                                                       class="form-control"
+                                                       name="createDriverRequestDate"
+                                                       ng-model="newDriverRequest.appliesUntil"
+                                                       datepicker-popup="dd/MM/yy"
+                                                       close-text="Close"
+                                                       is-open="isCreateDatePickerOpened"
+                                                       placeholder="Select a date"
+                                                       pr-format-date
+                                                       pr-valid-date
+                                                       pr-enter="createDriverRequest()"
+                                                       required />
+                                                <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-default" ng-click="openNewAppliesUntilDate($event)">
+                                                        <i class="glyphicon glyphicon-calendar"></i>
+                                                    </button>
+                                                </span>
+                                                <span class="input-group-addon input-group-addon-remove-border">
+                                                    <pr-validator form-control="editDriverRequestsForm.createDriverRequestDate" field-name="Date">
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <button type="button" class="btn btn-success" ng-click="createDriverRequest()">Create</button>
+                                        <button type="button" class="btn btn-danger" ng-click="toggleCreateDriverRequest()">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" ng-click="close()">Close</button>
+</div>

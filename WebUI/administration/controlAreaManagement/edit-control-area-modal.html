@@ -1,0 +1,53 @@
+﻿
+<div class="modal-header">
+<h3 class="modal-title">{{controlArea.controlAreaId ? 'Edit Control Area' : 'Add Control Area'}}</h3>
+</div>
+
+<div class="modal-body">
+    <form class="he-form" name="controlAreaForm" role="form">
+        <div class="form-group" pr-show-errors>
+            <div class="input-group">
+                <input type="text"
+                       class="form-control rounded"
+                       placeholder="Description"
+                       tooltip="Description"
+                       tooltip-placement="right"
+                       tooltip-trigger="mouseenter"
+                       name="description"
+                       ng-model="controlArea.description"
+                       ng-maxlength="50"
+                       required
+                       pr-enter="saveControlArea()" />
+                <span class="input-group-addon input-group-addon-remove-border">
+                    <pr-validator form-control="controlAreaForm.description" field-name="Description" only-when-touched></pr-validator>
+                </span>
+            </div>
+        </div>
+        <div class="form-group" pr-show-errors>
+            <div class="input-group">
+                <input type="text"
+                       class="form-control rounded"
+                       placeholder="Control Area Code"
+                       tooltip="Control Area Code"
+                       tooltip-placement="right"
+                       tooltip-trigger="mouseenter"
+                       name="controlAreaCode"
+                       ng-model="controlArea.controlAreaCode"
+                       ng-maxlength="10"
+                       required
+                       pr-enter="saveControlArea()" />
+                <span class="input-group-addon input-group-addon-remove-border">
+                    <pr-validator form-control="controlAreaForm.controlAreaCode" field-name="Control Area Code" only-when-touched></pr-validator>
+                </span>
+            </div>
+        </div>
+  
+    </form>
+</div>
+
+<div class="modal-footer">
+    <div class="form-buttons">
+        <div id="btnSave" class="btn btn-primary" ng-click="saveControlArea()" tabindex="0">Save</div>
+        <div id="btnCancel" class="btn btn-warning" ng-click="cancel()" tabindex="0">Cancel</div>
+    </div>
+</div>

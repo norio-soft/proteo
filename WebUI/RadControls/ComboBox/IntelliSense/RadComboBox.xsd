@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xsd:schema 
+	targetNamespace="http://schemas.telerik.com/intellisense/RadComboBox"
+	elementFormDefault="qualified"
+	xmlns="http://schemas.telerik.com/intellisense/RadComboBox"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:vs="http://schemas.microsoft.com/Visual-Studio-Intellisense"
+	vs:friendlyname="RadComboBox"
+	vs:ishtmlschema="false"
+	vs:iscasesensitive="false"
+	vs:requireattributequotes="false">
+	<xsd:annotation>
+		<xsd:documentation>This is the Visual Studio .NET ComboBox Schema</xsd:documentation>
+	</xsd:annotation>
+	<xsd:element name="RadComboBoxItemTemplate" type="RadComboBoxItemTemplateDef" />
+	<xsd:element name="RadComboBox" type="RadComboBoxDef" />	
+	<xsd:element name="RadComboBoxItem" type="RadComboBoxItemDef" />	
+	<xsd:simpleType name="RadComboBoxSort">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="None" />
+			<xsd:enumeration value="Ascending" />
+			<xsd:enumeration value="Descending" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType vs:noambientcontentmodel="true" name="RadComboBoxItemDef">
+		<xsd:attribute name="Text" type="xsd:string" />
+		<xsd:attribute name="Value" type="xsd:string" />
+		<xsd:attribute name="ID" type="xsd:string" />
+		<xsd:attribute name="Image" type="xsd:string" />
+		<xsd:attribute name="Selected" type="xsd:boolean" />
+		<xsd:attribute name="Enabled" type="xsd:boolean" />				
+		<xsd:attribute name="Height" type="xsd:unsignedInt" />		
+		<xsd:attribute name="ToolTip" type="xsd:string" />		
+		<xsd:attribute name="Visible" type="xsd:boolean" />		
+		<xsd:attribute name="Runat">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="server" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType vs:noambientcontentmodel="true" name="RadComboBoxDef">
+		<xsd:choice>
+			<xsd:element name="Items" type="RadComboBoxItemCollectionDef" />
+			<xsd:element name="ItemTemplate" type="ITemplateDef" />
+		</xsd:choice>
+		<xsd:attribute name="ContentFile" type="xsd:string" />
+		<xsd:attribute name="Text" type="xsd:string" />
+		<xsd:attribute name="LoadingMessage" type="xsd:string" />
+		<xsd:attribute name="ItemRequestTimeout" type="xsd:int" />
+		<xsd:attribute name="ZIndex" type="xsd:int" />
+		<xsd:attribute name="AutoPostBack" type="xsd:boolean" />
+		<xsd:attribute name="ShowMoreResultsBox" type="xsd:boolean" />
+		<xsd:attribute name="EnableAutoComplete" type="xsd:boolean" />
+		<xsd:attribute name="ShowToggleImage" type="xsd:boolean" />
+		<xsd:attribute name="Overlay" type="xsd:boolean" />
+		<xsd:attribute name="RadControlsDir" type="xsd:string" />
+		<xsd:attribute name="Skin" type="xsd:string" />
+		<xsd:attribute name="ItemCssClass" type="xsd:string" />
+		<xsd:attribute name="ItemCssClassHover" type="xsd:string" />
+		<xsd:attribute name="ItemCssClassDisabled" type="xsd:string" />
+		<xsd:attribute name="DropDownCssClass" type="xsd:string" />
+		<xsd:attribute name="InputCssClass" type="xsd:string" />
+		<xsd:attribute name="InputCssClassHover" type="xsd:string" />
+		<xsd:attribute name="ImageCssClass" type="xsd:string" />
+		<xsd:attribute name="ImageCssClassHover" type="xsd:string" />
+		<xsd:attribute name="LoadingMessageCssClass" type="xsd:string" />
+		<xsd:attribute name="MoreResultsMessageCssClass" type="xsd:string" />
+		<xsd:attribute name="MoreResultsImageCssClass" type="xsd:string" />
+		<xsd:attribute name="MoreResultsBoxCssClass" type="xsd:string" />
+		<xsd:attribute name="Sort" type="RadComboBoxSort" />
+		<xsd:attribute name="DataMember" type="xsd:string" />
+		<xsd:attribute name="DataTextField" type="xsd:string" />
+		<xsd:attribute name="DataValueField" type="xsd:string" />
+		<xsd:attribute name="AccessKey" type="xsd:string" />		
+		<xsd:attribute name="CssClass" type="xsd:string" />
+		<xsd:attribute name="Enabled" type="xsd:boolean" />			
+		<xsd:attribute name="Height" type="xsd:unsignedInt" />
+		<xsd:attribute name="TabIndex" type="xsd:short" />
+		<xsd:attribute name="ToolTip" type="xsd:string" />
+		<xsd:attribute name="Width" type="xsd:unsignedInt" />
+		<xsd:attribute name="ID" type="xsd:string" />
+		<xsd:attribute name="EnableViewState" type="xsd:boolean" />
+		<xsd:attribute name="Visible" type="xsd:boolean" />
+		<xsd:attribute vs:omtype="event" name="OnSelectedIndexChanged" />
+		<xsd:attribute vs:omtype="event" name="OnItemsRequested" />		
+		<xsd:attribute name="Runat">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="server" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="ITemplateDef" />
+	<xsd:complexType vs:noambientcontentmodel="true" name="RadComboBoxItemCollectionDef">
+		<xsd:choice>
+			<xsd:element name="RadComboBoxItem" type="RadComboBoxItemDef" />
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType vs:noambientcontentmodel="true" name="RadComboBoxItemTemplateDef">
+		<xsd:choice>
+			<xsd:element name="Template" type="ITemplateDef" />
+		</xsd:choice>
+		<xsd:attribute name="Runat">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="server" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>	
+</xsd:schema>

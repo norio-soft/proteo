@@ -1,0 +1,219 @@
+﻿.RadMenu_Orchestrator
+{
+	background-color: transparent;
+	width: 100%;
+	text-align: left;
+	line-height: 13px;
+}
+
+.RadMenu_Orchestrator a, .RadMenu_Orchestrator  a:active, .RadMenu_Orchestrator  a:visited 
+{
+	text-decoration: none;
+}
+
+div.RadMenu_Orchestrator ul.rmRootGroup
+{
+	float: left;
+	background-image: url(img/MasterPage/nav-seperatorbg.jpg);
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+/** Off **/
+
+.RadMenu_Orchestrator .rmLink
+{
+	background-image: url(img/MasterPage/nav-seperatorbg.jpg);
+	background-position: right center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	color: #FFF;
+	cursor: pointer;	
+	padding: 12px 10px !important;
+}
+
+.RadMenu_Orchestrator .rmLink .rmText 
+{
+    padding: 0px !important;
+}
+
+/** On **/
+
+.RadMenu_Orchestrator .rmLink:hover,
+.RadMenu_Orchestrator .rmExpanded,
+.RadMenu_Orchestrator .rmFocused
+{
+
+	cursor: pointer;
+}
+
+.RadMenu_Orchestrator .rmLink .rmText:hover,
+.RadMenu_Orchestrator .rmExpanded .rmText,
+.RadMenu_Orchestrator .rmFocused .rmText
+{
+	color: #e7d120;
+	cursor: pointer;
+}
+
+.RadMenu_Orchestrator .rmDisabled,
+.RadMenu_Orchestrator .rmDisabled:hover
+{
+	color: #888;
+	padding: 4px 6px;
+	border: 0;
+	background: none;
+	cursor: default;
+}
+
+/** --------------- **/
+/** Submenu styling **/
+
+
+.RadMenu_Orchestrator .rmSlide 
+{
+	padding: 0px;
+	z-index: 10000000000000 !important;
+}
+
+.RadMenu_Orchestrator .rmGroup
+{
+	background: #117238;	
+	padding: 0px 0px 5px 0px;	
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;	
+}
+
+/** Off **/
+
+.RadMenu_Orchestrator .rmGroup .rmLink
+{
+	margin: 1px;
+	border: 1px solid transparent;
+	background-image: none;
+	padding: 4px !important;
+}
+
+.RadMenu_Orchestrator .rmGroup .rmText
+{
+	padding: 4px 18px 4px 6px;
+}
+
+/** On **/
+
+.RadMenu_Orchestrator .rmGroup .rmLink:hover
+{
+	margin: 1px;
+	background-color: #c2c2c2;
+	background-image: url('img/MasterPage/menu-hoverbg.jpg');
+	background-repeat:repeat-x;	
+	border: 1px solid #30c26b;
+	color: #b5ba2b;	
+}
+
+.RadMenu_Orchestrator .rmGroup .rmLink:hover .rmText
+{
+	padding: 4px 6px;
+	color: #000;
+}
+
+/** Expanded **/
+
+.RadMenu_Orchestrator .rmGroup .rmExpanded
+{
+	margin: 1px;
+	background-color: #167b3f;
+	background-image: url('img/MasterPage/menu-hoverbg.jpg');
+	background-repeat:repeat-x;	
+	border: 1px solid #167b3f;
+	color: #e7d120;	
+}
+
+.RadMenu_Orchestrator .rmGroup .rmExpanded .rmText
+{
+	padding: 4px 6px;
+	color: #FFF;
+}
+
+.RadMenu_Orchestrator .rmGroup .rmExpandRight 
+{
+	background-image: url('img/MasterPage/Arrow_Black.gif');
+	background-position: right center;
+	background-repeat: no-repeat;	
+}
+
+/* */
+
+.RadMenu_Orchestrator .rmGroup .rmDisabled,
+.RadMenu_Orchestrator .rmGroup .rmDisabled:hover
+{
+	color: #888;
+	padding: 6px 1px;
+	border: 0;
+	background: none;
+	cursor: Orchestrator;
+}
+
+.RadMenu_Orchestrator .rmGroup .rmLeftImage
+{
+	margin-left: 2px;
+}
+
+/** Seperator **/
+
+.RadMenu_Orchestrator .rmGroup .rmSeparator 
+{
+	background-color: Transparent;
+	border-bottom: 1px dotted #000;
+	height: 1px;
+	padding: 0px;
+	margin: 0px;	
+}
+
+.RadMenu_Orchestrator .rmGroup .rmSeparator .rmtText 
+{
+	background-color: Transparent;
+	height: 0px;
+	padding: 0px;
+	margin: 0px;	
+}
+
+/* double margin bugfix */
+* html .RadMenu_Orchestrator .rmGroup .rmLeftImage { margin-left: 1px; }
+
+.RadMenu_Orchestrator .rmExpanded
+{
+	z-index: 2000;
+}
+
+/* scrolling arrows */
+
+.RadMenu_Orchestrator .rmTopArrow,
+.RadMenu_Orchestrator .rmBottomArrow
+{
+	background: #fff url('') no-repeat;
+	border: 0 solid #898fa5;
+	height: 10px;
+	width: 100%;
+	outline: 0;
+}
+
+.RadMenu_Orchestrator .rmLeftArrow,
+.RadMenu_Orchestrator .rmRightArrow
+{
+	background: #fff url('') no-repeat;
+	border: 0 solid #898fa5;
+	width: 10px;
+	height: 28px;
+	outline: 0;
+}
+
+.RadMenu_Orchestrator .rmTopArrow { background-position: 50% 0; border-bottom-width: 1px; }
+.RadMenu_Orchestrator .rmBottomArrow { background-position: 50% 100%; border-top-width: 1px; }
+.RadMenu_Orchestrator .rmLeftArrow { background-position: 0 50%; border-right-width: 1px; }
+.RadMenu_Orchestrator .rmRightArrow { background-position: 100% 50%; border-left-width: 1px; }
+
+.RadMenu_Orchestrator_Context
+{
+	background: none;
+}

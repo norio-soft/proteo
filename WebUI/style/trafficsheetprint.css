@@ -1,0 +1,68 @@
+﻿body 
+{
+	background:white;
+	font-size:10px;
+	font-family:Verdana;
+	margin:0px 0px 0px 0px;
+}
+
+#ControlPanelLayout
+{
+	height: auto;
+}
+
+#noPrintTD
+{
+	display:none;
+}
+
+#noPrintTD1
+{
+	display:none;
+}
+
+#noPrintDIV
+{
+	display:none;
+}
+
+#noPrint1
+{
+	display:none;
+}
+
+ #txtGridSearch
+ {
+	display:none;
+ }
+ 
+#imbRefresh 
+{
+	display:none;
+}
+
+#imbRefresh #imbPrint 
+{
+	display:none;
+}
+
+#imbRefresh #imbFilter
+{
+	display:none;
+}
+
+td
+{
+	font-size:10px;
+}
+
+a
+{
+	font-size:10px;
+}
+
+#Header1_mnuMainMenu_div
+{
+	display:none;
+}
+

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Profiles" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://blue.orchestrator.co.uk/Profiles.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://blue.orchestrator.co.uk/Profiles.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://blue.orchestrator.co.uk/Profiles.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/OrchestratorServices.DTO" />
+      <xsd:import schemaLocation="http://blue.orchestrator.co.uk/Profiles.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Profiles_GetLocationProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationProfiles" />
+  </wsdl:message>
+  <wsdl:message name="Profiles_GetLocationProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Profiles_GetLocationProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationProfile" />
+  </wsdl:message>
+  <wsdl:message name="Profiles_GetLocationProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="Profiles_ManageLocationProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManageLocationProfile" />
+  </wsdl:message>
+  <wsdl:message name="Profiles_ManageLocationProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManageLocationProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="Profiles_AssignVehiclesToProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignVehiclesToProfile" />
+  </wsdl:message>
+  <wsdl:message name="Profiles_AssignVehiclesToProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignVehiclesToProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="Profiles_GetPerformanceProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerformanceProfiles" />
+  </wsdl:message>
+  <wsdl:message name="Profiles_GetPerformanceProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerformanceProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Profiles_GetPerformanceProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerformanceProfile" />
+  </wsdl:message>
+  <wsdl:message name="Profiles_GetPerformanceProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerformanceProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="Profiles_ManagePerformanceProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManagePerformanceProfile" />
+  </wsdl:message>
+  <wsdl:message name="Profiles_ManagePerformanceProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManagePerformanceProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="Profiles_AssignVehiclesToPerformanceProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignVehiclesToPerformanceProfile" />
+  </wsdl:message>
+  <wsdl:message name="Profiles_AssignVehiclesToPerformanceProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignVehiclesToPerformanceProfileResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Profiles">
+    <wsdl:operation name="GetLocationProfiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/Profiles/GetLocationProfiles" message="tns:Profiles_GetLocationProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Profiles/GetLocationProfilesResponse" message="tns:Profiles_GetLocationProfiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/Profiles/GetLocationProfile" message="tns:Profiles_GetLocationProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Profiles/GetLocationProfileResponse" message="tns:Profiles_GetLocationProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManageLocationProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/Profiles/ManageLocationProfile" message="tns:Profiles_ManageLocationProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Profiles/ManageLocationProfileResponse" message="tns:Profiles_ManageLocationProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignVehiclesToProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/Profiles/AssignVehiclesToProfile" message="tns:Profiles_AssignVehiclesToProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Profiles/AssignVehiclesToProfileResponse" message="tns:Profiles_AssignVehiclesToProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPerformanceProfiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/Profiles/GetPerformanceProfiles" message="tns:Profiles_GetPerformanceProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Profiles/GetPerformanceProfilesResponse" message="tns:Profiles_GetPerformanceProfiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPerformanceProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/Profiles/GetPerformanceProfile" message="tns:Profiles_GetPerformanceProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Profiles/GetPerformanceProfileResponse" message="tns:Profiles_GetPerformanceProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManagePerformanceProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/Profiles/ManagePerformanceProfile" message="tns:Profiles_ManagePerformanceProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Profiles/ManagePerformanceProfileResponse" message="tns:Profiles_ManagePerformanceProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignVehiclesToPerformanceProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/Profiles/AssignVehiclesToPerformanceProfile" message="tns:Profiles_AssignVehiclesToPerformanceProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Profiles/AssignVehiclesToPerformanceProfileResponse" message="tns:Profiles_AssignVehiclesToPerformanceProfile_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_Profiles" type="tns:Profiles">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLocationProfiles">
+      <soap:operation soapAction="http://tempuri.org/Profiles/GetLocationProfiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationProfile">
+      <soap:operation soapAction="http://tempuri.org/Profiles/GetLocationProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManageLocationProfile">
+      <soap:operation soapAction="http://tempuri.org/Profiles/ManageLocationProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignVehiclesToProfile">
+      <soap:operation soapAction="http://tempuri.org/Profiles/AssignVehiclesToProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerformanceProfiles">
+      <soap:operation soapAction="http://tempuri.org/Profiles/GetPerformanceProfiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerformanceProfile">
+      <soap:operation soapAction="http://tempuri.org/Profiles/GetPerformanceProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManagePerformanceProfile">
+      <soap:operation soapAction="http://tempuri.org/Profiles/ManagePerformanceProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignVehiclesToPerformanceProfile">
+      <soap:operation soapAction="http://tempuri.org/Profiles/AssignVehiclesToPerformanceProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Profiles">
+    <wsdl:port name="BasicHttpBinding_Profiles" binding="tns:BasicHttpBinding_Profiles">
+      <soap:address location="http://blue.orchestrator.co.uk/Profiles.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

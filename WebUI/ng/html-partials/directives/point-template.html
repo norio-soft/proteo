@@ -1,0 +1,10 @@
+﻿<a ng-if="match.model.companyName != 'footer'" class="point-result cursor-pointer">
+    <div bind-html-unsafe="match.model.companyName | typeaheadHighlight:query"></div>
+    <div bind-html-unsafe="match.model.addressLine1 | typeaheadHighlight:query"></div>
+    <div bind-html-unsafe="match.model.town | typeaheadHighlight:query"></div>
+    <div bind-html-unsafe="match.model.county | typeaheadHighlight:query"></div>
+    <div bind-html-unsafe="match.model.postcode | typeaheadHighlight:query"></div>
+</a>
+<a ng-if="match.model.companyName == 'footer'" class="cursor-pointer text-center point-result" ng-click="open('', query)">
+    Add a new address
+</a>

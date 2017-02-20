@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Menu>
+  <Group>
+    <Item AccessKey="R" Text="Run">
+      <Group>
+        <Item Text="Run Sheet" Href="~/traffic/tsheet.aspx?isJobSheet=true&amp;csid=xx" />
+        <Item Text="Traffic Sheet">
+          <Group>
+            <Item Text="Current Window" Href="~/traffic/tsmaster.aspx?csid=xx" />
+            <Item Text="New Window" Href="javascript:window.open('/traffic/tsmaster.aspx' + getCSIDSingle()); void(0)" />
+            <Item Text="Current Window, New Filter Settings" Href="javascript:window.location='/traffic/tsmaster.aspx' + newCSIDSingle()" />
+            <Item Text="New Window, New Filter Settings" Href="javascript:window.open('/traffic/tsmaster.aspx' + newCSIDSingle()); void(0)" />
+          </Group>
+        </Item>
+        <Item Text="Search" Href="~/job/jobsearch.aspx?chkFilterDates=on&amp;csid=xx" />
+        <Item Text="Multi Call In" Href="~/job/multicallin.aspx?csid=xx" />
+        <Item Text="Find Runs For Driver" Href="~/job/jobsforresource.aspx?csid=xx"/>
+        <Item IsSeparator="True" />
+        <Item Text="Driver Instructions" Href="~/mwf/instructionlist.aspx?csid=xx"/>
+        <Item Text="Arrivals Board" Href="javascript:window.open('TODO INSERT URL'); void(0)" />
+        <Item Text="Device Management" Href="javascript:window.open('http://localhost:61002/devicemanagement'); void(0)" />
+      </Group>
+    </Item>
+    <Item AccessKey="O" Text="Orders" Href="">
+      <Group>
+        <Item Text="Add Orders" Href="~/groupage/AddOrder.aspx?csid=xx" />
+        <Item Text="Add Order (New Window)"  Href="javascript:popup('/groupage/addorder.aspx?hm=1' + getCSID(), 1218, 930)"/>
+        <Item Text="Approve Orders" Href="~/groupage/ApproveOrdersnew.aspx?csid=xx" />
+        <Item Text="Deliveries" Href="~/groupage/deliveriesNew.aspx?csid=xx" />
+        <Item Text="Collections" Href="~/groupage/collectionsNew.aspx?csid=xx" />
+        <Item IsSeparator="True" />
+        <Item Text="Export to Palletforce" Href="~/groupage/palletNetworkExportv3.aspx?csid=xx" />
+        <Item IsSeparator="True" />
+        <Item Text="Find" Href="~/groupage/findorder.aspx?csid=xx"/>
+        <Item IsSeparator="True" />
+        <Item Text="Map Based Deliveries" Href="~/planning/mpd.aspx?csid=xx"/>
+        <Item Text="Vehicle Planning (ALPHA)" Href="~/planning/vehicleplanning.aspx?csid=xx"/>
+      </Group>
+    </Item>
+    <Item AccessKey="P" Text="Planning" Href="">
+      <Group>
+        <Item Text="Resource Units" Href="javascript:window.open('/ng/resourceunits'); void(0)" />
+        <Item Text="Leg Planning" Href="javascript:window.open('/ng/legplanning'); void(0)" />
+      </Group>
+    </Item>
+    <Item AccessKey="T" Text="Reports" Href="">
+      <Group>
+        <Item Text="Call In Sheet Report" Href="~/job/callInSheet.aspx?csid=xx" />
+        <Item Text="Claused Call In Sheet" Href="~/reports/clausedcallin.aspx?csid=xx" />
+        <Item Text="CDR Report" Href="~/reports/cdrReport.aspx" /><!--Chiltern Custom Report-->
+        <Item Text="Outstanding Call In Log Report" Href="~/job/CallInLog.aspx?csid=xx" />
+        <Item Text="Weekend Sheet" Href="~/resource/driver/weekendsheet.aspx?csid=xx" />
+       
+        <Item IsSeparator="True" />
+        <Item Text="Runs with Demurrage" Href="~/job/demurragejobs.aspx?csid=xx" />
+        <Item Text="Runs with Problem Alerts" Href="~/problemAlert/problematicJobs.aspx?csid=xx" />
+        <Item Text="Completed Goods Return Runs" Href="~/goodsrefused/ListGoodsRefusedJob.aspx?csid=xx" />
+        <Item Text="Goods Return Runs Missing a Return Receipt Number" Href="~/job/MissingReturnReceiptNumber.aspx?csid=xx" />
+        <Item IsSeparator="True" />
+        <Item Text="All Work For Client" Href="~/organisation/workForClient.aspx?mode=client&amp;csid=xx" />
+        <Item Text="All Work For Client New" Href="~/organisation/WorkForClientNew.aspx?csid=xx" />
+        <Item Text="All Work For Driver" Href="~/organisation/workForDriver.aspx?mode=subcontractor&amp;csid=xx" />
+        <Item Text="All Work For Sub-Contractor" Href="~/organisation/workForClient.aspx?mode=subcontractor&amp;csid=xx" />
+        <Item Text="All Work For Sub-Contractor New" Href="~/organisation/workForSubContractor.aspx?csid=xx" />
+        <Item Text="All Uninvoiced Work For Client" Href="~/organisation/uninvoicedForClient.aspx?csid=xx" />
+        <Item Text="Client Turnover per Month" Href="~/reports/ClientTurnover.aspx?csid=xx" />
+        <Item Text="Subcontractor Costs per Month" Href="~/reports/SubcontractorTurnover.aspx?csid=xx" />
+        <Item Text="All runs For Client And Load date" Href="~/reports/getallforclientandload.aspx?csid=xx" />
+        <Item Text="Knauf Shunt Loading Sheet" Href="~/groupage/ShuntLoadingSheet.aspx?csid=xx" />
+        <Item Text="Agency Driver" Href="~/reports/Agencydriver.aspx" />
+        <Item IsSeparator="True" />
+        <Item Text="PIL List" Href="~/groupage/PILList.aspx?csid=xx" />
+        <Item IsSeparator="True" />
+        <Item Text="Pricing Report" Href="~/reports/jobpricing.aspx?csid=xx" />
+        <Item Text="Revenue per Vehicle Report" Href="~/reports/RevenuePerVehicleReport.aspx?csid=xx" />
+        <Item IsSeparator="True" />
+        <Item Text="Sub-Contracted History" Href="~/Job/SubContractedHistory.aspx?csid=xx" />
+        <Item Text="Resource Manifest" Href="~/manifest/resourcemanifestlist.aspx?csid=xx"/>
+        <Item Text="Manifest of Orders" Href="~/reports/orderbasedmanifest.aspx?csid=xx"/>
+        <Item IsSeparator="True" />
+        <Item Text="Route Deviation" Href="~/reports/RouteDeviation.aspx?csid=xx" />
+        <Item Text="Empty Running" Href="~/reports/EmptyRunning.aspx?csid=xx" />
+        <Item Text="Run Overview Report" Href="~/reports/runoverviewreport.aspx?csid=xx"/> <!--Report for Chiltern-->
+        <Item Text="Driver Time Report" Href="~/reports/drivertimereport.aspx?csid=xx" /><!--Report for JR-->
+        <Item Text="Profitability" Href="~/reports/jr/profitabilityreport.aspx?csid=xx"/> <!--Report for JR-->
+        <Item Text="Profitability BY Planner" Href="~/reports/jr/profitabilitybyplannerreport.aspx?csid=xx"/><!--Report for JR-->
+        <Item IsSeparator="True" />
+        <Item Text="Fleet Metrik">
+         
+          <Group>
+            <Item Text="Driver Behaviour" Href="~/reports/fmreports.aspx?csid=xx" />
+            <Item IsSeparator="True" />
+            <Item Text="Location" Href="">
+              <Group>
+                <Item Text="Driver Logon History" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=Location.DriverLogon' + getCSID(), 800, 800)" />
+                <Item Text="Location Event" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=Location.LocationEvent'+ getCSID(), 800, 800)" />
+                <Item Text="Location Idling" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=Location.LocationIdling'+ getCSID(), 800, 800)" />
+                <Item Text="Location Vehicle Trip" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=Location.LocationVehicleTrip'+ getCSID(), 800, 800)" />
+                <Item Text="Location Summary" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=Location.LocationSummary'+ getCSID(), 800, 800)" />
+              </Group>
+            </Item>
+            <Item Text="CAN" Href="">
+              <Group>
+                <!--<Item Text="Driver Grading" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=CAN.DriverGrading2', 800, 800)" />-->
+                <Item Text="Driver Grading Detail" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=CAN.DriverGradingDetail'+ getCSID(), 800, 800)" />
+                <!--<Item Text="Driver Overview" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=CAN.DriverOverview', 800, 800)" />-->
+                <Item Text="Driver Fuel Consumption" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=CAN.DriverFuelConsumption2'+ getCSID(), 800, 800)" />
+                <Item Text="Driver Idling" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=CAN.DriverIdling2'+ getCSID(), 800, 800)" />
+                <Item Text="Vehicle Fuel Consumption" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=CAN.VehicleFuelConsumption2'+ getCSID(), 800, 800)" />
+                <Item Text="Vehicle Idling" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=CAN.VehicleIdling2'+ getCSID(), 800, 800)" />
+              </Group>
+            </Item>
+            <Item Text="Geofence" Href="">
+              <Group>
+                <Item Text="Visits By Vehicle" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=GeoFence.VisitsByVehicle'+ getCSID(), 800, 800)" />
+              </Group>
+            </Item>
+            <Item Text="Vehicle Tracking Export" Href="~/reports/vehicle-tracking-export.aspx" />
+          </Group>
+        </Item>
+      </Group>
+    </Item>
+    <Item AccessKey="I" Text="Invoicing" Href="">
+      <Group>
+        <Item Text="Find Invoice" Href="~/invoicing/listinvoice.aspx?csid=xx" />
+        <Item Text="Invoice Audit Trail" Href="~/invoicing/InvoiceAuditTrail.aspx?csid=xx" />
+        <Item Text="Credit Note Audit Trail" Href="~/invoicing/creditnoteaudittrail.aspx?csid=xx" />
+        <Item IsSeparator="True" />
+        <Item Text="One Liner Invoice" Href="~/invoicing/addupdateonelinerinvoice.aspx?csid=xx" />
+        <Item Text="One Liner Credit Note" Href="~/invoicing/addupdateonelinercredit.aspx?csid=xx" />
+        <Item IsSeparator="True" />
+        <Item Text="Client Invoicing" Href="">
+          <Group>
+            <Item Text="Multi Batch Invoice" Href="~/invoicing/groupage/InvoiceBatchAndApproval.aspx?csid=xx"/>
+            <Item Text="Flag Orders as Ready to Invoice" Href="~/invoicing/groupage/FlagForInvoicing.aspx?csid=xx" />
+            <Item Text="Auto Batch Run"	 Href="~/invoicing/groupage/autorunstart.aspx?csid=xx"/>
+          </Group>
+        </Item>
+        <Item Text="Sub-Contractor" Href="">
+          <Group>
+            <Item Text="Auto Batch Run" Href="~/invoicing/subcontractorsb/autorunstart.aspx?csid=xx" />
+          </Group>
+        </Item>
+        <Item IsSeparator="True" />
+        <Item Text="Self Bill Invoice Preparation" Href="~/invoicing/invoiceselfbillpreparation.aspx?csid=xx" />
+        <Item Text="Invoice Extra Preparation" Href="~/invoicing/invoiceextrapreparation.aspx?csid=xx" />
+        <Item IsSeparator="True" />
+        <Item Text="Nominal Codes" Href="~/invoicing/nominalcodes.aspx?csid=xx" />
+        <Item Text="Approval Process" Href="~/Invoicing/Approval/ReviewableGroups.aspx?csid=xx" />
+        <Item Text="Stalled Batches" Href="~/Invoicing/Approval/StalledBatches.aspx?csid=xx" />
+      </Group>
+    </Item>
+    <Item AccessKey="G" Text="Goods" Href="">
+      <Group>
+        <Item Text="Goods Refused Report" Href="~/goodsrefused/ListGoodsRefused.aspx?csid=xx" />
+        <Item Text="Outstanding Goods Refused Report (Create Return Run)" Href="~/goodsrefused/ListGoodsRefused.aspx?createJob=true&amp;csid=xx" />
+        <Item Text="Manage Goods Types" Href="~/GoodsType/ListGoodsTypes.aspx?csid=xx" />
+        <Item Text="List Shorts and Overs" Href="~/goodsrefused/listShortsAndOvers.aspx?csid=xx" />
+      </Group>
+	  </Item>
+    <Item AccessKey="A" Text="Pallets" Href="">
+      <Group>
+        <Item Text="Pallet Balances" Href="~/pallet/viewpalletbalances.aspx?csid=xx" />
+        <Item Text="Manage Pallet Types" Href="~/Pallet/ListPalletTypes.aspx?csid=xx" />
+      </Group>
+    </Item>
+    <Item AccessKey="S" Text="PODs" Href="">
+      <Group>
+        <Item Text="View and Search POD List" Href="~/POD/viewpods.aspx?csid=xx" />
+        <Item Text="Outstanding PODs" Href="~/POD/outstandingPods.aspx?csid=xx" />
+        <Item Text="Missing POD List" Href="~/traffic/jobmanagement/missingpodlist.aspx?csid=xx" />
+        <Item Text="Imported PODs" Href="~/POD/ImportedPods.aspx?csid=xx" />
+      </Group>
+    </Item>
+    <Item AccessKey="U" Text="Resources" Href="">
+      <Group>
+        <Item Text="Diary" Href="~/resource/Diary.aspx?csid=xx"/>
+        <Item Text="Drivers" Href="">
+          <Group>
+            <Item Text="View All" Href="~/resource/driver/driverList.aspx?csid=xx" />
+            <Item Text="View Available" Href="~/resource/driver/driverList.aspx?showAvailable=true&amp;csid=xx" />
+            <Item IsSeparator="True" />
+            <Item Text="Driver Types" Href="~/resource/driver/drivertypes.aspx?csid=xx" />
+            <Item IsSeparator="True" />
+            <Item Text="Driver Start Times" Href="">
+              <Group>
+                <Item Text="Enter Driver Start Times" Href="~/resource/driver/enterdriverstarttimes.aspx?csid=xx" />
+                <Item Text="View Driver Start Times" Href="~/resource/driver/viewdriverstarttimes.aspx?csid=xx" />
+              </Group>
+            </Item>
+            <Item Text="Driver Requests" Href="">
+              <Group>
+                <Item Text="Enter a Driver Request" Href="~/resource/driver/addupdatedriverrequest.aspx?csid=xx" />
+                <Item Text="View Driver Requests" Href="~/resource/driver/listdriverrequests.aspx?csid=xx" />
+              </Group>
+            </Item>
+            <Item Text="Driver Activity" Href="~/job/driveractivity.aspx?csid=xx" />
+            <Item Text="Message Log" Href="~/mwf/DriverMessageList.aspx?csid=xx" />
+            <Item IsSeparator="True" />
+            <Item Text="Driver Time Report" Href="~/reports/drivertimereport.aspx?csid=xx" />
+          </Group>
+        </Item>
+        <Item Text="Vehicles" Href="">
+          <Group>
+            <Item Text="View All" Href="~/resource/vehicle/vehicleList.aspx?csid=xx" />
+            <Item Text="View Available" Href="~/resource/vehicle/vehicleList.aspx?showAvailable=true&amp;csid=xx" />
+            <Item Text="View Requiring Service" Href="~/resource/vehicle/VehicleRequiringService.aspx?csid=xx" />
+            <Item Text="Vehicle Types" Href="~/resource/vehicle/vehicletypes.aspx?csid=xx"/>
+            <Item Text="GPS Mapping Details" Href="~/resource/vehicle/gpsmappinglist.aspx?csid=xx"/>
+          </Group>
+        </Item>
+        <Item Text="Trailers" Href="">
+          <Group>
+            <Item Text="View All" Href="~/resource/trailer/trailerList.aspx?csid=xx" />
+            <Item Text="View Available" Href="~/resource/trailer/trailerList.aspx?showAvailable=true&amp;csid=xx" />
+            <Item Text="Trailer Types" Href="~/resource/trailer/trailertypes.aspx?csid=xx"/>
+            <Item Text="GPS Mapping Details" Href="~/resource/trailer/gpsmappinglist.aspx?csid=xx"/>
+          </Group>
+        </Item>
+        <Item Text="Deleted Resources" Href="~/Resource/DeletedResources.aspx?csid=xx" />
+        <Item IsSeparator="True" />
+        <Item Text="Manage Safety Profiles" Href="~/Resource/SafetyChecks/SafetyCheckProfiles.aspx?csid=xx" />
+        <Item Text="Search Safety Checks" Href="~/Resource/SafetyChecks/SearchSafetyCheckResults.aspx?csid=xx" />
+        <Item IsSeparator="True" />
+        <!--<Item Text="View Schedule" Href="~/schedule/scheduleresource.aspx?csid=xx" />-->
+        <Item Text="View Schedule" Href="javascript:window.open('/ng/scheduleresource'); void(0)" />
+        <Item Text="View Fleet" Href="~/Resource/Vehicle/Fleet.aspx?csid=xx" />
+      </Group>
+    </Item>
+    <Item AccessKey="C" Text="Clients/Client Customers" Href="">
+      <Group>
+        <Item Text="List Points for Organisation" Href="~/point/listpoints.aspx?csid=xx" />
+        <Item Text="Merge Points" Href="~/point/mergePoints.aspx?csid=xx" />
+        <Item Text="Add New Point" Href="~/point/addupdatepoint.aspx?csid=xx" />
+        <Item Text="List Clients" Href="~/organisation/organisations.aspx?csid=xx" />
+        <Item Text="List Incomplete Clients" Href="~/organisation/organisations.aspx?incomplete=true&amp;csid=xx" />
+        <Item Text="Add New Client" Href="~/organisation/addupdateorganisation.aspx?csid=xx" />
+        <Item Text="Lookup Client Contact" Href="javascript:popup275x600('/Organisation/clientContacts.aspx' + getCSIDSingle())" />
+        <Item Text="List Client Customers" Href="~/organisation/clientcustomers.aspx?csid=xx" />
+        <Item Text="Add New Client Customer" Href="~/organisation/addupdateclientscustomer.aspx?csid=xx" />
+      </Group>
+    </Item>
+    <Item AccessKey="B"  Text="Sub-Contractors" Href="">
+      <Group>
+        <Item Text="List Sub-Contractors" Href="~/resource/subcontractor/subcontractors.aspx?csid=xx" />
+        <Item Text="Add New Sub-Contractor" Href="~/organisation/addupdateorganisation.aspx?type=3&amp;csid=xx" />
+        <Item Text="Lookup Sub-Contractor Contact" Href="javascript:popup275x600('/Organisation/clientContacts.aspx?isClient=false' + getCSID())" />
+      </Group>
+    </Item>
+    <Item AccessKey="K"  Text="KPI" Href="">
+      <Group>
+        <Item Text="Driver Performance Analysis" Href="">
+          <Group>
+            <Item Text="Period" Href="~/kpireporting/driverperformanceanalysis/period.aspx?csid=xx" />
+            <Item Text="Trend" Href="~/kpireporting/driverperformanceanalysis/trend.aspx?csid=xx" />
+          </Group>
+        </Item>
+        <Item Text="Revenue Performance Analysis" Href="~/kpireporting/revenueperformanceanalysis.aspx?csid=xx" />
+      </Group>
+	  </Item>
+    <Item AccessKey="M"  Text="Administration" Href="">
+      <Group>
+        <Item Text="System Usage" Href="">
+          <Group>
+            <Item Text="Activity Log" Href="~/administration/audit/activityLog.aspx?csid=xx" />
+            <Item Text="Sent Faxes" Href="~/administration/audit/sentFaxes.aspx?csid=xx" />
+            <Item Text="Sent Emails" Href="~/administration/audit/sentemails.aspx?csid=xx" />
+          </Group>
+        </Item>
+        <Item Text="List Points" Href="~/Point/PointList.aspx?csid=xx" />
+        <Item Text="List Points for Integration" Href="~/Integration/IntegratePoints.aspx?csid=xx" />
+        <Item Text="Manage Messages" Href="~/Integration/ManageMessages.aspx?csid=xx"></Item>
+        <Item Text="Search Photos" Href="~/Mwf/SearchMwfPhotos.aspx?csid=xx" />
+        <Item Text="Search Logons" Href="~/Mwf/SearchMwfDriverLoginLogout.aspx?csid=xx" />
+        <Item IsSeparator="True" />
+        <Item Text="Manage My Filters" Href="~/Traffic/Filters/ListFilters.aspx?csid=xx" />
+        <Item IsSeparator="True" />
+        <Item Text="Tariffs" Href="">
+          <Group>
+            <Item Text="List Zone Maps" Href="~/Tariff/ZoneMapList.aspx?csid=xx" />
+            <Item Text="List Scales" Href="~/Tariff/ScaleList.aspx?csid=xx" />
+            <Item Text="List Tariffs" Href="~/Tariff/TariffList.aspx?csid=xx" />
+          </Group>
+        </Item>
+        <Item Text="Pallet Network" Href="">
+          <Group>
+            <Item Text="List Depots" Href="~/Tariff/DepotList.aspx?csid=xx" />
+            <Item Text="Edit Depot Postcodes" Href="~/Tariff/EditDepotPostCodes.aspx?csid=xx" />
+            <Item Text="Import Consignments" Href="~/administration/genericmessageimport.aspx?system=Palletforce&amp;csid=xx" />
+          </Group>
+        </Item>
+        <Item Text="Users" Href="">
+          <Group>
+            <Item Text="List Users" Href="~/administration/users/users.aspx?csid=xx" />
+            <Item Text="List User Groups" Href="~/administration/usergroups/addupdategroup.aspx?csid=xx" />
+            <Item Text="User Group Access Control" Href="~/administration/usergroups/accesscontrol.aspx?csid=xx" />
+            <Item Text="List Client Portal Users" Href="~/administration/users/users.aspx?isClient=true&amp;csid=xx" />
+          </Group>
+        </Item>
+        <Item Text="Consortium" Href="">
+          <Group>
+            <Item Text="Zone Maps" Href="~/tariff/zonemaplist.aspx?csid=xx" />
+            <Item Text="Allocation Tables" Href="~/consortium/allocationtablelist.aspx?csid=xx" />
+            <Item Text="Allocation Rule Sets" Href="~/consortium/allocationrulesets.aspx?csid=xx" />
+          </Group>
+        </Item>
+        <Item IsSeparator="True" />
+        <Item Text="Components Setup" Href="~/administration/system/components.aspx?csid=xx"/>
+        <Item Text="Scanner Setup" Href="~/administration/system/scanner.aspx?csid=xx"/>
+        <Item IsSeparator="True" />
+        <Item Text="Your Company" Href="~/organisation/addupdateorganisation.aspx?yourCompany=true&amp;csid=xx" />
+        <Item Text="Fleet Metrik">
+          <Group>
+            <Item Text="Manage Resource Grouping" Href="/CAN/AddUpdateOrgUnit.aspx?csid=xx" />
+            <Item Text="Set New Benchmark" Href="javascript:popup('/Reports/ReportViewer2.aspx?rn=CAN.DriverGradingDetail&amp;IsBenchmarkLinkEnabled=true' + getCSID())" />
+            <Item Text="Edit Grading Weights" Href="~/CAN/AddUpdateDriverGrading.aspx?csid=xx" />
+            <Item Text="Manage Driver Benchmarks" Href="~/CAN/managedriverbenchmarks2.aspx?csid=xx" />
+          </Group>
+        </Item>
+        <Item Text="Profitability Report Variables" Href="~/administration/ProfitabilityReporting/JRProfitabilitySelectReportVariable.aspx?csid=xx" />
+        <Item Text="Vehicle Revenue Report Exclusions" Href="~/administration/VehicleRevenueReportExclusions/VehicleRevenueReportExclusions.aspx?csid=xx" />
+        <Item IsSeparator="True" />
+        <Item Text="Control Areas" Href="~/administration/controlAreaManagement/controlAreaManagement.aspx?csid=xx" />
+        <Item Text="Inter-Site Charging Report Variables" Href="~/administration/intersite/interSiteChargingReportVariables.aspx?csid=zz"/>
+        <Item Text="Business Type" Href="~/groupage/businesstypes.aspx?csid=xx" />
+        <Item Text="Extra Type" Href="~/groupage/ExtraType.aspx?csid=xx" />
+        <Item Text="Goods Types" Href="~/goodstype/ListGoodsTypes.aspx?csid=xx" />
+        <Item Text="Multi-Trunks" Href="~/administration/managemultitrunk.aspx?csid=xx" />
+        <Item Text="Service Level" Href="~/groupage/orderservicelevels.aspx?csid=xx" />
+        <Item Text="Exchange Rates" Href="~/ExchangeRate/exchangeRate.aspx?csid=xx" />
+        <Item Text="Fuel Surcharge Rates" Href="~/FuelSurcharge/FuelSurchargeList.aspx?csid=xx" />
+        <Item Text="Message Import" Href="~/administration/genericmessageimport.aspx?csid=xx" />
+        <Item Text="View Import Messages" Href="~/administration/ImportMessageScreen.aspx?csid=xx" />
+        <Item Text="Vehicle">
+          <Group>
+            <Item Text="Manufacturers" Href="~/Resource/Vehicle/Manufacturer/manufacturers.aspx?csid=xx" />
+            <Item Text="Models" Href="~/Resource/Vehicle/Model/models.aspx?csid=xx" />
+            <Item Text="Classes" Href="~/Resource/Vehicle/Class/vehicleClasses.aspx?csid=xx" />
+          </Group>
+        </Item>
+        <Item Text="Collection/Delivery Windows"  Href="~/administration/DeliveryWindow/ListWindows.aspx?csid=xx" />
+      </Group>
+    </Item>
+    <Item AccessKey="H" Text="Help" Href="">
+      <Group>
+        <Item Text="Log Off" Href="~/security/login.aspx?LO=1" />
+        <Item IsSeparator="True" />
+        <Item Text="FleetMetrik Help" Href="javascript:popup('http://fleetmetrikhelp.proteoenterprise.co.uk/', 1000, 1000)" />
+        <Item IsSeparator="True" />
+        <Item Text="Remove Traffic Sheet Filter" Href="~/administration/system/ClearTrafficSheetCookie.aspx?csid=xx" />
+        <Item Text="Release Notes" Href="/help/relnotes.aspx?csid=xx" />
+        <Item Text="Edit Release Notes" Href="/help/releasenotes.aspx?csid=xx" />
+        <Item Text="Remote Assistance"  Href="javascript:window.open('http://www.ntrsupport.com/code')"/>
+      </Group>
+    </Item>
+  </Group>
+</Menu>

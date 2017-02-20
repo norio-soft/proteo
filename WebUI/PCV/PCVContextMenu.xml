@@ -1,0 +1,10 @@
+﻿<Nodes MenuTitle="Pallet Menu">
+	<Node>
+		<Text>Generate Pallet Log</Text>
+		<Url>/webui/PCV/listPCV.aspx</Url>
+	</Node>
+	<Node>
+		<Text>PCVs Requiring Scan</Text>
+		<Url>/webui/PCV/ListPCVsRequiringScan.aspx</Url>
+	</Node>
+</Nodes>

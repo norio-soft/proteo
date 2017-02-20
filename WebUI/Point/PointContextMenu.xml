@@ -1,0 +1,10 @@
+<Nodes MenuTitle="Point Menu">
+	<Node>
+		<Text>List Points For Client</Text>
+		<Url>/webui/point/listPoints.aspx</Url>
+	</Node>
+	<Node>
+		<Text>Add New Point</Text>
+		<Url>/webui/point/addupdatepoint.aspx</Url>
+	</Node>
+</Nodes>

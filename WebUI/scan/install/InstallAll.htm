@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta name=vs_targetSchema content="http://schemas.microsoft.com/intellisense/ie5">
+<title>SID Install Checker</title>
+<link rel="stylesheet" type="text/css" href="../style/iqs.css"/>
+</head>
+<body MS_POSITIONING="GridLayout" onload="setKeys();">
+	<h2>Install All Necessary Controls</h2>
+	<div class="pageDescription">
+		This page will check and if necessary download and install the necessary controls for you to be able to use this application. There could be a delay while the controls are being downloaded.
+	</div>
+	<div class="spacer" style="height:10px;"></div>
+	<div class="searchDeviant" style="font-family:verdana; font-size:11px;">
+		<div style="width:350px;">
+			<span style="width:200px; padding-right:5px;wrap:false;">View Control</span><span id="txtViewer" style="width:10px;"></span>
+		</div>
+		<div  style="width:350px;">
+			<span style="width:200px; padding-right:5px;">Scanner Control</span><span id="txtScanner" style="width:100px;"></span>
+		</div>
+		<div>
+			<span style="width:200px; padding-right:5px;">Print Control</span><span id="txtPrint"></span>
+		</div>
+		<div style="display:none;">
+		<object classid="clsid:5220cb21-c88d-11cf-b347-00aa00a28331" VIEWASTEXT ID="Object1">
+			<PARAM NAME="LPKPath" VALUE="ImagXpress7.lpk">
+		</object>
+		<OBJECT id="ix7" style="WIDTH: 100%; HEIGHT: 89%;display:none;" classid="clsid:6D3CF4F3-C2F3-46E7-A126-3E53102A6B91" VIEWASTEXT CODEBASE="../../CAB/ImagXpress7.cab#Version=7,0,27,0">
+			<PARAM NAME="ErrStr" VALUE="D9EAA52EFA74D7FAB3067744B35291A8">
+			<PARAM NAME="ErrCode" VALUE="215570196">
+			<PARAM NAME="ErrInfo" VALUE="-292780413">
+			<PARAM NAME="AutoSize" VALUE="5">
+		</OBJECT>
+		<OBJECT id="PrintPRO1" classid="clsid:66157B4F-9E4A-488C-92A4-4434A16FCBF2" CODEBASE="../../CAB/PrintPro3.cab#Version=3,0,8,0" VIEWASTEXT>
+			<PARAM NAME="_ExtentX" VALUE="953">
+			<PARAM NAME="_ExtentY" VALUE="794">
+			<PARAM NAME="ErrStr" VALUE="C33D27897EEBCA0E0FB71358D5B7BF01">
+			<PARAM NAME="ErrCode" VALUE="307824391">
+			<PARAM NAME="ErrInfo" VALUE="-442476862">
+		</OBJECT>
+		 <OBJECT ID="PicTwainPRO1" WIDTH=32 HEIGHT=32 CLASSID="CLSID:9EB329EF-4119-41F7-AE5F-804E287CEBD8" VIEWASTEXT CODEBASE="../../CAB/TwainPro4.cab#Version=4,0,10,0">
+			<PARAM NAME="_ExtentX" VALUE="847">
+			<PARAM NAME="_ExtentY" VALUE="847">
+			<PARAM NAME="ErrStr" VALUE="EFA8FF0545B6FF7798F2B1F82E7DC7F8">
+			<PARAM NAME="ErrCode" VALUE="279854">
+			<PARAM NAME="ErrInfo" VALUE="1221780965">
+		</OBJECT>
+		</div>
+	</div>
+	<div class="buttonbar">
+		<input type="button" onclick="window.opener.location.reload(); self.close();" value="Finish" class="button">
+	</div>
+	<script language="vbscript">
+		Sub setKeys() 
+			checkInstall
+			'License Keys for NMHT
+			dim webKey
+			if (instr(1, window.location, "Scan", 1) > 0) then
+				WebKey = "localhost?C0D75518493F4FD41777E366C3EDE4FC"
+				else
+					if (instr(1, window.location, "hmstest", 1) > 0) then
+						webKey	= "hmstest.Orchestrator.co.uk?A4358745B6B0AC2F7700070E51FD5E98"
+					else
+						if (instr(1, window.location, "hms", 1) > 0) then
+							WebKey = "hms.Orchestrator.co.uk?D196E6D44F66C9D4CF18EC83D36113E0"					
+					End If
+				End if
+			end if
+			
+			
+			document.all("ix7").IntegratorWeb webkey
+			document.all("PrintPRO1").IntegratorWeb webKey
+			document.all("PicTwainPRO1").IntegratorWeb webKey
+		End Sub
+	</script>
+	
+	<script language="javascript" >
+		function checkInstall() {
+				
+		var oScan	= document.all['ix7'];
+		var oPrint	= document.all['PrintPRO1'];
+		var oTwain	= document.all['PicTwainPRO1'];
+		
+		var tViewer = document.all["txtViewer"];
+		var tScanner = document.all["txtScanner"];
+		var tPrint = document.all["txtPrint"];
+		
+		
+		if (oScan == null) 
+		{
+			tViewer.innerText = "NOT Installed";
+			tViewer.className="notinstalled";	
+		}
+		else
+		{
+			tViewer.innerText = "Installed";
+			tViewer.className="installed";
+		}
+		
+		if (oPrint == null) 
+		{
+			tPrint.innerText = "NOT Installed";
+			tPrint.className="notinstalled";	
+		}
+		else
+		{
+			tPrint.innerText = "Installed";
+			tPrint.className="installed";
+		}
+		if (oTwain == null) 
+		{
+			tScanner.innerText = "NOT Installed";
+			tScanner.className="notinstalled";	
+		}
+		else
+		{
+			tScanner.innerText = "Installed";
+			tScanner.className="installed";
+		}
+		
+		if ((oScan == null) || (oPrint == null) || (oTwain == null)  )
+			setTimeout("checkInstall();", 500);
+		}		
+		
+		function checkOpen() {
+			//alert("CheckOpen");
+			
+			if (dialogWin.win && dialogWin.win.closed)
+				{
+				location.href=location.href;
+				}
+			else
+			{
+				//alert('calling timer');
+				setTimeout("checkOpen();", 500);
+			}	
+		}
+		
+		
+	</script>
+	
+	
+</body>
+</html>

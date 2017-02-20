@@ -1,0 +1,38 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<telerik:RadCombobox        runat="server" Skin="Orchestrator" EnableEmbeddedSkins="False" />
+<telerik:RadDateInput       runat="server" Skin="Orchestrator" EnableEmbeddedSkins="False" />
+<telerik:RadMenu            runat="server" Skin="Orchestrator" EnableEmbeddedSkins="False" />
+<telerik:RadGrid            runat="server" Skin="Orchestrator" EnableEmbeddedSkins="False" />
+<telerik:RadTabStrip        runat="server" Skin="Orchestrator" EnableEmbeddedSkins="False" />
+<telerik:RadNumericTextBox  runat="server" Skin="Orchestrator" EnableEmbeddedSkins="False" />
+<telerik:RadPanelItem       runat="server" SkinID="TSDrivers" ImageCollapsed="/panelbar/img/icon-mydrivers.png" ImageExpanded="/panelbar/img/icon-mydrivers.png" ImageHover="/panelbar/img/icon-mydrivers.png" height="100%" BackgroundImageCollapsed="/panelbar/img/myresource-bg.jpg" BackgroundImageHoverCollapsed="/panelbar/img/tabhover-bg.jpg" />
+<asp:RequiredFieldValidator runat="server" cssclass="validationErrorIcon" />
+<asp:CustomValidator        runat="server" cssclass="validationErrorIcon" />
+<telerik:RadTextBox         runat="server" Skin="Orchestrator" EnableEmbeddedSkins="False" />
+<telerik:RadSplitter        runat="server" Skin="Orchestrator" EnableEmbeddedSkins="False" />
+<telerik:RadTimePicker      runat="server" TimePopupButton-TabIndex="-1" />
+<telerik:RadDatePicker      runat="server" DatePopupButton-TabIndex="-1" />
+<telerik:RadDateTimePicker  runat="server" DatePopupButton-TabIndex="-1" TimePopupButton-TabIndex="-1" />
+
+<asp:Image                  runat="server" SkinID="imgGridGroupPositionSingle" Width="6px" Height="20px" ImageUrl="img/masterpage/grid-group-single.gif" AlternateText="Grouped item" />
+<asp:Image                  runat="server" SkinID="imgGridGroupPositionFirst" Width="6px" Height="20px" ImageUrl="img/masterpage/grid-group-first.gif" AlternateText="Grouped item" />
+<asp:Image                  runat="server" SkinID="imgGridGroupPositionMid" Width="5px" Height="22px" ImageUrl="img/masterpage/grid-group-mid.gif" AlternateText="Grouped item" />
+<asp:Image                  runat="server" SkinID="imgGridGroupPositionLast" Width="6px" Height="20px" ImageUrl="img/masterpage/grid-group-last.gif" AlternateText="Grouped item" />
+
+<asp:Image                  runat="server" SkinID="imgIconInformation" Width="16px" Height="16px" ImageUrl="img/masterpage/icon-info.png" AlternateText="Information" />
+<asp:Image                  runat="server" SkinID="imgIconHistory" Width="24px" Height="24px" ImageUrl="img/masterpage/icon-history.png" AlternateText="History" />

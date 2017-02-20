@@ -1,0 +1,77 @@
+﻿/* Styling for the Job Details page (Job.aspx and its associated user control for Groupage jobs). */
+
+/* background-image: url(../images/table_header_gradient_grey.jpg); */
+table.InstructionPoint tr
+{
+	background-color: whitesmoke;
+}
+
+table.InstructionPoint 
+{
+	border: 1px solid #CCC;
+}
+
+table.InstructionPoint td
+{
+	background-color: whitesmoke;
+	padding-left: 5px;
+	padding-right: 6px;
+}
+
+.InstructionSeparator
+{
+	background-image: url(../images/light_blue_gradient_small.jpg);
+	height: 3px;
+	width: 100%;
+}
+
+table.InstructionLeft td
+{
+	font-family: Verdana;
+	font-size: 10px;
+}
+
+table.OrderHandling
+{
+	border-bottom-style: solid;
+	border-width: 1px;
+	border-left: 1px solid;
+	border-right: 1px solid;
+}
+
+table.OrderHandling tr
+{
+	font-family: Verdana;
+	font-size: 8pt;
+}
+
+table.OrderHandling th
+{
+	background-image: url(../images/table_header_gradient_grey.jpg);
+	height: 26px;
+	font-size: 10px;
+	font-family: Verdana;
+	font-size: 10px;
+	vertical-align: top;
+}
+
+table.CollectDrop td
+{
+	vertical-align: top;
+	font-family: Verdana;
+	font-size: 10px;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+
+table.CollectDrop th
+{
+	background-image: url(../images/table_header_gradient_grey.jpg);
+	height: 26px;
+	font-size: 10px;
+	font-family: Verdana;
+	font-size: 10px;
+	vertical-align: top;
+}

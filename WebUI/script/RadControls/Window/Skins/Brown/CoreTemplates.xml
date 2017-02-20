@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- ==============================================================================================
+Parameters provided to the template
+{0} - radWindow client ID //not generally needed 
+{1} - radWindowobject reference (allows to call radWindow methods such as Close, Restore, etc.)
+{2} - Path to current skin folder (allows to access images, other resources)
+{3} - url to the Minimized Icon
+{4} - title text
+{5} - application path
+{6} – Text to show (in the alert, confirm, prompt);			
+=============================================================================================== -->
+<templates>
+	<splashtemplate>
+	<![CDATA[
+		<div style="height: 200px; width: 400px; border: solid 1px #808080; text-align: center; background-color: #fff; filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#404040,strength=3);">
+			<br /><br /><br />
+			<div style="font-weight: bold; color: #808080; font-size: 16px;">loading...</div>
+			<br />
+			<img src="{2}Img/splash.gif" height="62" width="62" alt="" />
+		</div>
+	]]>
+	</splashtemplate>
+	<minimizetemplate>
+		<![CDATA[				
+			<table border='0' style='display:inline' id='RadWMinimized{0}' class='RadWMinimizedActive' cellspacing='0' cellpadding='0'>
+			<tr class='RadWTitleRow'>
+				<td align="center">
+					<img class='RadWIcon' src='{3}' align='absmiddle' border='0'>
+				</td>
+			</tr>
+			</table>	
+		]]>
+	</minimizetemplate>
+	<alerttemplate>		
+		<![CDATA[
+		<style>
+				BODY
+				{
+					font-family: "Times New Roman", Helvetica, Serif;
+					font-size: 12px;
+					font-weight: normal;				
+					overflow:hidden;
+					background-color: #f1f2eb;	
+					background-image: url({2}Img/pageBg.gif);
+					background-repeat: repeat-x;
+					background-position: bottom left;
+				}
+				.Button
+				{
+					background-image: url({2}Img/modalBtnBg.gif);
+					background-repeat: no-repeat;
+					background-color: #15d1f8;
+					border: none;
+					width: 61px;
+					height: 22px;
+					color: #eaeac8;
+					font-family: "Times New Roman", Helvetica, Serif;
+					font-size: 12px;
+					font-weight: bold;				
+				}
+				.FixedDiv
+				{
+					overflow: auto;			
+					color: #000000;
+					vertical-align: top;
+					width: 280px;
+					height: 160px;
+				}
+				.imageContainer
+				{
+					float: left;
+					height: 160px;
+					width: 94px;
+				}
+				.guiControls
+				{
+					float: left;	
+				}												
+			</style>			
+			<br /><br />	
+			<div class='FixedDiv'>
+				<div class='imageContainer'>
+				<img align='absmiddle' style='vertical-align:middle;border:0' src='{2}Img/AlertIcon.gif'> 
+				</div>
+				<div class='guiControls'>
+				<br />
+				{6}
+				<br /><br /><br />
+				<center><button class="Button" onclick="GetRadWindow().Close();">OK</button></center>	
+				<embed src="{2}/Img/alert.wav" height="0" width="0" style="display: none;"></embed>
+				</div>
+			</div>
+			
+		]]>
+	</alerttemplate>
+	<prompttemplate>
+		<![CDATA[	
+			<script>
+				function OkClicked()
+				{
+					var oArg = document.getElementById("TextBox").value;					
+					GetRadWindow().ModalDialogCallBack(oArg);
+				}
+			</script>	
+			<style>
+				BODY
+				{
+					font-family: "Times New Roman", Helvetica, Serif;
+					font-size: 12px;
+					font-weight: normal;				
+					overflow:hidden;
+					background-color: #f1f2eb;	
+					background-image: url({2}Img/pageBg.gif);
+					background-repeat: repeat-x;
+					background-position: bottom left;
+				}
+				.Button
+				{
+					background-image: url({2}Img/modalBtnBg.gif);
+					background-repeat: no-repeat;
+					background-color: #15d1f8;
+					border: none;
+					width: 61px;
+					height: 22px;
+					color: #eaeac8;
+					font-family: "Times New Roman", Helvetica, Serif;
+					font-size: 12px;
+					font-weight: bold;				
+				}
+				.FixedDiv
+				{
+					overflow: auto;			
+					color: #000000;
+					vertical-align: top;
+					width: 280px;
+					height: 160px;
+				}
+				.imageContainer
+				{
+					float: left;
+					height: 140px;
+					width: 85px;
+				}
+				.guiControls
+				{
+					float: left;	
+				}	
+				.promptTxtBox
+				{
+					font-family: "Times New Roman", Helvetica, Serif;
+					font-size: 12px;
+					font-weight: normal;
+					margin-top: 5px;
+					border: solid 1px #5c5a4f;
+					width: 163px;
+				}
+			</style>
+			<br /><br />
+			<div class='FixedDiv'>
+				<div class='imageContainer'>
+					<img align='absmiddle' style='vertical-align:middle;border:0' src='{2}Img/confirmIcon.gif'> 
+					</div>
+					<div class='guiControls'>
+					{6}
+					<br /><br />
+					<input type='textbox' id='TextBox' class="promptTxtBox">
+					<br /><br /><br />
+					<center>
+					<button class="Button" onclick="OkClicked()";>OK</button>
+					<button class="Button" onclick="GetRadWindow().Close();">Cancel</button>
+					</center>	
+				<embed src="{2}/Img/alert.wav" height="0" width="0" style="display: none;"></embed>		
+				</div>
+			</div>		
+		]]>
+		
+	</prompttemplate>
+	
+	<confirmtemplate>
+		<![CDATA[				
+			<style>
+				BODY
+				{
+					font-family: "Times New Roman", Helvetica, Serif;
+					font-size: 12px;
+					font-weight: normal;				
+					overflow:hidden;
+					background-color: #f1f2eb;	
+					background-image: url({2}Img/pageBg.gif);
+					background-repeat: repeat-x;
+					background-position: bottom left;
+				}
+				.Button
+				{
+					background-image: url({2}Img/modalBtnBg.gif);
+					background-repeat: no-repeat;
+					background-color: #15d1f8;
+					border: none;
+					width: 61px;
+					height: 22px;
+					color: #eaeac8;
+					font-family: "Times New Roman", Helvetica, Serif;
+					font-size: 12px;
+					font-weight: bold;				
+				}
+				.FixedDiv
+				{
+					overflow: auto;			
+					color: #000000;
+					vertical-align: top;
+					width: 280px;
+					height: 160px;
+				}
+				.imageContainer
+				{
+					float: left;
+					height: 160px;
+					width: 85px;
+				}
+				.guiControls
+				{
+					float: left;	
+				}			
+			</style>
+			<br /><br />
+			<div class='FixedDiv'>
+				<div class='imageContainer'>
+				<img align='absmiddle' style='vertical-align:middle;border:0' src='{2}Img/confirmIcon.gif'> 
+				</div>
+				<div class='guiControls'>
+				{6}
+				<br /><br /><br /><br />
+				<center>
+				<button class="Button" onclick="GetRadWindow().ModalDialogCallBack(true);">Yes</button>
+				<button class="Button" onclick="GetRadWindow().ModalDialogCallBack(false);">No</button>
+				</center>
+				<embed src="{2}/Img/alert.wav" height="0" width="0" style="display: none;"></embed>	
+				</div>
+			</div>	
+		]]>
+	</confirmtemplate>
+</templates>

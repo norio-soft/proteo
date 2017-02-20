@@ -1,0 +1,137 @@
+/* r.a.d.menu Mac skin */
+
+.RadMenu_Mac
+{
+	border: solid 1px #dadada;
+	border-bottom: 0px;
+}
+
+.RadMenu_Mac .link
+{
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+	line-height: 22px;
+	background: #e9e9e9 url('img/MainItemBackground.gif') repeat-x;
+}
+
+.RadMenu_Mac .link:hover,
+.RadMenu_Mac .focused,
+.RadMenu_Mac .expanded
+{
+	color: white;
+	background: #4291ec url('img/MainItemBackgroundHvr.gif') repeat-x;
+}
+
+.RadMenu_Mac .text
+{
+	font-size: 11px;
+	padding: 0px 9px;
+}
+
+.RadMenu_Mac .group
+{
+	background: white url('img/MenuItemBackground.gif');
+	border: solid 1px #dadada;
+}
+
+.RadMenu_Mac .group .link
+{
+	background: none;
+	width: 140px;
+	text-align: left;
+	color: #333;
+}
+
+.RadMenu_Mac .group .text
+{
+	padding-left: 12px;
+}
+
+.RadMenu_Mac .group .link:hover,
+.RadMenu_Mac .group .focused,
+.RadMenu_Mac .group .expanded
+{
+	background: #326dc8 url('img/MenuItemBackgroundHvr.gif') repeat-x;
+	color: white;
+}
+
+.RadMenu_Mac .leftArrow,
+.RadMenu_Mac .rightArrow,
+.RadMenu_Mac .topArrow,
+.RadMenu_Mac .bottomArrow,
+.RadMenu_Mac .leftArrowDisabled,
+.RadMenu_Mac .rightArrowDisabled,
+.RadMenu_Mac .topArrowDisabled,
+.RadMenu_Mac .bottomArrowDisabled
+{
+	background: #326dc8 url('img/left.gif') center center no-repeat;
+	width: 15px;
+}
+
+.RadMenu_Mac .topArrow,
+.RadMenu_Mac .topArrowDisabled
+{
+	background-image:url('img/top.gif');
+	width: 100%;
+}
+
+.RadMenu_Mac .bottomArrow,
+.RadMenu_Mac .bottomArrowDisabled
+{
+	background-image:url('img/bottom.gif');
+	width:100%;
+}
+
+.RadMenu_Mac .rightArrow,
+.RadMenu_Mac .leftArrow
+{
+	height:100%;
+}
+
+.RadMenu_Mac .rightArrow,
+.RadMenu_Mac .rightArrowDisabled
+{
+	background-image: url('img/right.gif');
+}
+
+.RadMenu_Mac .vertical .separator .text
+{
+	padding-top: 1px;
+	background:	#d0d2d4;
+	font-size: 0px;
+	border-top:0px;
+	border-bottom:0px;
+}
+
+.RadMenu_Mac .expandLeft,
+.RadMenu_Mac .expandRight
+{
+	background:transparent url(img/groupImage.gif) right center no-repeat;
+}
+
+.RadMenu_Mac_rtl .expandLeft,
+.RadMenu_Mac_rtl .expandRight
+{
+	background: transparent url(img/left.gif) left center no-repeat;
+	
+}
+
+/* right to left */
+.RadMenu_Mac_rtl .group .link:hover .expandLeft,
+.RadMenu_Mac_rtl .group .link:hover .expandRight
+{
+	background:transparent url(img/invertedGroupImageRTL.gif) left center no-repeat;
+	margin: 0px;
+	
+}
+
+.RadMenu_Mac .link:hover .expandLeft,
+.RadMenu_Mac .link:hover .expandRight,
+.RadMenu_Mac .focused .expandLeft,
+.RadMenu_Mac .focused .expandRight,
+.RadMenu_Mac .expanded .expandLeft,
+.RadMenu_Mac .expanded .expandRight
+{
+	background:transparent url(img/invertedGroupImage.gif) right center no-repeat;
+}

@@ -1,0 +1,193 @@
+/* r.a.d.window eMail skin */
+
+.RadWContentFrame
+{
+	scrollbar-face-color: #BACBF4;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #7E9FD2;
+	scrollbar-3dlight-color: #E6EEFC;
+	scrollbar-arrow-color: #4D6185;
+	scrollbar-track-color: #F7F7F3;
+	scrollbar-darkshadow-color: #C6D1DC;		
+}
+.RadWStatus
+{
+	display: none;
+}
+.RadWModalImage
+{
+	display: block;
+	border: solid 3px #ccff00;		
+}
+.RadWDragHelper
+{		
+	border : solid 3px #cccccc;	
+	border: dashed 1px gray;
+	background-color : #cccccc;	
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	-moz-opacity: 0.5;
+	margin: 0px;
+	padding: 0px;	
+	position: absolute;
+	z-index: 50000;
+	overflow: hidden;	
+}
+.RadWMinimizedActive, .RadWMinimizedOver
+{
+	background: url(CssImg/RadWWrapperHeaderCenter.gif);
+	background-repeat: repeat-x;
+	background-color: #c4c4c4;
+	width: 60px;
+	height: 32px;
+	border: solid 1px #828282;
+}
+.RadWMinimizedPageLoaded
+{
+	background: url(CssImg/RadWWrapperHeaderCenter.gif);
+	background-repeat: repeat-x;
+	width: 60px;
+	height: 32px;
+	border: solid 1px #ce8112;
+}
+.RadWMinimizedInactive
+{
+	background-color: #c4c4c4;
+	background: url(CssImg/RadWWrapperHeaderCenter.gif);
+	background-repeat: repeat-x;
+	width: 60px;
+	height: 23px;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+	-moz-opacity: 0.6;
+	border-left: solid 1px #828282;
+	border-right: solid 1px #828282;
+}
+.RadWLoadingWrapper
+{
+	border: solid 1px red;	
+	vertical-align: middle;
+	width: 80px;
+	height: 100%;
+	text-align: center;	
+	font-family: Verdana, Arial, Tahoma, Sans-Serif;
+	font-size: 11px;
+	font-weight: normal;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=99);
+}
+.RadWIcon
+{
+	margin-left: 2px;	
+	margin-right: 2px;
+	cursor: default;
+}
+.RadWTitleText
+{
+	font-family: Verdana, Arial, Tahoma, Sans-Serif;
+	font-weight: bold;
+	font-size: 11px;
+	color: #d3d1c5;
+	vertical-align: middle;				
+}
+.RadWButton
+{
+	cursor: default;
+	margin-top: 3px;
+	vertical-align: top;
+	margin-right: 2px;
+}
+.RadWWrapperActive
+{
+	font-size: 0px;	
+	background-color: transparent;
+	filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#808080,strength=3);
+}
+.RadWWrapperInactive
+{
+	font-size: 0px;	
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+	-moz-opacity: 0.6;
+}
+.RadWWrapperModal
+{	
+	filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#808080,strength=3); 
+}
+.RadWTitleRow
+{
+	cursor: default;		
+}
+.RadWWrapperHeaderLeft
+{
+	width: 5px;
+	height: 32px;
+	background-image: url(CssImg/RadWWrapperHeaderLeft.gif);
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+.RadWWrapperHeaderCenter
+{
+	text-align: left;
+	height: 32px;
+	font-family: Verdana, Arial, Tahoma;
+	font-size: medium; /* make sure you always set a value */
+	color: #fff;
+	background-image: url(CssImg/RadWWrapperHeaderCenter.gif);
+	background-repeat: repeat-x;
+	background-color: #c4c4c4;
+}
+.RadWWrapperHeaderRight
+{
+	width: 20px;
+	height: 32px;
+	background-image: url(CssImg/RadWWrapperHeaderRight.gif);
+	background-repeat: no-repeat;
+}
+.RadWWrapperBodyLeft
+{
+	width: 5px;
+	background-image: url(CssImg/RadWWrapperBodyLeft.gif);
+	background-repeat: no-repeat;
+	background-color: #d3d1c5;
+}
+.RadWWrapperBodyCenter
+{
+	width: 100%;
+	height: 100%;
+}
+.RadWWrapperBodyRight
+{
+	width: 5px;
+	background-image: url(CssImg/RadWWrapperBodyRight.gif);
+	background-repeat: no-repeat;
+	background-color: #d3d1c5;
+}
+
+.RadWWrapperFooterLeft 
+{
+	width: 5px;
+	height: 5px;
+	background-image: url(CssImg/RadWWrapperFooterLeft.gif);
+	background-repeat: repeat-x;
+	font-size: 0px;
+	position: relative;
+	top: -1px;
+} 
+
+.RadWWrapperFooterCenter 
+{
+	height: 16px;
+	background-image: url(CssImg/RadWWrapperFooterCenter.gif);
+	background-repeat: repeat-x;
+	font-size: 0px;
+	line-height: 0px;
+	position: relative;
+	top: -1px;
+} 
+.RadWWrapperFooterRight 
+{
+	width: 14px;
+	height: 16px;
+	background-image: url(CssImg/RadWWrapperFooterRight.gif);
+	background-repeat: no-repeat;
+	font-size: 0px;
+	position: relative;
+	top: -1px;
+} 

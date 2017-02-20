@@ -1,0 +1,194 @@
+/* r.a.d.window Windows 2000 skin */
+
+.RadWContentFrame
+{
+	scrollbar-face-color: #BACBF4;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #7E9FD2;
+	scrollbar-3dlight-color: #E6EEFC;
+	scrollbar-arrow-color: #4D6185;
+	scrollbar-track-color: #F7F7F3;
+	scrollbar-darkshadow-color: #C6D1DC;		
+}
+.RadWStatus
+{
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 10px;
+	font-weight: normal;
+	height: 25px;
+	border-bottom: solid 1px #00138c;
+	background-image: url(CssImg/RadWStatus.gif);
+	background-repeat: repeat-x;
+	background-color: #d4d0c8;
+	cursor: default;
+	border-left: double 1px #e1e1e1;
+	border-right: double 1px #e1e1e1;
+	border-bottom: double 1px #e1e1e1;
+}
+.RadWModalImage
+{
+	display: block;
+	border: 3px solid #ccff00;		
+}
+.RadWDragHelper
+{		
+	border : 3px solid #cccccc;	
+	border: dashed 1px gray;
+	background-color : #cccccc;	
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50); /* IE */
+	-moz-opacity: 0.5; /* Mozilla */
+	margin: 0px;
+	padding: 0px;	
+	position: absolute;
+	z-index: 50000;
+	overflow: hidden;	
+}
+
+.RadWMinimizedPageLoaded
+{
+	border: 1px solid #0a246a;
+	background: url(CssImg/RadWWrapperHeaderCenter.gif);
+	background-repeat: repeat-x;
+	width: 60px;
+	height: 26px;
+}
+
+.RadWMinimizedActive, .RadWMinimizedOver
+{
+	border-left: 1px solid #696969;
+	border-right: solid 1px #696969;
+	background: url(CssImg/RadWMinimizedBg.gif);
+	background-repeat: repeat-x;
+	background-color: transparent;
+	width: 60px;
+	height: 26px;
+}
+.RadWMinimizedInactive
+{
+	border-left: solid 1px #696969;
+	border-right: solid 1px #696969;
+	background-color: #979797;
+	background: url(CssImg/RadWMinimizedBg.gif);
+	background-repeat: repeat-x;
+	width: 60px;
+	height: 26px;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=63);
+	-moz-opacity: 0.6;
+}
+.RadWLoadingWrapper
+{
+	border: solid 1px #c0c0c0;	
+	vertical-align: middle;
+	width: 80px;
+	height: 100%;
+	text-align: center;	
+	font-family: Verdana, Arial, Tahoma, Sans-Serif;
+	font-size: 11px;
+	font-weight: normal;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=99);
+}
+.RadWIcon
+{
+	margin-left: 2px;	
+	margin-right: 2px;
+	cursor: default;
+	margin-top: 3px;
+	vertical-align: middle;
+}
+.RadWTitleText
+{
+	font-family: Verdana, Arial, Tahoma, Sans-Serif;
+	font-weight: bold;
+	font-size: 11px;
+	color: #fff;
+	vertical-align: middle;		
+}
+.RadWButton
+{
+	cursor: default;
+	margin-top: 3px;
+	vertical-align: top;
+}
+.RadWWrapperActive
+{
+	background-color: #fff;
+	font-size: 0px;	
+	filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#404040,strength=3); 
+	border-right: solid 1px #404040;
+	border-bottom: solid 1px #404040;
+	border-left: solid 1px #d4d0c8;
+	border-top: solid 1px #d4d0c8;
+}
+.RadWWrapperInactive
+{
+	border-right: solid 1px #404040;
+	border-bottom: solid 1px #404040;
+	border-left: solid 1px #d4d0c8;
+	border-top: solid 1px #d4d0c8;
+	background-color: #CFE2FB;
+	font-size: 0px;	
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90); /* IE */
+	-moz-opacity: 0.9; /* Moz */
+	opacity: 0.9; /* CSS3 */
+}
+.RadWWrapperModal
+{	
+	border-right: solid 1px #404040;
+	border-bottom: solid 1px #404040;
+	border-left: solid 1px #d4d0c8;
+	border-top: solid 1px #d4d0c8;
+	background-color: #fff;
+	font-size: 0px;
+	filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#404040,strength=3); 
+}
+.RadWTitleRow
+{
+	cursor: default;		
+}
+.RadWWrapperHeaderLeft
+{
+	width: 3px;
+	height: 22px;
+	background-color: #0a246a;
+	background-image: url(CssImg/RadWWrapperHeaderLeft.gif);
+	background-repeat: no-repeat;
+}
+.RadWWrapperHeaderCenter
+{
+	text-align: left;
+	height: 22px;
+	font-family: Verdana, Arial, Tahoma;
+	font-size: 11px; /* always set a value */
+	color: #fff;
+	background-color: #0a246a;
+	background-image: url(CssImg/RadWWrapperHeaderCenter.gif);
+	background-repeat: repeat-x;
+}
+.RadWWrapperHeaderRight
+{
+	background-color: #0a246a;
+	width: 3px;
+	height: 22px;
+	background-color: #0a246a;
+	background-image: url(CssImg/RadWWrapperHeaderRight.gif);
+	background-repeat: no-repeat;
+}
+.RadWWrapperBodyLeft
+{
+	width: 3px;
+	background-image: url(CssImg/RadWWrapperBodyLeft.gif);
+	background-repeat: repeat-y;
+	background-color: #d4d0c8;
+}
+.RadWWrapperBodyCenter
+{
+	width: 100%;
+	height: 100%;
+}
+.RadWWrapperBodyRight
+{
+	width: 3px;
+	background-image: url(CssImg/RadWWrapperBodyRight.gif);
+	background-repeat: repeat-y;
+	background-color: #d4d0c8;
+}

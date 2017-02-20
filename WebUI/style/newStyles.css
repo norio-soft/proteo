@@ -1,0 +1,1144 @@
+﻿/** ---------------------------------- **/
+/** New global Styles for Orchestrator **/
+/** ---------------------------------- **/
+/*
+    Jason Steele 16/12/08
+    Removed all hover styles as this causes slow scrolling
+*/
+h1 
+{
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0 0 3px 0;
+	padding: 0 0 3px 0;
+	color: #404143;
+	border-bottom: 1px dotted #CCC;	
+}
+
+h2 
+{
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: normal;	
+	margin: 0 0 10px 0;
+	color: #4579B2;
+	padding: 0;	
+}
+
+h3, h3 *, h3 label 
+{
+	font-family: Arial !important;
+	font-size: 14px !important;
+	font-weight: bold;	
+	margin: 0 0 5px 0;
+	color: #404143;
+	padding: 0;
+	font-style: italic;			
+}
+
+p 
+{
+	font-family: Verdana;
+	font-size: 11px;
+	font-weight: normal;	
+	color: #363636;
+	margin: 0 0 10px 0;
+	padding: 0;	
+}
+
+hr 
+{
+	height: 1px;
+	background-color: #CCC;
+	background-position: middle;
+	color: #CCC;
+	border: none;
+	padding: 0;
+	margin: 1px 0;	
+}
+
+.whitepacepusher 
+{
+	height: 10px;	
+}
+
+a
+{
+	color: #2d4768;
+	text-decoration: underline;	
+}
+
+a:link	
+{	
+	color: #2d4768;
+	text-decoration: underline;	
+}
+	
+a:visited
+{	
+	color: #2d4768;
+	text-decoration: underline;	
+}	
+		
+a:active	
+{	
+	color: #2d4768;
+	text-decoration: underline;	
+}	
+/*		
+a:hover	
+{	
+	color: #2d4768;
+	text-decoration: none;	
+}
+*/
+.clearDiv 
+{
+	clear: both;
+	line-height: 0;
+	font-size: 0;
+	height: 0;
+	padding: 0;
+	margin: 0;
+	//display: none;
+	visibility: hidden;
+}
+
+/** ----- **/
+/** Forms **/
+/** ----- **/
+
+/** Container **/
+
+.formPageContainer 
+{
+	width: 75%;	
+}
+
+/** Fieldset **/
+
+fieldset 
+{
+	border: 1px solid #000;
+	padding: 10px;
+	margin: 0 0 10px 0;
+}
+
+fieldset legend
+{
+	font-size: 11px;
+	font-weight: bold;	
+	margin: 0;
+	padding: 2px 10px;
+	color: #404143;
+}
+
+.invisiableFieldset 
+{
+	background-color: Transparent;
+	border: 0 none;
+	margin: 0px;
+	padding: 0px;	
+}
+
+/** Cell label **/
+
+.formCellLabel 
+{
+	background-color:#F3F5F8;
+	border: 1px solid #FFF;
+	color:#000;
+	padding:5px 5px 5px 15px;
+	text-align:right;
+	vertical-align: top;
+	font-size: 11px;	
+}
+
+/** Label lists **/
+
+.formCellLabel li 
+{
+	font-size: 9px;
+	list-style-type: disc;
+	font-style: italic;
+	list-style-position: inside;
+	text-align: left;	
+}
+
+/** Input boxes **/
+
+.formCellField 
+{
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	border: 0px;
+}
+
+input.fieldInputBox, .fieldInputBox input
+{
+	color:#000;
+	font-size: 11px;
+	height: 1%;	
+	padding:3px;
+	margin: 0px;
+	vertical-align: middle;
+	border:1px solid #6e9bbf;		
+}
+/*
+input.fieldInputBox:hover, textarea.fieldInputBox:hover
+{
+	border: 1px solid #587d9a;
+}
+*/
+textarea.fieldInputBox
+{
+	color: #000;
+	font-size: 11px;
+	padding: 3px;
+	margin: 0px;
+	vertical-align: middle;
+	border:1px solid #6e9bbf;		
+}
+
+.fieldInputBoxHighlight 
+{
+	border-width: 1px;
+	border-style: solid;
+	background-color: #fdffd9;
+	border: 1px solid #7f9db9;
+	padding: 2px;	
+}
+
+/** Date Inputs **/
+
+input.dateInputBox
+{
+	color:#000!important;
+	font-size: 11px!important;
+	height: 1%!important;	
+	padding:3px!important;
+	margin: 0px!important;
+	vertical-align: middle!important;
+	border:1px solid #6e9bbf !important;	
+}
+/*
+input.dateInputBox:hover 
+{
+	border: 1px solid #587d9a !important;	
+}
+*/
+/** Button Bar **/
+
+.buttonbar, .buttonBar, .wizardbuttonbar 
+{
+	border: 1px solid #000;
+	background-color: whitesmoke;
+	padding: 5px;
+	text-align: left;
+	margin: 0 0 10px 0;
+}
+
+.buttonbar input, .buttonBar input, .buttonClass, .wizardbuttonbar input
+{
+	_border: 1px solid #374b64;	
+	*border: 1px solid whitesmoke;
+	background-color: #374b64;
+	padding: 5px 5px 6px 6px;
+	color: #FFF;
+	background-image: url('/images/newMasterPage/button-bg.jpg');
+	background-color: #3d3d3d;
+	background-position: top;
+	background-repeat: repeat-x;
+}
+/*
+.buttonbar input:hover, .buttonBar input:hover,  .buttonClass:hover, .wizardbuttonbar input:hover 
+{
+	cursor: pointer;
+	border: 1px solid #FFF;
+	background-image: url('/images/newMasterPage/button-bg-on.jpg');	
+}
+
+.buttonClassAdd:hover, .buttonClassCallIn-Remove:hover, .buttonClassCallIn-Add:hover, buttonClassTipSheet:hover
+{
+	cursor: pointer;	
+}
+*/
+.buttonClassAdd 
+{
+	background-image: url('/images/newMasterPage/icon-plus.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 16px;
+	width: 16px;
+	border: 0px;
+	background-color: Transparent; 		
+}
+
+.buttonClassCallIn-Remove 
+{
+	background-image: url('/images/newMasterPage/icon-callin-remove.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 16px;
+	width: 16px;
+	border: 0px;
+	background-color: Transparent;
+	margin: 0 4px 0px 0px; 
+}
+
+.buttonClassCallIn-Add 
+{
+	background-image: url('/images/newMasterPage/icon-callin-add.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 16px;
+	width: 16px;
+	border: 0px;
+	background-color: Transparent;
+	margin: 0 4px 0px 0px;	
+}
+
+.buttonClassTipSheet 
+{
+	background-image: url('/images/newMasterPage/icon-tipSheet.gif');
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 16px;
+	width: 16px;
+	border: 0px;
+	background-color: Transparent;
+	margin: 0 4px 0px 0px; 
+}
+
+/** Coloured Key **/
+
+.colouredKey {
+	border: 0px solid #000;
+	background-color: #000;
+}
+
+/** Table headers **/
+
+.formCellTableHeader 
+{
+	font-family: Verdana;
+	font-size: 11px;
+	font-style: italic;
+	font-weight: normal;
+	color: #404143;
+}
+
+/** ------------------------ **/
+/** Component art data table **/
+/** ------------------------ **/
+
+.Grid
+{ 
+	background-color: #FFFFFF; 
+	border: 1px solid #000; 
+	font-family: Verdana; 
+	font-size: 10px; 
+	cursor: pointer;
+}
+
+.Grid * 
+{
+	font-size: 11px !important;	
+}
+
+/** Group and search row **/
+
+.GridHeader
+{
+	background-image: none; 
+	background-color: #495e78;
+	background-image: url('../images/newGrid/header-bg.jpg');
+	background-repeat: repeat-x;
+	background-position: top; 
+	height: 24px;
+	padding-left: 3px;
+	cursor: default;
+	color: #FFF;
+}
+
+.GridHeader div 
+{
+	color: #FFF;	
+}
+
+.GridHeader input 
+{
+	color:#404143;
+	font-size: 10px;
+	height: 1%;	
+	padding:3px;
+	margin: 0 2px 2px 0;
+	vertical-align: middle;
+	border:1px solid #1c1c1c;	
+}
+/*
+.GridHeader input:hover 
+{
+	border: 1px solid #000;	
+}
+*/
+.GridHeaderText
+{
+	color: #FFF;  
+	font-family: Verdana; 
+	padding: 0 0 0 3px; 
+}
+
+.GroupByCell
+{
+	cursor: pointer;
+	background-color:#ffffff;
+}
+
+.GroupByText
+{
+	color: #FFF;  
+	font-weight: bold; 
+	padding-right: 5px;
+	text-align:left;
+}
+
+/** Data header **/
+
+.HeadingRow 
+{ 
+	background-color: #363636; 
+}
+
+.HeadingRow td, .HeadingRow th 
+{ 
+	background-image: url('../images/newGrid/tableheader-bg.jpg');
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color: #3d3d3d;
+	border-top: 1px solid #363636;
+	border-right: 1px solid #363636;
+	border-bottom: 1px solid #eae9e1;
+	padding: 0px 3px 1px 2px; 
+	height: 22px;
+	font-family: Verdana; 
+	font-weight: bold;
+	color: #FFF;
+	vertical-align: middle;  
+}
+
+.HeadingRow td td 
+{
+	background-image: none;
+	background-color: Transparent;
+	border: 0px;	
+}
+
+.HeadingRowLite 
+{
+	background-color: #3d3d3d;
+	vertical-align: top;
+}
+
+.HeadingRowLite th
+{ 
+	background-image: url('../images/newGrid/tableheader-bg.jpg');
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color: #3d3d3d;
+	border-top: 1px solid #363636;
+	border-right: 1px solid #363636;
+	border-bottom: 1px solid #eae9e1;
+	padding: 0px 3px 1px 2px; 
+	height: 22px;
+	font-family: Verdana; 
+	font-weight: bold;
+	color: #FFF;
+	vertical-align: middle;  
+}
+
+.HeadingRowLite th a 
+{
+	font-family: Verdana;  
+	font-weight: bold;
+	color: #FFF; 
+	text-align: left;
+}
+
+.HeadingCell 
+{ 
+	background-image: url('../images/newGrid/tableheader-bg.jpg');
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color: #3d3d3d;
+	border-top: 1px solid #363636;
+	border-right: 1px solid #363636; 
+	padding: 3px; 
+	padding-top: 2px; 
+	padding-bottom: 1px;  
+}
+
+.HeadingRow td.FirstHeadingCell
+{ 
+	background-image: url('../images/newGrid/tableheader-bg.jpg'); 
+}
+
+.HeadingCellText
+{
+	font-family: Verdana;
+	font-weight: bold;
+	color: #FFF; 
+	text-align: left;
+	padding-top: 3px;
+	padding-bottom: 5px;
+}
+
+/** Tabular data **/
+/** Normal Row **/
+
+.Row 
+{ 
+	height:20px;
+	background-color: #FFFFFF; 
+}
+
+.Row td.DataCell, .Row td 
+{ 
+	cursor: default;
+	padding: 1px 1px 1px 2px;
+	border-right: 1px solid #e9e9e9;  
+	border-bottom: 1px solid #e9e9e9; 
+	font-family: verdana; 
+	font-size: 10px;
+	height: 20px;
+	color: #363636; 
+}
+
+.Row td.LastDataCell 
+{ 
+	background-color: #EFEFF4; 
+} 
+
+/** Alerternate row **/
+
+.AlternatingRow td.DataCell, .AlternatingRow td  
+{ 
+	height:20px;
+	background-color: whitesmoke; 
+	cursor: default;
+	padding: 1px 1px 1px 2px;
+	border-right: 1px solid #e9e9e9; 
+	border-bottom: 1px solid #e9e9e9; 
+	font-family: verdana;
+	color: #363636; 
+}
+
+/** Selected row **/
+
+.SelectRowTrafficSheetLite td.DataCell
+{
+	background-color: #fff7ca;
+	padding: 1px 1px 1px 2px; 
+	font-family: verdana;   
+	border-right: 0px; 
+	height:20px;
+	border-right: 1px solid #e9e9e9;
+	border-bottom: 1px solid #e9e9e9;
+}
+
+.SelectedRow td.DataCell, .SelectedRow td
+{
+	height:20px;
+	background-color: #fff7ca;	 
+	cursor: default;
+	padding: 1px 1px 1px 2px;
+	border-right: 1px solid #e9e9e9;  
+	border-bottom: 1px solid #e9e9e9; 
+	font-family: verdana; 
+	font-size: 10px; 
+}
+
+.SelectedRow td.DataCell .helpLink
+{
+    color: #363636;
+}
+
+/** Data specific colours **/
+
+.stateCompleted td.DataCell
+{
+    background-color: LightBlue !important;
+    padding: 1px 1px 1px 2px; 
+	font-family: verdana;   
+	height:20px;
+	border-right: 1px solid #c7dac3;
+	border-bottom: 1px solid #c7dac3 !important;
+}
+
+
+.stateInProgress td.DataCell
+{
+    background-color: #99FF99 !important;
+    padding: 1px 1px 1px 2px; 
+	font-family: verdana;   
+	height:20px;
+	border-right: 1px solid #c7dac3;
+	border-bottom: 1px solid #c7dac3 !important;
+}
+
+.statePlanned td.DataCell
+{
+    background-color: #CCFFCC !important;
+    padding: 1px 1px 1px 2px; 
+	font-family: verdana;   
+	height:20px;
+	border-right: 1px solid #c7dac3;
+	border-bottom: 1px solid #c7dac3 !important;
+}
+
+.stateBooked td.DataCell
+{
+    background-color: #FFF !important;
+    padding: 1px 1px 1px 2px; 
+	font-family: verdana;   
+	height:20px;
+	border-right: 1px solid #e9e9e9;  
+	border-bottom: 1px solid #e9e9e9 !important; 
+}
+
+/** Data Hover **/
+/*
+.Row:hover td.DataCell, .AlternatingRow:hover td.DataCell, .Row:hover td, .AlternatingRow:hover td  
+{
+	background-color: #fffade;
+}
+
+.stateBooked:hover td.DataCell  
+{
+	background-color: #fffade;
+}
+*/
+/** Data Links */
+
+.Row td.DataCell a, .AlternatingRow td.DataCell a,
+.SelectedRow td.DataCell a, .SelectRowTrafficSheetLite td.DataCell a,
+.statePlanned td.DataCell a, .DataCell Div a, .Row td a,
+.AlternatingRow td a  
+{
+	color: #2d4768;
+	text-decoration: underline;	
+}
+/*
+.Row td.DataCell a:hover, .AlternatingRow td.DataCell a:hover,
+.SelectedRow td.DataCell a:hover, .SelectRowTrafficSheetLite td.DataCell a:hover,
+.statePlanned td.DataCell a:hover, .DataCell Div a:hover, .Row td a:hover,
+.AlternatingRow td a:hover    
+{
+	color: #2d4768;
+	text-decoration: none;	
+}
+*/
+/** **/  
+
+
+.SortedDataCell 
+{ 
+	background-color: #F5F5F5; 
+} 
+
+
+.SelectRowTrafficSheetLite 
+{ 
+	
+}
+
+
+.GroupHeading
+{
+	color: #0e0e0e; 
+	background-color: #FFFFFF; 
+	font-family: verdana; 
+	font-weight: bold;
+	border-bottom: 2px solid #898989; 
+	padding-top: 10px;
+	padding-bottom: 3px;
+	text-align: left;
+}
+
+.SliderPopup
+{
+	background-color: #FFF4D7; 
+	border: 1px solid #4B4B6F; 
+	border-top-color: #9495A2; 
+	border-left-color: #9495A2; 
+	width: 288px;
+	height: 60px;
+}
+
+.GridFooter
+{
+	cursor: default;
+	padding: 5px;
+}
+
+.GridFooterText
+{
+	color: #000000;  
+	font-family: verdana; 
+	font-size: 10px;
+}
+
+
+/** ----------------- **/
+/** Misc data table 1 **/
+/** ----------------- **/
+
+.DataGridStyle 
+{
+	background-color: #FFFFFF; 
+	border: 1px solid #000;  
+	font-family: Verdana; 
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+.DataGridStyle * 
+{
+	font-size: 11px !important;	
+}
+
+.DataGridStyle a 
+{
+	color: #2d4768;
+	text-decoration: underline;	
+}
+/*
+.DataGridStyle a:hover
+{
+	color: #2d4768;
+	text-decoration: none;
+}
+*/
+.DataGridListHead td
+{
+	background-image: url('../images/newGrid/tableheader-bg.jpg');
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color: #3d3d3d;
+	border-top: 1px solid #363636;
+	border-right: 1px solid #363636;
+	border-bottom: 1px solid #eae9e1;
+	padding: 2px 3px 2px 2px; 
+	height: 22px;
+	font-family: Verdana; 
+	font-weight: bold;
+	color: #FFF;
+	vertical-align: middle;
+	text-align: left; 
+}
+
+.DataGridListHeadSmall td 
+{
+	background-image: url('../images/newGrid/tableheader-bg.jpg');
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color: #3d3d3d !important;
+	border-top: 1px solid #363636;
+	border-right: 1px solid #363636 !important;
+	border-bottom: 1px solid #eae9e1;
+	padding: 1px 2px 1px 2px; 
+	height: 16px;
+	font-family: Verdana; 
+	color: #FFF;
+	vertical-align: middle;
+	text-align: left; 	
+}
+
+.DataGridListHead td a 
+{
+	color: #FFF;
+	text-decoration: none;
+}
+/*
+.DataGridListHead td a:hover 
+{
+	color: #FFF;
+	text-decoration: underline;
+}
+*/
+.DataGridListItem td
+{
+	cursor: default;
+	padding: 1px 1px 1px 2px;
+	border-right: 1px solid #e9e9e9;  
+	border-bottom: 1px solid #e9e9e9; 
+	font-family: verdana; 
+	height: 20px;
+	vertical-align: middle;
+	text-align: left;	
+}
+
+.DataGridListItemAlt td
+{
+	cursor: default;
+	padding: 1px 1px 1px 2px;
+	border-right: 1px solid #e9e9e9; 
+	border-bottom: 1px solid #e9e9e9; 
+	font-family: verdana; 
+	background-color: whitesmoke;
+	height: 20px;
+	vertical-align: middle;
+	text-align: left;		
+}
+/*
+.DataGridListItem:hover td, .DataGridListItemAlt:hover td  
+{
+	background-color: #fffade;
+}
+*/
+.DataGridListItemSelected td
+{
+	background-color: #fff7ca; 
+	padding: 1px 1px 1px 2px; 
+	font-family: verdana;  
+	border-right: 0px; 
+	height:20px;
+	border-right: 1px solid #e9e9e9;
+	border-bottom: 1px solid #e9e9e9;
+}
+
+/** -------------------------------------------------------------------- **/
+/** RADGrid styles are in RadControls/Grid/Skins/Orchestrator/Styles.css **/
+/** -------------------------------------------------------------------- **/
+
+/** ------------- **/
+/** Traffic Sheet **/
+/** ------------- **/
+
+/** Toolbar Silver **/
+
+.ToolbarSilver 
+{
+	background-image: url('../images/newMasterpage/silvertoolbar-bg.jpg');
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #9f9f9f;
+	color: #1a1a1a;
+	border: 1px solid #000;
+}
+
+.ToolbarSilver td 
+{
+	border: 0px;
+	padding: 0px 9px 0px 9px;		
+	font-size: 11px;
+	height: 26px;
+}
+
+.ToolbarSilver .HeadingCellText 
+{
+	color: #1a1a1a;
+	border: 0px;
+}
+
+.ToolbarSilver a 
+{
+	color: #2d4768;
+	text-decoration: underline;
+}
+/*
+.ToolbarSilver a:hover 
+{
+	color: #2d4768;
+	text-decoration: none;
+}
+*/
+/** Toolbar Blue **/
+
+.ToolbarBlue
+{
+	background-image: url('../images/newMasterpage/bluetoolbar-bg.jpg');
+	background-repeat: repeat-x;
+	background-position: bottom;
+	background-color: #475c75;
+	color: #fff;
+	padding: 5px;
+	border: 1px solid #000;
+}
+
+.ToolbarBlue td
+{
+	color: #FFF;
+}
+
+.ToolbarBlue input 
+{
+	border:1px solid #1C1C1C;
+	color:#404143;
+	font-size:10px;
+	height:1%;
+	margin:0 2px 2px 0;
+	padding:3px;
+	vertical-align:middle;
+}
+
+/** -------------- **/
+/** News on header **/
+/** -------------- **/
+
+.LoadingNews 
+{
+	background-image: url('/images/newMasterPage/loading.gif'); 
+	background-repeat: no-repeat;	
+	background-position: center 10px; 
+	text-align: center; 
+	padding-top: 40px; 
+	color: #FFF;  
+	display: block;	
+}
+
+#traffic  
+{
+	background-color:Transparent; 
+	width: 600px; 
+	height: 70px; 
+	margin-left:15px; 
+}
+
+#traffic div 
+{ 
+	width: 598px; 
+	height: 60px; 
+	margin:2px; 
+	color: #fff; 
+	text-align: left; 
+	font-size: 11px; 
+	overflow: hidden 
+}
+
+#traffic a 
+{
+	color:White; 
+	float:left; 
+	padding-top:2px; 
+	margin-right:10px;
+}
+
+#traffic #title 
+{
+	font-weight:bold; 
+	margin-left:10px; 
+	height:14px; 
+	width:450px; 
+	overflow:hidden; 
+}
+
+#traffic #newsItem 
+{
+	font-size:10px; 
+	display:inline; 
+	float:left; 
+	width:585px; 
+	height:40px; 
+}
+
+#traffic img 
+{
+	margin-left:190px; 
+	margin-top:3px; 
+}
+
+/** --------- **/
+/** Web Parts **/
+/** --------- **/
+
+.webpartContainer
+{
+	border: 1px solid #363636 !important;
+	background-color: #F8F8F8;	
+}
+
+.webpartTitleBar 
+{
+	background-color: #5a7495;  
+	font-size: 11px; 
+	color: #FFF;
+	background-image: url('../images/newMasterpage/bluetoolbar-bg.jpg');
+	background-repeat: repeat-x;
+	background-position: top;
+	padding: 3px 3px 3px 5px;
+	border-bottom: 1px solid #363636;
+}
+
+/** Menu downwards arrow icon **/
+
+.webpartIconArrow 
+{
+	color: #d2e3f7;	
+}
+/*
+.webpartIconArrow:hover 
+{
+	color: #FFF;	
+}
+*/
+/** Firefox doesn't display the downwards icon, and instead displays default text (verb) **/
+
+a.webpartTitleVerb 
+{
+	 font-size: 10px; 
+	 text-decoration: underline; 
+	 color: #FFF;
+}
+/*
+a.webpartTitleVerb:hover
+{
+	text-decoration: none;	
+}
+*/
+/** ! The menu wont pick up any CSS, so the styles are inline on the default.aspx page ! **/
+
+/** Grid Headers specifically for webparts **/
+
+.webpartHeadingRow 
+{ 
+	background-color: #363636; 
+	font-size: 10px;
+}
+
+.webpartHeadingRow td, .webpartHeadingRow th 
+{ 
+	background-image: url('../images/newGrid/tableheader-bg.jpg');
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color: #3d3d3d;
+	border: 1px solid #363636;
+	border-bottom-color: #eae9e1;
+	padding: 2px;
+	font-family: Verdana; 
+	font-weight: normal;
+	color: #FFF;
+	vertical-align: middle;  
+}
+
+/** Catalogue Box **/
+
+.webpartCatalogHeader
+{
+	background-image: url('../images/newMasterpage/silvertoolbar-bg.jpg');
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #9f9f9f;
+	color: #1a1a1a;
+	border-bottom: 1px solid #363636;
+	padding: 2px;
+}
+
+.webpartCatalogFooter 
+{
+	border-top: 1px solid #363636;
+	background-color: whitesmoke; 
+	text-align: left;
+}
+
+/** Editor **/
+
+.webpartEditorHeader
+{
+	background-image: url('../images/newMasterpage/silvertoolbar-bg.jpg');
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #9f9f9f;
+	color: #1a1a1a;
+	border-bottom: 1px solid #363636;
+	padding: 2px;
+}
+
+.webpartEditorFooter 
+{
+	border-top: 1px solid #363636;
+	background-color: whitesmoke; 
+	text-align: left;
+}
+
+.webpartEditorTitleBar 
+{ 
+	font-size: 11px;
+}
+
+
+/** Divs for Grouping Information with heading **/
+/** ------------------------- **/
+/** Whitelabeled Default.aspx **/
+/** ------------------------- **/
+
+.layoutDefault-boxOuter 
+{
+	width: 300px;
+	float: left;
+	border: 1px dotted #CCC;
+	margin-right: 15px;	
+}
+
+.layoutDefault-boxOuter a 
+{
+	text-decoration: none;	
+}
+
+.layoutDefault-boxInner 
+{
+	margin: 10px;	
+} 
+
+.layoutDefault-boxHeader 
+{
+	margin: 0;
+	padding: 0;	
+}
+
+.layoutDefault-boxHeader h1 
+{
+	padding: 0 0 5px 0;
+	margin: 0;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+.layoutDefault-boxContent 
+{
+	padding: 0;
+	margin: 0;	
+}
+
+.layoutDefault-contentList 
+{
+	margin: 0;
+	padding: 0;	
+}
+
+.layoutDefault-contentListItem 
+{
+	margin: 0 0 5px 0;
+	list-style-type: none;	
+}
+
+.layoutDefault-contentListItem .default-outer 
+{
+	background-image: url('/images/newMasterPage/button-bg-round-off.png');
+	background-position: right top;
+	height: 40px;
+	display: block;	
+}
+
+.layoutDefault-contentListItem .default-inner 
+{
+	background-image: url('/images/newMasterPage/button-bg-round-off.png');
+	background-position: left top;
+	height: 40px;
+	margin: 0 5px 0 0;
+	display: block;	
+}
+

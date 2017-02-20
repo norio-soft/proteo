@@ -1,0 +1,20 @@
+﻿<div class="editExtraTypeRates">
+    <h1>{{description}} Rates</h1>
+
+    <table class="rgMasterTable">
+        {{#each scaleValueRates}}
+        <tr class="rgRow">
+            <th class="rgHeader">{{this.scaleValue}}</th>
+            <td>
+                <input type="text" class="extraTypeScaleValueRate {{#if this.isDirty}}dirty{{/if}}" data-scale-value="{{this.scaleValue}}" value="{{this.rate}}" />
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+
+    <div class="buttonbar">
+        <input type="button" id="btnExtraTypeRatesClearAll" value="Clear All">
+        <input type="button" id="btnExtraTypeRatesCopyDown" value="Copy Down" title="Copy rates to empty cells below">
+        <input type="button" id="btnExtraTypeRatesUpdate" value="Done">
+    </div>
+</div>

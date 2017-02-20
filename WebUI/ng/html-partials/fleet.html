@@ -1,0 +1,68 @@
+﻿<div id="fleetview" fullscreen="layoutState.isFullscreen">
+    <div id="fleetview-map-container" ng-style="{ left: layoutState.sidePanelWidth, height: layoutState.mapContainerHeight, width: layoutState.mapContainerWidth }" ng-resize="resizeMap()">
+        <pr-here-map id="fleetview-map" credentials="mapSetup.credentials"
+                     map-options="mapOptions" oncontextmenu="return false"
+                     resize="hereMapResize">
+
+            <div id="context-menu-template">
+                <pr-map-context-menu pin='pin' map-options="mapOptions">
+            </div>
+
+            <pr-here-map-push-pins pins="mapData.vehicle.vehicles"
+                                   collection-id="vehicles"
+                                   default-options="mapData.vehicle.displayOptions"
+                                   live-update="true"
+                                   selected-pin-id="mapData.vehicle.selectedPinId"
+                                   tracked-pin-id="mapData.vehicle.trackedPinId">
+                >
+                <div id="pin-template">
+                    <pr-vehicle-pin pin='pin' map-options="mapOptions" />
+                </div>
+            </pr-here-map-push-pins>
+
+            <pr-here-map-push-pins pins="mapData.vehicleHistory.gpsPositionHistories"
+                                   collection-id="gpsPositionHistories"
+                                   default-options="mapData.vehicleHistory.displayOptions"
+                                   selected-pin-id="mapData.vehicleHistory.selectedPinId">
+                <div id="pin-template">
+                    <pr-vehicle-history-pin pin='pin' map-options="mapOptions" />
+                </div>
+            </pr-here-map-push-pins>
+
+            <pr-here-map-radius radii="mapData.locationHistory.radii"
+                                collection-id="radii">
+            </pr-here-map-radius>
+
+        </pr-here-map>
+    </div>
+
+    <div class="slide-panel-expander bottom" ng-click="toggleBottomPanel()" ng-style="{ bottom: layoutState.bottomPanelHeight }">
+        <i class="glyphicon" ng-class="layoutState.bottomPanelOpen ? 'glyphicon-chevron-down' : 'glyphicon-chevron-up'" />
+    </div>
+
+    <div class="slide-panel-expander left" ng-click="toggleSidePanel()" ng-style="{ left: layoutState.sidePanelWidth }" ng-show="mapOptions.mode==='noticeboard' && !isClientPortalUser">
+        <i class="glyphicon" ng-class="layoutState.sidePanelOpen ? 'glyphicon-chevron-left' : 'glyphicon-chevron-right'" />
+    </div>
+
+    <div class="slide-panel bottom" ng-style="{ top: layoutState.mapContainerHeight, height: layoutState.bottomPanelHeight }">
+        <div class="slide-panel-content">
+            <div ng-show="mapOptions.mode==='noticeboard'" ng-controller="NoticeboardTableCtrl" ng-include="'html-partials/noticeboard-table.html'"></div>
+            <div ng-show="mapOptions.mode==='vehicleHistory'" ng-controller="VehicleHistoryTableCtrl" ng-include="'html-partials/vehicle-history-table.html'"></div>
+            <div ng-show="mapOptions.mode==='locationHistory'" ng-controller="LocationHistoryTableCtrl" ng-include="'html-partials/location-history-table.html'"></div>
+        </div>
+    </div>
+
+    <div class="slide-panel left" ng-style="{ width: layoutState.sidePanelWidth, height: layoutState.mapContainerHeight }">
+        <div class="slide-panel-content vehicle-view">
+            <div class="vehicle-view-panel">
+                <h5>Vehicle Views</h5>
+                <div ng-controller="VehicleTreeViewCtrl" ng-include="'html-partials/vehicle-treeview.html'"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-group-vertical map-buttons">
+        <button class="btn btn-primary" ng-click="backToNoticeboard()" title="{{noticeBoardButtonCaption}}"><i class="glyphicon glyphicon-repeat" /></button>
+        <button class="btn btn-primary no-focus" ng-click="toggleFullScreen()" title="Full Screen"><i class="glyphicon glyphicon-fullscreen" /></button>
+    </div>
+</div>

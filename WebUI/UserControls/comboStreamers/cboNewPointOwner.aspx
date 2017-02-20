@@ -1,0 +1,2 @@
+<%@ Page Language="C#" AutoEventWireup="true" Inherits="UserControls_comboStreamers_cboNewPointOwner" EnableViewStateMac="false" Codebehind="cboNewPointOwner.aspx.cs" %>
+ <telerik:radcombobox id="cboNewPointOwner" runat="server"></telerik:radcombobox>

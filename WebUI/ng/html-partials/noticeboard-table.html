@@ -1,0 +1,82 @@
+﻿<div class="noticeboard-table" ng-resize="resizeTable()">
+    <div class="header">
+        <h4>Noticeboard</h4>
+
+        <span class="filter-text form-inline">
+            <span class="input-group">
+                <input type="text"
+                       class="form-control header-ctrl filter-input"
+                       id="from-date"
+                       ng-model="mapOptions.vehicle.filterText"
+                       ng-model-options="mapOptions.vehicle.filterOptions"
+                       ng-keyup="keyPress($event)"
+                       placeholder="search">
+
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-sm btn-default header-ctrl" ng-click="clearFilter()" title="Clear search">
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </button>
+                </span>
+
+            </span>
+
+            <span class="input-group" title="Switch search between a noticeboard search and a location search.">
+                <input bs-switch
+                       ng-model="mapOptions.vehicle.isMapSearchEnabled"
+                       type="checkbox"
+                       switch-size="small"
+                       switch-inverse="true"
+                       switch-on-text="location"
+                       switch-off-text="noticeboard">
+            </span>
+            <span class="input-group" title="Only show vehicles that were at this location">
+                <checkbox ng-model="mapOptions.vehicle.historicalSearch" ng-click="doHistoricalSearch()" ng-disabled="!mapOptions.vehicle.isMapSearchEnabled" class="btn-default" ></checkbox>
+            </span>
+            
+            <button class="btn btn-sm btn-default header-ctrl" ng-click="refreshNoticeboard()" ng-disabled="layoutState.isLoading">
+                <i ng-class="{'spinning': layoutState.isLoading}" class="glyphicon glyphicon-refresh" title="Refresh"></i>
+            </button>
+        </span>
+
+    </div>
+
+    <table id="noticeboardDataTable"
+           datatable="ng"
+           dt-options="noticeboardDataTable.options"
+           dt-instance="noticeboardDataTable.instance"
+           dt-column-defs="noticeboardDataTable.columnDefs"
+           class="table table-striped table-bordered table-hover nowrap">
+        <thead>
+            <tr>
+                <th style="width: 11%;">Reg No</th>
+                <th style="width: 13%;">Driver</th>
+                <th style="width: 9%;">GPS Timestamp</th>
+                <th style="width: 35%;">Reported Location</th>
+                <th style="width: 9%;">Last Responded</th>
+                <th style="width: 13%;">Reason</th>
+                <th ng-show ="!isClientPortalUser" style="width: 10%;">Current Run</th>
+                <th style="width: 0; display:none;"></th>
+                <th style="width: 0; display:none;"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="vehicle in mapData.vehicle.tableData"
+                ng-click="selectPin(vehicle)"
+                ng-class="{'selected-row': vehicle.isSelected}">
+                <td>
+                    {{vehicle.regNo }}
+                    <a href="#" ng-click="showVehicleHistory($event, vehicle)" class="pull-right show-history" title="Show History"><i class="glyphicon glyphicon-road"></i></a>
+                    <i ng-show="vehicle.isSelected" ng-click="toggleTracking($event, vehicle)"  ng-class="{'tracking-icon-tracking': mapData.vehicle.trackedPinId != null ,'tracking-icon': mapData.vehicle.trackedPinId == null,'pull-right': true, 'glyphicon':true, 'glyphicon-screenshot': true}"  title="Click to toggle vehicle tracking."></i>
+                </td>
+                <td>{{vehicle.firstNames}} {{ vehicle.lastName}}</td>
+                <td>{{vehicle.dateStamp | date: 'dd/MM/yy HH:mm:ss'}}</td>
+                <td>{{vehicle.locationString }}</td>
+                <td>{{vehicle.lastResponseTime | date: 'dd/MM/yy HH:mm:ss'}}</td>
+                <td ng-style="getReasonColorStyle(vehicle.reasonCode)">{{vehicle.reason}}</td>
+                <td ng-show="!isClientPortalUser"><a class="mouse-cursor-click" ng-click="vehicle.viewRun()">{{vehicle.currentJobID}}</a></td>
+                <td style="display:none">{{vehicle.dateStamp | date: 'yyyyMMddHH:mm:ss'}}</td>
+                <td style="display:none">{{vehicle.lastResponseTime | date: 'yyyyMMddHH:mm:ss'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

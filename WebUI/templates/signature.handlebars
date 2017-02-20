@@ -1,0 +1,19 @@
+﻿<div class="signatureTooltip">
+    <h1>Signed by: {{signedBy}}</h1>
+    {{#if imageName}}
+        <img src="{{imageBaseUrl}}/{{imageName}}" />
+    {{else}}
+        <h1 style="margin: 20px;">No signature collected</h1>
+    {{/if}}
+    <br />
+    {{#if comment}}
+        <h3>Comments: {{comment}}</h3>
+    {{/if}}
+    {{#if latitude}}
+        {{#if longitude}}
+            <a href="#" class="showWhereSigned" data-latitude="{{latitude}}" data-longitude="{{longitude}}">Show Where Signed</a>
+            <br />
+        {{/if}}
+    {{/if}}
+    <b>Date:</b> {{instructionCompleteDateTime}}
+</div>

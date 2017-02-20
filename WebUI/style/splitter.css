@@ -1,0 +1,57 @@
+﻿.HorizontalSplitterBar
+{
+  background: url(../images/splitter/splitter_horBg.gif); 
+}
+
+.CollapsedHorizontalSplitterBar
+{
+  background: url(../images/splitter/splitter_horBg.gif); 
+  border: 1px solid #000000;
+  border-right-width: 0px;
+}
+
+.VerticalSplitterBar
+{
+  background: url(../images/splitter/splitter_verBg.gif); 
+}
+
+.CollapsedVerticalSplitterBar
+{
+  background: url(../images/splitter/splitter_verBg.gif); 
+  border: 1px solid #000000;
+  border-bottom-width: 0px;
+}
+
+.ActiveSplitterBar
+{
+  background-color: #000000;  
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=40); 
+  opacity: 0.4;
+}
+
+.SplitterPane
+{
+  border: 1px solid #333333;
+}
+
+.DetailsPane
+{
+  border: 7px solid #888888;
+}
+
+.HeadingCell 
+{ 
+  background-color: #D8D8E6; 
+  background-image: url(../images/grid_headerBg.gif); 
+  border: 1px solid gray; 
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-left-color: #E6E6E6; 
+}
+
+.HeadingCellText
+{
+  font-family: verdana; 
+  font-size: 11px; 
+  padding:5px;
+}

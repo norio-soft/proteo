@@ -1,0 +1,95 @@
+.RadTabStrip_Orchestrator
+{
+
+}
+
+/** Tabs **/
+
+.RadTabStrip_Orchestrator li .wrap
+{
+	background-image: url('Img/tableft-bg-off.jpg');
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+.RadTabStrip_Orchestrator li .innerWrap
+{
+	background-image: url('Img/tabright-bg-off.jpg');
+	background-position: top right;
+	background-repeat: no-repeat;
+	padding: 5px 10px 10px 13px;
+	color: #616d79;
+	font-size: 11px; 
+}
+
+/** Selected Tabs **/
+
+.RadTabStrip_Orchestrator li .selected .wrap
+{
+	background-image: url('Img/tableft-bg-on.jpg');
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+.RadTabStrip_Orchestrator li .selected .innerWrap
+{
+	background-image: url('Img/tabright-bg-on.jpg');
+	background-position: top right;
+	background-repeat: no-repeat;
+	padding: 5px 10px 10px 13px;
+	color: #3d4f63;
+	font-size: 11px; 
+}
+
+/** Last tabs **/
+
+.RadTabStrip_Orchestrator .last .selected .innerWrap
+{
+	background-image: url('Img/tabrightlast-bg-on.jpg');
+	background-position: top right;
+	background-repeat: no-repeat;
+	padding: 5px 10px 10px 13px;
+}
+
+.RadTabStrip_Orchestrator .last .innerWrap
+{
+	background-image: url('Img/tabrightlast-bg-off.jpg');
+	background-position: top right;
+	background-repeat: no-repeat;
+	padding: 5px 10px 10px 13px;
+}
+
+/* scrolling arrows */
+
+.RadTabStrip_Orchestrator .leftArrow
+{
+	background-image:url(Img/ScrollLeft.gif);
+	background-repeat: no-repeat;
+	height: 11px;
+	width: 8px;
+}
+
+.RadTabStrip_Orchestrator .rightArrow
+{
+	background-image:url(Img/ScrollRight.gif);
+	background-repeat: no-repeat;
+	height: 11px;
+	width: 8px;
+}
+
+
+.RadTabStrip_Orchestrator .leftArrowDisabled
+{
+	background-image:url(Img/ScrollLeftDisabled.gif);
+	height: 11px;
+	width: 8px;
+	background-repeat: no-repeat;
+}
+
+.RadTabStrip_Orchestrator .rightArrowDisabled
+{
+	background-image:url(Img/ScrollRightDisabled.gif);
+	height: 11px;
+	width: 8px;
+	background-repeat: no-repeat;
+}

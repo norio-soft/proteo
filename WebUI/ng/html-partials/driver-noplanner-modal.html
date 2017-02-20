@@ -1,0 +1,18 @@
+﻿<div class="modal-body">
+    <div>
+        <!--<p>You cannot complete this action unless all the selected Drivers have an assigned Planner.</p>
+        <p>Please assign a Planner to each of these Drivers and then try again.</p>-->
+        <p ng-show="data.Assigned > 0">
+            <span class="bold" ng-bind="data.Assigned"></span> drivers assigned.
+        </p>
+        <p ng-show="data.UnAssigned.length > 0">
+            Drivers exist where no planner has been assigned, please assign a planner for the drivers below:
+        </p>
+    </div>
+    <div style="height: 300px; overflow-y: scroll;">
+        <div ng-repeat="driver in data.UnAssigned track by $index">{{driver}}</div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

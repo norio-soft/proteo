@@ -1,0 +1,184 @@
+﻿<div class="modal-header">
+    <button type="button" class="close" ng-click="cancel()" aria-hidden="true">&times;</button>
+    <h4 class="modal-title">Assign Vehicle To {{ ::data.driverFullName }}</h4>
+</div>
+
+<div class="modal-body">
+    <div class="container-fluid">
+        <form class="form-horizontal" name="assignVehicleForm" role="form" id="assignVehicleForm">
+
+            <div class="list-group">
+
+                <div class="list-group-item">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="row form-group">
+                                <label for="vehicle" class="col-sm-4 control-label">Vehicle</label>
+                                <div class="col-sm-8" pr-show-errors>
+                                    <div class="input-group">
+                                        <input class=" form-control single-input-control"
+                                             id="vehicle"
+                                             type="text"
+                                             placeholder="Enter a vehicle"
+                                             name="vehicle"
+                                             ng-model="data.vehicle"
+                                             ng-blur="vehicleBlurred()"
+                                             typeahead="vehicle as vehicle.registrationNumber for vehicle in getVehicles($viewValue) | limitTo:25"
+                                             typeahead-min-length="2"
+                                             typeahead-wait-ms="250"
+                                             typeahead-template-url="/ng/html-partials/directives/vehicle-typeahead-template.html"
+                                             typeahead-on-select="setVehicle($item)"
+                                             required
+                                             pr-auto-focus>
+                                            <span class="input-group-addon input-group-addon-remove-border">
+                                                <pr-validator form-control="assignVehicleForm.vehicle" field-name="Vehicle">
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-group-item">
+                    <h5>Create Resource Units</h5>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table">
+                                <thead>
+                                <th class="col-sm-1">&nbsp;</thclass>
+                                <th class="col-sm-offset-1 col-sm-3">Start Date</th>
+                                <th class="col-sm-1">Start Time</th>
+                                <th class="col-sm-offset-2 col-sm-3">End Date</th>
+                                <th class="col-sm-1">End Time</th>
+                                </thead>
+
+                                <tbody>
+                                    <tr ng-repeat="resourceUnit in data.resourceUnits" ng-form="resourceUnitForm">
+                                        <td>
+                                            <input type="checkbox" ng-model="resourceUnit.isSelected">
+                                        </td>
+
+                                        <td pr-show-errors>
+                                            <div class="input-group date-picker" ng-disabled="!resourceUnit.isSelected">
+                                                <input type="text"
+                                                       class="form-control date-input single-input-control"
+                                                       id="startDate"
+                                                       name="startDate"
+                                                       ng-model="resourceUnit.startDate"
+                                                       datepicker-popup="dd/MM/yyyy"
+                                                       show-button-bar="false"
+                                                       is-open="resourceUnit.startDateOpen"
+                                                       required
+                                                       ng-disabled="!resourceUnit.isSelected">
+                                                <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-default" ng-click="openStartDatePicker($event, resourceUnit)" ng-disabled="!resourceUnit.isSelected">
+                                                        <i class="glyphicon glyphicon-calendar"></i>
+                                                    </button>
+                                                </span>
+                                                <span class="input-group-addon input-group-addon-remove-border">
+                                                    <pr-validator form-control="resourceUnitForm.startDate" field-name="Start Date">
+                                                </span>
+                                            </div>
+
+                                        </td>
+
+                                        <td pr-show-errors>
+                                            <div class="input-group">
+                                                <input type="text"
+                                                       class="form-control time-picker single-input-control"
+                                                       name="startTime"
+                                                       ng-model="resourceUnit.startTime"
+                                                       pr-format-time
+                                                       pr-valid-time
+                                                       required
+                                                       ng-disabled="!resourceUnit.isSelected">
+                                                <span class="input-group-addon input-group-addon-remove-border">
+                                                    <pr-validator form-control="resourceUnitForm.startTime" field-name="Start Time">
+                                                </span>
+                                            </div>
+                                        </td>
+
+                                        <td pr-show-errors>
+                                            <div class="input-group date-picker">
+                                                <input type="text"
+                                                       class="form-control date-input single-input-control"
+                                                       id="finishDate"
+                                                       name="finishDate"
+                                                       ng-model="resourceUnit.finishDate"
+                                                       datepicker-popup="dd/MM/yyyy"
+                                                       show-button-bar="false"
+                                                       is-open="resourceUnit.finishDateOpen"
+                                                       pr-date-less-than="resourceUnit.startDate"
+                                                       required
+                                                       ng-disabled="!resourceUnit.isSelected">
+                                                <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-default" ng-click="openFinishDatePicker($event, resourceUnit)" ng-disabled="!resourceUnit.isSelected">
+                                                        <i class="glyphicon glyphicon-calendar"></i>
+                                                    </button>
+                                                </span>
+                                                <span class="input-group-addon input-group-addon-remove-border">
+                                                    <pr-validator form-control="resourceUnitForm.finishDate" field-name="Finish Date">
+                                                </span>
+                                            </div>
+
+                                        </td>
+
+                                        <td pr-show-errors>
+                                            <div class="input-group">
+                                                <input type="text"
+                                                       class="form-control time-picker single-input-control"
+                                                       name="finishTime"
+                                                       ng-model="resourceUnit.finishTime"
+                                                       pr-time-less-than="resourceUnit.startTime"
+                                                       start-date="resourceUnit.startDate"
+                                                       finish-date="resourceUnit.finishDate"
+                                                       pr-enter="save()"
+                                                       pr-format-time
+                                                       pr-valid-time
+                                                       required
+                                                       ng-disabled="!resourceUnit.isSelected">
+                                                <span class="input-group-addon input-group-addon-remove-border">
+                                                    <pr-validator form-control="resourceUnitForm.finishTime" field-name="Finish Time">
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-group-item" ng-if="data.legs.length">
+                    <h5>Assign Vehicle To Legs</h5>
+
+                    <div class="list-group">
+                        <div class="list-group-item" ng-repeat="leg in data.legs">
+                            <div class="row">
+                                <div class="col-sm-1">
+                                    <input type="checkbox" ng-model="leg.isSelected">
+                                </div>
+                                <div class="col-sm-11">
+                                    <dl class="dl-horizontal half-width-titles remove-bottom-margin">
+                                        <dt>From</dt>
+                                        <dd>{{ ::leg.startPointDescription }} {{ :: leg.startDateDisplay }}</dd>
+                                        <dt>To</dt>
+                                        <dd>{{ ::leg.endPointDescription }} {{ :: leg.endDateDisplay }}</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" ng-click="save()">Assign Vehicle</button>
+    <button type="button" class="btn btn-default" ng-click="cancel()">Close</button>
+</div>

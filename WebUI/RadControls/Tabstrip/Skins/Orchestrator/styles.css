@@ -1,0 +1,75 @@
+.RadTabStrip_Orchestrator 
+{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;	
+}
+
+.RadTabStrip_Orchestrator .levelwrap	
+{
+	background-image: url('Img/1px-tab-border.gif');
+	background-position: bottom;
+	background-repeat: repeat-x; 	 	
+}
+
+.RadTabStrip_Orchestrator a,
+.RadTabStrip_Orchestrator a:active,
+.RadTabStrip_Orchestrator a:visited
+{
+	text-decoration: none;
+}
+
+.RadTabStrip_Orchestrator .first
+{
+	margin-left: 3px;	
+}
+
+/** Off Style **/
+
+.RadTabStrip_Orchestrator li .wrap 
+{
+	border-top: 1px solid #CCC;
+	border-right: 0px solid #CCC;
+	//border-bottom: 1px solid #000;
+	border-left: 1px solid #CCC;
+	background-color: #f1f3f5;
+	padding:  5px 8px 6px 8px;
+	//padding: 5px 8px 5px 8px;
+	margin: 6px 0 0 0;
+	//margin: 5px 0 0 0;
+	color: #456286;
+	line-height: 12px;	
+}
+
+/** On Style **/
+
+.RadTabStrip_Orchestrator .selected .wrap 
+{
+	border-top: 1px solid #4d4d4d;
+	border-right: 1px solid #4d4d4d;
+	border-bottom: 0px solid #4d4d4d;
+	border-left: 1px solid #4d4d4d;
+	background-color: #FFF;
+	padding: 7px 8px 8px 8px;
+	//padding: 7px 8px 7px 8px;
+	margin: 3px -1px 0 0;
+	//margin: 2px -1px 0 0; 
+	color: #2d4768;
+	line-height: 12px;
+}
+
+/** Ends **/
+
+.RadTabStrip_Orchestrator .last .selected .wrap 
+{
+	border-right: 1px solid #4d4d4d;
+}
+
+.RadTabStrip_Orchestrator .last .wrap 
+{
+	border-right: 1px solid #CCC;
+}
+
+.RadTabStrip_Orchestrator .rtsAfter .rtsOut 
+{
+	border-left: 0px solid #CCC;
+}

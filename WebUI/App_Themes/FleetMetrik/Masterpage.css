@@ -1,0 +1,1439 @@
+﻿/** -----------------------------------------------------------------------------------  **/
+/** Orchestrator Masterpage CSS - This stylesheet handles the layout and				 **/
+/** look and feel for: header/footer user controls, default.master.                 	 **/
+/** and tsmaster.aspx. When making any additions or ammendments remember to add them to	 **/
+/** ------------------------------------------------------------------------------------ **/
+/** By Robin Turner, Steve Newman, Greg Duffield,										 **/
+/** ------------------------------------------------------------------------------------ **/
+/** Whitelabeling lives in <Web ui root>/Whitelabel/ and it just overwrites this file	 **/
+/** ------------------------------------------------------------------------------------ **/
+
+body
+{
+	background-color: #0c4626;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	margin: 0px;
+	width: 100%; 
+}
+
+/** ---------------- **/
+/** Table MasterPage **/
+/** ---------------- **/
+
+.layoutContainer 
+{
+	border: 1px solid #000;
+}
+
+.layoutHeaderRow 
+{
+	background-color: #0c4626;
+	background-image: url('img/MasterPage/header-bg.jpg');
+	background-position: top;
+	background-repeat: repeat-x;
+	height: 70px;
+}
+
+.layoutHeaderRow iframe 
+{
+	background-color: Transparent;	
+}
+
+.bodyIframe 
+{
+	background-color: #363636;
+	background-image: url('img/MasterPage/header-bg.jpg');
+	background-position: -30px;
+	background-repeat: repeat-x;	
+}
+
+.layoutHeaderLogo 
+{
+	padding: 0 0 0 9px;
+}
+
+.HeaderLogoImg
+{
+	background-image: url('img/MasterPage/orch-logo.png'); 
+	background-position: left center; 
+	background-repeat: no-repeat;
+	width: 355px;
+	height: 60px;
+	display: block; 	
+}
+
+.HeaderLogoImg:hover 
+{
+	cursor: pointer;	
+}
+
+.layoutContentTop 
+{
+	background-color: #FFF; 
+	background-image: url('img/MasterPage/content-bg-top.jpg'); 
+	background-position: top; 
+	background-repeat: repeat-x; 
+	height: 14px;
+	border-top: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+}
+
+.layoutContentMiddle 
+{
+	background-color: #FFF;
+	padding: 0px 10px 0px 10px !important;
+}
+
+.layoutContentMiddleInner 
+{
+	min-height: 600px;	
+}
+
+.layoutContentBottom 
+{
+	background-color: #FFF; 
+	background-image: url('img/MasterPage/content-bg-bottom.jpg'); 
+	background-position: bottom; 
+	background-repeat: repeat-x; 
+	height: 14px;
+	border-bottom: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+	border-left: 1px solid #FFF;	
+}
+
+.layoutFooter 
+{
+	background-color: #1c1c1c;
+	color: #FFF;
+}
+
+/** ---------------- **/
+/** Header seperator **/
+/** ---------------- **/
+
+.layoutHeaderSeperator 
+{
+	border-top: 1px solid #000;
+	border-bottom: 3px solid #6daddd;
+	background-color: #6daddd;
+	font-size: 0px;
+	line-height: 0px;	
+}
+
+/** ---------- **/
+/** Navigation **/
+/** ---------- **/
+
+.layoutNavigationHomeLink 
+{
+	background-color: #484747;
+	color: #FFF;
+	padding: 0 10px 0 7px;
+	background-image: url('img/MasterPage/nav-seperatorbg.jpg');
+	background-position: center right;
+	background-repeat: no-repeat;
+	vertical-align: middle !important;	
+}
+
+.layoutNavigationHomeLink a img 
+{
+	border: 0px;	
+	margin: 4px 0 0 0;		
+}
+
+.layoutNavigationHomeLink a:hover 
+{
+	cursor: pointer;
+}
+
+.layoutNavigationHomeImage 
+{
+	width: 16px;
+	height: 16px;
+	display: block;
+	background-image: url('img/MasterPage/icon-home.png');
+	background-repeat: no-repeat;
+}
+
+.layoutNavigationMiddle 
+{
+	background-color: #484747;
+	color: #FFF;
+	padding: 0;	
+}
+
+.layoutNavigationVersion 
+{
+	background-color: #484747;
+	/*float: right;*/
+	width: 15%;
+	text-align: right;
+	color: #bddbf2 !important;
+}
+
+.layoutNavigationVersion * 
+{	
+	font-weight: normal !important;	
+	color: #bddbf2 !important;
+	font-size: 11px !important;
+	font-family: Verdana, Geneva, sans-serif !important;
+	margin: 0;
+	display: block;	
+}
+
+.layoutNavigationHome a:active
+{
+	color: #FFF;	
+}
+
+.TopMenuItem 
+{
+	color: #FFF;
+	background-image: url('img/MasterPage/nav-seperatorbg.jpg');
+	background-position: center right;
+	background-repeat: no-repeat;
+	padding: 12px 10px !important;	
+}
+
+.TopMenuItemHover, .TopMenuItemActive 
+{
+	background-image: url('img/MasterPage/nav-seperatorbg.jpg');
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-color: #484747;
+	color: #8cc7f1;
+	padding: 12px 10px !important;
+	cursor: pointer;
+}
+
+.MenuGroup 
+{
+	background-color: #484747;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	border-top: 1px solid #484747;
+}
+
+.MenuItem 
+{
+	background-color: #484747;
+	border: 1px solid #484747;	
+}
+
+.MenuItem nobr 
+{
+	color: #FFF;
+}
+
+.MenuItemHover
+{
+	background-color: #c2c2c2;
+	background-image: url('img/MasterPage/menu-hoverbg.jpg');
+	background-repeat:repeat-x;
+	border: 1px solid #a5cae4;	
+}
+
+.MenuItemHover nobr 
+{
+	color: #000;
+}
+
+.MenuBreak 
+{
+	background-color: #3e3e3e;
+	border-bottom: 1px dotted #000;		
+}
+
+/** ------- **/
+/** Traffic **/
+/** ------- **/
+
+.LoadingNews 
+{
+	background-image: url('img/MasterPage/loading.gif'); 
+	background-repeat: no-repeat;	
+	background-position: center 10px; 
+	text-align: center; 
+	padding-top: 40px; 
+	color: #FFF;  
+	display: block;	
+}
+
+#traffic  
+{
+	background-color:Transparent; 
+	width: 550px; 
+	height: 60px; 
+	margin-left:15px;
+}
+
+#traffic:hover 
+{
+	cursor: pointer;	
+}
+
+#traffic div 
+{ 
+	width: 100%; 
+	height: 50px; 
+	margin:2px; 
+	color: #fff; 
+	text-align: left; 
+	font-size: 11px; 
+	overflow: hidden 
+}
+
+#traffic div div 
+{
+	margin: 0px;	
+}
+
+#traffic a 
+{
+	color:White; 
+	float:left; 
+	margin-right:10px;
+	font-size: 10px;
+}
+
+#traffic #title 
+{
+	font-weight:bold;
+	font-size: 10px; 
+	margin-left:10px; 
+	height:14px; 
+	width:450px; 
+	overflow:hidden; 
+}
+
+#traffic #newsItem 
+{
+	font-size:10px; 
+	display:inline; 
+	float:left; 
+	width:100%; 
+	height:40px;
+	color: #CCC; 
+}
+
+#traffic img 
+{
+	margin-left:190px; 
+	margin-top:3px; 
+}
+
+/** ---------- **/
+/** Search Box **/
+/** ---------- **/
+
+.masterpagelite_headerSearch 
+{
+	display: none !important;	
+}
+
+.layoutSearch
+{
+	float: right;
+	padding-right: 10px;	
+}
+
+.layoutSearchDropDown
+{
+	float: left;
+	width: 160px;
+	height: 22px;
+	display: none;
+}
+
+.layoutSearchBox
+{
+	float: right;
+	width: 197px;
+	border-bottom: 2px solid #282828;
+	text-align: left;
+	margin: 0px;
+}
+
+.layoutSearchBox input 
+{
+	border: 0px;
+	background-color: Transparent;
+	width: 164px;
+	margin: 3px 0px 0px 2px;
+	float: left;	
+}
+
+.layoutSearchBoxInner
+{
+	background-image: url('img/MasterPage/search-bg.jpg');
+	background-repeat: repeat-x;
+	border: 1px solid #FFF;
+	height: 22px;
+	width: 195px;
+}
+
+.layoutSearchBoxInner a img 
+{
+	margin: 3px 0px 0px 6px;	
+}
+
+.layoutSearchBoxInner a:hover 
+{
+	cursor: pointer;	
+}
+
+.layoutSearchBoxImage 
+{
+	width: 16px;
+	height: 16px;
+	float: right;
+	display: block;
+	background-image: url('img/MasterPage/icon-search.png');
+	background-repeat: no-repeat;
+	margin: 3px 5px 0px 0px;		
+}
+
+.layoutSearchBoxFilter
+{
+	/** Doesn't seem to be used anymore, but it's here just incase **/
+}
+
+/** ------------- **/ 
+/** Traffic sheet **/
+/** ------------- **/
+
+.layoutTrafficSheetHeader 
+{
+	border: 0px;
+}
+
+/** ------------- **/
+/** Error Page	  **/
+/** ------------- **/
+
+.errorpageBodyClass 
+{
+	background-color: #363636;
+	background-image: url('img/newLogin/page-bg.jpg');
+	background-position: top center;
+	background-repeat: no-repeat;
+	font-family: Verdana;
+	font-size: 11px;
+	color: #363636;	
+}
+
+.errorContainerOuter 
+{
+	margin: 0px auto;
+	padding: 100px 0 0 0;
+	width: 375px;
+	text-align: left;
+}
+
+.errorInnerHeader
+{
+	background-image: url("img/newLogin/page-bg-top.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+	height: 15px;	
+}
+
+.errorInnerContent
+{
+	background-image: url('img/newLogin/page-bg-mid.jpg');
+	background-position: center center;
+	background-repeat: repeat-y;
+	padding: 0 15px 0 15px;	
+}
+
+.errorInnerFooter
+{
+	background-image: url('img/newLogin/page-bg-bottom.jpg');
+	background-position: top center;
+	background-repeat: no-repeat;
+	height: 17px;	
+}
+
+.errorBottomFooter
+{
+	margin-top: 7px;
+	color: #CCC;
+}
+
+.errorContentContaier 
+{
+	border: 1px dotted #CCC;
+	padding: 10px;
+	margin-top: 10px;	
+}
+
+/** Content **/
+
+.errorContentBox 
+{
+	border: 1px dotted #CCC;
+	padding: 10px;
+	margin-top: 10px	
+}
+
+.errorInnerContent h1 
+{
+	font-size: 18px;
+	font-weight: normal;
+	font-family: Arial;
+	margin: 0 0 3px 0;
+	padding: 0 0 3px 22px;
+	color: #FFF;
+	background-image: url('img/MasterPage/icon-warningshield.png');
+	background-repeat: no-repeat;
+	background-position: left 3px;
+}
+
+.errorInnerContent p, .errorInnerContent .ControlTitleHeader 
+{
+	padding: 0px;
+	margin: 0 0 15px 0;	
+}
+
+.errorInnerContent h3 
+{
+	font-weight: normal;
+	font-family: Verdana;
+	font-style: normal;
+	font-size: 18px;
+	color: #FFF;
+	text-align: center;
+	margin: 0 0 15px 0;
+}
+
+.errorButtonBar {
+	border: 1px dotted #6e9bbf;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.errorButtonBar .buttonclass 
+{
+	_border: 1px solid #374b64;	
+	border: 1px solid #daece2;
+	background-color: #374b64;
+	padding: 5px 5px 6px 6px;
+	color: #FFF;
+	background-image: url('img/MasterPage/button-bg.jpg');
+	background-color: #3d3d3d;
+	background-position: top;
+	background-repeat: repeat-x;
+	font-size: 11px;
+}
+
+.errorButtonBar .buttonclass:hover 
+{
+	cursor: pointer;
+	border: 1px solid #FFF;
+	background-image: url('img/MasterPage/button-bg-on.jpg');	
+}
+
+/** Footer **/
+
+.errorBottomFooter a, .errorBottomFooter a:link, .errorBottomFooter a:visited  {
+	border-bottom: 1px solid #737373;
+	color:#CCC;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.errorBottomFooter a:hover {
+	border-bottom: 1px solid #FFF;
+	color: #FFF;
+}
+
+/** -------------------- **/
+/** Tableless Masterpage **/
+/** -------------------- **/
+
+.masterpage_layout 
+{
+	margin: 0px;
+	padding: 0px;	
+	height:100%;
+}
+
+.masterpage_layoutContainer
+{
+	margin: 0px;
+	padding: 0px;	
+	height:100%;
+	width: 100%;
+}
+
+.masterpage_clearDiv 
+{
+	clear: both;
+	line-height: 0px;
+	padding: 0px;
+	margin: 0px;
+	height: 0px;
+	font-size: 0px;
+	width: 0px;	
+}
+
+/** ------ **/
+/** Header **/
+/** ------ **/
+
+.masterpage_layoutHeader
+{
+	background-color: #363636;
+	background-image: url('img/MasterPage/header-bg.jpg');
+	background-position: top;
+	background-repeat: repeat-x;
+	padding: 7px 10px;
+}
+
+.masterpage_layoutHeaderInner
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+.masterpage_headerLogo 
+{
+	float: left;
+	width: 27%;
+	overflow: visible;	
+}
+
+.masterpage_headerTraffic
+{
+	float: left;
+	width: 48%;
+	background-color:Transparent;
+}
+
+.masterpage_headerSearch 
+{
+	float: right;
+	width: 24%;		
+}
+
+/** ------------ **/
+/** Header Image **/
+/** ------------ **/
+
+.masterpage_headerLogoImg 
+{
+	background-image: url('img/MasterPage/orch-logo.png'); 
+	background-position: left top; 
+	background-repeat: no-repeat;
+	height: 60px;
+	display: block; 	
+}
+
+.masterpage_headerLogo a 
+{
+	border: 0px;	
+}
+
+.masterpage_headerLogo a:hover 
+{
+	cursor: pointer;
+}
+
+/** ------------ **/
+/** Traffic News **/
+/** ------------ **/
+
+.masterpage_headerTraffic .LoadingNews 
+{
+	background-image: url('img/MasterPage/loading.gif'); 
+	background-repeat: no-repeat;	
+	background-position: center 10px; 
+	text-align: center; 
+	padding-top: 40px; 
+	color: #FFF;  
+	display: block;	
+}
+
+.masterpage_headerTraffic #traffic  
+{
+	background-color:Transparent; 
+	width: 100%; 
+	height: 60px; 
+	margin-left:15px;
+}
+
+.masterpage_headerTraffic #traffic div 
+{ 
+	width: 100%; 
+	height: 50px; 
+	margin:2px; 
+	color: #fff; 
+	text-align: left; 
+	font-size: 11px; 
+	overflow: hidden 
+}
+
+.masterpage_headerTraffic #traffic div div 
+{
+	margin: 0px;	
+}
+
+.masterpage_headerTraffic #traffic a 
+{
+	color:White; 
+	float:left; 
+	margin-right:10px;
+	font-size: 10px;
+}
+
+.masterpage_headerTraffic #traffic #title 
+{
+	font-weight:bold;
+	font-size: 10px; 
+	margin-left:10px; 
+	height:14px; 
+	width:74%; 
+	overflow:hidden; 
+}
+
+.masterpage_headerTraffic #traffic #newsItem 
+{
+	font-size:10px; 
+	display:inline; 
+	float:left; 
+	width:100%; 
+	height:40px;
+	color: #CCC; 
+}
+
+.masterpage_headerTraffic #traffic img 
+{
+	margin-left:190px; 
+	margin-top:3px; 
+}
+
+/** ---------- **/
+/** Search Box **/
+/** ---------- **/
+
+.masterpage_searchBox 
+{
+	padding: 4px 0px;
+	margin: 0px;
+	width: 195px;
+	float: right;		
+}
+
+.masterpage_searchInput 
+{
+	background-image: url('img/MasterPage/search-bg.jpg');
+	background-color: #ddd;
+	background-repeat: repeat-x;
+	background-position: top;
+	border: 1px solid #FFF;
+	padding: 0px;
+}
+
+.masterpage_searchInput input 
+{
+	float: left;
+	margin: 5px 3px 3px 3px;
+	width: 160px;
+	padding: 0px;
+	border: 0px;
+	background-color: transparent;	
+}
+
+.masterpage_searchInput input:focus 
+{ 
+    outline: none; 
+}
+
+.masterpage_searchImage 
+{
+	width: 16px;
+	height: 16px;
+	display: block;
+	float: right;
+	margin: 3px 5px 3px 3px;
+	padding: 0px;
+	background-image: url('img/MasterPage/icon-search.png');
+	background-repeat: no-repeat;		
+}
+
+.masterpage_searchImage:hover 
+{
+	cursor: pointer;	
+}
+
+.masterpage_searchFilter 
+{
+	padding: 2px 0px 0px 0px;
+	text-align: right;
+	border-top: 2px solid #000;
+}
+
+.masterpage_searchFilter .masterpage_searchRadiobuttons 
+{
+    float: left;
+    width: 110px;        
+}
+
+.masterpage_searchFilter .masterpage_searchRadiobuttons *
+{
+    color: #FFF;    
+}
+
+.masterpage_searchFilter .masterpage_searchCheckbox
+{
+    float: right;
+    width: 85px;        
+}
+
+/** ---------- **/
+/** Navigation **/
+/** ---------- **/
+
+.masterpage_layoutNav {
+	background-color: #484747;
+	border-top: 3px solid #6daddd;
+	padding: 0px 10px;
+}
+
+.masterpage_layoutNavInner 
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+.masterpage_navControl 
+{
+	float: left;
+	width: 960px;	
+}
+
+/** --------- **/
+/** Home Icon **/
+/** --------- **/
+
+.masterpage_navHome 
+{
+	float: left;
+	width: 24px;
+}
+
+.masterpage_navHomeImg 
+{
+	background-image:url(img/MasterPage/icon-home.png);
+	background-repeat:no-repeat;
+	display:block;
+	height:16px;
+	width:16px;	
+	margin: 11px 0px;	
+	cursor: pointer;
+}
+
+/** -------------------- **/
+/** Orchestrator Version **/
+/** -------------------- **/
+
+.masterpage_navVersion 
+{
+	float: right;
+	width: 150px;
+	padding-top: 7px;
+	text-align: right;
+
+}
+
+.masterpage_navVersion * 
+{	
+	font-weight: normal !important;	
+	color: #bddbf2 !important;
+	font-size: 11px !important;
+	font-family: Verdana, Geneva, sans-serif !important;
+	margin: 0;
+	display: block;	
+}
+
+/** ------- **/
+/** Content **/
+/** ------- **/
+
+.masterpage_layoutContent 
+{
+	background-color: #FFF;
+	border: 1px solid #000;
+}
+
+.masterpage_contentTop 
+{
+	background-color: #FFFFFF;
+	background-image: url(img/MasterPage/content-bg-top.jpg);
+	background-position: center top;
+	background-repeat: repeat-x;
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	height: 14px;
+}
+
+.masterpage_contentHolder 
+{
+	padding: 0 8px;	
+	min-height: 600px;		
+	height:100%;
+} 
+
+.masterpage_contentBottom 
+{
+	background-color: #FFFFFF;
+	background-image: url(img/MasterPage/content-bg-bottom.jpg);
+	background-position: center bottom;
+	background-repeat: repeat-x;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	height: 14px;	
+}
+
+/** ------ **/
+/** Footer **/
+/** ------ **/
+
+.masterpage_layoutFooter 
+{
+	padding: 5px 8px;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	background-color: #484747;
+	min-width: 1024px;	
+}
+
+.masterpage_layoutFooter p 
+{
+	color: #CCC;
+	margin: 0px;
+	padding: 0px;	
+}
+
+/** ----------------- **/
+/** Pop up Masterpage **/
+/** ----------------- **/
+
+.masterpagepopup_layoutHeaderOuter, .layoutWizzardHeaderOuter  
+{
+	background-image: url('img/MasterPage/nav-bg.jpg'); 
+	background-repeat: repeat-x;	
+}
+
+.masterpagepopup_layoutHeaderInner, .layoutWizzardHeaderInner  
+{
+	font-size: 12px; 
+	color: #FFF; 
+	padding: 10px 10px 10px 160px; 
+	vertical-align: top;
+	background-image: url('img/MasterPage/orch-logo-mini.png'); 
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	background-color: Transparent;	
+}
+
+.masterpagepopup_layoutHeaderInner p 
+{
+	float: left;
+	display: block;
+	width: 17px;
+	color: #CCC;
+	margin: 0;
+	padding: 0;	
+}
+
+.masterpagepopup_layoutHeaderInner span 
+{
+	padding: 0;
+	margin: 0;
+	display: block;
+	float: left;	
+}
+
+.masterpagepopup_layoutContainer 
+{
+	border: 1px solid #000;	
+}
+
+.masterpagepopup_contentTop 
+{
+	background-color: #FFFFFF;
+	background-image: url(img/MasterPage/content-bg-top.jpg);
+	background-position: center top;
+	background-repeat: repeat-x;
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	height: 14px;	
+}
+
+.masterpagepopup_contentHolder
+{
+	padding: 0 8px;	
+	min-height: 100px;		
+	background-color: #FFF;	
+}
+
+.masterpagepopup_contentBottom 
+{
+	background-color: #FFFFFF;
+	background-image: url(img/MasterPage/content-bg-bottom.jpg);
+	background-position: center bottom;
+	background-repeat: repeat-x;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	height: 14px;		
+}
+
+/** ---------------------------------------- **/
+/** Lite version of the Tableless Masterpage **/
+/** ---------------------------------------- **/
+
+.masterpagelite_layout 
+{
+	margin: 0px;
+	padding: 0px;	
+	height:100%;
+}
+
+.masterpagelite_layoutContainer
+{
+	margin: 0px;
+	padding: 0px;	
+	height: 100%;
+	min-width: 1024px;
+}
+
+.masterpagelite_clearDiv 
+{
+	clear: both;
+	line-height: 0px;
+	padding: 0px;
+	margin: 0px;
+	height: 0px;
+	font-size: 0px;
+	width: 0px;	
+}
+
+/** ------ **/
+/** Header **/
+/** ------ **/
+
+.masterpagelite_layoutHeader
+{
+	background-color: #0c4626;
+	background-image: url('img/MasterPage/header-bg.jpg');
+	background-position: bottom;
+	background-repeat: repeat-x;
+	padding: 7px 10px;
+}
+
+.masterpagelite_layoutHeaderInner
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+.masterpagelite_headerLogo 
+{
+	float: left;
+	width: 170px;
+	padding: 7px 0;
+	overflow: visible;	
+}
+
+.masterpagelite_headerTitle
+{
+	float: left;
+	display: inline-block;
+	border-left: 1px solid #88da9d;
+	/*border-right: 1px solid #6daddd;*/	
+}
+
+.masterpagelite_headerNews 
+{
+	float: left;
+	display: none;
+	border-right: 1px solid #6daddd;
+	padding: 0px 0;	
+	color: #FFF;
+	font-size: 12px;
+	margin: 0px 10px 0px 10px;
+	height: 45px;
+	width: 100px;
+}
+
+.masterpagelite_headerSearch 
+{
+	display:inline;
+	float: right;
+	width: 200px;
+}
+
+/** ------------ **/
+/** Header Image **/
+/** ------------ **/
+
+.masterpagelite_headerLogoImg 
+{
+	background-image: url('img/MasterPage/fm-logo.png'); 
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-color: Transparent;	
+	height: 30px;
+	display: block; 	
+}
+
+.masterpagelite_headerLogo a 
+{
+	border: 0px;	
+}
+
+.masterpagelite_headerLogo a:hover 
+{
+	cursor: pointer;
+}
+
+/** ----- **/
+/** Title **/
+/** ----- **/
+
+.masterpagelite_headerTitle h1 
+{
+	color: #fff;
+	border: 0 none;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Verdana;
+	display: block;
+	margin: 16px;
+	padding: 0;
+}
+
+.masterpagelite_headerTitle h2 
+{
+	color: #FFF;
+	border: 0 none;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Verdana;
+	display: block;
+	margin: 16px;
+	padding: 0;
+}
+
+
+/** ---- **/
+/** News **/
+/** ---- **/
+
+.masterpagelite_headerNewsInner
+{
+	overflow-x: hidden;
+	height: 28px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.masterpagelite_headerNewsInner #traffic 
+{
+	height: 28px;
+	width: auto;
+	margin: 0px 18px;
+}
+
+.masterpagelite_headerNewsInner #traffic:hover * 
+{
+	color: #FFF !important;
+	cursor: pointer;	
+}
+
+.masterpagelite_headerNewsInner #traffic div 
+{
+	width: inherit !important;
+	color: #CCC;	
+}
+
+.masterpagelite_headerNewsInner #traffic a 
+{
+	width: auto !important;
+	text-decoration: none !important;
+	color: #CCC;	
+}
+
+.masterpagelite_headerNewsInner #traffic #title 
+{
+	font-weight: bold;
+	width: auto !important;
+	color: #CCC;		
+}
+
+.masterpagelite_headerNewsInner #traffic #newsItem 
+{
+	
+	text-overflow:ellipsis;
+	height: 12px !important;
+	width: 100%;
+	white-space: nowrap;
+	color: #CCC;		
+}
+
+.masterpagelite_headerNewsInner .LoadingNews 
+{
+	background-image: url('img/MasterPage/loading.gif'); 
+	background-repeat: no-repeat;	
+	background-position: left 4px; 
+	text-align: left; 
+	padding: 9px 0 10px 40px; 
+	color: #FFF;  
+	display: block;	
+}
+
+/** ---------- **/
+/** Search Box **/
+/** ---------- **/
+
+.masterpagelite_searchBox 
+{
+	margin: 0px;
+	width: 200px;
+}
+
+.masterpagelite_searchInput 
+{
+	background-image: url('img/MasterPage/search-bg.jpg');
+	background-color: #ddd;
+	background-repeat: repeat-x;
+	background-position: top;
+	border: 1px solid #FFF;
+	padding: 0px;	
+	float: left;
+	width: 195px;
+}
+
+.masterpagelite_searchInput input 
+{
+	float: left;
+	margin: 5px 3px 3px 3px;
+	width: 160px;
+	padding: 0px;
+	border: 0px;
+	background-color: transparent;	
+}
+
+.masterpagelite_searchInput input:focus 
+{ 
+    outline: none; 
+}
+
+.masterpagelite_searchImage 
+{
+	width: 16px;
+	height: 16px;
+	display: block;
+	float: right;
+	margin: 3px 5px 3px 3px;
+	padding: 0px;
+	background-image: url('img/MasterPage/icon-search.png');
+	background-repeat: no-repeat;		
+}
+
+.masterpagelite_searchImage:hover 
+{
+	cursor: pointer;	
+}
+
+.masterpagelite_searchFilter 
+{
+	padding: 3px 0px 0px 0px;
+	width: 85px;
+	float: left;
+}
+
+.masterpagelite_searchInputBorder 
+{
+	border-top: 2px solid #000;
+	width: 195px;
+	height: 0px;
+	line-height: 0px;	
+}
+
+.masterpagelite_searchFilterOptions 
+{
+    margin: 0px;
+    //margin: -5px 0 0;
+    height: 8px;    
+}
+
+.masterpagelite_searchFilterOptions *
+{
+    color: #FFF !important;
+}
+
+.masterpagelite_searchFilterOptions table td 
+{
+    padding: 0px;
+    border-spacing: 0px;
+    vertical-align: middle;    
+}
+
+.masterpagelite_searchBox .clearDiv 
+{
+    height: 0px;
+	overflow: hidden;
+	line-height: 0px;
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+	width: 0px;
+	max-width: 0px;
+	max-height: 0px;    
+}
+
+/** ---------- **/
+/** Navigation **/
+/** ---------- **/
+
+.masterpagelite_layoutNav {
+	background-color: #117238;
+	border-top: 2px solid #e7d120;
+	padding: 0px 10px;
+}
+
+.masterpagelite_layoutNavInner 
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+.masterpagelite_navControl 
+{
+	float: left;
+	width: 960px;	
+}
+
+/** --------- **/
+/** Home Icon **/
+/** --------- **/
+
+.masterpagelite_navHome 
+{
+	float: left;
+	width: 24px;
+}
+
+.masterpagelite_navHomeImg 
+{
+	background-image:url(img/MasterPage/icon-home.png);
+	background-repeat:no-repeat;
+	display:block;
+	height:16px;
+	width:16px;	
+	margin: 11px 0px;	
+	cursor: pointer;
+}
+
+/** ------- **/
+/** Content **/
+/** ------- **/
+
+.masterpagelite_layoutContent 
+{
+	background-color: #FFF;
+	border: 1px solid #000;
+}
+
+.masterpagelite_contentTop 
+{
+	background-color: #FFFFFF;
+	background-image: url(img/MasterPage/content-bg-top.jpg);
+	background-position: center top;
+	background-repeat: repeat-x;
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	height: 14px;
+}
+
+.masterpagelite_contentHolder 
+{
+	padding: 0 8px;	
+	min-height: 600px;		
+	height:100%;
+} 
+
+.masterpagelite_contentBottom 
+{
+	background-color: #FFFFFF;
+	background-image: url(img/MasterPage/content-bg-bottom.jpg);
+	background-position: center bottom;
+	background-repeat: repeat-x;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	height: 14px;	
+}
+
+/** ------ **/
+/** Footer **/
+/** ------ **/
+
+.masterpagelite_layoutFooter 
+{
+	padding: 5px 8px;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	background-color: #0c5a2e;
+	min-width: 1024px;	
+}
+
+.masterpagelite_layoutFooter p 
+{
+	color: #CCC;
+	margin: 0px;
+	padding: 0px;
+	width: 500px;
+	float: left;	
+}
+
+
+/** -------------------- **/
+/** Orchestrator Version **/
+/** -------------------- **/
+
+.masterpagelite_footerVersion 
+{
+	float: right;
+	width: 400px;
+	text-align: right;
+}
+
+.masterpagelite_footerVersion * 
+{	
+	font-weight: normal;	
+	color: #CCC;
+	font-size: 11px;
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 0;	
+}
+
+.masterpagelite_footerVersion span
+{
+    display: inline-block;
+    padding: 0px;
+}

@@ -1,0 +1,413 @@
+﻿<div class="row proteo-banner-resource-unit">
+
+    <div class="col-md-5 col-sm-12">
+        <div class="proteo-logo" />
+        <div class="btn-group banner-logo-control">
+            <button href="#"
+                    type="button"
+                    class="btn btn-primary glyphicon2 glyphicon-calendar"
+                    title="Open leg planning screen"
+                    ng-click="openLegPlanning()"
+                    role="button"></button>
+            <button type="button"
+                    class="btn btn-primary glyphicon2 glyphicon-plus"
+                    title="Add new resource unit"
+                    ng-click="editResourceUnit('', null);"></button>
+
+            <span class="btn-group" dropdown is-open="status2.isopen" ng-click="$event.stopPropagation()">
+                <button type="button" class="btn btn-primary dropdown-toggle glyphicon2 glyphicon-copy"><span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="pointer" title="Assign usual vehicle to your drivers">
+                        <a ng-really-message="Are you sure you want to assign the usual vehicles to all your drivers for this week?"
+                           ng-really-ok="Yes"
+                           ng-really-cancel="No"
+                           ng-really-click="assignUsualVehiclesForWeek(false)">Assign usual vehicle for your drivers</a>
+                    </li>
+                    <li class="pointer" title="Assign usual vehicle to all drivers">
+                        <a ng-really-message="Are you sure you want to assign the usual vehicles to all the drivers for this week?"
+                           ng-really-ok="Yes"
+                           ng-really-cancel="No"
+                           ng-really-click="assignUsualVehiclesForWeek(true)">Assign usual vehicle to all drivers</a>
+                    </li>
+                    <li role="presentation" class="divider"></li>
+                    <li class="pointer" title="Copy only your resource units from last weeks to the current week">
+                        <a ng-really-message="Are you sure you want to copy only your resource units from last week to the current week?"
+                           ng-really-ok="Yes"
+                           ng-really-cancel="No"
+                           ng-really-click="copyResourceUnits(false)">Copy your resource units from last week</a>
+                    </li>
+                    <li class="pointer" title="Copy all of last weeks resource units to the current week">
+                        <a ng-really-message="Are you sure you want to copy all resource units from last week to the current week?"
+                           ng-really-ok="Yes"
+                           ng-really-cancel="No"
+                           ng-really-click="copyResourceUnits(true)">Copy all resource units from last week</a>
+                    </li>
+                </ul>
+            </span>
+        </div>
+    </div>
+
+    <form novalidate name="filterForm">
+        <div class="col-md-2 col-sm-6">
+            <div class="input-group banner-control">
+                <input type="text"
+                       class="form-control"
+                       id="schedulerWeek"
+                       name="schedulerWeek"
+                       ng-model="scheduleState.week"
+                       ng-model-options="{ getterSetter: true }"
+                       datepicker-popup="dd/MM/yyyy"
+                       show-button-bar="false"
+                       datepicker-options="datePickerOptions"
+                       is-open="datePickerOpened">
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="openDatePicker($event)">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class="col-md-5 col-sm-12" ng-controller="AvailableDriversCtrl">
+            <div class="input-group banner-control">
+                <input class="form-control" type="text" name="driverFilter" ng-model="driverFiltersForm.searchText" placeholder="Filter drivers" />
+                <div class="input-group-btn" dropdown is-open="status.isopen" ng-click="$event.stopPropagation()">
+                    <button type="button" class="btn btn-default dropdown-toggle btn-middle"><i class="glyphicon glyphicon-filter" title="Filter options"></i> <span class="caret"></span></button>
+                    <div class="dropdown-menu advanced-filter">
+                        <div class="form-group">
+                            <label class="control-label">Resource Units</label>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" ng-model="filters.includeDrivers" value="onlyMyDrivers" ng-change="filterAvailableDrivers()">Show only my drivers
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" ng-model="filters.includeDrivers" value="includeAllDrivers" ng-change="filterAvailableDrivers()">Show all drivers
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" ng-model="filters.includeDrivers" value="anotherPlannersDrivers">Another planner's drivers
+                                    </label>
+                                </div>
+
+                                <select class="form-control filter-ctrl" name="plannersView" ng-model="filters.viewingPlanner" ng-change="filterAvailableDrivers()" ng-disabled="!(filters.includeDrivers == 'anotherPlannersDrivers')">
+                                    <option ng-selected="user.identityID == filters.viewingPlanner" ng-repeat="user in plannerUsers" value="{{::user.identityID}}">
+                                        {{::user.userName}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input class="form-control" type="text" name="vehicleFilter" ng-model="filters.vehicle" placeholder="Filter vehicles" />
+                <div class="input-group-btn" dropdown is-open="vehiclestatus.isopen" ng-click="$event.stopPropagation()">
+                    <button type="button" class="btn btn-default dropdown-toggle btn-middle"><i class="glyphicon glyphicon-filter" title="Filter options"></i> <span class="caret"></span></button>
+                    <div class="dropdown-menu advanced-filter">
+                        <div class="form-group">
+                            <label class="control-label">Vehicle Type</label>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="isVehicleTypeChecked" ng-checked="true" ng-click="unTickAll('vehicleType')"> Select All
+                                </label>
+                            </div>
+                            <div ng-repeat="vehicleType in vehicleTypes">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" ng-model="filters.vehicleTypes[vehicleType.vehicleTypeID]">{{ vehicleType.description }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div class="row">
+    <div class="col-md-2" ng-controller="AvailableDriversCtrl">
+        <div class="row">
+            <div class="filter-available-drivers">
+                <form novalidate name="driverFilterForm">
+                    <!-- Visible at large and small -->
+                    <div class="hidden-md visible-lg visible-sm">
+                        <div class="input-group disable-ms-clear">
+                            <input class="form-control" type="text" name="driverFilter" ng-model="driverFiltersForm.searchText" placeholder="Filter drivers" />
+                            <div class="input-group-btn" dropdown is-open="status.isopen" ng-click="$event.stopPropagation()">
+                                <button type="button" class="btn btn-default dropdown-toggle"><i class="glyphicon glyphicon-filter" title="Filter options"></i><span class="caret"></span></button>
+                                <div class="dropdown-menu advanced-filter open-right">
+                                    <div class="form-group">
+                                        <label class="control-label">Drivers</label>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" ng-model="filters.includeDrivers" value="onlyMyDrivers" ng-change="filterAvailableDrivers()">Show only my drivers
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" ng-model="filters.includeDrivers" value="includeAllDrivers" ng-change="filterAvailableDrivers()">Show all drivers
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" ng-model="filters.includeDrivers" value="anotherPlannersDrivers">Another planner's drivers
+                                                </label>
+                                            </div>
+
+                                            <select class="form-control filter-ctrl" name="plannersView" ng-model="filters.viewingPlanner" ng-change="filterAvailableDrivers()" ng-disabled="!(filters.includeDrivers == 'anotherPlannersDrivers')">
+                                                <option ng-selected="user.identityID == filters.viewingPlanner" ng-repeat="user in plannerUsers" value="{{::user.identityID}}">
+                                                    {{::user.userName}}
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <label class="control-label">Driver Type</label>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" ng-model="isDriverTypeChecked" ng-checked="true" ng-click="unTickAll('driverType')"> Select All
+                                            </label>
+                                        </div>
+                                        <div ng-repeat="driverType in driverTypes">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" ng-model="filters.drivers.driverType[driverType.description]">{{ driverType.description }}
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <button class="btn btn-sm btn-default prevent-default-action" ng-click="filterProperties.drivers.reset()" ng-disabled="!filterProperties.drivers.isResetEnabled()">Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end: Visible at large and small -->
+                    <!-- Visible at medium -->
+                    <div class="hidden-lg visible-md">
+                        <input class="form-control" type="text" name="driverFilter" ng-model="driverFiltersForm.searchText" placeholder="Filter drivers" />
+                        <div class="input-group-btn single" dropdown is-open="statusMedium.isopen" ng-click="$event.stopPropagation()">
+                            <button type="button" class="btn btn-default dropdown-toggle align-right margin-top-10"><i class="glyphicon glyphicon-filter" title="Filter options"></i> <span class="caret"></span></button>
+                            <div class="dropdown-menu advanced-filter open-right">
+                                <div class="form-group">
+                                    <label class="control-label">Drivers</label>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" ng-model="filters.includeDrivers" value="onlyMyDrivers" ng-change="filterAvailableDrivers()">Show only my drivers
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" ng-model="filters.includeDrivers" value="includeAllDrivers" ng-change="filterAvailableDrivers()">Show all drivers
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" ng-model="filters.includeDrivers" value="anotherPlannersDrivers">Another planner's drivers
+                                            </label>
+                                        </div>
+
+                                        <select class="form-control filter-ctrl" name="plannersView" ng-model="filters.viewingPlanner" ng-change="filterAvailableDrivers()" ng-disabled="!(filters.includeDrivers == 'anotherPlannersDrivers')">
+                                            <option ng-selected="user.identityID == filters.viewingPlanner" ng-repeat="user in plannerUsers" value="{{::user.identityID}}">
+                                                {{::user.userName}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <label class="control-label">Driver Type</label>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" ng-model="isDriverTypeChecked" ng-checked="true" ng-click="unTickAll('driverType')"> Select All
+                                        </label>
+                                    </div>
+                                    <div ng-repeat="driverType in driverTypes">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" ng-model="filters.drivers.driverType[driverType.description]">{{ driverType.description }}
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <button class="btn btn-sm btn-default prevent-default-action" ng-click="filterProperties.drivers.reset()" ng-disabled="!filterProperties.drivers.isResetEnabled()">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end: Visible at medium -->
+
+                    <div class="margin-top-10 drivers-label">
+                        <span ng-show="filters.includeAllDrivers === 'onlyMyDrivers'">Showing all drivers</span>
+                        <span ng-show="filters.includeAllDrivers === 'includeAllDrivers'">Showing only my drivers</span>
+                        <span ng-show="filters.includeAllDrivers === 'anotherPlannersDrivers'">Showing another planners drivers</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="available-drivers">
+                <accordion close-others="true">
+                    <accordion-group ng-repeat="day in days" is-open="day.open">
+                        <accordion-heading>
+                            <div class="visible-xs visible-sm visible-md hidden-lg mouse-cursor-click">{{day.shortDayName}}<span class="badge">{{day.drivers.length}}</span></div>
+                            <div class="visible-lg hidden-md mouse-cursor-click">{{day.dayName}}<span class="badge">{{day.drivers.length}}</span></div>
+                        </accordion-heading>
+                        <ul class="list-group">
+                            <li ng-repeat="driver in day.drivers | filter: driverFiltersForm.searchText | orderBy: driverFilter" class="list-group-item" pr-draggable="true" drag-data="driver" drag-type="driver">
+                                <p>
+                                    <span class="visible-xs visible-sm hidden-md visible-lg">
+                                        <span style="max-width: 50%;" class="pull-left ellipsis" title="{{driver.fullName}}">{{driver.fullName}}</span>
+                                        <span class="pull-right ellipsis" style="max-width: 50%;">
+                                            <span style=" font-style: italic" title="{{driver.driverType}}">{{driver.driverType}}</span>
+                                            <i class="glyphicon glyphicon-registration-mark glyphicon-red" ng-click="viewDriverRequests(driver)" data-toggle="tooltip" title="Driver request requires your attention" data-placement="top" ng-show="driver.pendingDriverRequest"></i>
+                                        </span>
+                                    </span>
+
+                                    <span class="hidden-xs hidden-sm visible-md hidden-lg">
+                                        <span style="max-width: 100%;" class="pull-left ellipsis" title="{{driver.fullName}}">
+                                            {{driver.fullName}}
+                                        </span>
+                                        <br />
+                                        <span style="max-width: 100%;" class="pull-left ellipsis">
+                                            <span style="font-style: italic" title="{{driver.driverType}}">{{driver.driverType}}</span>
+                                            <i class="glyphicon glyphicon-registration-mark glyphicon-red" ng-click="viewDriverRequests(driver)" data-toggle="tooltip" title="Driver request requires your attention" data-placement="top" ng-show="driver.pendingDriverRequest"></i>
+                                        </span>
+                                    </span>
+                                </p>
+                            </li>
+                        </ul>
+                    </accordion-group>
+                </accordion>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-10 padding-left-10">
+        <tabset>
+            <tab heading="{{schedulerViewHeading}}"
+                 ng-controller="ResourceUnitSchedulerCtrl"
+                 ng-click="schedulerControl.resetScheduler()">
+                <pr-scheduler config="scheduleConfig"
+                              data="events"
+                              loading="loading"
+                              y-data="schedulerVehicles"
+                              from-date-time="scheduleState.fromDateTime"
+                              to-date-time="scheduleState.toDateTime"
+                              on-internal-drop="onInternalDrop(schedulerEvent)"
+                              on-column-toggle="onColumnToggle(dayDate)"
+                              on-external-drop="onExternalDrop(dropData, dropDateTime,schedulerSection, isRowHeaderDrop)"
+                              allow-drop-on-row-headers="true"
+                              conflict-detect="onConflictDetect(event1, event2)"
+                              use-column-headers="true"
+                              empty-cell-count-tooltip="Number of available vehicles for this day. Click this icon to see only these vehicles."
+                              drop-type="driver"
+                              date-range-formatter="dateRangeFormatter(dateA, dateB)"
+                              on-event-double-click="schedulerEventDoubleClick(schedulerEvent)"
+                              display-event-tooltips="scheduleState.displayEventTooltips"
+                              control="schedulerControl"
+                              scheduler-height="85vh">
+                    <div id="eventTooltipTemplate">
+                        <div class="{{::isResourceUnit ? '' : 'ng-hide'}}">
+                            <table class="scheduler-tooltip-table">
+                                <tr>
+                                    <td>Driver</td>
+                                    <td>{{ text }}</td>
+                                </tr>
+                                <tr>
+                                    <td>From</td>
+                                    <td>{{ start_date_display }}</td>
+                                </tr>
+                                <tr>
+                                    <td>To</td>
+                                    <td>{{ end_date_display }}</td>
+                                </tr>
+                                <tr class="{{color==='red' ? '' : 'ng-hide'}}">
+                                    <td>Warning</td>
+                                    <td>There is a conflict with this driver/vehicle</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="{{::isResourceSchedule ? '' : 'ng-hide'}}">
+                            <div><b>Vehicle unavailable</b></div>
+                            <table class="scheduler-tooltip-table">
+                                <tr>
+                                    <td>Reason</td>
+                                    <td>{{ text }}</td>
+                                </tr>
+                                <tr>
+                                    <td>From</td>
+                                    <td>{{ start_date_display }}</td>
+                                </tr>
+                                <tr>
+                                    <td>To</td>
+                                    <td>{{ end_date_display }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="eventTemplate">
+                        <div ng-show="::isResourceUnit" context-menu="::onContextMenuShow()" context-menu-close="::onContextMenuClose()" data-target="schedulerEventMenu" data-style-update="height: {{::yEventHeight}}px;" style="height: {{::yEventHeight}}px">
+                            {{ text }}
+                        </div>
+                        <div ng-show="::isResourceSchedule">
+                            {{ text }}
+                        </div>
+                    </div>
+
+                    <div id="staticEventTemplate">
+                        <div class="padding-left-5">
+                            {{ text }}
+                        </div>
+                    </div>
+
+                </pr-scheduler>
+
+                <!-- scheduler event context menu -->
+                <div id="schedulerEventMenu" class="dropdown position-fixed eventMenu">
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="presentation" ng-repeat="item in resourceUnitContextMenuItems" ng-class="{ 'disabled': item.isDisabled, 'divider': item.isDivider }" tooltip="{{ item.tooltip }}" tooltip-trigger="mouseenter" tooltip-placement="right">
+                            <a ng-if="!item.isDivider" class="pointer" role="menuitem" tabindex="-1" ng-click="item.action()">{{ item.caption }}</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </tab>
+            <tab heading="{{ listViewHeading }}">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Driver</th>
+                                    <th>Vehicle</th>
+                                    <th>Start Time</th>
+                                    <th>Finish Time</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="resourceUnit in resourceUnits | filter: listFilter | orderBy: driverFilter">
+                                    <td>{{ resourceUnit.driver.fullName }}</td>
+                                    <td>{{ resourceUnit.vehicle.registrationNumber }}</td>
+                                    <td>{{ resourceUnit.startDateTime | date: 'dd/MM/yyyy HH:mm' }}</td>
+                                    <td>{{ resourceUnit.finishDateTime | date: 'dd/MM/yyyy HH:mm' }}</td>
+                                    <td>
+                                        <button class="btn btn-default" ng-click="editResourceUnit('', resourceUnit)">Edit</button>
+                                        <button class="btn btn-primary" ng-really-message="Are you sure you want to delete this resource unit?" ng-really-ok="Yes" ng-really-cancel="No" ng-really-click="deleteResourceUnit(resourceUnit.resourceUnitID)">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </tab>
+        </tabset>
+    </div>
+</div>

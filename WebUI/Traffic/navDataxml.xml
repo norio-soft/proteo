@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PanelItems>
+	<PanelItem ID="Panel1" ItemCollapsedCssClass="itemCollapsedStyle" ItemExpandedCssClass="itemExpandedStyle" Text="My Drivers" Expanded="True" ImageCollapsed="icon-mydrivers.png" ImageExpanded="icon-mydrivers.png" ImageHover="icon-mydrivers.png" height="100%" BackgroundImageCollapsed="myresource-bg.jpg" BackgroundImageExpanded="tabhover-bg.jpg" BackgroundImageHoverCollapsed="tabhover-bg.jpg" BackgroundImageHoverExpanded=""  >
+		<PanelItem ID="Panel1_1" TemplateID="templateMyDrivers" ItemCollapsedCssClass="CalendarStyle" />
+	</PanelItem>
+	<PanelItem ID="Panel2" ItemCollapsedCssClass="itemCollapsedStyle" ItemExpandedCssClass="itemExpandedStyle" Text="My Trailers" ImageCollapsed="icon-mytrailers.png" ImageExpanded="icon-mytrailers.png" ImageHover="icon-mytrailers.png" BackgroundImageCollapsed="myresource-bg.jpg" BackgroundImageExpanded="tabhover-bg.jpg" BackgroundImageHoverCollapsed="tabhover-bg.jpg" BackgroundImageHoverExpanded=""  >
+		<PanelItem ID="Panel2_1" TemplateID="templateMyTrailers" ItemCollapsedCssClass="CalendarStyle" />
+	</PanelItem>
+	<PanelItem ID="Panel3" ItemCollapsedCssClass="itemCollapsedStyle" ItemExpandedCssClass="itemExpandedStyle" Text="My Vehicles" ImageCollapsed="icon-myvehicles.png" ImageExpanded="icon-myvehicles.png" ImageHover="icon-myvehicles.png" BackgroundImageCollapsed="myresource-bg.jpg" BackgroundImageExpanded="tabhover-bg.jpg" BackgroundImageHoverCollapsed="tabhover-bg.jpg" BackgroundImageHoverExpanded=""  >
+		<PanelItem ID="Panel3_1" TemplateID="templateMyVehicles" ItemCollapsedCssClass="CalendarStyle" />
+	</PanelItem>
+	<PanelItem ID="Panel4" ItemCollapsedCssClass="itemCollapsedStyle" ItemExpandedCssClass="itemExpandedStyle" Text="Runs Coming In" ImageCollapsed="icon-injobs.png" ImageExpanded="icon-injobs.png" ImageHover="icon-injobs.png" BackgroundImageCollapsed="comingin-bg.jpg" BackgroundImageHoverCollapsed="tabhover-bg.jpg" BackgroundImageExpanded="tabhover-bg.jpg" >
+		<PanelItem ID="Panel4_1" TemplateID="templateJobsComingIn" ItemCollapsedCssClass="CalendarStyle" />
+	</PanelItem>
+	<PanelItem ID="Panel5" ItemCollapsedCssClass="itemCollapsedStyle" ItemExpandedCssClass="itemExpandedStyle" Text="Drivers Coming In" ImageCollapsed="icon-indrivers.png" ImageExpanded="icon-indrivers.png" ImageHover="icon-indrivers.png" BackgroundImageCollapsed="comingin-bg.jpg" BackgroundImageHoverCollapsed="tabhover-bg.jpg" BackgroundImageExpanded="tabhover-bg.jpg" >
+		<PanelItem ID="Panel5_1" TemplateID="templateDriversComingIn" ItemCollapsedCssClass="CalendarStyle" />
+	</PanelItem>
+	<PanelItem ID="Panel6" ItemCollapsedCssClass="itemCollapsedStyle" ItemExpandedCssClass="itemExpandedStyle" Text="Vehicles Coming In" ImageCollapsed="icon-invehicles.png" ImageExpanded="icon-invehicles.png" ImageHover="icon-invehicles.png" BackgroundImageCollapsed="comingin-bg.jpg" BackgroundImageHoverCollapsed="tabhover-bg.jpg" BackgroundImageExpanded="tabhover-bg.jpg" >
+		<PanelItem ID="Panel6_1" TemplateID="templateVehiclesComingIn" ItemCollapsedCssClass="CalendarStyle" />
+	</PanelItem>
+	<PanelItem ID="Panel7" ItemCollapsedCssClass="itemCollapsedStyle" ItemExpandedCssClass="itemExpandedStyle" Text="Trailers Coming In" ImageCollapsed="icon-intrailers.png" ImageExpanded="icon-intrailers.png" ImageHover="icon-intrailers.png" BackgroundImageCollapsed="comingin-bg.jpg" BackgroundImageHoverCollapsed="tabhover-bg.jpg" BackgroundImageExpanded="tabhover-bg.jpg" >
+		<PanelItem ID="Panel7_1" TemplateID="templateTrailersComingIn" ItemCollapsedCssClass="CalendarStyle" />
+	</PanelItem>
+</PanelItems>

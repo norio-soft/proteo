@@ -1,0 +1,126 @@
+.RadMenu_System 
+{
+	background:buttonface;
+	border:1px solid buttonshadow;
+	border-top-color:threedhighlight;
+	border-left-color:threedhighlight;
+}
+.RadMenu_System .link
+{
+	font:menu;
+	padding:.5em 6px;
+	text-decoration:none;
+	color:menutext;
+}
+
+.RadMenu_System .link:hover,
+.RadMenu_System .focused,
+.RadMenu_System .expanded
+{
+	background:highlight;
+	color:highlighttext;
+}
+
+.RadMenu_System .rootGroup .disabled:hover
+{
+	background: none;
+}
+
+.RadMenu_System .text
+{
+	padding-right: 15px;
+}
+
+.RadMenu_System .group
+{
+	background:white;
+}
+
+.RadMenu_System .group
+{
+	border:1px solid buttonshadow;
+}
+
+.RadMenu_System .group .text
+{
+	padding-right: 46px;
+}
+
+.RadMenu_System .leftArrow,
+.RadMenu_System .rightArrow,
+.RadMenu_System .topArrow,
+.RadMenu_System .bottomArrow,
+.RadMenu_System .leftArrowDisabled,
+.RadMenu_System .rightArrowDisabled,
+.RadMenu_System .topArrowDisabled,
+.RadMenu_System .bottomArrowDisabled
+{
+	border-left: 1px solid buttonshadow;
+	border-right: 1px solid buttonshadow;
+	background:buttonface url('img/left.gif') center center no-repeat;
+	width:15px;
+}
+
+.RadMenu_System .topArrow,
+.RadMenu_System .topArrowDisabled
+{
+	background-image:url('img/top.gif');
+	width:100%;
+}
+
+.RadMenu_System .bottomArrow,
+.RadMenu_System .bottomArrowDisabled
+{
+	background-image:url('img/bottom.gif');
+	width:100%;
+}
+
+.RadMenu_System .rightArrow,
+.RadMenu_System .leftArrow
+{
+	height:100%;
+}
+
+.RadMenu_System .rightArrow,
+.RadMenu_System .rightArrowDisabled
+{
+	background-image:url('img/right.gif');
+}
+
+.RadMenu_System .vertical .separator .text
+{
+	border-bottom:2px inset buttonface;
+	margin:0 2px;
+}
+
+.RadMenu_System .expandLeft,
+.RadMenu_System .expandRight
+{
+	background:transparent url(img/groupImage.gif) right center no-repeat;
+}
+
+.RadMenu_System_rtl .expandLeft,
+.RadMenu_System_rtl .expandRight
+{
+	background: transparent url(img/groupImageRTL.gif) left center no-repeat;
+	padding-left: 10px !important;
+}
+
+/* right to left */
+.RadMenu_System_rtl .group .link:hover .expandLeft,
+.RadMenu_System_rtl .group .link:hover .expandRight
+{
+	background:transparent url(img/invertedGroupImageRTL.gif) left center no-repeat;
+	margin: 0px 1px;
+	margin-left: -2px;
+}
+
+.RadMenu_System .link:hover .expandLeft,
+.RadMenu_System .link:hover .expandRight,
+.RadMenu_System .focused .expandLeft,
+.RadMenu_System .focused .expandRight,
+.RadMenu_System .expanded .expandLeft,
+.RadMenu_System .expanded .expandRight
+{
+	background:transparent url(img/invertedGroupImage.gif) right center no-repeat;
+}

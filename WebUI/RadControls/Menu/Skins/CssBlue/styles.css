@@ -1,0 +1,189 @@
+
+/* r.a.d.menu CssBlue skin */
+
+.RadMenu_CssBlue
+{
+	background: #a7cfe8;
+}
+
+.RadMenu_CssBlue_Context
+{
+	background:none;
+}
+
+.RadMenu_CssBlue .link
+{
+	text-decoration:none;
+	color: black;
+	line-height: 20px;
+	border-bottom: 2px solid #a7cfe8;
+	border-top: 3px solid #a7cfe8;
+}
+
+
+.RadMenu_CssBlue .link .text
+{
+	padding-right: 20px;
+}
+
+.RadMenu_CssBlue .link:hover,
+.RadMenu_CssBlue .focused,
+.RadMenu_CssBlue .expanded
+{
+	background: #64b3df;
+	border-bottom: 3px solid #1973c9;
+	border-top: 1px solid #3487d4;
+	color: black;
+}
+
+.RadMenu_CssBlue .link:hover .text,
+.RadMenu_CssBlue .focused .text,
+.RadMenu_CssBlue .expanded .text
+{
+	border-top: 1px solid #85c3e6;
+}
+
+.RadMenu_CssBlue .rootGroup .disabled:hover
+{
+	border-bottom: 2px solid #a7cfe8;
+	border-top: 2px solid #a7cfe8;
+	background: #a7cfe8;
+}
+
+.RadMenu_CssBlue .rootGroup .disabled:hover .text
+{
+	border-top: 1px solid #a7cfe8;
+}
+
+.RadMenu_CssBlue .text
+{
+	padding: 0px 15px;
+	font-size: 11px;
+}
+
+.RadMenu_CssBlue .group
+{
+	background: white;
+	border: 0px;
+}
+
+.RadMenu_CssBlue .group .link
+{
+	background: #dfeef4;
+	border: solid 1px #bfcde3;
+	border-top-color: white;
+	text-align: left;
+	padding-right: 0px; 
+}
+
+.RadMenu_CssBlue .group .text
+{
+	padding-left:6px;
+	padding-right: 40px;
+}
+
+
+
+.RadMenu_CssBlue .group .link:hover,
+.RadMenu_CssBlue .group .focused,
+.RadMenu_CssBlue .group .expanded
+{
+	background: #a7cfe8;
+	
+	border-bottom: 1px solid #1973c9;
+	border-top: 1px solid white;
+	font-weight: normal;
+}
+
+.RadMenu_CssBlue .group .link:hover .text,
+.RadMenu_CssBlue .group .focused .text,
+.RadMenu_CssBlue .group .expanded .text
+{
+	border-top: 0;
+}
+
+.RadMenu_CssBlue .leftArrow,
+.RadMenu_CssBlue .rightArrow,
+.RadMenu_CssBlue .topArrow,
+.RadMenu_CssBlue .bottomArrow,
+.RadMenu_CssBlue .leftArrowDisabled,
+.RadMenu_CssBlue .rightArrowDisabled,
+.RadMenu_CssBlue .topArrowDisabled,
+.RadMenu_CssBlue .bottomArrowDisabled
+{
+	border-left: 1px solid #bfcde3;
+	border-right: 1px solid #bfcde3;
+	background: #a7cfe8 url('img/left.gif') center center no-repeat;
+	width:15px;
+}
+
+.RadMenu_CssBlue .topArrow,
+.RadMenu_CssBlue .topArrowDisabled
+{
+	background-image:url('img/top.gif');
+	width: 100%;
+}
+
+.RadMenu_CssBlue .bottomArrow,
+.RadMenu_CssBlue .bottomArrowDisabled
+{
+	background-image:url('img/bottom.gif');
+	width: 100%;
+}
+
+.RadMenu_CssBlue .rightArrow,
+.RadMenu_CssBlue .leftArrow
+{
+	height:100%;
+}
+
+.RadMenu_CssBlue .rightArrow,
+.RadMenu_CssBlue .rightArrowDisabled
+{
+	background-image:url('img/right.gif');
+}
+
+
+.RadMenu_CssBlue .vertical .separator .text
+{
+	background: #d4e5eb;
+	font-size:1px;
+	padding-top: 2px;
+	border-left: solid 1px #bfcde3;
+	border-right: solid 1px #bfcde3;
+}
+
+
+.RadMenu_CssBlue .expandLeft,
+.RadMenu_CssBlue .expandRight
+{
+	background:transparent url(img/groupImage.gif) right center no-repeat;
+	margin: 0px;
+}
+
+
+.RadMenu_CssBlue_rtl .group .link:hover .expandLeft,
+.RadMenu_CssBlue_rtl .group .link:hover .expandRight
+{
+	background:transparent url(img/left.gif) left center no-repeat;
+	margin: 0px 1px;
+	padding-left: 8px;
+}
+
+.RadMenu_CssBlue_rtl .expandLeft,
+.RadMenu_CssBlue_rtl .expandRight
+{
+	background:transparent url(img/groupImageRTL.gif) left center no-repeat;
+}
+
+
+
+.RadMenu_CssBlue .link:hover .expandLeft,
+.RadMenu_CssBlue .link:hover .expandRight,
+.RadMenu_CssBlue .focused .expandLeft,
+.RadMenu_CssBlue .focused .expandRight,
+.RadMenu_CssBlue .expanded .expandLeft,
+.RadMenu_CssBlue .expanded .expandRight
+{
+	background:transparent url(img/invertedGroupImage.gif) right center no-repeat;
+}

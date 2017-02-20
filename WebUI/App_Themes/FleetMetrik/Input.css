@@ -1,0 +1,169 @@
+﻿/* Telerik RadInput Orchestrator skin */
+
+/*global*/
+
+.radInput_Orchestrator
+{
+	font:11px Verdana;
+	vertical-align:middle;
+}
+
+.radInput_Orchestrator table,
+.radInput_Orchestrator table td
+{
+	border:0;
+}
+
+.radInput_Orchestrator table
+{
+	vertical-align:bottom;
+}
+
+.radInput_Orchestrator td
+{
+	padding:0;
+	vertical-align:middle;
+	overflow:visible;/*RadGrid*/
+}
+
+.radInput_Orchestrator td.inputCell
+{
+	padding-right:4px;
+}
+
+.radInput_Orchestrator textarea
+{
+	vertical-align:bottom;
+	overflow:auto;
+}
+
+/*textbox states*/
+
+.radEnabledCss_Orchestrator,
+.radEmptyMessageCss_Orchestrator,
+.radHoverCss_Orchestrator,
+.radFocusedCss_Orchestrator,
+.radReadOnlyCss_Orchestrator,
+.radDisabledCss_Orchestrator,
+.radNegativeCss_Orchestrator,
+.radInvalidCss_Orchestrator
+{
+	border:1px solid #6e9bbf;
+	color:#000;
+	font-size: 11px;
+	//height: 1%;	
+	padding:3px;
+	margin: 0px;
+	background-color: #FFF;
+	font:11px Verdana;
+}
+
+.radEnabledCss_Orchestrator,
+.radEmptyMessageCss_Orchestrator,
+.radNegativeCss_Orchestrator
+{
+	background:#FFF;
+}
+
+.radEmptyMessageCss_Orchestrator
+{
+	color:#587d9a;
+	font-style:italic;
+}
+
+.radHoverCss_Orchestrator 
+{
+	border-color:#587d9a;
+}
+
+.radFocusedCss_Orchestrator
+{
+	border-color:#587d9a;
+}
+
+.radReadOnlyCss_Orchestrator
+{
+	border-color:#6e9bbf;
+	background:#CCC;
+}
+
+.radDisabledCss_Orchestrator
+{
+	border-color:#6e9bbf;
+	background:#EEE;
+	color:#777;
+	cursor:default;
+}
+
+.radInvalidCss_Orchestrator
+{
+	border:1px solid #RED;
+	color:#000;
+}
+
+.radNegativeCss_Orchestrator
+{
+	color:#333;
+}
+
+/*buttons*/
+
+.radInput_Orchestrator a
+{
+	display:block;
+	text-indent:-4444px;
+	overflow:hidden;
+	position:relative;/*FF*/
+	outline:none;/*FF*/
+	z-index:2;/*Opera*/
+	background:url('Input/sprite.gif') no-repeat;
+}
+* html .radInput_Orchestrator a{position:static}/*IE6*/
+*+html .radInput_Orchestrator a{position:static}/*IE7*/
+
+/*go*/
+
+.radInput_Orchestrator a.gobutton
+{
+	width:20px;
+	height:17px; 
+	line-height:17px;
+	background-position:3px 4px;
+}
+
+/*spin*/
+
+.radInput_Orchestrator a.spinbutton
+{
+	width:12px;
+	height:7px;
+	line-height:7px;
+	margin:0 1px;
+}
+
+.radInput_Orchestrator a.up
+{
+	background-position:3px -41px;
+}
+
+.radInput_Orchestrator a.down
+{
+	background-position:3px -76px;
+	margin-top:2px;
+}
+
+/*label*/
+
+.radLabelCss_Orchestrator
+{
+	color:#000;
+	margin:0 4px 0 0;
+	white-space:nowrap;
+}
+
+/** Tool Top Box **/
+
+.rcbSlide 
+{
+	z-index: 9000 !important;	/** So it's always overlaying **/
+}

@@ -1,0 +1,171 @@
+/* r.a.d.window WinXP Silver skin */
+
+.RadWContentFrame
+{
+	scrollbar-face-color: #BACBF4;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #7E9FD2;
+	scrollbar-3dlight-color: #E6EEFC;
+	scrollbar-arrow-color: #4D6185;
+	scrollbar-track-color: #F7F7F3;
+	scrollbar-darkshadow-color: #C6D1DC;		
+}
+.RadWStatus
+{
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 10px;
+	font-weight: normal;
+	height: 24px;
+	background-image: url(CssImg/RadWStatus.gif);
+	background-repeat: repeat-x;
+	background-color: #d4d0c8;
+	cursor: default;
+	border-left: solid 1px #66667e;
+	border-right: solid 1px #66667e;
+	border-bottom: solid 1px #66667e;
+}
+.RadWModalImage
+{
+	display: block;
+	border: solid 3px #ccff00;		
+}
+.RadWDragHelper
+{		
+	border : solid 3px #cccccc;	
+	border: dashed 1px gray;
+	background-color : #cccccc;	
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	-moz-opacity: 0.5;
+	margin: 0px;
+	padding: 0px;	
+	position: absolute;
+	z-index: 50000;
+	overflow: hidden;	
+}
+.RadWMinimizedActive, .RadWMinimizedOver
+{
+	background: url(CssImg/RadWWrapperHeaderCenter.gif);
+	background-repeat: repeat-x;
+	background-color: transparent;
+	width: 60px;
+	height: 30px;
+	border: solid 1px #66667e;
+}
+.RadWMinimizedPageLoaded
+{
+	background: url(CssImg/RadWWrapperHeaderCenter.gif);
+	background-repeat: repeat-x;
+	background-color: transparent;
+	width: 60px;
+	height: 30px;
+	border: solid 1px #d57252;
+}
+.RadWMinimizedInactive
+{
+	background-color: transparent;
+	background: url(CssImg/RadWWrapperHeaderCenter.gif);
+	background-repeat: repeat-x;
+	width: 60px;
+	height: 30px;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+	-moz-opacity: 0.6;
+	border: solid 1px #66667e;
+}
+.RadWLoadingWrapper
+{
+	border: solid 1px red;	
+	vertical-align: middle;
+	width: 80px;
+	height: 100%;
+	text-align: center;	
+	font-family: Verdana, Arial, Tahoma, Sans-Serif;
+	font-size: 11px;
+	font-weight: normal;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=99);
+}
+.RadWIcon
+{
+	margin-left: 2px;	
+	margin-right: 2px;
+	cursor: default; /* you can also use cursor: move; */
+}
+.RadWTitleText
+{
+	font-family: Verdana, Arial, Tahoma, Sans-Serif;
+	font-weight: bold;
+	font-size: 11px;
+	color: #000;
+	vertical-align: middle;				
+}
+.RadWButton
+{
+	cursor: default;
+	margin-top: 2px;
+	vertical-align: top;
+	margin-right: 2px;
+}
+.RadWWrapperActive
+{
+	font-size: 0px;	
+	filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#404040,strength=3); 
+}
+.RadWWrapperInactive
+{
+	font-size: 0px;	
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90); /* IE */
+	-moz-opacity: 0.9; /* Moz */
+	opacity: 0.9; /* CSS3 */
+}
+.RadWWrapperModal
+{	
+	filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#404040,strength=3); 
+}
+.RadWTitleRow
+{
+	cursor: default;		
+}
+.RadWWrapperHeaderLeft
+{
+	width: 6px;
+	height: 30px;
+	background-image: url(CssImg/RadWWrapperHeaderLeft.gif);
+	background-repeat: no-repeat;
+}
+.RadWWrapperHeaderCenter
+{
+	text-align: left;
+	height: 30px;
+	font-family: Verdana, Arial, Tahoma;
+	font-size: medium; /* make sure you always set a value */
+	color: #fff;
+	background-image: url(CssImg/RadWWrapperHeaderCenter.gif);
+	background-repeat: repeat-x;
+	background-color: #dfe0e5;
+}
+.RadWWrapperHeaderRight
+{
+	width: 6px;
+	height: 30px;
+	background-image: url(CssImg/RadWWrapperHeaderRight.gif);
+	background-repeat: no-repeat;
+}
+.RadWWrapperBodyLeft
+{
+	width: 3px;
+	background-image: url(CssImg/RadWWrapperBodyLeft.gif);
+	background-repeat: repeat-y;
+	background-color: #0023d6;
+	
+}
+.RadWWrapperBodyCenter
+{
+	width: 100%;
+	height: 100%;
+}
+.RadWWrapperBodyRight
+{
+	width: 3px;
+	background-image: url(CssImg/RadWWrapperBodyRight.gif);
+	background-repeat: repeat-y;
+	background-color: red;
+}

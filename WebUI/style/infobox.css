@@ -1,0 +1,115 @@
+﻿ /* Styles that apply to the InfoBox's containing element whether it
+ has no beak, a rightBeak, or a leftBeak */
+        .customInfoBox-noBeak, .customInfoBox-with-rightBeak, .customInfoBox-with-leftBeak
+        {
+            font-family: Trebuchet;
+            background: transparent;
+            border: 0 solid black;
+            color: #676767;
+            display: block;
+            font-size: 11px;
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            z-index: 500 !important;
+        }
+        .customInfoBox-with-rightBeak
+        {
+            padding: 0 19px 0 0;
+        }
+        .customInfoBox-with-leftBeak
+        {
+            padding: 0 0 0 19px;
+        }
+        /* Offsets the body for the drop shadow and sets the body 
+background and border (developers can change these settings) */
+        .customInfoBox-body
+        {
+            border: 1px solid #888;
+            left: -3px;
+            overflow: hidden;
+            position: relative;
+            top: -3px;
+            padding: 0;
+            width: 300px;
+        }
+        /* Applies a default drop shadow after the default 
+Virtual Earth InfoBox styles are cleared */
+        .customInfoBox-shadow
+        {
+            background: transparent url(/images/ve/infobox/dropshadow.png) no-repeat 100% 100%;
+            float: left;
+            position: relative;
+        }
+        /* Sections of the InfoBox that a developer could style if desired,
+ but have no style when the default Virtual Earth InfoBox styles
+ are cleared */
+        .customInfoBox-previewArea, .customInfoBox-actionsBackground
+        {
+            background-color: White;
+            padding: 0;
+            margin: 0;
+        }
+        .customInfoBox-actionsBackground
+        {
+            /* sorts out firefox but breaks ie
+position:relative;
+top:-10px;
+*/
+            padding: 0;
+            margin: 0;
+        }
+        .customInfoBox-previewArea
+        {
+            background-color: Transparent;
+            width: 100%;
+        }
+        .customInfoBox-previewArea .VE_Pushpin_Popup_Title
+        {
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+            background: url(/images/ve/infobox/infobox-title-bg-orch.png) repeat-x;
+            padding: 8px;
+        }
+        .VE_Pushpin_Popup_Body
+        {
+            padding: 8px 8px 0 8px;
+            background: url(/images/ve/infobox/infobox-body-bg.jpg) repeat-x;
+        }
+        /* Sections of the InfoBox that should not be visible when the 
+default Virtual Earth InfoBox styles are cleared */
+        .customInfoBox-actions
+        {
+            padding: 4px 8px 0;
+            display: none;
+        }
+        .customInfoBox-beak, .customInfoBox-progressAnimation
+        {
+            visibility: hidden;
+        }
+        .customInfoBox-beak, .customInfoBox-progressAnimation
+        {
+            visibility: inherit !important;
+        }
+        .customInfoBox-beak
+        {
+            height: 34px;
+            position: absolute;
+            top: 10px;
+            width: 19px;
+        }
+        .customInfoBox-with-leftBeak .customInfoBox-beak
+        {
+            background: transparent url(/images/ve/infobox/beakLeft.gif) no-repeat scroll 0;
+            left: 0;
+        }
+        .customInfoBox-with-rightBeak .customInfoBox-beak
+        {
+            background: transparent url(/images/ve/infobox/beakRight.png) no-repeat scroll 0;
+            right: 4px;
+        }
+        .customInfoBox-body .smalltext
+        {
+            clear: both;
+        }

@@ -1,0 +1,114 @@
+IMG {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LETTER-SPACING: 0px
+}
+U {
+	TEXT-DECORATION: underline
+}
+HR {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 8px; WIDTH: 100%; PADDING-TOP: 0px; HEIGHT: 1px
+}
+LI {
+	MARGIN-BOTTOM: 5px; LINE-HEIGHT: 15px
+}
+.headerbar {
+	FONT-WEIGHT: bold; FONT-SIZE: 60%; COLOR: #ffffff; LINE-HEIGHT: 19px; FONT-FAMILY: Verdana; BACKGROUND-COLOR: #7e99cc
+}
+.headerbar A:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 120%; COLOR: #ffffff; LINE-HEIGHT: 19px; FONT-FAMILY: Verdana
+}
+.header1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 110%; COLOR: #f4793b; FONT-FAMILY: verdana
+}
+.header2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 80%; COLOR: #f4793b; FONT-FAMILY: verdana
+}
+.header3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 75%; COLOR: #000000; FONT-FAMILY: verdana
+}
+.header4 {
+	FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #000000; FONT-FAMILY: verdana
+}
+.header4:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #0066cc; FONT-FAMILY: verdana
+}
+.header4:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #9900cc; FONT-FAMILY: verdana
+}
+.header4:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #66cc33; FONT-FAMILY: verdana
+}
+.linkItem {
+	FONT-SIZE: 70%; COLOR: #0066cc; FONT-FAMILY: verdana; TEXT-DECORATION: underline
+}
+.linkItem:visited {
+	FONT-SIZE: 70%; COLOR: #9900cc; FONT-FAMILY: verdana; TEXT-DECORATION: underline
+}
+.linkItem:hover {
+	FONT-SIZE: 70%; COLOR: #66cc33; FONT-FAMILY: verdana; TEXT-DECORATION: underline
+}
+.breadcrumb {
+	FONT-SIZE: 60%; COLOR: #0066cc; FONT-FAMILY: verdana; TEXT-DECORATION: none
+}
+.breadcrumb:hover {
+	FONT-SIZE: 60%; COLOR: #66cc33; FONT-FAMILY: verdana; TEXT-DECORATION: none
+}
+.postedDate {
+	FONT-SIZE: 60%; COLOR: #666666; FONT-FAMILY: verdana
+}
+.infoHeader {
+	FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #f4793b; FONT-FAMILY: verdana
+}
+.text {
+	FONT-SIZE: 70%; COLOR: #000000; FONT-FAMILY: verdana
+}
+.text A:link {
+	COLOR: #0066cc; FONT-FAMILY: verdana
+}
+.text A:visited {
+	COLOR: #9900cc; FONT-FAMILY: verdana
+}
+.text A:hover {
+	COLOR: #66cc33; FONT-FAMILY: verdana
+}
+.text UL {
+	MARGIN: 0px 0px 0px 15px
+}
+.newBullet {
+	FONT-SIZE: 70%; MARGIN: 0px 0px 0px 15px; COLOR: #000000; FONT-FAMILY: verdana
+}
+.text OL {
+	MARGIN: 0px 0px 0px 15px
+}
+.eSextTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 70%; FONT-FAMILY: Verdana, sans-serif
+}
+.eSextMerchant {
+	FONT-SIZE: 70%; COLOR: black; FONT-FAMILY: Verdana, sans-serif
+}
+.eSextPromo {
+	FONT-SIZE: 70%; COLOR: #ff6600; FONT-FAMILY: Verdana, sans-serif
+}
+.eSextPrice {
+	FONT-WEIGHT: bold; FONT-SIZE: 70%; FONT-FAMILY: Verdana, sans-serif
+}
+.eSextSale {
+	FONT-WEIGHT: bold; FONT-SIZE: 70%; COLOR: #ff6600; FONT-FAMILY: Verdana, sans-serif
+}
+.eSextMore {
+	FONT-SIZE: 70%; PADDING-TOP: 3px; FONT-FAMILY: Verdana, sans-serif
+}
+.line {
+	BACKGROUND-IMAGE: url([/mappoint/images/dashline.gif])
+}
+.tableHead {
+	FONT-WEIGHT: 900; FONT-SIZE: 110%; COLOR: #aebed9; FONT-FAMILY: Arial Narrow
+}
+.quoteText {
+	FONT-SIZE: 85%; COLOR: #ec903a; FONT-FAMILY: Times New Roman
+}
+.quoteEnd {
+	FONT-SIZE: 60%; COLOR: #000000; FONT-FAMILY: Verdana
+}
+.postedDate {
+	FONT-SIZE: 60%; COLOR: #666666; FONT-FAMILY: verdana
+}

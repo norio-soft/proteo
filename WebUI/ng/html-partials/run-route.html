@@ -1,0 +1,80 @@
+﻿<alert ng-if="nonGeocodedPoints.length" class="alert-over-map" type="danger" close="closePointGeocodeMessage($index)">
+    An estimated route cannot be displayed because the following locations on this run have not been geocoded:<br>
+    <ul>
+        <li ng-repeat="point in nonGeocodedPoints"><a class="mouse-cursor-click" ng-click="updatePoint(point.pointID)">{{ point.description }}</a></li>
+    </ul>
+</alert>
+
+<alert class="alert-over-map" ng-repeat="alert in alerts" type="danger" close="closeAlert($index)">
+    {{ alert }}
+</alert>
+
+<div id="run-route-map-container" ng-style="{ height: layoutState.mapContainerHeight }" ng-resize="resizeMap()">
+    <pr-here-map id="run-route-map" credentials="mapSetup.credentials" map-options="mapOptions" oncontextmenu="return false" resize="hereMapResize">
+
+        <pr-here-map-polylines polylines="mapData.actualRoute" default-options="mapData.actualRouteOptions" visible="layoutState.actualRouteVisible">
+        </pr-here-map-polylines>
+
+        <pr-here-map-polylines polylines="mapData.estimatedRoute" default-options="mapData.estimatedRouteOptions" visible="layoutState.estimatedRouteVisible">
+        </pr-here-map-polylines>
+
+        <pr-here-map-push-pins pins="mapData.pins" collection-id="instructions" default-options="mapData.pinOptions">
+            <div id="pin-template">
+                <pr-instruction-pin pin='pin' map-options="mapOptions" />
+            </div>
+        </pr-here-map-push-pins>
+
+    </pr-here-map>
+</div>
+
+<div class="slide-panel-expander bottom" ng-click="toggleBottomPanel()" ng-style="{ bottom: layoutState.bottomPanelHeight }">
+    <i class="glyphicon" ng-class="layoutState.bottomPanelOpen ? 'glyphicon-chevron-down' : 'glyphicon-chevron-up'" />
+</div>
+
+<div class="slide-panel bottom" ng-style="{ top: layoutState.mapContainerHeight, height: layoutState.bottomPanelHeight }">
+    <div class="slide-panel-content">
+        <div class="run-route-leg-table" ng-resize="resizeLegTable()">
+            <div class="header">
+                <h4>Legs</h4>
+            </div>
+
+            <table id="legDataTable" datatable="ng" dt-options="legDataTable.options" dt-instance="legDataTable.instance" class="table table-striped table-bordered table-hover nowrap">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Driver</th>
+                        <th>Vehicle</th>
+                        <th>Trailer</th>
+                        <th>Estimated Distance</th>
+                        <th>Estimated Time</th>
+                        <th>Actual Distance</th>
+                        <th>Actual Time</th>
+                        <th>ETA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="leg in runLegs" ng-click="selectLeg(leg)">
+                        <td>{{ leg.index + 1 }}</td>
+                        <td>{{ leg.startInstructionLocation }}</td>
+                        <td>{{ leg.endInstructionLocation }}</td>
+                        <td>{{ leg.driverFullName || subcontractorName }}</td>
+                        <td>{{ leg.vehicleRegistration }}</td>
+                        <td>{{ leg.trailerReference }}</td>
+                        <td>{{ leg.estimatedDistance | number : 1 }}</td>
+                        <td>{{ leg.estimatedDuration | duration }}</td>
+                        <td>{{ leg.actualDistance | number : 1 }}</td>
+                        <td>{{ leg.actualDuration | duration }}</td>
+                        <td ng-class="{ 'vehicle-overdue': leg.isOverdue }">{{ leg.eta | date : 'dd/MM/yy HH:mm' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="btn-group-vertical map-buttons">
+    <button class="btn btn-primary no-focus" ng-class="{ 'active': layoutState.estimatedRouteVisible }" ng-click="toggleEstimatedRoute()">Estimated Route</button>
+    <button class="btn btn-primary no-focus" ng-class="{ 'active': layoutState.actualRouteVisible }" ng-click="toggleActualRoute()">Actual Route</button>
+</div>

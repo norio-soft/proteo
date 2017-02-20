@@ -1,0 +1,199 @@
+/* r.a.d.window monochrome skin */
+
+.RadWContentFrame
+{
+	scrollbar-face-color: #BACBF4;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #7E9FD2;
+	scrollbar-3dlight-color: #E6EEFC;
+	scrollbar-arrow-color: #4D6185;
+	scrollbar-track-color: #F7F7F3;
+	scrollbar-darkshadow-color: #C6D1DC;		
+}
+.RadWStatus
+{
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 10px;
+	font-weight: normal;
+	height: 22px;
+	background-image: url(CssImg/RadWStatus.gif);
+	background-repeat: repeat-x;
+	cursor: default;
+	color: #fff;
+	border-bottom: solid 1px #a6a6a6;
+	border-left: solid 2px #a6a6a6;
+	border-right: solid 2px #a6a6a6;
+	color: #a6a6a6;
+}
+.RadWModalImage
+{
+	display: block;
+	border: 3px solid #ccff00;		
+}
+.RadWDragHelper
+{		
+	border : 3px solid #cccccc;	
+	border: dashed 1px gray;
+	background-color : #cccccc;	
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50); /* IE */
+	-moz-opacity: 0.5; /* Mozilla */
+	margin: 0px;
+	padding: 0px;	
+	position: absolute;
+	z-index: 50000;
+	overflow: hidden;	
+}
+
+.RadWMinimizedPageLoaded
+{
+	border: 1px solid #e34a4e;
+	background: url(CssImg/RadWWrapperHeaderCenter.gif);
+	background-repeat: repeat-x;
+	width: 60px;
+	height: 25px;
+}
+
+.RadWMinimizedActive, .RadWMinimizedOver
+{
+	border: solid 1px #4071c5;
+	background: url(CssImg/RadWWrapperHeaderCenter.gif);
+	background-repeat: repeat-x;
+	background-color: transparent;
+	width: 60px;
+	height: 25px;
+}
+.RadWMinimizedInactive
+{
+	border: solid 1px #4071c5;
+	background-color: #979797;
+	background: url(CssImg/RadWWrapperHeaderCenter.gif);
+	background-repeat: repeat-x;
+	width: 60px;
+	height: 25px;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=63);
+	-moz-opacity: 0.6;
+}
+.RadWLoadingWrapper
+{
+	border: solid 1px #d6cfb9;
+	vertical-align: middle;
+	width: 80px;
+	height: 100%;
+	text-align: center;	
+	font-family: Verdana, Arial, Tahoma, Sans-Serif;
+	font-size: 11px;
+	font-weight: normal;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=99);
+}
+.RadWIcon
+{
+	margin-left: 2px;	
+	margin-right: 2px;
+	cursor: default;
+	margin-top: 3px;
+	vertical-align: middle;
+}
+.RadWTitleText
+{
+	font-family: Verdana, Arial, Tahoma, Sans-Serif;
+	font-weight: bold;
+	font-size: 11px;
+	color: #fff;
+	vertical-align: middle;		
+}
+.RadWButton
+{
+	cursor: default;
+	margin-top: 3px;
+	margin-right: 1px;
+	vertical-align: top;
+}
+.RadWWrapperActive
+{
+	background-color: #fff;
+	font-size: 0px;	
+	filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#404040,strength=3); 
+	border-left: solid 2px #a6a6a6;
+	border-top: solid 2px #a6a6a6;
+	border-right: solid 2px #a6a6a6 !important;
+	_border-right: 0px;
+	border-bottom: solid 2px #a6a6a6 !important;
+	_border-bottom: 0px;
+}
+.RadWWrapperInactive
+{
+	/*border: solid 1px #a6a6a6;*/
+	background-color: #CFE2FB;
+	font-size: 0px;	
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90); /* IE */
+	-moz-opacity: 0.9; /* Moz */
+	opacity: 0.9; /* CSS3 */
+}
+.RadWWrapperModal
+{	
+	border-right: solid 1px #404040;
+	border-bottom: solid 1px #404040;
+	border-left: solid 1px #d4d0c8;
+	border-top: solid 1px #d4d0c8;
+	background-color: #fff;
+	font-size: 0px;
+	filter: progid:DXImageTransform.Microsoft.Shadow(direction=140,color=#404040,strength=3); 
+}
+.RadWTitleRow
+{
+	cursor: default;		
+}
+.RadWWrapperHeaderLeft
+{
+	width: 2px;
+	background-color: #a6a6a6;
+	height: 27px;
+}
+.RadWWrapperHeaderCenter
+{
+	text-align: left;
+	height: 27px;
+	font-family: Verdana, Arial, Tahoma;
+	font-size: 11px; /* always set a value */
+	color: #fff;
+	background-color: #a6a6a6;
+	background-image: url(CssImg/RadWWrapperHeaderCenter.gif);
+	background-repeat: repeat-x;
+}
+.RadWWrapperHeaderRight
+{
+	width: 2px;
+	background-color: #a6a6a6;
+	height: 27px;
+}
+.RadWWrapperBodyLeft
+{
+	width: 2px;
+	background-color: #a6a6a6;
+}
+.RadWWrapperBodyCenter
+{
+	width: 100%;
+	height: 100%;
+}
+.RadWWrapperBodyRight
+{
+	width: 2px;
+	background-color: #a6a6a6;
+}
+.RadWWrapperFooterLeft 
+{
+	
+	background-color: #a6a6a6;
+} 
+
+.RadWWrapperFooterCenter 
+{
+	
+	background-color: #a6a6a6;
+} 
+.RadWWrapperFooterRight 
+{
+	
+	background-color: #a6a6a6;
+} 

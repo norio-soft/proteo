@@ -1,0 +1,245 @@
+﻿/** New Login Styles for Orchestrator **/
+
+/** Layout **/
+
+.loginBody 
+{
+	background-color: #13703b;
+	background-image: url('img/Login/page-bg.jpg');
+	background-position: top center;
+	background-repeat: no-repeat;
+	font-family: Verdana;
+	font-size: 11px;
+	color: #363636;	
+}
+
+#loginContainer 
+{
+	margin: 0px auto;
+	padding: 100px 0 0 0;
+	width: 375px;
+	text-align: left;
+}
+
+.loginLogoContainer
+{
+	height: 65px;	
+}
+
+.loginLogo 
+{
+	background-image: url('img/Login/orch-logo.png');
+	background-position: top left;
+	background-repeat: no-repeat;
+	display: block;
+	height: 64px;		
+}
+
+.loginBoxOuter 
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+.loginBoxTop 
+{
+	background-image: url("img/Login/page-bg-top.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+	height: 15px;
+}
+
+.loginBoxMiddle 
+{
+	background-image: url('img/Login/page-bg-mid.jpg');
+	background-position: center center;
+	background-repeat: repeat-y;
+	padding: 0 15px 0 15px;
+}
+
+.loginBoxBottom 
+{
+	background-image: url('img/Login/page-bg-bottom.jpg');
+	background-position: top center;
+	background-repeat: no-repeat;
+	height: 17px;	
+}
+
+.loginFooter 
+{
+	margin-top: 7px;
+	color: #b2dfc3;
+}
+
+/** Content **/
+
+.loginBoxMiddle h1 
+{
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0 0 3px 0;
+	padding: 0 0 3px 19px;
+	color: #033a1c;
+	border-bottom: 1px dotted #CCC;
+	background-image: url('img/Login/icon-login.png');
+	background-repeat: no-repeat;
+	background-position: left 3px;
+}
+
+.loginBoxMiddle em 
+{
+	background-color: #fff19f;
+	font-style: normal; 	
+}
+
+.loginBoxMiddle p 
+{
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+.loginBoxMiddle span
+{
+	font-family: Verdana;
+	font-size: 11px;	
+}
+
+/** Login Fields **/
+
+.loginCredentialsContainer 
+{
+	border: 1px dotted #CCC;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.loginCredentials .fieldLabel 
+{
+	background-color: whitesmoke;
+	border: 1px solid #FFF;
+	color:#000;
+	padding:7px 7px 7px 15px;
+	text-align:right;
+	vertical-align: top;
+	font-size: 11px;
+	width: 100px;
+}
+
+.loginCredentials .fieldInput 
+{
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	width: 200px;	
+}
+
+.loginCredentials .fieldInput input
+{
+	color:#000;
+	font-size: 11px;
+	*height: auto;
+	_height: 1%;	
+	padding: 4px;
+	margin: 0px;
+	vertical-align: middle;
+	border:1px solid #b0b0b0;
+	width: 180px;		
+}
+
+.loginCredentials .fieldInput input:hover 
+{
+	border: 1px solid #1da253;	
+}
+
+/** Validation boxes **/
+
+#loginValidationBoxes 
+{
+	width: 345px;
+	overflow: hidden; 	
+}
+
+.loginBoxMiddle #rfvOldPwd, .loginBoxMiddle #rfvNewPwd, .loginBoxMiddle #lblMessage,
+.loginBoxMiddle #rfvConfirmPwd, .loginBoxMiddle #rfvCompareNewPwds, .loginBoxMiddle #rfvComplexPwd,
+.loginBoxMiddle #rfvValidationSummary
+{
+	border: 1px dotted #d11111;
+	color: #d11111; 
+	padding: 10px 10px 10px 40px;
+	margin-top: 10px;
+	background-image: url('img/Login/icon-warning.png');
+	background-repeat: no-repeat;
+	background-position: 15px 10px;
+	display: block;
+}
+
+#loginValidationBoxes #rfvUserName, .loginBoxMiddle #rfvPIN 
+{
+	background-image: none;	
+}
+
+#loginValidationBoxes #rfvUserName div, .loginBoxMiddle #rfvPIN div
+{
+	border: 1px dotted #d11111;
+	color: #d11111; 
+	padding: 10px 10px 10px 40px;
+	margin-top: 10px;
+	background-image: url('img/Login/icon-warning.png');
+	background-repeat: no-repeat;
+	background-position: 15px 10px;
+	display: block;
+}
+
+.loginBoxMiddle #rfvValidationSummary ul
+{
+	list-style-type: none;
+	margin: 0;
+	width: 90%;
+}
+
+.loginBoxMiddle #rfvValidationSummary li 
+{
+	margin-bottom: 5px;	
+}
+
+/** Button bar **/
+
+.loginButtonBar
+{
+	border: 1px dotted #66ca8c;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.loginButtonBar .fieldInput 
+{
+	font-size: 11px;	
+}
+
+.loginButtonBar .buttonclass 
+{
+	border: 1px solid #105830;	
+	color: #FFF;
+	padding: 8px 12px;
+	background-image: url('img/MasterPage/button-bg.jpg');
+	background-color: #105830;
+	background-position: top;
+	background-repeat: repeat-x;
+	font-size: 11px;
+}
+
+/** Footer **/
+
+.loginFooter a, .loginFooter a:link, .loginFooter a:visited  {
+	border-bottom: 1px solid #b2dfc3;
+	color:#b2dfc3;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.loginFooter a:hover {
+	border-bottom: 1px solid #FFF;
+	color: #FFF;
+}

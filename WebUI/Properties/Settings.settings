@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Orchestrator.WebUI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WebUI_InterFax_InterFax" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://ws.interfax.net/dfs.asmx</Value>
+    </Setting>
+    <Setting Name="WebUI_PostCodeAnywhere_LookupUK" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://services.postcodeanywhere.co.uk/uk/lookup.asmx</Value>
+    </Setting>
+    <Setting Name="WebUI_textanywhere_ws_TextAnywhere_SMS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://ws.textanywhere.net/ta_sms.asmx</Value>
+    </Setting>
+    <Setting Name="WebUI_Alerts_Email" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:4016/Email.asmx</Value>
+    </Setting>
+    <Setting Name="WebUI_Mapping_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://mapping.orchestrator.co.uk/Position.asmx</Value>
+    </Setting>
+    <Setting Name="UseOldClientPortal" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="HereMapsApplicationCode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">JpK4aIcgRI4b6hkgCWJBiQ</Value>
+    </Setting>
+    <Setting Name="HereMapsApplicationId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">j8Wgmhi8ntrfHwEgHiFC</Value>
+    </Setting>
+    <Setting Name="HereMapsJSCoreUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://js.api.here.com/v3/3.0/mapsjs-core.js</Value>
+    </Setting>
+    <Setting Name="HereMapsJSServiceUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://js.api.here.com/v3/3.0/mapsjs-service.js</Value>
+    </Setting>
+    <Setting Name="HereMapsJSMapEventsUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://js.api.here.com/v3/3.0/mapsjs-mapevents.js</Value>
+    </Setting>
+    <Setting Name="HereMapsJSUIUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://js.api.here.com/v3/3.0/mapsjs-ui.js</Value>
+    </Setting>
+    <Setting Name="HereMapsJSUICSSUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://js.api.here.com/v3/3.0/mapsjs-ui.css</Value>
+    </Setting>
+    <Setting Name="HereMapsJSClusteringUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://js.api.here.com/v3/3.0/mapsjs-clustering.js</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

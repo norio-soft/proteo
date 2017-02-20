@@ -1,0 +1,108 @@
+﻿/** ------------------------------------------------------------------------------------------------- **/
+/** FleetMetric Whitelabeled Masterpage CSS - This stylesheet overwrites the Masterpage.Orchestrator  **/
+/** CSS file and whitelabels certain elements of masterpages										  **/
+/** This is for Firmin ONLY																			  **/
+/** ------------------------------------------------------------------------------------------------- **/
+/** Original By Robin Turner            															  **/
+/** Lifted from WhiteLabel.css by Thomas Lunken														  **/
+/** ------------------------------------------------------------------------------------------------- **/
+
+/** ---------------- **/
+/** Table MasterPage **/
+/** ---------------- **/
+
+body  
+{
+	background-color: #0c4626 !important;
+}
+
+.layoutHeaderRow, 
+.masterpage_layoutHeader, 
+.masterpagelite_layoutHeader,
+.masterpagepopup_layoutHeaderOuter 
+{	
+	background-color: #0c4626 !important;
+	background-image: url('header-bg.jpg') !important;
+	background-position: left top !important;
+}
+
+.HeaderLogoImg, 
+.masterpage_headerLogoImg, 
+.masterpagelite_headerLogoImg
+{
+	background-image: url('fm-logo.png') !important;
+	/** background-image:  url('Img/fagan-alt-header-bg.jpg'); **/ /** Alt version due to two logos **/
+}
+
+.masterpagelite_headerTitle
+{
+    border-color: #88da9d !important;    
+}
+
+.HeaderLogoImg, 
+.masterpage_layoutNav, 
+.masterpagelite_layoutNav 
+{
+	border-color: #b5ba2b !important;	
+}
+
+.masterpagelite_layoutNav,
+.masterpagelite_layoutFooter, 
+.RadMenu_Orchestrator .rmGroup 
+{
+    background-color: #0c5a2e !important;
+}
+
+.RadGrid a,
+.Row td.DataCell a, 
+.AlternatingRow td.DataCell a, 
+.SelectedRow td.DataCell a, 
+.SelectRowTrafficSheetLite td.DataCell a, 
+.statePlanned td.DataCell a, 
+.DataCell div a, .Row td a, 
+.AlternatingRow td a,
+h2 
+{
+    color: #0c5a2e !important;
+}
+
+.RadMenu_Orchestrator .rmGroup .rmLink:hover,
+.RadMenu_Orchestrator .rmGroup .rmExpanded
+{
+    background-image: url('menu-hoverbg.jpg') !important; 
+    border-color: #30c26b !important;
+    color: #000 !important;   
+}
+
+.RadMenu_Orchestrator .rmGroup .rmExpanded
+{
+    color: #000 !important;   
+}
+
+.RadMenu_Orchestrator .rmLink .rmText:hover, 
+.RadMenu_Orchestrator .rmExpanded .rmText, 
+.RadMenu_Orchestrator .rmFocused .rmText
+{
+    color: #b5ba2b !important;
+}
+
+.buttonbar input, 
+.buttonBar input, 
+.buttonClass 
+{
+    background:url("button-bg.jpg") repeat-x scroll center top #0f5830 !important;
+    border: 1px solid #033a1c !important;
+}
+
+.GridHeader, 
+.webpartTitleBar,
+.rgCommandRow td
+{
+    background-color: #0f5830 !important;
+    background-image: url("bluetoolbar-bg.jpg") !important;
+}
+
+.rgHeader a 
+{
+    color: #FFFFFF !important;
+}

@@ -1,0 +1,178 @@
+﻿  #container {
+		background:	#999;
+		height:		700px;
+		margin:		0 auto;
+		width:		100%;
+		max-width:	1920px;
+		min-width:	700px;
+		_width:		700px; /* min-width for IE6 */
+	}
+
+    .ui-layout-pane { /* all 'panes' */ 
+		background: #FFF; 
+		border: 1px solid #BBB; 
+		padding: 10px; 
+		overflow: auto;
+	} 
+
+	.ui-layout-resizer { /* all 'resizer-bars' */ 
+		background: #DDD; 
+	} 
+
+	.ui-layout-toggler { /* all 'toggler-buttons' */ 
+		background: #AAA; 
+	} 
+        
+/* JS-Enabled CSS */
+/* Sortables */
+ul.column {
+	/*
+	float: left;
+	width: 33.3%;
+	min-height: 400px;
+	height: auto !important;
+	height: 400px;
+	*/
+}
+ul.column li.widget {
+	width: auto; /* width when 'parked' */
+}
+
+/* colours for goods types - for demo*/
+.color-green
+{
+    background-color: rgb(187, 248, 154);
+}
+.color-blue
+{
+    background-color: rgb(182, 210, 245);
+}
+.color-yellow
+{
+    background-color: rgb(240, 243, 163);
+}
+.color-grey
+{
+    background-color: #ffe763;
+}
+
+li.widget {
+	width: 25%; /* width when 'moving' */
+	
+	border: 1px solid #eee;
+	margin-bottom: 5px;
+	padding: 3px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	}
+	li.widget .widget-head {
+		color: black;
+		padding: 0 0 4px;
+		cursor: move;
+		overflow: hidden;
+	}
+
+	li.widget .widget-content {
+		background: white repeat-x;
+		color: black;
+		font-size:0.8em;
+		
+		padding: 5px;
+		overflow: hidden;
+		-moz-border-radius-bottomleft: 2px;
+		-moz-border-radius-bottomright: 2px;
+		-webkit-border-bottom-left-radius: 2px;
+		-webkit-border-bottom-right-radius: 2px;
+	}
+
+
+.widget-head a.remove  {
+    float: right;
+    display: inline;
+    background: url(/images/widget/buttons.gif) no-repeat -24px 0;
+    width: 14px;
+    height: 14px;
+    margin: 8px 4px 8px 0;
+    text-indent: -9999em;
+    outline: none;
+}
+
+.widget-head a.edit  {
+    float: right;
+    display: inline;
+    background: url(/images/widget/buttons.gif) no-repeat;
+    width: 24px;
+    height: 14px;
+    text-indent: -9999em;
+    margin: 8px 4px 8px 4px;
+    outline: none;
+}
+
+.widget-head a.collapse  {
+    float: left;
+    display: inline;
+    background: url(/images/widget/buttons.gif) no-repeat -52px 0;
+    width: 14px;
+    height: 14px;
+    text-indent: -9999em;
+    margin: 8px 0 8px 4px;
+    outline: none;
+}
+
+.widget-placeholder { background:#2F505F;border: 2px dashed #FFF;}
+#column1 .widget-placeholder { margin: 30px 35px 0 25px; }
+
+.edit-box {
+    overflow: hidden;
+    background: #333;
+    margin-bottom: 2px;
+    padding: 10px 0;
+}
+
+.edit-box li.item {
+    padding: 10px 0;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+    clear: both;
+}
+
+.edit-box label {
+    float: left;
+    width: 30%;
+    color: #FFF;
+    padding: 0 0 0 10px;
+}
+
+.edit-box ul.colors li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #EEE;
+    float: left;
+    display: inline;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+}
+
+.widget-head {margin:0px;padding:0px;}
+.widget-head h3 {font-size:0.9em !important;margin:0px;padding:0px; font-style:normal;}
+
+.widget-strong
+{
+    float:right;
+    font-style:normal;
+    padding-right:2px;
+}
+.column {
+        margin:4px;
+        padding:4px;
+        list-style-image:none;
+        list-style-position:outside;
+        list-style-type:none;
+    }
+
+
+.ui-accordion-content
+{
+    padding:0px !important;
+}

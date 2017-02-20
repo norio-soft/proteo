@@ -1,0 +1,7 @@
+﻿<Nodes MenuTitle="Traffic Menu">
+	<Node>
+		<Text>List All Control Areas</Text>
+		<Url>/webui/traffic/listcontrolareas.aspx</Url>
+	</Node>
+
+</Nodes>

@@ -1,0 +1,16 @@
+﻿{{#if rateRanges.length}}
+
+    <table class="rateRangeTable editExtraRatesTrigger">
+        {{#each rateRanges}}
+            <tr>
+                <td>{{this.scales}}</td>
+                <td>{{this.rate}}</td>
+            </tr>
+        {{/each}}
+    </table>
+
+{{else}}
+
+    <span class="rateRangeNone editExtraRatesTrigger">None</span>
+
+{{/if}}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/OrchestratorServices.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/OrchestratorServices.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://blue.orchestrator.co.uk/Profiles.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://blue.orchestrator.co.uk/Profiles.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfTrackingProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TrackingProfile" nillable="true" type="tns:TrackingProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTrackingProfile" nillable="true" type="tns:ArrayOfTrackingProfile" />
+  <xs:complexType name="TrackingProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BatchSize" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DirectionAngle" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DistanceFrequency" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FilterFrequency" type="xs:decimal" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GPSUnits" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="IdleTimeFrequency" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IdlingFrequency" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IsDefault" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NumberOfBluePorts" type="xs:int" />
+      <xs:element minOccurs="0" name="NumberOfVehicles" type="xs:int" />
+      <xs:element minOccurs="0" name="ProfileID" type="ser:guid" />
+      <xs:element minOccurs="0" name="QueueSize" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ReportOnCANEvents" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ReportOnEvents" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ReportOnWeightEvents" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SendFrequency" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SendSize" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SleepingFrequency" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TimeFrequency" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WeightDecrease" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WeightFrequency" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WeightIncrease" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WeightStab" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WeightStabFrequency" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WeightThreshold" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrackingProfile" nillable="true" type="tns:TrackingProfile" />
+  <xs:complexType name="ArrayOfPerformanceProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PerformanceProfile" nillable="true" type="tns:PerformanceProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPerformanceProfile" nillable="true" type="tns:ArrayOfPerformanceProfile" />
+  <xs:complexType name="PerformanceProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DecelerationCutOff" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DecelerationWarning" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EconomyBandEnd" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EconomyBandStart" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FreeIdlingTime" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FreeSpeedingTime" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FreeStoppingTime" type="xs:decimal" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GPSUnits" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="IsDefault" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Make" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberOfVehicles" type="xs:int" />
+      <xs:element minOccurs="0" name="OverRevLimit" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OverRevWarning" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ProfileID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Purpose" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RevBands" nillable="true" type="q3:ArrayOfint" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SpeedBands" nillable="true" type="q4:ArrayOfint" />
+      <xs:element minOccurs="0" name="SpeedingLimit" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PerformanceProfile" nillable="true" type="tns:PerformanceProfile" />
+</xs:schema>
