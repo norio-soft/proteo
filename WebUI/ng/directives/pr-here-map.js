@@ -122,7 +122,7 @@ angular.module('peApp').directive('prHereMap', ['$compile', '$timeout', function
                 scope.$watch('mapOptions.zoom', function (zoom) {
                     scope.map.setZoom(zoom, animate);
                 });
-
+                // get View Coordinates
                 scope.$watchCollection('mapOptions.viewCoordinates', function (viewCoordinates) {
                     if (viewCoordinates && viewCoordinates.length > 0) {
                         var locations = viewCoordinates.map(function (coordinate) {
